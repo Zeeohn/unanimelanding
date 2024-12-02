@@ -6,6 +6,7 @@ import languagechange from "../../../public/Assets/languagechange.svg";
 import greydropdown from "../../../public/Assets/greydropdown.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import hamburger from "../../../public/Assets/hamburger.svg";
 
 const Header = () => {
 
@@ -41,7 +42,7 @@ const Header = () => {
                 isActive(item.path)
                   ? "text-white font-bold"
                   : "text-[#888888]"
-              } hover:text-white text-lg font-redhat transition-colors`}
+              } hover:text-white md:text-base lg:text-lg font-redhat transition-colors`}
             >
               {item.label}
             </button>
@@ -50,6 +51,7 @@ const Header = () => {
       </div>
 
       {/* Language Selector and Actions */}
+   <div className="flex items-center">
       <div className="flex items-center space-x-6">
         {/* Language Dropdown */}
         <div className="flex items-center space-x-1">
@@ -59,7 +61,7 @@ const Header = () => {
           </button>
         </div>
         <Link href="/support" passHref>
-        <button className={`${
+        <button className={`lg:block hidden  ${
                 isActive("/support")
                   ? "text-white font-bold"
                   : "text-[#888888]"
@@ -67,14 +69,18 @@ const Header = () => {
           Support
         </button>
         </Link>
-        <a href="#" className="hover:text-white text-[#888888] text-lg font-redhat">
+        <a href="#" className="hover:text-white text-[#888888] text-lg font-redhat lg:block hidden">
           Login
         </a>
 
         {/* Sign Up Button */}
-        <button className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg">
+        <button className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden">
           Sign Up
         </button>
+      </div>
+      <div className="lg:hidden ">
+        <Image src={hamburger} alt="hamburger" style={{width:"100%"}}/>
+      </div>
       </div>
     </div>
   );

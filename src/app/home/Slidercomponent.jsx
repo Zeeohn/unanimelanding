@@ -18,22 +18,20 @@ import {
 
 const Slidercomponent = () => {
   return (
-    <div className=" pt-10 pb-16 bg-[#111111] mt-28 ">
-        <p className="text-center text-lg text-white">Our services</p>
-        <p className="text-center font-bold pt-6 text-4xl text-white">Lorem ipsum dolor sit amet, consectetur </p>
-       <div className="pl-[8%] pt-20">
+    <div className=" px-[5%] pt-10 pb-16 bg-[#111111] mg:mt-28 md:mt-20 mt-12  ">
+        <p className="sm:text-center text-xl  sm:text-lg text-white sm:font-medium font-bold text-left">Our services</p>
+        <p className="sm:text-center sm:font-bold pt-2 sm:pt-6 text-sm sm:text-2xl lg:text-4xl text-white font-normal text-left ">Lorem ipsum dolor sit amet, consectetur </p>
+       <div className="md:pl-[8%] lg:pt-20 sm:pt-12 pt-6  ">
           <Swiper
             className="h-full w-full px-8"
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
-            slidesPerView={4}
             navigation
-            pagination={{ clickable: true }}
             scrollbar={false}
             breakpoints={{
-              320: { slidesPerView: 1, spaceBetween: 20 },
-              480: { slidesPerView: 2, spaceBetween: 30 },
-              640: { slidesPerView: 3, spaceBetween: 30 },
+              320: { slidesPerView: 1.5, spaceBetween: 16 },
+              480: { slidesPerView: 1.5, spaceBetween: 16 },
+              640: { slidesPerView: 2, spaceBetween: 30 },
               1024: { slidesPerView: 2.5, spaceBetween: 20  },
             }}
             onSlideChange={() => console.log("slide change")}
@@ -58,12 +56,12 @@ const Slidercomponent = () => {
                 <Image
                     src={taximimgbg}
                     alt="productimg"
-                    className="max-h-[200px] max-w-[200px] sm:max-h-full sm:max-w-full relative"
+                    className="max-h-[200px] sm:max-h-full sm:max-w-full relative"
                   />
-                  <div className="absolute w-full top-0 left-0 flex flex-col justify-end h-full px-8 pb-10">
+                  <div className="absolute w-full top-0 left-0 flex flex-col justify-end h-full p-3 md:p-5 lg:px-8 lg:pb-10">
                     <p className="font-bold text-lg text-white ">Lorem ipsum dolor</p>
-                    <p className="pt-2 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                   <div className="flex gap-2 items-center pt-6"><button className="text-white">View details</button> <Image src={arrowicon} alt="arrow"/></div>
+                    <p className="pt-2 text-white md:block hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                   <div className="flex gap-2 items-center pt-2 md:pt-6"><button className="text-white font-bold text-sm md:text-base">View details</button> <Image src={arrowicon} alt="arrow"/></div>
                   </div>
                 </div>
               </SwiperSlide>

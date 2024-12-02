@@ -31,6 +31,27 @@ import Footer from "../home/Footer";
 
 const Trendinglocation = () => {
   const [isClient, setIsClient] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalBlogs = 4;
+  const containerRef = useRef(null); 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % totalBlogs);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [totalBlogs]);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const scrollAmount = containerRef.current.scrollWidth / totalBlogs;
+      containerRef.current.scrollTo({
+        left: activeIndex * scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  }, [activeIndex, totalBlogs]);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -186,19 +207,10 @@ const Trendinglocation = () => {
         <p className="font-redhat font-bold text-4xl pt-28 pb-10">
           Read our latest Blogs
         </p>
-        {/* Blog 1 */}
-        {/* <div className="group flex-grow basis-1/2 transition-all duration-300 relative bg-cover bg-center hover:basis-1/2"
-   style={{ backgroundImage: "url('/path-to-image-1.jpg')" }}>
-<div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-  <p className="text-white text-2xl font-bold">
-    How to connect your e-commerce <br /> with BOLD logistics
-  </p>
-</div>
-</div> */}
 
         {/* Other Blogs */}
-        <div className="flex w-full gap-4 mb-28 min-h-[360px]">
-          {[1, 2, 3, 4].map((blog, index) => (
+        <div className=" flex w-full gap-4 mb-28 min-h-[360px] overflow-hidden" ref={containerRef}>
+          {/* {[1, 2, 3, 4].map((blog, index) => (
             <div
               key={index}
               className="group w-full basis-1/3 relative  hover:basis-1/2 rounded-2xl overflow-hidden  "
@@ -214,7 +226,70 @@ const Trendinglocation = () => {
                 </p>
               </div>
             </div>
-          ))}
+          ))} */}
+
+{/* <Swiper
+  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+  spaceBetween={10}
+  slidesPerView={3.5}
+  loop={true}
+  speed={800}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  onSlideChangeTransitionEnd={(swiper) => {
+    const allSlides = document.querySelectorAll('.swiper-slide');
+    allSlides.forEach((slide) => slide.classList.remove('large-slide'));
+    const activeIndex = swiper.activeIndex % allSlides.length;
+    allSlides[activeIndex].classList.add('large-slide');
+  }}
+>
+  {[...Array(7).keys()].map((_, index) => (
+    <SwiperSlide key={index}>
+      {({ isActive }) => (
+        <div
+          className={`relative transition-transform duration-500 ${
+            isActive ? 'scale-125 z-10' : 'scale-100'
+          }`}
+        >
+          <Image
+            src={blogsback}
+            alt="Slide"
+            className="h-full object-cover w-full"
+          />
+          <div className="absolute w-full h-full top-0 left-0 flex justify-end flex-col px-8 pb-14">
+            <p className="text-white text-xl font-bold group-hover:text-4xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+            </p>
+          </div>
+        </div>
+      )}
+    </SwiperSlide>
+  ))}
+</Swiper> */}
+ {[1, 2, 3, 4,].map((blog, index) => (
+        <div
+          key={index}
+          className={`group relative rounded-2xl overflow-hidden transition-all duration-700 ${
+            index === activeIndex ? "basis-1/2" : "basis-1/6"
+          }`}
+        >
+          <Image
+            src={blogsback}
+            alt="blogsback"
+            className="h-full object-center object-cover"
+          />
+          <div className="absolute w-full h-full top-0 left-0 px-8 pb-14 flex justify-end flex-col">
+            <p
+              className={`text-white font-bold transition-all duration-500 ${index === activeIndex ? "text-4xl" : "text-xl"
+              }`}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+            </p>
+          </div>
+        </div>
+      ))}
         </div>
       </div>
 

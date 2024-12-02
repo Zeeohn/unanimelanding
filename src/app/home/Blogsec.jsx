@@ -1,21 +1,42 @@
+"use client"
 import blogimg from "../../../public/Assets/blogbg.jpeg";
 import arrowicon from "../../../public/Assets/arrow.svg";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
-const Blogsec = () => {
+const Blogsec = ({text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam, quis."}) => {
+
+  const [displayText, setDisplayText] = useState(text);
+
+  useEffect(() => {
+    const truncateText = () => {
+      const maxWords = window.innerWidth < 640 ? 12 : window.innerWidth < 1024 ? 20 : text.split(" ").length;
+      const words = text.split(" ");
+      if (words.length > maxWords) {
+        setDisplayText(words.slice(0, maxWords).join(" ") + "...");
+      } else {
+        setDisplayText(text);
+      }
+    };
+
+    truncateText(); // Initial truncation
+    window.addEventListener("resize", truncateText); // Update on window resize
+
+    return () => window.removeEventListener("resize", truncateText); // Cleanup on unmount
+  }, [text]);
   return (
     <div>
-         <div className="px-[5%] pt-16">
+         <div className="md:px-[5%] sm:pt-4 md:pt-10 lg:pt-16 overflow-hidden md:rounded-2xl">
       <div className="relative rounded-2xl overflow-hidden">
                 <Image
                     src={blogimg}
                     alt="productimg"
                     className="max-h-[700px] w-full"
                   />
-                  <div className="absolute w-full max-w-[45%] top-0 left-0 flex flex-col justify-end h-full px-8 pb-10">
-                    <p className="font-bold text-5xl text-white ">Your safest way to ride</p>
-                    <p className="pt-10 font-semibold text-white text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam, quis.</p>
-                   <div className="flex gap-6 items-center pt-6"><button className="text-white text-2xl font-bold">Read our details on safety concerns</button> <Image src={arrowicon} alt="arrow"/></div>
+                  <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-end h-full px-[5%] pb-6 md:px-8 md:pb-10">
+                    <p className="font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-white ">Your safest way to ride</p>
+                    <p className=" pt-2 md:pt-6 lg:pt-10 sm:font-semibold text-white text-sm sm:text-xl">{displayText}</p>
+                   <div className="flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-6"><button className="text-white text-sm md:text-xl lg:text-2xl font-bold ">Read our details on safety concerns</button> <Image src={arrowicon} alt="arrow"/></div>
                   </div>
                 </div>
       </div>
