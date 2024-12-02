@@ -37,7 +37,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <div className="min-h-[500px] relative">
+      <div className="min-h-[650px] relative">
         {/* <img src={bgimg} alt="backimg" /> */}
         <Image
         className="object-cover object-center"
@@ -57,10 +57,10 @@ const Homepage = () => {
             across town, we prioritize your comfort and safety.
           </p>
           <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] lg:max-w-[50%] pt-14">
-            <button className="py-3 px-8 font-redhat bg-[#18C4B8] text-white text-xl rounded-3xl font-bold sm:w-fit w-[50%]">
+            <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]">
               Get started
             </button>
-            <button className="py-3 px-8 font-redhat font-semibold border-white border-2 text-xl text-white rounded-3xl sm:w-fit w-[50%]  ">
+            <button className="py-3 sm:px-8 font-redhat font-semibold border-white border-2 text-sm  sm:text-base md:text-xl text-white rounded-3xl sm:w-fit w-[50%]  ">
               Know more
             </button>
           </div>
