@@ -47,7 +47,7 @@ const Homepage = () => {
           minHeight: "650px",
           }}
         />
-        <div className=" absolute top-[16%] flex flex-col sm:items-center px-[5%] ">
+        <div className=" absolute w-full h-full top-0 left-0 flex flex-col justify-center sm:items-center px-[5%] ">
           <p className="font-redhat font-bold text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
             The <span className="font-extrabold"> BOLD</span> way to move forward
           </p>
