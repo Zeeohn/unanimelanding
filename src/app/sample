@@ -1,0 +1,5 @@
+text-xl font-opensans md:text-3xl lg:text-4xl
+font-bold text-xl font-opensans md:text-3xl lg:text-4xl
+text-sm sm:text-2xl lg:text-4xl
+font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl
+text-sm md:text-xl lg:text-2xl
