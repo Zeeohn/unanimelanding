@@ -162,17 +162,17 @@ const Ridepage = () => {
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl lg:max-w-[40%]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="mt-6 md:mt-10 lg:mt-16 flex gap-6 md:gap-10 lg:gap-16">
-              <p className="text-white text-xs flex items-center justify-center text-center md:text-xl font-semibold bg-[#000000] py-[10px] px-6 rounded-full">
+            <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16">
+              <p className="text-white text-[10px] flex items-center justify-center text-center md:text-xl font-semibold bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full">
                 BOLD Share
               </p>
-              <p className="hover:text-white text-xs flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-[10px] px-6 rounded-full">
+              <p className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full">
                 BOLD Regular
               </p>
-              <p className="hover:text-white text-xs flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-[10px] px-6 rounded-full">
+              <p className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full">
                 BOLD Premium
               </p>
-              <p className="hover:text-white text-xs flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-[10px] px-6 rounded-full">
+              <p className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777]  hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full">
                 BOLD XL
               </p>
             </div>
