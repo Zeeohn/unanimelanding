@@ -29,7 +29,7 @@ const Header = () => {
       {/* Logo Section */}
       <div className="flex items-center">
         <Link href="/" passHref>
-          <Image src={Boldlogo} alt="logo" />
+          <Image src={Boldlogo} alt="logo" className="sm:max-h-[88px] max-h-12 "/>
         </Link>
       </div>
 
@@ -55,8 +55,8 @@ const Header = () => {
       <div className="flex items-center space-x-6">
         {/* Language Dropdown */}
         <div className="flex items-center space-x-1">
-          <button className="hover:text-white text-[#888888] text-lg font-redhat flex gap-2">
-            <Image src={languagechange} alt="language" />
+          <button className="hover:text-white text-[#888888] text-lg font-redhat flex gap-2 items-center">
+            <Image src={languagechange} alt="language" className="h-5 sm:h-full"/>
             <Image src={greydropdown} alt="greydropdown" />
           </button>
         </div>
@@ -79,7 +79,7 @@ const Header = () => {
         </button>
       </div>
       <div className="lg:hidden ">
-        <Image src={hamburger} alt="hamburger" style={{width:"100%"}}/>
+        <Image src={hamburger} alt="hamburger" style={{width:"100%"}} className="max-w-6 sm:max-w-none"/>
       </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 "use client"
-import blogimg from "../../../public/Assets/blogbg.jpeg";
+import blogimg from "../../../public/Assets/blogbg.png";
 import arrowicon from "../../../public/Assets/arrow.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";

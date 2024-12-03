@@ -1,5 +1,5 @@
 "use client";
-import bgimg from "../../public/Assets/landingmainimg.jpeg";
+import bgimg from "../../public/Assets/landingmainimg.png";
 import Image from "next/image";
 import videogif from "../../public/Assets/video.png";
 import uppericon from "../../public/Assets/uppericon.png";
@@ -10,7 +10,6 @@ import Slidercomponent from "./home/Slidercomponent";
 import partner1 from "../../public/Assets/partner1.svg";
 import partner2 from "../../public/Assets/partner2.svg";
 import partner3 from "../../public/Assets/partner3.svg";
-
 import FAQ from "./home/FAQ";
 import Footer from "./home/Footer";
 import Blogsec from "./home/Blogsec";

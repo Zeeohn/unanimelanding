@@ -6,9 +6,9 @@ import socials from "../../../public/Assets/socials.svg";
 const Footer = () => {
   return (
     <div>
-        <div className="px-[5%] pt-8 pb-8  md:pb-20 lg:pb-28 bg-[#111111] flex flex-col md:flex-row justify-between gap-6 xl:gap-6">
+        <div className="px-[5%] pt-8 pb-8  md:pb-20 lg:pb-28 bg-[#111111] flex flex-col md:flex-row justify-between gap-6 xl:gap-6 ">
             <div className="md:max-w-[22%]">
-                <Image src={logo} alt="logo"></Image>
+                <Image src={logo} alt="logo" className="w-20 sm:w-40"></Image>
                 <p className="font-semibold text-sm md:text-lg lg:text-xl text-white ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ut labore.</p>
             </div>
             <div className="flex items-end ">
@@ -36,14 +36,14 @@ const Footer = () => {
                     <div className=" p-2 mt-8 rounded-3xl overflow-hidden bg-white flex justify-between">
                         <input type="text" placeholder="Email address"/>
                         <div className="bg-[#18C4B8] rounded-full flex justify-center items-center h-10 w-10">
-                            <Image src={subscribeemail} alt="subscribe"></Image>
+                            <Image src={subscribeemail} alt="subscribe" className="w-4 h-4 sm:h-6 sm:w-6"></Image>
                         </div>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="flex justify-between bg-[#000000] px-[5%] pt-6 pb-24 sm:py-6  flex-wrap gap-6">
+        <div className="flex justify-between bg-[#000000] px-[5%] pt-6 pb-24 sm:py-6  flex-wrap gap-6 ">
             <p className="text-sm text-white">Copyright 2022 | All rights reserved. </p>
             <div className="flex items-center gap-12 ">
                 <p className=" font-semibold text-xl  md:font-normal md:text-sm  text-white">Follow us on: </p>
