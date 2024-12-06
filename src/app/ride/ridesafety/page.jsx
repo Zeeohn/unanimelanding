@@ -1,5 +1,5 @@
 import React from "react";
-import trendingbanner from "../../../../public/Assets/trendingbanner.jpeg";
+import trendingbanner from "../../../../public/Assets/trendingbanner.png";
 import Image from "next/image";
 import whitearrow from "../../../../public/Assets/whitearrow.svg";
 import blackstr from "../../../../public/Assets/blackstr.svg";
@@ -11,7 +11,6 @@ import boldadvertise from "../../../../public/Assets/boldadvertise.png";
 import appadvertise from "../../../../public/Assets/appadvertise.png";
 import btnrightarrow from "../../../../public/Assets/buttunrightarrow.svg";
 import FAQ from "@/app/home/FAQ";
-
 
 const Ridesafety = () => {
   return (

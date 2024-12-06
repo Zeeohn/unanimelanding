@@ -34,6 +34,7 @@ import ridegroup from "../../../public/Assets/ridegroup.png";
 import Link from "next/link";
 import Ridesafety from "./ridesafety/page";
 import Trendinglocation from "./Trendinglocation";
+import rideoverview from "../../../public/Assets/rideoverview.png"
 
 
 const Ridepage = () => {
@@ -91,7 +92,7 @@ const Ridepage = () => {
           </div>
           {currentpage==="ridesafety"?(<Ridesafety/>): currentpage==="trendinglocation"?(<Trendinglocation/>):(
           <div>
-          <div className="py-16 md:pt-24 md:pb-20 flex bg-[#090909] px-[5%] justify-between ">
+          <div className="py-16 md:pt-24 md:pb-20 flex bg-[url('/Assets/rideoverview.png')] bg-cover px-[5%] justify-between relative  ">
             <div className="max-w-full lg:max-w-[33%]">
               <p className="text-4xl lg:text-[40px]  font-bold text-white lg:leading-[60px]">
                 Lorem ipsum amet, consectetur adipiscing elit dolor
@@ -162,7 +163,7 @@ const Ridepage = () => {
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl lg:max-w-[40%]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16">
+            <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16 flex-wrap">
               <p className="text-white text-[10px] flex items-center justify-center text-center md:text-xl font-semibold bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full">
                 BOLD Share
               </p>

@@ -10,7 +10,7 @@ function CollapsibleSection({ title, children }) {
     <div className="border-b border-[#DDDDDD]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 sm:py-6 lg:py-10 text-sm  md:text-xl flex items-center justify-between text-left   md:text-center"
+        className="w-full py-4 sm:py-6 lg:py-10 text-sm  md:text-xl flex items-center justify-between md:justify-center text-left   md:text-center"
       >
         {title}
         <Image src={dropdown} alt="dropdown" className="inline-flex ml-16 h-5 md:h-10" />

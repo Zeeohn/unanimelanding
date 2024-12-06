@@ -1,5 +1,5 @@
 import React from "react";
-import trendingbanner from "../../../public/Assets/trendingbanner.jpeg";
+import trendingbanner from "../../../public/Assets/trendingbanner.png";
 import Image from "next/image";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
