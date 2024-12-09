@@ -184,27 +184,27 @@ const Drivepage = () => {
              </div>
              <div className="">
                 <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                <div className="flex gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
-                    <div className="">
-                    <Image src={one} alt="one" width={32} height={32}/>
+                <div className="flex gap-2 md:gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
+                    <div className="w-[6%] md:w-[5%]">
+                    <Image src={one} alt="one" className="w-full"/>
                     </div>
                     <div className="">
                         <p className="font-bold text-base md:text-xl">Packages</p>
                         <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
-                    <div className="">
-                    <Image src={two} alt="one" width={32} height={32}/>
+                <div className="flex gap-2 md:gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+                    <div className="w-[6%] md:w-[5%]">
+                    <Image src={two} alt="one" className="w-full"/>
                     </div>
                     <div className="">
                         <p className="font-bold text-base md:text-xl">Intercity</p>
                         <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
-                    <div className="">
-                    <Image src={three} alt="one" width={32} height={32}/>
+                <div className="flex gap-2 md:gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+                    <div className="w-[6%] md:w-[5%]">
+                    <Image src={three} alt="one" className="w-full"/>
                     </div>
                     <div className="">
                         <p className="font-bold text-base md:text-xl">Jumpstart</p>
