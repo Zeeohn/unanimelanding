@@ -182,7 +182,7 @@ const Drivesafety = () => {
         </div>
       </div> */}
 
-      <div className="flex lg:flex-row flex-col px-[5%] pt-0 pb-12 lg:py-28 gap-[3%] xl:gap-[5%] justify-between">
+      <div className="flex lg:flex-row flex-col px-[5%] pt-0 pb-12 lg:pb-28 gap-[3%] xl:gap-[5%] justify-between">
         <div className="lg:block lg:flex-1 hidden rounded-2xl overflow-hidden max-w-[40%]">
           <Image
             src={Drivesafe}
