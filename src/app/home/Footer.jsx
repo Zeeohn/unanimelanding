@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "../../../public/Assets/footerlogo.svg";
 import subscribeemail from "../../../public/Assets/subscribeemail.svg";
 import socials from "../../../public/Assets/socials.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -20,8 +21,12 @@ const Footer = () => {
                     <div className="min-w-[15%]">
                         <p className="font-bold text-xl text-white">Important Links</p>
                         <p className="font-redhat sm:text-lg text-white text-sm font-semibold sm:font-normal pt-10">Our products</p>
+                        <Link href="/privacy">
                         <p className="font-redhat sm:text-lg text-white text-sm font-semibold sm:font-normal pt-6">Privacy policy</p>
+                        </Link>
+                        <Link href="/termsandcondition">
                         <p className="font-redhat sm:text-lg text-white text-sm font-semibold sm:font-normal pt-6">Terms & Conditions</p>
+                        </Link>
                     </div>
                     <div className="">
                         <p className="font-bold text-xl text-white">Products</p>

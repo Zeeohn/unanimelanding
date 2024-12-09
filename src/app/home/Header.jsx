@@ -74,6 +74,7 @@ const Header = () => {
         </a>
 
         {/* Sign Up Button */}
+       
         <button className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden">
           Sign Up
         </button>
