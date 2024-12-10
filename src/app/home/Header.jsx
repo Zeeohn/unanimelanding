@@ -25,7 +25,7 @@ const Header = () => {
    
 
   return (
-    <div className="flex items-center justify-between px-[5%] bg-black text-white">
+    <div className="container mx-0 w-[100vw] flex items-center justify-between px-[5%] bg-black text-white">
       {/* Logo Section */}
       <div className="flex items-center">
         <Link href="/" passHref>
