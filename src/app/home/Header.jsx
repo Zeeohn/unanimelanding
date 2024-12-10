@@ -40,7 +40,7 @@ const Header = () => {
    
 
   return (
-    <div className="w-full flex items-center justify-between px-[5%] bg-black text-white z-50">
+    <div className="w-full  flex items-center justify-between px-[5%] bg-black text-white z-50">
       {/* Logo Section */}
       <div className="flex items-center">
         <Link href="/" passHref>
