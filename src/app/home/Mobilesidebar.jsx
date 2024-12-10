@@ -19,6 +19,7 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
         }`} 
       >
         <ul className="flex flex-col gap-10 md:gap-16 py-12 h-full overflow-y-auto">
+        <Link href="/ride" passHref>
           <li className="relative">
             <button
               className="flex justify-center w-full gap-2  text-xl font-semibold text-black font-redhat"
@@ -37,6 +38,8 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
               </ul>
             )}
           </li>
+          </Link>
+          <Link href="/drive" passHref>
           <li className="relative">
             <button
               className="flex justify-center w-full gap-2  text-xl font-semibold text-black font-redhat"
@@ -56,6 +59,7 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
               </ul>
             )}
           </li>
+          </Link>
           <Link href="/intercity" passHref>
           <li className="text-xl font-semibold text-black text-center">Intercity</li>
           </Link>
