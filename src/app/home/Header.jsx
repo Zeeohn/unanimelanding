@@ -7,6 +7,8 @@ import greydropdown from "../../../public/Assets/greydropdown.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import hamburger from "../../../public/Assets/hamburger.svg";
+import { useState } from "react";
+import Sidebar from "./Mobilesidebar";
 
 const Header = () => {
 
@@ -18,14 +20,27 @@ const Header = () => {
     { label: "Intercity", path: "/intercity" },
     { label: "Logistics", path: "/logistics" },
     { label: "Business", path: "/business" },
+   
   ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState("");
 
   // Function to check if the current path matches the nav item's path
   const isActive = (path) => pathname===path
+
+  const toggleMenu = () => {
+    console.log("1")
+    console.log(isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSubMenu = (menu) => {
+    setSubMenuOpen(subMenuOpen === menu ? "" : menu);
+  };
    
 
   return (
-    <div className="container mx-0 w-[100vw] flex items-center justify-between px-[5%] bg-black text-white">
+    <div className="w-full flex items-center justify-between px-[5%] bg-black text-white z-50">
       {/* Logo Section */}
       <div className="flex items-center">
         <Link href="/" passHref>
@@ -74,13 +89,16 @@ const Header = () => {
         </a>
 
         {/* Sign Up Button */}
+       
         <button className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden">
           Sign Up
         </button>
       </div>
-      <div className="lg:hidden ">
-        <Image src={hamburger} alt="hamburger" style={{width:"100%"}} className="max-w-6 sm:max-w-none"/>
+      <div className="lg:hidden relative ">
+        <Image src={hamburger} alt="hamburger" style={{width:"100%"}} className="max-w-6 sm:max-w-none" onClick={()=>toggleMenu()}/>
+        {isMenuOpen && <Sidebar toggleSubMenu={toggleSubMenu} isMenuOpen={isMenuOpen} subMenuOpen={subMenuOpen}/>}
       </div>
+
       </div>
     </div>
   );
