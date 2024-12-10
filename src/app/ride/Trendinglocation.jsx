@@ -33,7 +33,7 @@ const Trendinglocation = () => {
   const [isClient, setIsClient] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalBlogs = 4;
-  const containerRef = useRef(null); 
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,18 +58,21 @@ const Trendinglocation = () => {
   return (
     <div>
       <div className="relative">
-        <Image src={trendingbanner} alt="logistic" className="max-h-[616px]" />
-        <div className="absolute top-0 left-0 max-w-[55%] h-full flex flex-col justify-center pl-[5%] ">
-          <p className="font-redhat font-bold text-[40px] leading-[60px] text-white">
+        <Image
+          src={trendingbanner}
+          alt="logistic"
+          className="h-[50vh] md:max-h-[616px]"
+        />
+        <div className="absolute top-0 left-0 md:max-w-[55%] h-full flex flex-col justify-center pl-[5%] ">
+          <p className="font-redhat font-bold text-[24px] md:text-[40px] md:leading-[60px] text-white">
             Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
-            incididunt
           </p>
-          <p className="font-opensans text-xl text-[#BBBBBB] pt-6">
+          <p className="font-opensans text-base md:text-xl text-[#BBBBBB] pt-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
             eiusmod tempor incididunt
           </p>
           <div className=" flex gap-6 pt-6">
-            <button className=" text-white font-opensans font-semibold text-2xl flex items-center gap-3 rounded-lg underline ">
+            <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
               Browse more trending locations
               <span className="inline-flex items-center text-white">
                 <Image src={whitearrow} alt="btnarrow " width={16}></Image>
@@ -79,20 +82,20 @@ const Trendinglocation = () => {
         </div>
       </div>
 
-      <div className="flex justify-between px-[5%] items-center py-28 ">
-        <div className="max-w-[50%] flex flex-col justify-center ">
-          <p className="font-bold text-4xl font-redhat">
+      <div className="flex justify-between px-[5%] items-center md:py-28 py-12 ">
+        <div className="md:max-w-[50%] flex flex-col justify-center ">
+          <p className="font-bold text-xl md:text-4xl font-redhat">
             What so Trending in your location
           </p>
-          <p className="text-2xl font-semibold pt-4 font-opensans">
+          <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
-          <p className="text-xl  pt-8 font-opensans">
+          <p className="text-base md:text-xl  pt-8 font-opensans">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </p>
-          <p className="text-xl  pt-8 font-opensans">
+          <p className="text-base md:text-xl  pt-8 font-opensans">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
@@ -102,13 +105,14 @@ const Trendinglocation = () => {
           src={trendinglocationmobile}
           alt="driverapp"
           style={{ maxWidth: "45%" }}
+          className="hidden md:block"
         />
       </div>
 
       <div className="bg-[#F3F3F3] px-[5%] pt-14 pb-20">
         <div className="flex justify-between gap-[20%] mb-10">
           <div className=" flex-grow flex gap-4 items-center">
-            <p className="font-bold text-4xl">
+            <p className="font-bold text-xl md:text-4xl">
               Popular destinations in Portugal
             </p>
             <Image src={flag} alt="flag" />
@@ -125,10 +129,10 @@ const Trendinglocation = () => {
         </div>
         {isClient && (
           <Swiper
-            className="h-full w-full px-8"
+            className="h-full md:w-full px-8"
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            slidesPerView={2.5}
+            // spaceBetween={20}
+            // slidesPerView={2.5}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
@@ -142,7 +146,7 @@ const Trendinglocation = () => {
               });
             }}
             breakpoints={{
-              320: { slidesPerView: 1, spaceBetween: 20 },
+              320: { slidesPerView: 2, spaceBetween: 20 },
               480: { slidesPerView: 2, spaceBetween: 30 },
               640: { slidesPerView: 3, spaceBetween: 30 },
               1024: { slidesPerView: 3.5, spaceBetween: 40 },
@@ -154,14 +158,14 @@ const Trendinglocation = () => {
                   <Image
                     src={trendinglocationslider}
                     alt="productimg"
-                    className="max-h-[200px] max-w-[200px] sm:max-h-full sm:max-w-full relative"
-                    style={{ maxHeight: 350 }}
+                    className="max-h-[300px] max-w-[200px] sm:max-h-full sm:max-w-full relative object-cover"
+                    // style={{ maxHeight: 350 }}
                   />
-                  <div className="absolute w-full top-0 left-0 flex flex-col-reverse pt-6 justify-between h-full px-8 pb-10">
-                    <p className="font-bold text-2xl text-white ">
+                  <div className="absolute max-w-[200px] sm:w-full top-0 left-0 flex flex-col-reverse pt-6 justify-between h-full px-2 md:px-8 pb-10">
+                    <p className="font-bold text-base md:text-2xl text-white ">
                       Lorem ipsum dolor sit amet, consectetur
                     </p>
-                    <div className="w-full flex justify-end">
+                    <div className="absolute top-1 -left-1 md:relative w-full flex justify-end">
                       <div className=" h-5 rounded-3xl bg-white p-3 py-4 flex items-center gap-2">
                         <div className="w-3 h-3 rounded-full bg-[#EF1D1D]"></div>
                         <p className="font-opensans text-xl font-bold">
@@ -177,25 +181,26 @@ const Trendinglocation = () => {
         )}
       </div>
 
-      <div className="flex justify-between px-[5%] items-center py-28 ">
+      <div className="flex justify-between px-[5%] items-center md:py-28 py-16">
         <Image
           src={belowtrendingsec}
           alt="driverapp"
           style={{ maxWidth: "45%" }}
+          className="hidden md:block"
         />
-        <div className="max-w-[50%] flex flex-col justify-center ">
-          <p className="font-bold text-4xl font-redhat text-right">
+        <div className="md:max-w-[50%] flex flex-col justify-center ">
+          <p className="font-bold text-xl md:text-4xl font-redhat md:text-right">
             Find the top place to have a best cup of coffee and date yourself ☕
           </p>
-          <p className="text-2xl font-semibold pt-4 font-opensans text-right">
+          <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans md:text-right">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
           </p>
-          <p className="text-xl  pt-8 font-opensans text-right ">
+          <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </p>
-          <p className="text-xl  pt-8 font-opensans text-right">
+          <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
@@ -204,95 +209,39 @@ const Trendinglocation = () => {
       </div>
 
       <div className=" w-full  px-[5%]">
-        <p className="font-redhat font-bold text-4xl pt-28 pb-10">
+        <p className="hidden md:flex font-redhat font-bold text-4xl pt-28 pb-10">
           Read our latest Blogs
+        </p>
+        <p className="md:hidden font-redhat font-bold text-xl pt-0 pb-4">
+          Our Blogs
+        </p>
+        <p className="md:hidden font-redhat text-base  pb-6">
+          Lorem ipsum dolor sit amet, consectetur
         </p>
 
         {/* Other Blogs */}
-        <div className=" flex w-full gap-4 mb-28 min-h-[360px] overflow-hidden" ref={containerRef}>
-          {/* {[1, 2, 3, 4].map((blog, index) => (
+        <div className="flex w-full gap-4 mb-12 md:mb-28 min-h-[360px] overflow-x-auto">
+          {[1, 2, 3, 4].map((blog, index) => (
             <div
               key={index}
-              className="group w-full basis-1/3 relative  hover:basis-1/2 rounded-2xl overflow-hidden  "
+              className="flex-shrink-0 w-[calc(100vw-4rem)] md:w-1/4 relative rounded-2xl overflow-hidden 
+                  hover:w-[calc(100vw-2rem)] md:hover:w-1/2 
+                  transition-all duration-300"
             >
               <Image
                 src={blogsback}
                 alt="blogsback"
-                className="h-full object-center object-cover "
+                className="w-full h-full object-center object-cover"
               />
-              <div className="group absolute w-full h-full top-0 left-0 px-8 pb-14 flex justify-end flex-col">
-                <p className="text-white text-xl font-bold group-hover:text-4xl">
+              <div className="absolute w-full h-full top-0 left-0 px-8 pb-14 flex justify-end flex-col">
+                <p className="text-white text-xl md:group-hover:text-2xl transition-all duration-300 font-bold">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
                 </p>
               </div>
             </div>
-          ))} */}
-
-{/* <Swiper
-  modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-  spaceBetween={10}
-  slidesPerView={3.5}
-  loop={true}
-  speed={800}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-  }}
-  onSlideChangeTransitionEnd={(swiper) => {
-    const allSlides = document.querySelectorAll('.swiper-slide');
-    allSlides.forEach((slide) => slide.classList.remove('large-slide'));
-    const activeIndex = swiper.activeIndex % allSlides.length;
-    allSlides[activeIndex].classList.add('large-slide');
-  }}
->
-  {[...Array(7).keys()].map((_, index) => (
-    <SwiperSlide key={index}>
-      {({ isActive }) => (
-        <div
-          className={`relative transition-transform duration-500 ${
-            isActive ? 'scale-125 z-10' : 'scale-100'
-          }`}
-        >
-          <Image
-            src={blogsback}
-            alt="Slide"
-            className="h-full object-cover w-full"
-          />
-          <div className="absolute w-full h-full top-0 left-0 flex justify-end flex-col px-8 pb-14">
-            <p className="text-white text-xl font-bold group-hover:text-4xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
-            </p>
-          </div>
-        </div>
-      )}
-    </SwiperSlide>
-  ))}
-</Swiper> */}
- {[1, 2, 3, 4,].map((blog, index) => (
-        <div
-          key={index}
-          className={`group relative rounded-2xl overflow-hidden transition-all duration-700 ${
-            index === activeIndex ? "basis-1/2" : "basis-1/6"
-          }`}
-        >
-          <Image
-            src={blogsback}
-            alt="blogsback"
-            className="h-full object-center object-cover"
-          />
-          <div className="absolute w-full h-full top-0 left-0 px-8 pb-14 flex justify-end flex-col">
-            <p
-              className={`text-white font-bold transition-all duration-500 ${index === activeIndex ? "text-4xl" : "text-xl"
-              }`}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
-            </p>
-          </div>
-        </div>
-      ))}
+          ))}
         </div>
       </div>
-
     </div>
   );
 };
