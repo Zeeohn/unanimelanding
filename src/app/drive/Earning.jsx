@@ -1,5 +1,5 @@
 import React from "react";
-import ridegroup from "../../../public/Assets/ridegroup.png";
+import ridegroup from "../../../public/Assets/driveearninggroup.png";
 import Image from "next/image";
 import earningdriver from "../../../public/Assets/earningdriver.png";
 import blackcircletick from "../../../public/Assets/blackcircletick.svg";
@@ -35,7 +35,7 @@ const Earning = () => {
             </div>
           </div>
         </div>
-        <Image src={ridegroup} alt="ridegruop" className="md:block hidden" />
+        <Image src={ridegroup} alt="ridegruop" className="md:block hidden max-w-[45%]" />
         {/* <div className="max-w-[30%] ml-[8%]">
           <p className="text-xl text-[#BBBBBB]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
