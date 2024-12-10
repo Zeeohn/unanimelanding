@@ -26,22 +26,26 @@ import Footer from "../home/Footer";
 
 const Anotherabout = () => {
   return (
-    <div>
+    <div className="container mx-0 w-[100vw]">
       <div className="relative w-full">
-        <Image src={anotheraboutbanner} alt="anotherabout" />
+        <Image
+          src={anotheraboutbanner}
+          alt="anotherabout"
+          className="object-cover h-[70vh] md:h-[90vh]"
+        />
         <div className="absolute w-full top-0 left-0 h-full flex items-center">
-          <div className="max-w-[55%] flex flex-col justify-center mx-auto items-center">
-            <p className="font-bold text-4xl font-opensans text-white text-center">
+          <div className="md:max-w-[55%] flex flex-col justify-center mx-4 md:mx-auto md:items-center">
+            <p className="font-bold text-4xl font-opensans text-white md:text-center">
               About
             </p>
-            <p className="text-xl pt-6 font-semibold text-white text-center ">
+            <p className="text-xl pt-6 md:font-semibold text-white md:text-center ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minimveniam.
             </p>
             <div className="flex gap-2">
               <div className="flex pt-8 items-center">
-                <p className="text-2xl text-white">Rated</p>
+                <p className="md:text-2xl text-xl text-white">Ratings</p>
                 <div className="flex  items-center pl-3 gap-1 ">
                   <Image src={yellowstr} alt="yellostr" height={16} />
                   <p className="text-lg text-white"> 4.8</p>
@@ -58,10 +62,10 @@ const Anotherabout = () => {
         </div>
       </div>
 
-      <div className=" flex justify-between w-full gap-[5%]  py-20 px-[5%]">
-        <div className="w-[55%] flex flex-col justify-center">
-          <p className="font-opensans font-bold text-4xl">More on BOLD</p>
-          <p className="font-opensans text-xl pt-6">
+      <div className=" flex flex-col-reverse md:flex-row justify-between w-full gap-4 md:gap-[5%]  py-20 px-[5%]">
+        <div className="md:w-[55%] flex flex-col justify-center">
+          <p className="font-opensans font-bold text-xl md:text-4xl">More on BOLD</p>
+          <p className="font-opensans text-base md:text-xl pt-6">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -75,7 +79,7 @@ const Anotherabout = () => {
             aliquid ex ea commodi consequatur.
           </p>
         </div>
-        <div className="w-[42%] rounded-2xl overflow-hidden">
+        <div className="md:w-[42%] rounded-2xl overflow-hidden">
           <Image src={taxiimage} alt="promotion" />
         </div>
       </div>
@@ -83,15 +87,15 @@ const Anotherabout = () => {
         <Image src={aboutbigbanner} alt="smallanother" />
       </div>
 
-      <div className=" flex justify-between w-full gap-[5%]  py-20 px-[5%]">
-        <div className="w-[42%] rounded-2xl overflow-hidden">
+      <div className=" flex flex-col md:flex-row justify-between w-full gap-[5%]  py-20 px-[5%]">
+        <div className="md:w-[42%] rounded-2xl overflow-hidden">
           <Image src={smallanotherabout} alt="promotion" />
         </div>
-        <div className="w-[55%] flex flex-col justify-center">
-          <p className="font-opensans font-bold text-4xl">
+        <div className="md:w-[55%] flex flex-col justify-center">
+          <p className="font-opensans font-bold text-xl md:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
-          <p className="font-opensans text-xl pt-6">
+          <p className="font-opensans text-base md:text-xl pt-6">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -105,8 +109,9 @@ const Anotherabout = () => {
       </div>
 
       <div className="px-[5%] bg-[#F3F3F3] pt-10 pb-14">
-        <p className="font-bold text-4xl text-center">Our Blogs</p>
-        <div className=" pt-20">
+        <p className="font-bold text-xl md:text-4xl md:text-center">Our Blogs</p>
+        <p className="text-base md:hidden">Lorem ipsum dolor sit amet, consectetur </p>
+        <div className="pt-8 md:pt-20">
           <Swiper
             className="h-full w-full px-8"
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -162,10 +167,16 @@ const Anotherabout = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <button className="md:hidden font-redhat font-bold text-base flex items-center gap-2 rounded-lg mt-4">
+        Partner with us now
+        <span className="inline-flex items-center">
+          <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+        </span>
+      </button>
         </div>
       </div>
 
-      <button className="  font-redhat font-bold text-4xl flex items-center gap-2 rounded-lg pl-[5%] mt-20 mb-36">
+      <button className="hidden  font-redhat font-bold text-4xl md:flex items-center gap-2 rounded-lg pl-[5%] mt-20 mb-36">
         Partner with us now
         <span className="inline-flex items-center">
           <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
