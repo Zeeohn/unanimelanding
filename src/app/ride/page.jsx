@@ -36,6 +36,7 @@ import Ridesafety from "./ridesafety/page";
 import Trendinglocation from "./Trendinglocation";
 import rideoverview from "../../../public/Assets/rideoverview.png";
 import { useStateContext } from "../Stateproviderwraper";
+import "../swiperslider.css";
 
 const RideDetails = ({ heading, paragraphs, listItems, imageSrc, altText }) => (
   <div className="flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
@@ -166,7 +167,7 @@ const Ridepage = () => {
   return (
     <div className="relative">
       <div
-        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden
+        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden bg-white bg-opacity-[15%]
     "
       >
         <p className="text-xl font-bold text-white ">

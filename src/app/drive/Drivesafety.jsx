@@ -28,6 +28,7 @@ import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import driverhandapp from "../../../public/Assets/driverhandapp.png";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
+import "../swiperslider.css";
 
 const Drivesafety = () => {
   const [isClient, setIsClient] = useState(false);

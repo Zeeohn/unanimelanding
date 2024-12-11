@@ -43,6 +43,7 @@ import Earning from "./Earning";
 import Drivesafety from "./Drivesafety";
 import drivebackground from "../../../public/Assets/drivebackground.png";
 import { useStateContext } from "../Stateproviderwraper";
+import "../swiperslider.css";
 
 const Drivepage = () => {
   const [isClient, setIsClient] = useState(false);
@@ -70,7 +71,7 @@ const Drivepage = () => {
   return (
     <div className="relative">
       <div
-        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden
+        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden bg-white bg-opacity-[15%]
     "
       >
         <p className="text-xl font-bold text-white ">
@@ -421,7 +422,7 @@ const Drivepage = () => {
                       }
                     : true // Use inbuilt navigation for small screens
                 }
-                pagination={!isLargeScreen && { clickable: true }} // Enable pagination for small screens
+              // Enable pagination for small screens
                 onSwiper={(swiper) => {
                   if (isLargeScreen) {
                     setTimeout(() => {
