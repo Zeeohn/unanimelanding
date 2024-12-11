@@ -33,6 +33,20 @@ const Drivesafety = () => {
   const [isClient, setIsClient] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensure Swiper runs client-side
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 768); // Check screen size
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
+  }, []);
+
 
   useEffect(() => {
     setIsClient(true);
@@ -41,18 +55,18 @@ const Drivesafety = () => {
   return (
     <div>
       <div className="relative">
-        <Image src={trendingbanner} alt="logistic" className="max-h-[616px]" />
-        <div className="absolute top-0 right-0 max-w-[55%] h-full flex flex-col justify-center pr-[5%] ">
-          <p className="font-redhat font-bold text-[40px] leading-[60px] text-white">
+        <Image src={trendingbanner} alt="logistic" className="min-h-[480px] max-h-[616px] w-full object-cover object-center"  />
+        <div className="absolute top-0 right-0 md:max-w-[75%] lg:max-w-[55%] h-full flex flex-col justify-center px-[5%] md:px-0 md:pr-[5%] ">
+          <p className="font-redhat font-bold text-4xl lg:text-[40px] lg:leading-[60px] text-white md:pt-6">
             Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
             incididunt
           </p>
-          <p className="font-opensans text-xl text-[#BBBBBB] pt-6">
+          <p className="font-opensans text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
             eiusmod tempor incididunt
           </p>
-          <div className=" flex gap-6 pt-6">
-            <button className=" text-white font-opensans font-semibold text-2xl flex items-center gap-3 rounded-lg underline ">
+          <div className=" flex gap-6 pt-8 md:pt-6">
+            <button className=" text-white font-opensans font-semibold text-base md:text-xl lg:text-2xl flex items-center gap-3 rounded-lg underline ">
               Browse more trending locations
               <span className="inline-flex items-center text-white">
                 <Image src={whitearrow} alt="btnarrow " width={16}></Image>
@@ -62,18 +76,80 @@ const Drivesafety = () => {
         </div>
       </div>
 
-      <div className="pl-[5%] py-20 max-w-[70%]">
-        <p className="font-redhat font-bold text-[40px] leading-[60px] ">
+      <div className="px-[5%] md:pl-[5%] pt-12 pb-8 md:py-16 lg:py-[88px] md:max-w-[70%]">
+        <p className="font-redhat font-bold text-xl md:text-3xl lg:text-[40px] lg:leading-[60px] ">
           Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
           incididunt
         </p>
-        <p className="font-opensans text-xl text-[#777777] pt-6">
+        <p className="font-opensans text-sm md:text-xl text-[#777777] pt-2 md:pt-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
           eiusmod tempor incididunt
         </p>
       </div>
 
-      <div className="flex justify-between mt-10 pb-20 px-[5%]">
+      <div className="flex gap-4 md:gap-6 lg:gap-12 xl:gap-20 flex-wrap justify-between md:mt-10 pb-12 md:pb-16 lg:pb-[88px] px-[5%]">
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+          <Image src={blackstr} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Basic requirements</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]" >
+          <Image src={documents} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Documents</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+          <Image src={blacktick} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Sign up process</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+          <Image src={blackstr} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Basic requirements</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+          <Image src={documents} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Documents</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+          <Image src={blacktick} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Sign up process</p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+          <p className="text-sm sm:text-base md:pt-2">
+            . Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+      </div>
+      {/* <div className="flex justify-between mt-10  px-[5%]">
         <div className="">
           <Image src={blackstr} alt="blackstr" width={48} />
           <p className="font-semibold text-2xl pt-8">Basic requirements</p>
@@ -104,42 +180,10 @@ const Drivesafety = () => {
             . Lorem Ipsum is not simply random text.
           </p>
         </div>
-      </div>
-      <div className="flex justify-between mt-10  px-[5%]">
-        <div className="">
-          <Image src={blackstr} alt="blackstr" width={48} />
-          <p className="font-semibold text-2xl pt-8">Basic requirements</p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-        </div>
-        <div className="">
-          <Image src={documents} alt="blackstr" width={48} />
-          <p className="font-semibold text-2xl pt-8">Documents</p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-        </div>
-        <div className="">
-          <Image src={blacktick} alt="blackstr" width={48} />
-          <p className="font-semibold text-2xl pt-8">Sign up process</p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-base pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-        </div>
-      </div>
+      </div> */}
 
-      <div className="flex px-[5%] py-28 gap-[5%] justify-between">
-        <div className="flex-1 rounded-2xl overflow-hidden max-w-[40%]">
+      <div className="flex lg:flex-row flex-col px-[5%] pt-0 pb-12 lg:pb-28 gap-[3%] xl:gap-[5%] justify-between">
+        <div className="lg:block lg:flex-1 hidden rounded-2xl overflow-hidden max-w-[40%]">
           <Image
             src={Drivesafe}
             alt="earning"
@@ -147,48 +191,54 @@ const Drivesafety = () => {
             className="object-cover object-center"
           />
         </div>
-        <div className="flex-1 px-12 py-16 flex flex-col justify-center">
-          <p className="font-bold text-4xl font-opensans">
+        <div className="flex-1 lg:px-12 lg:py-16 flex flex-col justify-center">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           </p>
-          <div className="flex flex-wrap justify-between pt-4">
-            <div className="flex gap-4 pt-6 w-[45%]">
+          <Image
+            src={Drivesafe}
+            alt="earning"
+            style={{ width: "100%", height: "100%" }}
+            className="object-cover object-center lg:hidden pt-6 md:pt-8"
+          />
+          <div className="flex flex-wrap justify-between pt-2 md:pt-4">
+            <div className="flex gap-4 pt-4 md:pt-6 lg:w-[45%]">
               <div className="text-white text-center bg-[#18C4B8] w-6 px-2 rounded-full h-fit">
                 1
               </div>
               <div className="">
-                <p className="text-xl font-semibold font-opensans text-[#2F313F] ">
+                <p className=" text-sm md:text-base lg:text-xl font-semibold font-opensans text-[#2F313F] ">
                   Pick up the correct rider
                 </p>
-                <p className="font-opensans text-[#121D2B99] pt-2">
+                <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod{" "}
                 </p>
               </div>
             </div>
-            <div className="flex gap-4 pt-6 w-[45%]">
+            <div className="flex gap-4 pt-4 md:pt-6 lg:w-[45%]">
               <div className="text-white text-center bg-[#18C4B8] w-6 px-2 rounded-full h-fit">
                 2
               </div>
               <div className="">
-                <p className="text-xl font-semibold font-opensans text-[#2F313F] ">
-                  Remain professional
+                <p className=" text-sm md:text-base lg:text-xl font-semibold font-opensans text-[#2F313F] ">
+                Remain professional
                 </p>
-                <p className="font-opensans text-[#121D2B99] pt-2">
+                <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod{" "}
                 </p>
               </div>
             </div>
-            <div className="flex gap-4 pt-6 w-[45%]">
+            <div className="flex gap-4 pt-4 md:pt-6 lg:w-[45%]">
               <div className="text-white text-center bg-[#18C4B8] w-6 px-2 rounded-full h-fit">
                 3
               </div>
               <div className="">
-                <p className="text-xl font-semibold font-opensans text-[#2F313F] ">
-                  Focus on your driving
+                <p className=" text-sm md:text-base lg:text-xl font-semibold font-opensans text-[#2F313F] ">
+                Focus on your driving
                 </p>
-                <p className="font-opensans text-[#121D2B99] pt-2">
+                <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod{" "}
                 </p>
@@ -198,12 +248,13 @@ const Drivesafety = () => {
         </div>
       </div>
 
-      <div className="bg-[#F3F3F3] px-[5%] pt-14 pb-20">
-        <div className="flex justify-between gap-[20%] mb-10">
-          <p className="font-bold text-4xl max-w-[50%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
-          </p>
+      <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
+      <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
+        <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod
+        </p>
+        {isLargeScreen && (
           <div className="flex gap-6">
             <button ref={prevRef}>
               <Image src={prevbtn} alt="Previous" />
@@ -212,70 +263,76 @@ const Drivesafety = () => {
               <Image src={nextbtn} alt="Next" />
             </button>
           </div>
-        </div>
-        {isClient && (
-          <Swiper
-            className="h-full w-full px-8"
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            slidesPerView={2.5}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            onSwiper={(swiper) => {
+        )}
+      </div>
+
+      {isClient && (
+        <Swiper
+          className="h-full w-full md:px-8"
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          spaceBetween={50}
+          navigation={
+            isLargeScreen
+              ? {
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                }
+              : true // Use inbuilt navigation for small screens
+          }
+          pagination={!isLargeScreen && { clickable: true }} // Enable pagination for small screens
+          onSwiper={(swiper) => {
+            if (isLargeScreen) {
               setTimeout(() => {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
                 swiper.navigation.init();
                 swiper.navigation.update();
               });
-            }}
-            breakpoints={{
-              320: { slidesPerView: 1, spaceBetween: 20 },
-              480: { slidesPerView: 2, spaceBetween: 30 },
-              640: { slidesPerView: 3, spaceBetween: 30 },
-              1024: { slidesPerView: 2.5, spaceBetween: 20 },
-            }}
-          >
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide key={index}>
-                <div className="px-6 py-8 bg-white rounded-2xl">
-                  <div className="flex justify-between">
-                    <p className="text-[#777777] font-semibold text-xl w-[90%]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed incididunt ut labore et dolore magna aliqua. Lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      incididunt ut labore et dolore magna aliqua.{" "}
-                    </p>
-                    <div className="w-10">
-                      <Image src={doublequotes} alt="doublequoes" />
-                    </div>
+            }
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            480: { slidesPerView: 1, spaceBetween: 30 },
+            640: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 2.5, spaceBetween: 20 },
+          }}
+        >
+          {[...Array(10)].map((_, index) => (
+            <SwiperSlide key={index}>
+              <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl">
+                <div className="flex justify-between">
+                  <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                  <div className="w-10">
+                    <Image src={doublequotes} alt="doublequotes" className="w-3 md:w-8 lg:w-10" />
                   </div>
+                </div>
 
-                  <div className="mt-12 flex gap-6">
-                    <Image src={reviewer} alt="reviewer" width={64} />
-                    <div>
-                      <p className="font-bold text-xl">Carter Carder</p>
-                      <div className="mt-2 flex gap-2 items-center">
-                        <Image src={yellowstr} alt="yellowstr" />
-                        <p className="font-semibold text-xl">
-                          4.8
-                          <span className="font-normal text-[#777777]">
-                            {" "}
-                            (Customer ratings)
-                          </span>
-                        </p>
-                      </div>
+                <div className="mt-4 md:mt-6 lg:mt-12 flex gap-4 md:gap-6">
+                  <Image src={reviewer} alt="reviewer" className="w-11 md:w-16" />
+                  <div>
+                    <p className="font-bold text-sm md:text-xl">Carter Carder</p>
+                    <div className="mt-2 flex gap-2 items-center">
+                      <Image src={yellowstr} alt="yellowstr" className="w-3 md:w-6" />
+                      <p className="font-semibold text-sm md:text-xl">
+                        4.8
+                        <span className="font-normal text-sm md:text-xl text-[#777777]">
+                          {" "}
+                          (Customer ratings)
+                        </span>
+                      </p>
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
-      </div>
-      <div className="px-[5%] pb-28 ">
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
+    </div>
+      {/* <div className="px-[5%] pb-28 ">
         <div className="flex rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="max-w-[55%] flex flex-col justify-center">
             <p className="font-bold text-4xl text-white">
@@ -306,6 +363,35 @@ const Drivesafety = () => {
             alt="driverapp"
             style={{ maxWidth: "50%" }}
           />
+        </div>
+      </div> */}
+      <div className="md:px-[5%]  ">
+        <div className="flex md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
+          <div className="md:max-w-[55%] flex flex-col justify-center py-6">
+            <p className="font-bold text-lg font-opensans md:text-3xl lg:text-4xl text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <p className="font-semibold text-xs md:text-base lg:text-xl pt-2 md:pt-4 lg:pt-8 max-w-[80%] text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+            </p>
+            <div className="flex gap-2">
+              <div>
+                <button className="p-2 md:p-4 text-white font-redhat font-semibold text-sm md:text-lg lg:text-xl flex items-center gap-2 rounded-lg mt-4  md:mt-8 lg:mt-12 border border-white">
+                  Download App
+                  <span className="inline-flex items-center text-white">
+                    <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="w-[35%] md:w-[45%] flex items-end flex-col">
+          <Image
+            src={driverhandapp}
+            alt="driverapp"
+            className=""
+          />
+          </div>
         </div>
       </div>
       <FAQ />
