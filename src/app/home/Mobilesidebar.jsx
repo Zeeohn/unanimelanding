@@ -25,15 +25,15 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
               <span>{subMenuOpen === "ride" ? <Image src={sidebarup} alt="sidebar"/> : <Image src={sidebardown} alt="sidebar"/>}</span>
             </button>
             {subMenuOpen === "ride" && (
+               <Link href="/ride" passHref>
               <ul className="pl-[10%] mt-4 space-y-4 text-[#777777] ">
-                <Link href="/ride" passHref>
             <li  className="cursor-pointer text-sm">Overview</li>
-            </Link>
                 <li  className="cursor-pointer text-sm" onClick={() =>setCurrentPage("trendinglocation")}>Trending locations</li>
                 <li  className="cursor-pointer text-sm" onClick={() =>setCurrentPage("ridesafety")}>Ride safety</li>
                 <li  className="cursor-pointer text-sm">Blogs</li>
                 <li  className="cursor-pointertext-sm">FAQ</li>
               </ul>
+              </Link>
             )}
           </li>
          
@@ -46,16 +46,17 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
               <span>{subMenuOpen === "drive" ?<Image src={sidebarup} alt="sidebar"/> : <Image src={sidebardown} alt="sidebar"/>}</span>
             </button>
             {subMenuOpen === "drive" && (
+               <Link href="/drive" passHref>
               <ul className="pl-[10%] mt-4  space-y-4 text-[#777777]">
-                 <Link href="/drive" passHref>
+                
                 <li  className="cursor-pointer text-sm">Overview</li>
-                </Link>
                 <li  className="cursor-pointer text-sm"  onClick={() => setCurrentPage("howitworks")}>How it works</li>
                 <li  className="cursor-pointer text-sm"  onClick={() => setCurrentPage("earning")}>Earnings</li>
                 <li  className="cursor-pointer text-sm"  onClick={() => setCurrentPage("drivesafety")}>Driver safety</li>
                 <li  className="cursor-pointer text-sm"  onClick={() => setCurrentPage("faq")}>FAQ</li>
                 
               </ul>
+              </Link>
             )}
           </li>
           <Link href="/intercity" passHref>
@@ -76,8 +77,11 @@ const Sidebar = ({toggleSubMenu,isMenuOpen,subMenuOpen}) => {
               <span>{subMenuOpen === "about" ? <Image src={sidebarup} alt="sidebar"/> : <Image src={sidebardown} alt="sidebar"/>}</span>
             </button>
             {subMenuOpen === "about" && (
+               <Link href="/about" passHref>
               <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                <li  className="cursor-pointer text-sm">About us</li>
               </ul>
+              </Link>
             )}
           </li>
           <li  className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto">Signup</li>
