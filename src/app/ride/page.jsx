@@ -35,6 +35,8 @@ import Link from "next/link";
 import Ridesafety from "./ridesafety/page";
 import Trendinglocation from "./Trendinglocation";
 import rideoverview from "../../../public/Assets/rideoverview.png";
+import { useStateContext } from "../Stateproviderwraper";
+import "../swiperslider.css";
 
 const RideDetails = ({ heading, paragraphs, listItems, imageSrc, altText }) => (
   <div className="flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
@@ -138,7 +140,7 @@ const Ridepage = () => {
   const [isClient, setIsClient] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [currentpage, setcurrentpage] = useState("overview");
+  const { currentpage ,setCurrentPage} = useStateContext(); 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [boldType, setBoldType] = useState("share");
 
@@ -165,7 +167,7 @@ const Ridepage = () => {
   return (
     <div className="relative">
       <div
-        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-50 hidden
+        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden bg-white bg-opacity-[15%]
     "
       >
         <p className="text-xl font-bold text-white ">
@@ -177,7 +179,7 @@ const Ridepage = () => {
               className={`text-lg text-[#888888] ${
                 currentpage === "overview" ? "text-white font-bold" : ""
               }  hover:text-white hover:font-bold`}
-              onClick={() => setcurrentpage("overview")}
+              onClick={() =>setCurrentPage("overview")}
             >
               Overview
             </p>
@@ -186,7 +188,7 @@ const Ridepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "trendinglocation" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("trendinglocation")}
+            onClick={() =>setCurrentPage("trendinglocation")}
           >
             Trending locations
           </p>
@@ -194,7 +196,7 @@ const Ridepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "ridesafety" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("ridesafety")}
+            onClick={() =>setCurrentPage("ridesafety")}
           >
             Ride safety
           </p>

@@ -1,7 +1,10 @@
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./home/Header";
 import Footer from "./home/Footer";
+import React from "react";
+import StateProvider from "./Stateproviderwraper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,14 +23,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col max-h-screen`}
       >
-        <Header />
+        <StateProvider>
+        <Header/>
+        <div className="mt-[42px] sm:mt-[88px]">
         {children}
+        </div>
         <Footer />
+        </StateProvider>
       </body>
     </html>
   );

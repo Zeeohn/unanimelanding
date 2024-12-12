@@ -32,6 +32,7 @@ import "swiper/css/scrollbar";
 import { useRef, useEffect, useState } from "react";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
+import "../swiperslider.css";
 
 const Intercitypage = () => {
   const [isClient, setIsClient] = useState(false);

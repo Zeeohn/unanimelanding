@@ -42,12 +42,15 @@ import Howitworks from "./Howitworks";
 import Earning from "./Earning";
 import Drivesafety from "./Drivesafety";
 import drivebackground from "../../../public/Assets/drivebackground.png";
+import { useStateContext } from "../Stateproviderwraper";
+import "../swiperslider.css";
 
 const Drivepage = () => {
   const [isClient, setIsClient] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [currentpage, setcurrentpage] = useState("overview");
+  const { currentpage , setCurrentPage} = useStateContext(); 
+  console.log(currentpage);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -68,7 +71,7 @@ const Drivepage = () => {
   return (
     <div className="relative">
       <div
-        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-50 hidden
+        className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-40 hidden bg-white bg-opacity-[15%]
     "
       >
         <p className="text-xl font-bold text-white ">
@@ -79,7 +82,7 @@ const Drivepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "overview" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("overview")}
+            onClick={() => setCurrentPage("overview")}
           >
             Overview
           </p>
@@ -87,7 +90,7 @@ const Drivepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "howitworks" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("howitworks")}
+            onClick={() => setCurrentPage("howitworks")}
           >
             How it works
           </p>
@@ -95,7 +98,7 @@ const Drivepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "earning" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("earning")}
+            onClick={() => setCurrentPage("earning")}
           >
             Earnings
           </p>
@@ -103,7 +106,7 @@ const Drivepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "drivesafety" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("drivesafety")}
+            onClick={() => setCurrentPage("drivesafety")}
           >
             Driver safety
           </p>
@@ -111,7 +114,7 @@ const Drivepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "faq" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold`}
-            onClick={() => setcurrentpage("faq")}
+            onClick={() => setCurrentPage("faq")}
           >
             FAQ
           </p>
@@ -217,7 +220,7 @@ const Drivepage = () => {
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Flexible work
                 </p>
-                <p className="text-[#777777]  text-smmd:text-xl lg:pt-8">
+                <p className="text-[#777777]  text-sm md:text-xl lg:pt-8">
                   Say goodbye to rigid schedules. Take charge of your time and
                   be your own boss with BOLD. Whether it’s a few hours a day or
                   a full-time hustle, you decide when and how you work.
@@ -235,7 +238,7 @@ const Drivepage = () => {
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Smooth payouts
                 </p>
-                <p className="text-[#777777]  text-smmd:text-xl lg:pt-8">
+                <p className="text-[#777777]  text-sm md:text-xl lg:pt-8">
                   Get paid seamlessly and on time. BOLD ensures hassle-free
                   payouts so that you can access your earnings easily.
                 </p>
@@ -352,7 +355,6 @@ const Drivepage = () => {
               </p>
               <p className="font-semibold text-sm md:text-xl pt-2 sm:pt-4 md:pt-6 lg:pt-8 max-w-[80%]">
               Drive on your terms and earn more with every trip. Whether it’s passengers or packages, our platform lets you maximize your earnings across all our services. 
-
               </p>
               <div className="flex gap-2">
                 <div>
