@@ -24,7 +24,7 @@ const Ridesafety = () => {
           We look out for our riders because your safety drives us
           </p>
           <p className="font-opensans md:text-xl text-base text-[#BBBBBB] pt-6">
-          Bold is a place where everyone feels at home. We prioritize respect and safety by setting high standards from your first ride. With real human support available 24/7, we're by your side on every ride. 
+          Bold is a place where everyone feels at home. We prioritize respect and safety by setting high standards from your first ride. With real human support available 24/7, we&apos;re by your side on every ride. 
           </p>
           <div className=" flex gap-6 pt-6">
             <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">

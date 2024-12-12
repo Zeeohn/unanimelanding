@@ -139,7 +139,7 @@ const Howitworks = () => {
       </div>
 
       <div className="px-[5%] pt-12 md:pt-16 lg:pt-20 ">
-        <p className="font-opensans font-bold text-base md:text-2xl lg:text-4xl">Got Questions? We've Got Answers</p>
+        <p className="font-opensans font-bold text-base md:text-2xl lg:text-4xl">Got Questions? We&apos;ve Got Answers</p>
         <div className=" flex flex-col md:flex-row gap-4 md:gap-[5%] pt-6 md:py-10">
           <div className="py-5 px-3 md:px-6 md:py-10 rounded-2xl border border-[#DDDDDD] md:w-1/2">
             <p className="font-redhat font-bold  text-sm md:text-base lg:text-xl">

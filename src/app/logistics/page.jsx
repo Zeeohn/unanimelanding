@@ -260,7 +260,7 @@ const Logisticspage = () => {
                 Unlock the Power of Fast Deliveries. Download Our App Today!
                 </p>
                 <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-                Experience hassle-free deliveries with just a tap. Our app gives you access to fast, reliable, and secure shipping solutions, all in one place. Whether you’re sending a package across town or the country, we've got you covered. Download the BOLD app and unlock the power of seamless deliveries at your fingertips.
+                Experience hassle-free deliveries with just a tap. Our app gives you access to fast, reliable, and secure shipping solutions, all in one place. Whether you’re sending a package across town or the country, we&apos;ve got you covered. Download the BOLD app and unlock the power of seamless deliveries at your fingertips.
                 </p>
                 <div className="flex gap-2 flex-row justify-between mb-3">
                   <div>

@@ -69,7 +69,7 @@ const Businesspage = () => {
     },
     {
       index: 2,
-      heading: "Maximize Your Fleet's Potential with Bold!",
+      heading: "Maximize Your Fleet&apos;s Potential with Bold!",
       cta: "Sign Up Now",      
       title1: "Made for Your Fleet’s Success!",      
       title2: "Register on the Bold App Maximize your fleet’s earning potential.",      
@@ -105,7 +105,7 @@ const Businesspage = () => {
                   <span className="font-bold">Bold Business:</span> Transforming mobility and logistics for business success
                   </p>
                   <p className="font-opensans text-base md:text-xl  text-[#777777] pt-6">
-                  <span className="font-bold">BOLD</span> revolutionizes business mobility with reliable transportation and package delivery solutions. Whether you're a small business or a large corporation, we provide the tools to help you grow. 
+                  <span className="font-bold">BOLD</span> revolutionizes business mobility with reliable transportation and package delivery solutions. Whether you&apos;re a small business or a large corporation, we provide the tools to help you grow. 
 <br /><br />
 Fleet owners can maximize earnings by integrating their vehicles into the <span className="font-bold">BOLD</span> platform, ensuring consistent revenue and supporting local and international operations.
 
@@ -157,7 +157,7 @@ Fleet owners can maximize earnings by integrating their vehicles into the <span 
                 <p className="font-opensans font-bold text-xl md:text-4xl pt-4">
                 <span className="text-[#18C4B8]">
                     Maximize{" "}
-                  </span>{" "} Your Event's Reach with Bold
+                  </span>{" "} Your Event&apos;s Reach with Bold
                 </p>
                 <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
                 Sell your concert or event tickets directly on the Bold app and connect with a larger audience to make your event unforgettable.{" "}
@@ -215,7 +215,7 @@ With <span className="font-bold">BOLD</span>, you can easily tap into the same o
               <span className="font-bold">Start Getting Noticed:</span> Promote Your Business with Bold
               </p>
               <p className="text-xl  text-center pt-6">
-              <span className="font-bold">Unlock Your Business’s Potential with Bold</span> and start reaching more customers today! With our powerful advertising platform, you’ll easily expand your reach, enhance visibility, and drive growth. Whether you're a small business or a large corporation, Bold has the tools to take your brand to the next level. Don’t miss out—get started now and watch your business thrive!
+              <span className="font-bold">Unlock Your Business’s Potential with Bold</span> and start reaching more customers today! With our powerful advertising platform, you’ll easily expand your reach, enhance visibility, and drive growth. Whether you&apos;re a small business or a large corporation, Bold has the tools to take your brand to the next level. Don’t miss out—get started now and watch your business thrive!
 
               </p>
             </div>

@@ -229,7 +229,7 @@ const Trendinglocation = () => {
             special.
           </p>
           <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right ">
-            Whether you're looking for a quiet corner to unwind or a peaceful
+            Whether you&apos;re looking for a quiet corner to unwind or a peaceful
             spot to reflect, these cafés offer the perfect environment to savor
             every moment.
             <br />

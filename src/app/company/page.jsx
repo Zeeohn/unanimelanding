@@ -162,7 +162,7 @@ Our goal is to ensure that every interaction is seamless, so your experience wit
         </div>
         <div className="flex flex-col gap-4 justify-center md:max-w-[50%]">
           <p className="font-opensans mt-4 md:mt-0 text-base md:text-xl text-[#777777]">
-          At Bold, we provide exceptional service for businesses of all sizes. Whether you're a small e-commerce store or a larger operation, we ensure smooth operations from shipping to logistics with efficiency and care.
+          At Bold, we provide exceptional service for businesses of all sizes. Whether you&apos;re a small e-commerce store or a larger operation, we ensure smooth operations from shipping to logistics with efficiency and care.
           </p>
         </div>
       </div>
@@ -211,7 +211,7 @@ Our goal is to ensure that every interaction is seamless, so your experience wit
         Elevate Your Business with Bold’s All-In-One Solution
         </p>
         <p className="font-opensans text-base md:text-xl pt-4 md:text-center ">
-        At Bold, we’re here to simplify your business operations and fuel growth. Whether you're a small e-commerce store or a large enterprise, we offer the tools you need—shipping solutions, logistics, fleet management, and advertising—to keep things running smoothly. <br /> <br />
+        At Bold, we’re here to simplify your business operations and fuel growth. Whether you&apos;re a small e-commerce store or a large enterprise, we offer the tools you need—shipping solutions, logistics, fleet management, and advertising—to keep things running smoothly. <br /> <br />
 
 With Bold, you can easily manage your operations, reach more customers, and focus on what matters most.
 

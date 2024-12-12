@@ -186,7 +186,7 @@ const Drivepage = () => {
               How it works
             </p>
             <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-              You're in control with the BOLD app. Drive anytime you want, day
+              You&apos;re in control with the BOLD app. Drive anytime you want, day
               or night.
             </p>
             <div className="mt-4 md:mt-8 lg:mt-14 xl:mt-20 flex flex-col md:flex-row gap-4 justify-between md:gap-[4%]">

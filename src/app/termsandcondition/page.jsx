@@ -69,7 +69,7 @@ const Termsandcondition = () => {
           <p>
             The Services provided by Bold are designed to offer seamless access
             to transportation, logistics, and other related services through
-            Bold’s mobile applications or websites. By using Bold's platform,
+            Bold’s mobile applications or websites. By using Bold&apos;s platform,
             users can schedule rides, book deliveries, and interact with
             independent third-party providers, including drivers and logistics
             professionals who work with Bold. Unless otherwise specified, these
@@ -121,7 +121,7 @@ const Termsandcondition = () => {
             <span className="font-bold">
               Provision of the Services
             </span> <br /> <br />
-            You acknowledge that Bold's Services may be accessed through various
+            You acknowledge that Bold&apos;s Services may be accessed through various
             branded platforms or apps, each designed for specific transportation
             or logistics needs. Bold works with third-party providers, including
             fleet operators and independent contractors, who fulfill requests
@@ -158,7 +158,7 @@ const Termsandcondition = () => {
             Bold owns all rights related to the Services, including the
             platform, content, and branding. These Terms grant you a limited
             license to use the Services but do not transfer ownership or any
-            rights to Bold’s intellectual property. Unauthorized use of Bold's
+            rights to Bold’s intellectual property. Unauthorized use of Bold&apos;s
             trademarks or service names is prohibited.
           </p>
           <br />
@@ -329,7 +329,7 @@ const Termsandcondition = () => {
             <br />
             For the purposes of this section, all references to Bold shall mean
             Bold and its affiliates and subsidiaries. The Services are provided
-            "as is" and "as available." Bold disclaims all representations and
+            &quot;as is&quot; and &quot;as available.&quot; Bold disclaims all representations and
             warranties, express, implied, or statutory, not expressly set out in
             these Terms, including implied warranties of merchantability,
             fitness for a particular purpose, and non-infringement. Bold does
@@ -435,7 +435,7 @@ const Termsandcondition = () => {
             Services, email to the address linked to your Account, or by sending
             written communication to your address as listed in your Account. You
             may provide notice to Bold by sending written communication to our
-            address at [Insert Bold's Address]. <br />
+            address at [Insert Bold&apos;s Address]. <br />
             <br />
             <span className="font-bold">General</span>
             <br />

@@ -70,7 +70,7 @@ const Earning = () => {
       <div className="px-[5%] pt-16 pb-12 md:pt-16 md:pb-20 lg:pt-20 lg:pb-28  flex md:flex-row gap-2 flex-col justify-between ">
         <div className="md:max-w-[45%]">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            How BOLDS's earning work
+            How BOLDS&apos;s earning work
           </p>
         </div>
         <div className="flex flex-col gap-4 justify-center md:max-w-[50%]">
