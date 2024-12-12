@@ -53,6 +53,33 @@ const Trendinglocation = () => {
     }
   }, [activeIndex, totalBlogs]);
 
+  const mustVisit = [
+    {
+      index: 1,
+      location: "Paris, France",
+      description:
+        "Experience the charm of the City of Lights with iconic spots like the Eiffel Tower, Louvre Museum, and vibrant cafes like Café de Flore.",
+    },
+    {
+      index: 2,
+      location: "Tokyo, Japan",
+      description:
+        "A blend of modern innovation and rich culture—visit bustling Shibuya, historic Asakusa, and the serene gardens of Meiji Shrine.",
+    },
+    {
+      index: 3,
+      location: "Cape Town, South Africa",
+      description:
+        "From the breathtaking Table Mountain to the lively V&A Waterfront, Cape Town offers stunning views and unforgettable experiences.",
+    },
+    {
+      index: 4,
+      location: "New York City, USA",
+      description:
+        "Explore the energy of the Big Apple with attractions like Times Square, Central Park, and the Statue of Liberty.",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
@@ -61,19 +88,25 @@ const Trendinglocation = () => {
         <Image
           src={trendingbanner}
           alt="logistic"
-          className="h-[50vh] md:max-h-[616px]"
+          className="h-[70vh] md:h-[90vh]"
         />
         <div className="absolute top-0 left-0 md:max-w-[55%] h-full flex flex-col justify-center pl-[5%] ">
           <p className="font-redhat font-bold text-[24px] md:text-[40px] md:leading-[60px] text-white">
-            Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
+            Ditch the Boredom, Dive into Fun with BOLD!
           </p>
           <p className="font-opensans text-base md:text-xl text-[#BBBBBB] pt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-            eiusmod tempor incididunt
+            Turn ordinary moments into unforgettable adventures with{" "}
+            <span className="font-bold">BOLD</span>. Discover trending events,
+            book your tickets, and travel affordably by sharing a ride with
+            friends or choosing eco-friendly options for a greener journey.{" "}
+            <br />
+            With reliable drivers, transparent pricing, and seamless travel,{" "}
+            <span className="font-bold">BOLD</span> makes every trip as exciting
+            as the destination.
           </p>
           <div className=" flex gap-6 pt-6">
             <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
-              Browse more trending locations
+              Explore Trending Locations On Bold Now
               <span className="inline-flex items-center text-white">
                 <Image src={whitearrow} alt="btnarrow " width={16}></Image>
               </span>
@@ -85,20 +118,16 @@ const Trendinglocation = () => {
       <div className="flex justify-between px-[5%] items-center md:py-28 py-12 ">
         <div className="md:max-w-[50%] flex flex-col justify-center ">
           <p className="font-bold text-xl md:text-4xl font-redhat">
-            What so Trending in your location
+            What’s Trending Around You?
           </p>
           <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            Looking for the best spots in town? Bold’s got you covered! From
+            cozy cafes and must-visit restaurants to popular tourist attractions
+            and exciting event venues, we’ll help you find all the buzz-worthy
+            places.
           </p>
           <p className="text-base md:text-xl  pt-8 font-opensans">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
-          <p className="text-base md:text-xl  pt-8 font-opensans">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Ready to explore? Let’s make your next outing unforgettable!
           </p>
         </div>
         <Image
@@ -113,7 +142,7 @@ const Trendinglocation = () => {
         <div className="flex justify-between gap-[20%] mb-10">
           <div className=" flex-grow flex gap-4 items-center">
             <p className="font-bold text-xl md:text-4xl">
-              Popular destinations in Portugal
+              Must-Visit Destinations Near You
             </p>
             <Image src={flag} alt="flag" />
             <Image src={belowarrowtrending} alt="belowarrow" className="pt-6" />
@@ -152,8 +181,8 @@ const Trendinglocation = () => {
               1024: { slidesPerView: 3.5, spaceBetween: 40 },
             }}
           >
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide key={index}>
+            {mustVisit.map((must) => (
+              <SwiperSlide key={must.index}>
                 <div className="relative rounded-2xl overflow-hidden">
                   <Image
                     src={trendinglocationslider}
@@ -161,15 +190,15 @@ const Trendinglocation = () => {
                     className="max-h-[300px] max-w-[200px] sm:max-h-full sm:max-w-full relative object-cover"
                     // style={{ maxHeight: 350 }}
                   />
-                  <div className="absolute max-w-[200px] sm:w-full top-0 left-0 flex flex-col-reverse pt-6 justify-between h-full px-2 md:px-8 pb-10">
-                    <p className="font-bold text-base md:text-2xl text-white ">
-                      Lorem ipsum dolor sit amet, consectetur
+                  <div className="absolute max-w-[200px] sm:w-full top-0 flex flex-col-reverse pt-6 justify-between h-full px-2  pb-10">
+                    <p className="font-bold text-sm md:text-xl text-white ">
+                      {must.description}
                     </p>
-                    <div className="absolute top-1 -left-1 md:relative w-full flex justify-end">
+                    <div className="absolute top-1 -left-1  md:relative w-full flex justify-end">
                       <div className=" h-5 rounded-3xl bg-white p-3 py-4 flex items-center gap-2">
                         <div className="w-3 h-3 rounded-full bg-[#EF1D1D]"></div>
-                        <p className="font-opensans text-xl font-bold">
-                          Lisbon
+                        <p className="font-opensans text-sm md:text-xl font-bold">
+                          {must.location}
                         </p>
                       </div>
                     </div>
@@ -190,34 +219,44 @@ const Trendinglocation = () => {
         />
         <div className="md:max-w-[50%] flex flex-col justify-center ">
           <p className="font-bold text-xl md:text-4xl font-redhat md:text-right">
-            Find the top place to have a best cup of coffee and date yourself ☕
+            Find Your Perfect Coffee Spot ☕
           </p>
           <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans md:text-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+            Sometimes, the best way to recharge is with a great cup of coffee
+            and some time to yourself. <span className="font-bold">BOLD</span>{" "}
+            helps you discover cozy cafés where you can enjoy not just amazing
+            coffee, but also delicious pastries that make your me-time extra
+            special.
           </p>
           <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Whether you're looking for a quiet corner to unwind or a peaceful
+            spot to reflect, these cafés offer the perfect environment to savor
+            every moment.
+            <br />
+            Take a deep breath, sip slowly, and enjoy the simple joy of spending
+            time with yourself. You’ve earned it.
           </p>
-          <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
-          </p>
+          <div className=" flex justify-end gap-6 pt-6">
+            <button className="font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
+              Find Your Perfect Café with Bold Today!
+              <span className="inline-flex ">
+                <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
       <div className=" w-full  px-[5%]">
         <p className="hidden md:flex font-redhat font-bold text-4xl pt-28 pb-10">
-          Read our latest Blogs
+          Check Out Our Latest Blogs
         </p>
         <p className="md:hidden font-redhat font-bold text-xl pt-0 pb-4">
-          Our Blogs
+          Check Out Our Latest Blogs
         </p>
-        <p className="md:hidden font-redhat text-base  pb-6">
+        {/* <p className="md:hidden font-redhat text-base  pb-6">
           Lorem ipsum dolor sit amet, consectetur
-        </p>
+        </p> */}
 
         {/* Other Blogs */}
         <div className="flex w-full gap-4 mb-12 md:mb-28 min-h-[360px] overflow-x-auto">

@@ -131,7 +131,7 @@ const Drivepage = () => {
           <div className="bg-[url('/Assets/drivebackground.png')] bg-cover py-16 md:pt-24 md:pb-14 px-[5%] flex">
             <div className=" md:max-w-[50%]">
               <p className="font-bold text-4xl lg:text-[40px] lg:leading-[60px] font-redhat text-white">
-                Lorem ipsum amet, consectetur adipiscing elit dolor
+                Drive on your terms and make money with BOLD!
               </p>
               <div className="flex flex-wrap justify-between py-8 md:pt-4 md:pb-10">
                 <div className="flex gap-4 items-center pt-6">
@@ -141,7 +141,7 @@ const Drivepage = () => {
                     className="w-4 sm:w-6"
                   />
                   <p className=" text-base md:text-lg text-white">
-                    Lorem ipsum dolor sit amet
+                    No need to own a car
                   </p>
                 </div>
                 <div className="flex gap-4 items-center pt-6">
@@ -151,7 +151,7 @@ const Drivepage = () => {
                     className="w-4 sm:w-6"
                   />
                   <p className="text-base md:text-lg text-white">
-                    Lorem ipsum dolor sit amet
+                    Flexible hours
                   </p>
                 </div>
                 <div className="flex gap-4 items-center pt-6">
@@ -161,13 +161,13 @@ const Drivepage = () => {
                     className="w-4 sm:w-6"
                   />
                   <p className="text-base md:text-lg text-white">
-                    Lorem ipsum dolor sit amet
+                    24/7 in‑app safety and support
                   </p>
                 </div>
               </div>
 
               <button className=" text-sm md:text-xl font-semibold bg-white py-4 px-6 rounded-lg lg:mt-10 gap-2 md:mt-7 flex items-center">
-                Become a partner
+                Become a partner today
                 <span className="inline-flex items-center">
                   <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
                 </span>
@@ -186,8 +186,8 @@ const Drivepage = () => {
               How it works
             </p>
             <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              You're in control with the BOLD app. Drive anytime you want, day
+              or night.
             </p>
             <div className="mt-4 md:mt-8 lg:mt-14 xl:mt-20 flex flex-col md:flex-row gap-4 justify-between md:gap-[4%]">
               <div
@@ -203,8 +203,9 @@ const Drivepage = () => {
                   Higher earnings
                 </p>
                 <p className="text-[#777777]  text-smmd:text-xl lg:pt-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
+                  Maximise your income with competitive rates, bonuses, and
+                  peak-hour incentives. Drive smarter, earn more, and unlock the
+                  potential of your hustle.
                 </p>
               </div>
               <div
@@ -219,9 +220,10 @@ const Drivepage = () => {
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Flexible work
                 </p>
-                <p className="text-[#777777]  text-smmd:text-xl lg:pt-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
+                <p className="text-[#777777]  text-sm md:text-xl lg:pt-8">
+                  Say goodbye to rigid schedules. Take charge of your time and
+                  be your own boss with BOLD. Whether it’s a few hours a day or
+                  a full-time hustle, you decide when and how you work.
                 </p>
               </div>
               <div
@@ -236,9 +238,9 @@ const Drivepage = () => {
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Smooth payouts
                 </p>
-                <p className="text-[#777777]  text-smmd:text-xl lg:pt-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
+                <p className="text-[#777777]  text-sm md:text-xl lg:pt-8">
+                  Get paid seamlessly and on time. BOLD ensures hassle-free
+                  payouts so that you can access your earnings easily.
                 </p>
               </div>
             </div>
@@ -298,45 +300,38 @@ const Drivepage = () => {
             </div>
             <div className="">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.
+              Earn more money from BOLD
               </p>
-              <div className="flex gap-2 md:gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
-                <div className="w-[6%] md:w-[5%]">
-                  <Image src={one} alt="one" className="w-full" />
+              <div className="flex gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
+                <div className="">
+                  <Image src={one} alt="one" width={32} height={32} />
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Packages</p>
                   <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.{" "}
+                  Boost your earnings by delivering packages quickly and securely. From e-commerce orders to personal deliveries, turn every trip into a money-making opportunity.{" "}
                   </p>
                 </div>
               </div>
-              <div className="flex gap-2 md:gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
-                <div className="w-[6%] md:w-[5%]">
-                  <Image src={two} alt="one" className="w-full" />
+              <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+                <div className="">
+                  <Image src={two} alt="one" width={32} height={32} />
                 </div>
                 <div className="">
-                  <p className="font-bold text-base md:text-xl">Intercity</p>
+                  <p className="font-bold text-base md:text-xl">Boldmiles</p>
                   <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.{" "}
+                  Drive between cities and boost your earnings on longer trips with BOLD Intercity feature.{" "}
                   </p>
                 </div>
               </div>
-              <div className="flex gap-2 md:gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
-                <div className="w-[6%] md:w-[5%]">
-                  <Image src={three} alt="one" className="w-full" />
+              <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+                <div className="">
+                  <Image src={three} alt="one" width={32} height={32} />
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Jumpstart</p>
                   <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.{" "}
+                  Assist stranded drivers and make money by providing quick, reliable jumpstart services. Turn car troubles into your next earning opportunity. {" "}
                   </p>
                 </div>
               </div>
@@ -344,30 +339,27 @@ const Drivepage = () => {
           </div>
 
           <Blogsec
-            uppertext={
-              "Drive with care, arrive anywhere – your safety is our priority!"
+            heading={
+              "Your safety drives everything we do"
             }
-            belowtext={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad minim veniam, quis."
+            text={
+              "Your well-being and safety matter. That’s why we’ve designed an experience that keeps you comfortable whether driving at night or during the day."
             }
-            btntext={"Read our details on safety concerns"}
+            cta={"Learn More"}
           />
 
           <div className="flex justify-between px-[5%] items-center py-12 md:py-20 lg:py-28 ">
             <div className="md:max-w-[50%] lg:max-w-[50%] flex flex-col justify-center">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+              Earn money and drive with confidence
               </p>
               <p className="font-semibold text-sm md:text-xl pt-2 sm:pt-4 md:pt-6 lg:pt-8 max-w-[80%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                ad minim veniam, quis.
+              Drive on your terms and earn more with every trip. Whether it’s passengers or packages, our platform lets you maximize your earnings across all our services. 
               </p>
               <div className="flex gap-2">
                 <div>
                   <button className="p-4 text-white bg-black font-redhat font-semibold text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
-                    Become a partner{" "}
+                    Become a partner today{" "}
                     <span className="inline-flex items-center text-white">
                       <Image
                         src={whitearrow}
@@ -394,8 +386,7 @@ const Drivepage = () => {
           <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
             <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
+               Reviews
               </p>
               {isLargeScreen && (
                 <div className="flex gap-6">
@@ -422,7 +413,7 @@ const Drivepage = () => {
                       }
                     : true // Use inbuilt navigation for small screens
                 }
-              // Enable pagination for small screens
+                pagination={!isLargeScreen && { clickable: true }} // Enable pagination for small screens
                 onSwiper={(swiper) => {
                   if (isLargeScreen) {
                     setTimeout(() => {

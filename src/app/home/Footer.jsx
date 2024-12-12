@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="container mx-0 w-[100vw]">
+    <div className="">
         <div className="px-[5%] pt-8 pb-8  md:pb-20 lg:pb-28 bg-[#111111] flex flex-col md:flex-row justify-between gap-6 xl:gap-6 ">
             <div className="md:max-w-[22%]">
                 <Image src={logo} alt="logo" className="w-20 sm:w-40"></Image>

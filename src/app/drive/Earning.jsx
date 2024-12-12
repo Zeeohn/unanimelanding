@@ -12,15 +12,14 @@ const Earning = () => {
       <div className="py-16 md:pt-24  md:pb-20 flex bg-[#090909] px-[5%] justify-between ">
         <div className="md:max-w-[50%] xl:max-w-[35%]">
           <p className="text-4xl lg:text-[40px] lg:leading-[60px] font-bold text-white">
-            Lorem ipsum amet, consectetur adipiscing elit dolor
+            Earnings you can rely on!
           </p>
           <p className="text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-            eiusmod tempor incididunt
+          We know you’re wondering how much you can make driving for BOLD. And all we can say is A LOT! Your earnings grow with every ride. It all depends on when, where, and how often you drive.
           </p>
           <div className="flex gap-4 md:gap-8 items-center pt-14">
             <button className="font-semibold bg-[#FFFFFF] py-3 px-5 md:py-4 md:px-6 rounded-lg flex items-center gap-2 text-sm md:text-xl ">
-              Download App
+              Start earning now
                <span className="inline-flex items-center text-white">
                 <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
               </span>
@@ -71,7 +70,7 @@ const Earning = () => {
       <div className="px-[5%] pt-16 pb-12 md:pt-16 md:pb-20 lg:pt-20 lg:pb-28  flex md:flex-row gap-2 flex-col justify-between ">
         <div className="md:max-w-[45%]">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            How BOLDS's earning work
           </p>
         </div>
         <div className="flex flex-col gap-4 justify-center md:max-w-[50%]">
@@ -87,34 +86,34 @@ const Earning = () => {
         <div className="pt-3 pb-6 md:py-8 border-t-2 border-black flex-1">
           <div className="flex gap-3 items-center">
             <div className="w-3 h-3 bg-black rounded-full"></div>
-            <p className="font-opensans text-sm">Driver engagement</p>
+            <p className="font-opensans text-sm">Surge</p>
           </div>
-          <p className="text-xl md:text-3xl lg:text-[40px] font-bold font-opensans lg:leading-[54px] pt-2 md:pt-6">
-            2215
+          <p className="font-opensans text-sm md:text-xl pt-[14px] md:pt-6 lg:pt-8 font-normal">
+          Earn more when there’s a high demand from passengers 
           </p>
         </div>
         <div className="pt-3 pb-6 md:py-8 border-t-2 border-black flex-1">
           <div className="flex gap-3 items-center ">
             <div className="w-3 h-3 bg-black rounded-full"></div>
-            <p className="font-opensans text-sm">Average customers</p>
+            <p className="font-opensans text-sm">Standard Fare</p>
           </div>
-          <p className="text-xl md:text-3xl lg:text-[40px] font-bold font-opensans lg:leading-[54px]  pt-2 md:pt-6">
+          {/* <p className="text-xl md:text-3xl lg:text-[40px] font-bold font-opensans lg:leading-[54px]  pt-2 md:pt-6">
           210k +
-          </p>
+          </p> */}
           <p className="font-opensans text-sm md:text-xl pt-[14px] md:pt-6 lg:pt-8 font-normal">
-            Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipiscing
+          Receive a complete and standard fare each time you complete a trip
           </p>
         </div>
         <div className="pt-3 pb-6 md:py-8 border-t-2 border-black flex-1">
           <div className="flex gap-3 items-center ">
             <div className="w-3 h-3 bg-black rounded-full"></div>
-            <p className="font-opensans text-sm">Impact on earnings</p>
+            <p className="font-opensans text-sm">Boost</p>
           </div>
-          <p className="text-xl md:text-3xl lg:text-[40px] font-bold font-opensans lg:leading-[54px]  pt-2 md:pt-6">
+          {/* <p className="text-xl md:text-3xl lg:text-[40px] font-bold font-opensans lg:leading-[54px]  pt-2 md:pt-6">
           82%
-          </p>
+          </p> */}
           <p className="font-opensans text-sm md:text-xl pt-[14px] md:pt-6 lg:pt-8 font-normal">
-            Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipiscing
+          Enjoy in-app bonuses when you hit certain driving milestones.
           </p>
         </div>
       </div>
@@ -145,24 +144,24 @@ const Earning = () => {
           <div className="flex flex-wrap justify-between pt-4">
             <div className="flex gap-4 items-center pt-2 md:pt-6">
               <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
-              <p className="text-base md:text-lg ">Lorem ipsum dolor sit amet</p>
+              <p className="text-base md:text-lg ">Offer ride-hailing services</p>
             </div>
             <div className="flex gap-4 items-center pt-2 md:pt-6">
               <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
-              <p className="text-base md:text-lg ">Lorem ipsum dolor sit amet</p>
+              <p className="text-base md:text-lg ">Offer jumpstart services</p>
             </div>
             <div className="flex gap-4 items-center pt-2 md:pt-6">
               <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
-              <p className="text-base md:text-lg ">Lorem ipsum dolor sit amet</p>
+              <p className="text-base md:text-lg ">Drive Intercity</p>
             </div>
-            <div className="flex gap-4 items-center pt-2 md:pt-6">
+             <div className="flex gap-4 items-center pt-2 md:pt-6">
+              <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
+              <p className="text-base md:text-lg ">Run Logistics Services</p>
+            </div>
+           {/* <div className="flex gap-4 items-center pt-2 md:pt-6">
               <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
               <p className="text-base md:text-lg ">Lorem ipsum dolor sit amet</p>
-            </div>
-            <div className="flex gap-4 items-center pt-2 md:pt-6">
-              <Image src={blackcircletick} alt="whitecheck" className="w-4 md:w-6" />
-              <p className="text-base md:text-lg ">Lorem ipsum dolor sit amet</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -170,7 +169,7 @@ const Earning = () => {
       <div className="px-[5%] py-12 md:py-20 lg:py-28">
         <div className="md:max-w-[70%] lg:max-w-[50%]">
           <p className="font-opensans font-bold text-base md:text-2xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            Become your own boss today!
           </p>
           <div className="p-4 rounded-2xl border border-[#DDDDDD] flex gap-4 md:gap-6 items-center mt-10 ">
             <Image
@@ -181,12 +180,11 @@ const Earning = () => {
             />
             <div className="">
               <p className="font-redhat font-bold text-sm sm:text-base lg:text-xl">
-              Download driver app
+              Download now
               </p>
               <div className="flex justify-between ">
                 <p className=" pt-2 md:pt-4 text-xs sm:text-base lg:text-xl font-opensans max-w-[75%]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing ut labore
-                  et dolore magna aliqua.
+                Get the Bold app and track your earnings at a glance. Start driving and earning on your own terms today. 
                 </p>
                 <button>
                   <Image src={btnrightarrow} alt="rightarrow" className="w-5" />

@@ -17,14 +17,10 @@ const Packagepage = ({ setcurrentpage }) => {
       <div className="bg-black px-[5%] flex items-center min-h-[560px]">
         <div className="">
           <p className="font-redhat font-bold text-2xl md:text-5xl text-white">
-            BOLD <span className="font-normal">LOGISTICS</span>
-          </p>
-          <p className="font-redhat font-semibold text-2xl md:text-5xl text-white pt-4">
-            Package delivery
+          Find out where your package is
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+          Watch your package closely with our tracker. Enter your shipping ID to start tracking and stay up to date with your delivery.
           </p>
           <div className="mt-12 flex rounded-lg overflow-hidden w-[80vw] md:w-fit">
             <div className="p-4 flex gap-4 items-center bg-white">
@@ -44,10 +40,10 @@ const Packagepage = ({ setcurrentpage }) => {
       <div className="py-20 px-[8%]">
         <div className="md:max-w-[50%] mx-auto">
           <p className="md:flex hidden font-opensans font-bold text-4xl md:text-center">
-            How simple you ship with BOLD
+            How to ship with Bold
           </p>
           <p className="md:hidden font-opensans font-bold text-xl md:text-4xl md:text-center">
-            How it works
+          How to ship with Bold
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 md:text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -61,7 +57,7 @@ const Packagepage = ({ setcurrentpage }) => {
               <Image src={downloadapp} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
-              Download Bold app
+              Download the app
             </p>
           </div>
 
@@ -70,7 +66,7 @@ const Packagepage = ({ setcurrentpage }) => {
               <Image src={fillindetails} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
-              Fill in your details
+              Fill your details
             </p>
           </div>
 
@@ -79,7 +75,7 @@ const Packagepage = ({ setcurrentpage }) => {
               <Image src={pickuppackage} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
-              We pickup your package
+              We ship your package
             </p>
           </div>
 
@@ -88,7 +84,7 @@ const Packagepage = ({ setcurrentpage }) => {
               <Image src={rightdelivery} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
-              It is smoothly delivered
+            Your package is delivered in one piece 
             </p>
           </div>
         </div>
@@ -98,15 +94,16 @@ const Packagepage = ({ setcurrentpage }) => {
         <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="md:max-w-[55%] flex flex-col justify-center">
             <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Send packages with BOLD
             </p>
             <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+            Get the BOLD app and enjoy seamless delivery when you send packages safely to your friends and family.
+
             </p>
             <div className="flex gap-2 flex-row justify-between mb-3">
               <div>
                 <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
-                  Download App
+                  Download Now
                   <span className="inline-flex items-center text-white">
                     <Image src={whitearrow} alt="btnarrow " width={16}></Image>
                   </span>

@@ -18,16 +18,14 @@ const Howitworks = () => {
         <Image src={trendingbanner} alt="logistic" className="min-h-[480px] max-h-[648px] w-full object-cover object-center" />
         <div className="absolute top-0 left-0 md:max-w-[75%] lg:max-w-[55%] h-full flex flex-col justify-center px-[5%] md:px-0 md:pl-[5%] ">
           <p className="font-redhat font-bold text-4xl lg:text-[40px] lg:leading-[60px] text-white md:pt-6">
-            Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
-            incididunt
+          Start Your Journey: Drive Bold, Earn Big!
           </p>
           <p className="font-opensans text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-            eiusmod tempor incididunt
+          Bold allows you to be your own boss and earn on your terms. You start driving with Bold—even if you don’t own a car. Here’s everything you need to get started.
           </p>
           <div className=" flex gap-6 pt-8 md:pt-6">
             <button className=" text-white font-opensans font-semibold text-base md:text-xl lg:text-2xl flex items-center gap-3 rounded-lg underline ">
-            Lorem ipsum dolor sit amet
+            Begin your BOLD Journey
               <span className="inline-flex items-center text-white">
                 <Image src={whitearrow} alt="btnarrow " width={16}></Image>
               </span>
@@ -37,10 +35,9 @@ const Howitworks = () => {
       </div>
 
       <div className="px-[5%] py-12 md:pb-16 md:pt-20 lg:pb-20 lg:pt-28 lg:max-w-[70%] xl:max-w-[50%]">
-        <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">How to join BOLD as Driver</p>
+        <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">Kickstart your BOLD Journey</p>
         <p className="text-sm md:text-base lg:text-xl pt-4 md:pt-6 lg:pt-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+        Ready to turn your time on the road into earnings? Start your Bold journey today and discover a world of flexible earning opportunities.{" "}
         </p>
       </div>
 
@@ -48,17 +45,13 @@ const Howitworks = () => {
         <div className="px-[5%] flex md:flex-row gap-2 flex-col justify-between md:items-center">
           <div className="md:max-w-[50%] md:py-10 ">
             <p className="font-opensans font-bold text-sm md:text-base lg:text-xl">
-              Download the app and signup
+              Download the BOLD app and signup
             </p>
             <p className=" pt-3 md:pt-4 lg:pt-6 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </p>
-            <p className="pt-2 md:pt-4 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
+            Download the Bold app, sign up, and take control of your schedule. Whether you drive your own car, use a rental, or explore student dispatch options, it’s easy to get started.{" "}
             </p>
             <button className="mt-2 md:mt-6 bg-white font-redhat font-semibold text-sm md:text-base lg:text-xl flex items-center gap-2 rounded-lg  border border-white">
-              Download App
+              Get the BOLD app, Now!
               <span className="inline-flex items-center text-white">
                 <Image src={btnrightarrow} alt="btnarrow " className="w-3 md:w-4"></Image>
               </span>
@@ -76,17 +69,13 @@ const Howitworks = () => {
         <div className="px-[5%] flex md:flex-row gap-2 flex-col justify-between md:items-center">
           <div className="md:max-w-[50%] md:py-10 ">
             <p className="font-opensans font-bold text-sm md:text-base lg:text-xl">
-            Upload your documents
+            Get Your Docs Ready, Start Earning
             </p>
             <p className=" pt-3 md:pt-4 lg:pt-6 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-            </p>
-            <p className="pt-2 md:pt-4 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-            </p>
+            The right documentation is your key to driving with BOLD. Check out the list of required documents based on your driving option and get ready to hit the road!{" "}
+            </p>            
             <button className="mt-2 md:mt-6 bg-white font-redhat font-semibold text-sm md:text-base lg:text-xl flex items-center gap-2 rounded-lg  border border-white">
-            View list of important documents
+            Check the list of important documents
               <span className="inline-flex items-center text-white">
                 <Image src={btnrightarrow} alt="btnarrow " className="w-3 md:w-4"></Image>
               </span>
@@ -104,14 +93,14 @@ const Howitworks = () => {
         <div className="px-[5%] flex md:flex-row gap-2 flex-col justify-between md:items-center">
           <div className="md:max-w-[50%] md:py-10 ">
             <p className="font-opensans font-bold text-sm md:text-base lg:text-xl">
-            Get fleet assigned
+            No Car? No Problem!
             </p>
             <p className=" pt-3 md:pt-4 lg:pt-6 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            We’ll connect you with a fleet partner to provide a vehicle so you can start earning with <span className="font-bold">BOLD</span>.
+            {" "}
             </p>
             <p className="pt-2 md:pt-4 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
+            Register now to get matched with a fleet partner and start driving <span className="font-bold">BOLD</span>!{" "}
             </p>
           </div>
           <div className="border-r border-black w-[2%] h-auto self-stretch relative md:block hidden">
@@ -126,15 +115,17 @@ const Howitworks = () => {
         <div className="px-[5%] flex md:flex-row gap-2 flex-col justify-between md:items-center">
           <div className="md:max-w-[50%] md:py-10 ">
             <p className="font-opensans font-bold text-sm md:text-base lg:text-xl">
-            Get fleet assigned
+            Make Money with BOLD
             </p>
             <p className=" pt-3 md:pt-4 lg:pt-6 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            Be your own boss with Bold! Whether you’re taking scheduled trips, delivering packages, or going intercity, Bold offers endless ways to earn.{" "}
             </p>
-            <p className="pt-2 md:pt-4 text-sm md:text-base lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-            </p>
+            <button className="mt-2 md:mt-6 bg-white font-redhat font-semibold text-sm md:text-base lg:text-xl flex items-center gap-2 rounded-lg  border border-white">
+            Begin your BOLD Journey!
+              <span className="inline-flex items-center text-white">
+                <Image src={btnrightarrow} alt="btnarrow " className="w-3 md:w-4"></Image>
+              </span>
+            </button>
           </div>
           <div className=" w-[2%] h-auto self-stretch relative md:block hidden">
             <div className="h-6 w-6 rounded-full bg-black absolute top-0 -right-[50%]"></div>
@@ -148,16 +139,15 @@ const Howitworks = () => {
       </div>
 
       <div className="px-[5%] pt-12 md:pt-16 lg:pt-20 ">
-        <p className="font-opensans font-bold text-base md:text-2xl lg:text-4xl">Having any trouble?</p>
+        <p className="font-opensans font-bold text-base md:text-2xl lg:text-4xl">Got Questions? We've Got Answers</p>
         <div className=" flex flex-col md:flex-row gap-4 md:gap-[5%] pt-6 md:py-10">
           <div className="py-5 px-3 md:px-6 md:py-10 rounded-2xl border border-[#DDDDDD] md:w-1/2">
             <p className="font-redhat font-bold  text-sm md:text-base lg:text-xl">
-              Contact BOLD support
+              Reach Out!
             </p>
             <div className="flex justify-between ">
               <p className="pt-2 md:pt-4  text-sm md:text-base lg:text-xl font-opensans max-w-[75%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
-                dolore magna aliqua.
+              Need help? Contact Bold Support, and we’ll make sure your experience is smooth and hassle-free. We’re always here for you.
               </p>
               <button>
                 <Image src={btnrightarrow} alt="rightarrow" />
@@ -166,12 +156,11 @@ const Howitworks = () => {
           </div>
           <div className="py-5 px-3 md:px-6 md:py-10 rounded-2xl border border-[#DDDDDD] md:w-1/2">
             <p className="font-redhat font-bold  text-sm md:text-base lg:text-xl">
-            Download the app
+            Get the BOLD app
             </p>
             <div className="flex justify-between ">
               <p className="pt-2 md:pt-4  text-sm md:text-base lg:text-xl font-opensans max-w-[75%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
-                dolore magna aliqua.
+              Get started and discover your earning potential with the <span className="font-bold">BOLD</span> app!
               </p>
               <button>
                 <Image src={btnrightarrow} alt="rightarrow" />
@@ -184,16 +173,13 @@ const Howitworks = () => {
     
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+          Join the BOLD Movement
           </p>
           <p className="font-semibold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+          Become part of a community of eco-conscious drivers. 
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+          With Bold, you can drive green, reduce your carbon footprint, and deliver a top-tier experience to your passengers.
           </p>
           <div className="flex gap-2">
             <div>

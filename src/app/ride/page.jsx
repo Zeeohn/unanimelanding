@@ -307,25 +307,25 @@ const Ridepage = () => {
             </p>
             <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16 flex-wrap">
               <button
-                className="text-white text-[10px] flex items-center justify-center text-center md:text-xl hover:font-semibold hover:bg-[#000000] focus:font-semibold focus:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
+                className="hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] hover:font-semibold hover:bg-[#000000] focus:font-semibold focus:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
                 onClick={() => handleSetBold("share")}
               >
                 BOLD Share
               </button>
               <button
-                className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
+                className="hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
                 onClick={() => handleSetBold("regular")}
               >
                 BOLD Regular
               </button>
               <button
-                className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
+                className="hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
                 onClick={() => handleSetBold("premium")}
               >
                 BOLD Premium
               </button>
               <button
-                className="hover:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
+                className="hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] focus:font-semibold focus:bg-[#000000] hover:font-semibold  hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
                 onClick={() => handleSetBold("xl")}
               >
                 BOLD XL
@@ -520,9 +520,9 @@ const Ridepage = () => {
           <div className="px-[5%] py-12  md:py-16 lg:pt-20 lg:pb-28 ">
             <div className="flex md:flex-row flex-col-reverse justify-between md:gap-[10%] lg:gap-[20%]">
               <div className=" lg:max-w-[40%] pt-4 lg:pt-0">
-                <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod
+                <p className="font-semibold text-xl font-opensans md:text-3xl lg:text-4xl ">
+                  <span className="font-bold">Jump-Start Assistance:</span>{" "}
+                  We’ll Get You Back on the Road Fast!
                 </p>
                 <p className="font-semibold text-sm pt-2 md:text-xl text-[#777777] lg:hidden block">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -531,29 +531,29 @@ const Ridepage = () => {
                 </p>
                 <div className=" pt-6 md:pt-10 lg:pt-16">
                   <p className="text-sm md:text-xl font-bold">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    Dead battery? No problem
                   </p>
                   <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    incididunt ut labore et dolore magna aliqua.{" "}
+                    We’re available when you need us. Whether it’s dawn or dusk,
+                    we’ve got you covered.{" "}
                   </p>
                 </div>
                 <div className=" pt-6 md:pt-10 lg:pt-16">
                   <p className="text-sm md:text-xl font-bold">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    Quick and Reliable Service
                   </p>
                   <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    incididunt ut labore et dolore magna aliqua.{" "}
+                    With just a few taps easily order a driver to help
+                    jump-start your car.{" "}
                   </p>
                 </div>
                 <div className=" pt-6 md:pt-10 lg:pt-16">
                   <p className="text-sm md:text-xl font-bold">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    Stress-Free Experience
                   </p>
                   <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    incididunt ut labore et dolore magna aliqua.{" "}
+                    Count on us to handle the hassle so you can get back on the
+                    road and focus on the journey ahead.{" "}
                   </p>
                 </div>
               </div>
@@ -575,8 +575,7 @@ const Ridepage = () => {
           <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
             <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
+                See What Riders Have To Say About Bold
               </p>
               {isLargeScreen && (
                 <div className="flex gap-6">
@@ -674,14 +673,14 @@ const Ridepage = () => {
           <div className="flex justify-between px-[5%] items-center py-12 md:py-4">
             <div className=" md:max-w-[40%]">
               <p className=" font-opensans md:text-3xl lg:text-4xl font-bold ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Don’t let another car ruin your day
               </p>
               <p className="text-sm md:text-xl text-[#BBBBBB] font-semibold pt-2 md:pt-6 lg:pt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                dolor eiusmod tempor incididunt
+                Use the SOS feature to alert other drivers blocking your way.
+                With just a few taps they’ll get out of your way.
               </p>
               <button className="text-sm md:text-xl font-semibold bg-black text-white px-4 py-2 md:py-3 md:px-6 rounded-lg mt-8 lg:mt-7">
-                Download App
+                Download Now
               </button>
             </div>
             <Image

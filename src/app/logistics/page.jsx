@@ -19,7 +19,7 @@ import Trackdetails from "../package/Trackdetails";
 const Logisticspage = () => {
   const [currentpage, setcurrentpage] = useState("default");
   return (
-    <div className="container mx-0 w-[100vw]">
+    <div className="">
       {currentpage === "trackpackage" ? (
         <Packagepage setcurrentpage={setcurrentpage} />
       ) : currentpage === "trackdetail" ? (
@@ -33,22 +33,19 @@ const Logisticspage = () => {
               alt="logistic"
               className="h-[70vh] md:h-[90vh] object-cover"
             />
-            <div className="absolute top-0 w-full left-0 md:max-w-[39%] h-full flex flex-col justify-center pl-[5%] z-20">
-              <p className="hidden md:block font-opensans font-bold text-[64px] leading-[88px] text-white">
-                Your new way to logistics
+            <div className="absolute top-0 w-full left-0 md:max-w-[50%] h-full flex flex-col justify-center pl-[5%] z-20">
+              <p className="hidden md:block font-opensans font-bold text-[45px] leading-[70px] text-white">
+                Deliveries Made Easy With Your E-Commerce Logistics Partner
               </p>
-              <p className="md:hidden font-opensans text-nowrap font-bold text-[32px] text-white">
-                Your new way to <br /> logistics
+              <p className="md:hidden font-opensans font-bold text-[25px] text-white">
+                Deliveries Made Easy With Your E-Commerce Logistics Partner
               </p>
               <p className="font-opensans w-full text-base md:text-xl md:font-semibold text-white pt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut
+              Satisfy your customers with on-time deliveries. Whether you’re making a delivery within the city, intercity, or to another country, BOLD helps you deliver seamlessly. 
               </p>
               <div className="flex flex-col gap-4 md:flex-row md:gap-6 pt-8 w-[70%] md:w-full">
                 <button className="font-opensans text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
-                  Ship with us
+                  Ship with us today
                 </button>
                 <button
                   className=" text-white underline md:underline-none font-opensans font-semibold text-xl flex items-center gap-3 rounded-lg "
@@ -65,26 +62,18 @@ const Logisticspage = () => {
 
           <div className="px-[5%] pt-8 pb-10 md:pt-20 md:pb-28">
             <p className="hidden md:block font-opensans font-bold md:text-4xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            Take a BOLD Step With Deliveries{" "}
             </p>
             <p className="md:hidden font-opensans font-bold text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
+            Take a BOLD Step With Deliveries
             </p>
             <p className="hidden md:block pt-10 text-[#777777] text-xl">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
+            Say goodbye to delivery struggles. Experience fast and secure deliveries with <span>BOLD Logistics</span>. If you run an E-Commerce business, this one’s for you. And yes, even random people can send packages too. Sending packages is only a tap away. 
+
             </p>
             <p className="md:hidden pt-5 text-black text-base">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+            Say goodbye to delivery struggles. Experience fast and secure deliveries with <span>BOLD Logistics</span>. If you run an E-Commerce business, this one’s for you. And yes, even random people can send packages too. Sending packages is only a tap away. 
+
             </p>
           </div>
 
@@ -92,19 +81,13 @@ const Logisticspage = () => {
             <Image src={pakageone} alt="driverapp" />
             <div className=" flex flex-col justify-center md:max-w-[50%]">
               <p className="font-bold text-xl pt-6 md:pt-0 md:text-4xl font-opensans">
-                Join BOLD package for all your e-commerce & business needs.
+              Level Up Your Online Business With BOLD Logistics
               </p>
               <p className="text-base md:text-xl text-black md:text-[#777777] pt-6 font-opensans">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+              Join <span>BOLD Logistics</span> to keep your customers satisfied with fast delivery services. We partner with you for all your delivery needs so you can keep your online store running smoothly. 
               </p>
               <button className=" bg-white font-redhat font-semibold text-lg underline md:text-xl flex items-center gap-2 rounded-lg mt-8">
-                Join as business partner{" "}
+                Partner with us today{" "}
                 <span className="inline-flex items-center">
                   <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
                 </span>
@@ -115,23 +98,16 @@ const Logisticspage = () => {
           <div className="flex flex-col-reverse md:flex-row justify-between px-[5%] items-center pt-20 md:pb-28 pb-10 md:gap-[5%] gap-8">
             <div className=" flex flex-col justify-center md:max-w-[50%]">
               <p className="font-bold text-xl md:text-4xl font-opensans">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              BOLD Logistics For Individuals
               </p>
               <p className="hidden md:block text-xl text-[#777777] pt-6 font-opensans">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores.
+              Need to send something special? BOLD makes it easy! Use the BOLD app to deliver gifts, documents, and other items to your friends and loved ones. Our reliable same-day delivery ensures your packages reach their destination quickly and safely. 
               </p>
               <p className="md:hidden text-base text-black pt-4 font-opensans">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore
+              Need to send something special? BOLD makes it easy! Use the BOLD app to deliver gifts, documents, and other items to your friends and loved ones. Our reliable same-day delivery ensures your packages reach their destination quickly and safely. 
               </p>
               <button className=" bg-black text-white font-redhat font-semibold text-xl  rounded-lg py-3 px-6 mt-5 w-max">
-                Download App
+                Download the App Now
               </button>
             </div>
             <Image src={pakagetwo} alt="driverapp" className="rounded-md" />
@@ -139,19 +115,17 @@ const Logisticspage = () => {
 
           <div className="px-[5%]">
             <p className="font-bold text-xl md:text-4xl font-opensans">
-              Join our logistics for all your fasts delivery needs
+            Send Packages With BOLD! Where Fast, Reliable Deliveries Drive Your Business. 
             </p>
             <div className="flex flex-col md:flex-row justify-between gap-14 md:gap-0 pt-10 pb-28">
               <div className="md:max-w-[45%]">
                 <Image src={businesspackage} alt="businesspackage" />
                 <div className="bg-[#F3F3F3]  px-6 pb-9">
                   <p className="font-opensans font-semibold text-xl md:text-4xl pt-6">
-                    For business and e-commerce
+                    For Business and E-commerce
                   </p>
                   <p className="font-opensans text-sm md:text-xl pt-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis.
+                  Seamlessly integrate BOLD into your platform and give your customers a smooth experience. Our skilled delivery professionals are ready to deliver when your customers place an order. 
                   </p>
                   <button className="  font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
                     Connect your business
@@ -172,11 +146,9 @@ const Logisticspage = () => {
                     For domestic packages
                   </p>
                   <p className="font-opensans text-sm md:text-xl pt-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis.
+                  Sending a package to a friend or family? With <span  className="font-bold">BOLD’s</span> reliable same-day delivery, we can deliver on time.
                   </p>
-                  <button className="  font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+                  <button className="font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
                     Send your package now{" "}
                     <span className="inline-flex items-center">
                       <Image
@@ -201,10 +173,10 @@ const Logisticspage = () => {
             />
             <div className="absolute top-0 left-0 md:max-w-[50%] pl-[5%] flex flex-col justify-center md:justify-end h-full md:pb-24">
               <p className="font-bold text-[25px] md:text-[50px] md:leading-[70px] text-white">
-                Join our logistics for all your fast delivery needs
+              Get the BOLD App and Accelerate Your Deliveries. Join BOLD for Lightning-Fast, Reliable Logistics!
               </p>
               <button className="rounded-lg mt-2 md:mt-10 py-3 px-6 font-redhat text-xl font-semibold bg-white w-fit">
-                Download App
+                Download App Now
               </button>
             </div>
           </div>
@@ -285,16 +257,15 @@ const Logisticspage = () => {
             <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
               <div className="md:max-w-[55%] flex flex-col justify-center">
                 <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Unlock the Power of Fast Deliveries. Download Our App Today!
                 </p>
                 <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do.
+                Experience hassle-free deliveries with just a tap. Our app gives you access to fast, reliable, and secure shipping solutions, all in one place. Whether you’re sending a package across town or the country, we've got you covered. Download the BOLD app and unlock the power of seamless deliveries at your fingertips.
                 </p>
                 <div className="flex gap-2 flex-row justify-between mb-3">
                   <div>
                     <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
-                      Download App
+                      Download App Now
                       <span className="inline-flex items-center text-white">
                         <Image
                           src={whitearrow}
