@@ -27,6 +27,7 @@ import "swiper/css/scrollbar";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import driverhandapp from "../../../public/Assets/driverhandapp.png";
+import safety from"../../../public/Assets/safety.png";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
 
 const Drivesafety = () => {
@@ -55,24 +56,22 @@ const Drivesafety = () => {
   return (
     <div>
       <div className="relative">
-        <Image src={trendingbanner} alt="logistic" className="min-h-[480px] max-h-[616px] w-full object-cover object-center"  />
+        <Image src={safety} alt="logistic" className="min-h-[480px] max-h-[616px] w-full object-cover object-center"  />
         <div className="absolute top-0 right-0 md:max-w-[75%] lg:max-w-[55%] h-full flex flex-col justify-center px-[5%] md:px-0 md:pr-[5%] ">
           <p className="font-redhat font-bold text-4xl lg:text-[40px] lg:leading-[60px] text-white md:pt-6">
-            Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
-            incididunt
+          We look out for our drivers because your safety drives us
           </p>
           <p className="font-opensans text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-            eiusmod tempor incididunt
+            Our goal is to help you move freely, maximize your time, and stay connected to the people and places that matter most. That’s why we prioritize safety standards and develop technology designed to minimize risks.
           </p>
-          <div className=" flex gap-6 pt-8 md:pt-6">
+          {/* <div className=" flex gap-6 pt-8 md:pt-6">
             <button className=" text-white font-opensans font-semibold text-base md:text-xl lg:text-2xl flex items-center gap-3 rounded-lg underline ">
               Browse more trending locations
               <span className="inline-flex items-center text-white">
                 <Image src={whitearrow} alt="btnarrow " width={16}></Image>
               </span>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -87,38 +86,29 @@ const Drivesafety = () => {
         </p>
       </div>
 
-      <div className="flex gap-4 md:gap-6 lg:gap-12 xl:gap-20 flex-wrap justify-between md:mt-10 pb-12 md:pb-16 lg:pb-[88px] px-[5%]">
+       <div className="flex gap-4 md:gap-6 lg:gap-12 xl:gap-20 flex-wrap justify-between md:mt-10 pb-12 md:pb-16 lg:pb-[88px] px-[5%]">
         <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
           <Image src={blackstr} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
-          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Basic requirements</p>
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">In-App Safety Features</p>
           <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
+          Share your trip details with loved ones, track your ride in real time, and enjoy the peace of mind our technology provides.
+          </p>          
         </div>
         <div className="space-y-2 md:space-y-0 lg:min-w-[25%]" >
           <Image src={documents} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
-          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Documents</p>
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">A Community Built on Inclusivity </p>
           <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
+          Millions of riders and drivers follow shared community guidelines, fostering accountability and promoting the right actions.
+          </p>          
         </div>
         <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
           <Image src={blacktick} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
-          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Sign up process</p>
+          <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Round-the-Clock Support</p>
           <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
-          </p>
-          <p className="text-sm sm:text-base md:pt-2">
-            . Lorem Ipsum is not simply random text.
+          Our dedicated team is available 24/7 to assist you. Whether you have questions or safety concerns, you can reach them anytime directly through the app.
           </p>
         </div>
-        <div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
+        {/*<div className="space-y-2 md:space-y-0 lg:min-w-[25%]">
           <Image src={blackstr} alt="blackstr" className="w-6 md:w-8 lg:w-12" />
           <p className="font-semibold text-base md:text-xl lg:text-2xl md:pt-4 lg:pt-8">Basic requirements</p>
           <p className="text-sm sm:text-base md:pt-2">
@@ -147,8 +137,8 @@ const Drivesafety = () => {
           <p className="text-sm sm:text-base md:pt-2">
             . Lorem Ipsum is not simply random text.
           </p>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
       {/* <div className="flex justify-between mt-10  px-[5%]">
         <div className="">
           <Image src={blackstr} alt="blackstr" width={48} />
@@ -193,7 +183,7 @@ const Drivesafety = () => {
         </div>
         <div className="flex-1 lg:px-12 lg:py-16 flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            Tips to Stay Safe
           </p>
           <Image
             src={Drivesafe}
@@ -211,8 +201,7 @@ const Drivesafety = () => {
                   Pick up the correct rider
                 </p>
                 <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod{" "}
+                Make sure you verify the identity of the passenger you’re picking up. {" "}
                 </p>
               </div>
             </div>
@@ -225,8 +214,7 @@ const Drivesafety = () => {
                 Remain professional
                 </p>
                 <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod{" "}
+                Ensure you remain professional and treat passengers with respect and courtesy.{" "}
                 </p>
               </div>
             </div>
@@ -239,8 +227,7 @@ const Drivesafety = () => {
                 Focus on your driving
                 </p>
                 <p className="font-opensans  text-sm md:text-base text-[#121D2B99] pt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod{" "}
+                Focus on what matters most. Drive and give your passenger an exotic experience. {" "}
                 </p>
               </div>
             </div>
@@ -369,15 +356,15 @@ const Drivesafety = () => {
         <div className="flex md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="md:max-w-[55%] flex flex-col justify-center py-6">
             <p className="font-bold text-lg font-opensans md:text-3xl lg:text-4xl text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Become your own boss today!
             </p>
             <p className="font-semibold text-xs md:text-base lg:text-xl pt-2 md:pt-4 lg:pt-8 max-w-[80%] text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+            Get the Bold app to start driving and earning on your own terms.
             </p>
             <div className="flex gap-2">
               <div>
                 <button className="p-2 md:p-4 text-white font-redhat font-semibold text-sm md:text-lg lg:text-xl flex items-center gap-2 rounded-lg mt-4  md:mt-8 lg:mt-12 border border-white">
-                  Download App
+                  Download Now
                   <span className="inline-flex items-center text-white">
                     <Image src={whitearrow} alt="btnarrow " width={16}></Image>
                   </span>

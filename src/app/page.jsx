@@ -47,10 +47,10 @@ const Homepage = () => {
           }}
         />
         <div className=" absolute w-full h-full top-0 left-0 flex flex-col justify-center sm:items-center px-[5%] ">
-          <p className="font-redhat font-bold text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
+          <p className="font-redhat font-bold text-[25px] md:text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
             Innovative Technology Connecting You Globally
           </p>
-          <p className="font-normal font-opensans text-2xl sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
+          <p className="font-normal font-opensans md:text-2xl text-base sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
             BOLD is more than just a platform. We’re game changers. We enable
             seamless movement across the globe for people and businesses.
             Whether you’re booking a ride in your city, delivering packages

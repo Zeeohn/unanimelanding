@@ -36,6 +36,60 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Businesspage = () => {
+  const questions = [
+    {
+      question: "How do I sign up for Bold’s services?",
+      answer: "Content for section 1.",
+    },
+    {
+      question: "What payment methods are accepted on the Bold platform?",
+      answer: "Content for section 2.",
+    },
+    {
+      question: "How does Bold handle vehicle maintenance and safety for fleet owners?",
+      answer: "Content for section 3.",
+    },
+    {
+      question: "How do you ensure data security and privacy for my business information?",
+      answer: "Content for section 4.",
+    },
+    {
+      question: "Can I track my shipments with Bold?",
+      answer: "Content for section 5.",
+    },
+  ];
+
+  const collection = [
+    {
+      index: 1,
+      heading: "Deliver Your Products Faster with Bold Logistics!",
+      cta: "Get Started Now",      
+      title1: "Perfect for Your Startups Too!",      
+      title2: "Get the Bold App Today Ship your Products with Bold",      
+    },
+    {
+      index: 2,
+      heading: "Maximize Your Fleet's Potential with Bold!",
+      cta: "Sign Up Now",      
+      title1: "Made for Your Fleet’s Success!",      
+      title2: "Register on the Bold App Maximize your fleet’s earning potential.",      
+    },
+    {
+      index: 3,
+      heading: "Advertise Smarter with Bold!",
+      cta: "Join today",      
+      title1: "Tailored Advertising for Your Business!",      
+      title2: "Download the Bold App Now Reach more customers by advertising with Bold.",      
+    },
+    {
+      index: 4,
+      heading: "Unlock Seamless Solutions for Your Company!",
+      cta: "Start Today",      
+      title1: "Effortless Solutions for Your Business!",      
+      title2: "Get the Bold App Now Streamline your Logistics. Transport and Marketing.",      
+    },
+  ]
+
   const [currentpage, setcurrentpage] = useState("Business");
   return (
     <div>
@@ -45,22 +99,22 @@ const Businesspage = () => {
         <div className="">
           <div className="bg-black">
             <div className="flex justify-between px-[5%] py-20">
-              <div className="w-[50%]">
+              <div className="md:w-[50%]">
                 <div className="  h-full flex flex-col justify-center">
-                  <p className="font-opensans font-bold text-[50px] leading-[68px] text-white">
-                    Lorem ipsum dolor amet, consecteur adipiscing, sed eiusmod
+                  <p className="font-opensans font-bold text-[25px] md:text-[50px] md:leading-[68px] text-white">
+                  <span className="font-bold">Bold Business:</span> Transforming mobility and logistics for business success
                   </p>
-                  <p className="font-opensans text-xl  text-[#777777] pt-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut
+                  <p className="font-opensans text-base md:text-xl  text-[#777777] pt-6">
+                  <span className="font-bold">BOLD</span> revolutionizes business mobility with reliable transportation and package delivery solutions. Whether you're a small business or a large corporation, we provide the tools to help you grow. 
+<br /><br />
+Fleet owners can maximize earnings by integrating their vehicles into the <span className="font-bold">BOLD</span> platform, ensuring consistent revenue and supporting local and international operations.
+
                   </p>
                   <div className=" flex gap-6 pt-8">
-                    <button className="font-opensans text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
+                    <button className="font-opensans text-base md:text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
                       Sign up for business
                     </button>
-                    <button className=" text-white font-opensans font-semibold text-xl flex items-center gap-3 rounded-lg ">
+                    <button className=" text-white font-opensans font-semibold md:text-xl flex items-center gap-3 rounded-lg ">
                       Sign up as fleet owner
                       <span className="inline-flex items-center text-white">
                         <Image
@@ -81,54 +135,51 @@ const Businesspage = () => {
             <div className="w-[80%] border-b border-white mx-auto"></div>
 
             <div className="px-[5%] pt-20 pb-24 ">
-              <p className="font-opensans text-[40px] leading-[54px] font-semibold text-white max-w-[50%]">
-                Lorem ipsum dolor amet, consecteur adipiscing, sed eiusmod
+              <p className="font-opensans text-[20px] md:text-[40px] md:leading-[54px] font-semibold text-white md:max-w-[50%]">
+              Accelerate Your Growth with BOLD Business
               </p>
             </div>
           </div>
 
           <div className="px-[5%]">
-            <p className="font-semibold text-2xl font-opensans text-[#777777] pt-20">
-              Why choosing BOLD for your business?
+            <p className="font-semibold text-lg md:text-2xl font-opensans text-[#777777] pt-20">
+            Why Bold is the Perfect Partner for Your Business
             </p>
-            <p className="font-opensans font-bold text-[50px] leading-[68px]  pt-6">
-              We have created it in a way to solve all your business
-              requirements and to meet all your transportation needs
+            <p className="font-opensans font-bold text-[25px] md:text-[50px] md:leading-[68px] pt-6">
+            We’ve got everything you need to streamline your logistics, keep your team moving, and grow your brand—all in one place.
             </p>
             <div className=" flex justify-between w-full gap-[5%] pt-28 pb-20">
               <div className="">
                 <Image src={leftbigpromotion} alt="promotion" />
               </div>
-              <div className="w-[50%] flex flex-col justify-center">
+              <div className="md:w-[50%] flex flex-col justify-center">
                 <Image src={promotion} alt="promotion" />
-                <p className="font-opensans font-bold text-4xl pt-4">
-                  Sell your upcoming concert or event ticket directly on our app
-                  and get{" "}
-                  <span className="text-[#18C4B8]">Bigger Audience</span> reach
+                <p className="font-opensans font-bold text-xl md:text-4xl pt-4">
+                <span className="text-[#18C4B8]">
+                    Maximize{" "}
+                  </span>{" "} Your Event's Reach with Bold
                 </p>
-                <p className="font-opensans text-xl text-[#777777] pt-6">
-                  Sed ut perspiciatis unde omnis iste natus error voluptatem
-                  accusantium doloremque laudantium, eaque ipsa ab. voluptatem
-                  accusantium doloremque laudantium, eaque ipsa ab{" "}
+                <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
+                Sell your concert or event tickets directly on the Bold app and connect with a larger audience to make your event unforgettable.{" "}
                   <span className="text-black font-bold underline">
                     {" "}
                     Read more
                   </span>
                 </p>
                 <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-16 rounded-lg">
-                  Learn more
+                 Get Started
                 </button>
               </div>
             </div>
             <div className="w-[25%] mx-auto flex flex-col items-center">
               <button
-                className="font-bold text-xl py-4 px-10 rounded-[40px] bg-black text-white w-fit "
+                className="font-bold text-xl py-4 px-10 rounded-[40px] bg-black text-white w-fit"
                 onClick={() => setcurrentpage("promotion")}
               >
-                More on business
+                Discover More
               </button>
-              <p className="text-xl text-[#777777] text-center pt-6">
-                900+ trusted business partners
+              <p className="text-base md:text-xl text-[#777777] text-center pt-6">
+                1000+ Trusted Partners
               </p>
             </div>
 
@@ -139,40 +190,33 @@ const Businesspage = () => {
               <div className="w-[50%] flex flex-col justify-center">
                 <Image src={trendloc} alt="promotion" width={"18%"} />
                 <p className="font-opensans font-bold text-4xl pt-4">
-                  More than{" "}
+                  Over{" "}
                   <span className="text-[#18C4B8]">
-                    50+ shops & restaurants{" "}
+                  50+ shops and restaurants{" "}
                   </span>{" "}
-                  have chose BOLD advertisement and got 20 times revenue growth
+                  have used Bold for advertising—and they’ve seen 20x revenue growth
                 </p>
                 <p className="font-opensans text-xl text-[#777777] pt-6">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem.
+                  Shops and restaurants using <span className="font-bold">BOLD’S</span> advertising platform have seen impressive results by reaching more customers and growing their businesses. 
+With <span className="font-bold">BOLD</span>, you can easily tap into the same opportunities to increase your brand’s visibility, connect with a wider audience, and drive more sales. Let Bold’s advertising solutions help you take your business to the next level.
                   <span className="text-black font-bold underline">
                     {" "}
                     Read more
                   </span>
                 </p>
                 <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
-                  Start advertising
+                  Start advertising with bold
                 </button>
               </div>
             </div>
 
             <div className="w-[85%] mx-auto flex flex-col items-center pt-8 pb-28">
               <p className="font-opensans font-bold text-4xl">
-                Lorem ipsum dolor sit amet
+              <span className="font-bold">Start Getting Noticed:</span> Promote Your Business with Bold
               </p>
               <p className="text-xl  text-center pt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              <span className="font-bold">Unlock Your Business’s Potential with Bold</span> and start reaching more customers today! With our powerful advertising platform, you’ll easily expand your reach, enhance visibility, and drive growth. Whether you're a small business or a large corporation, Bold has the tools to take your brand to the next level. Don’t miss out—get started now and watch your business thrive!
+
               </p>
             </div>
           </div>
@@ -180,12 +224,10 @@ const Businesspage = () => {
           <div className="bg-black px-[5%] relative pb-72">
             <div className="w-[75%] mx-auto flex flex-col items-center pt-12 pb-16">
               <p className="font-opensans font-semibold text-4xl text-white text-center">
-                How you can make some extra money with BOLD 3rd party
+              Earn extra cash in your free time with Bold’s third-party opportunities
               </p>
               <p className="text-xl  text-center pt-6 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Have some free time? Sign up as a third-party partner or intercity driver and start earning extra cash on your schedule. It’s flexible, simple, and all up to you. Join <span className="font-bold">BOLD</span> today and start driving!
               </p>
             </div>
 
@@ -195,7 +237,7 @@ const Businesspage = () => {
                   <Image src={businessdownloadapp} alt="downloadapp" />
                 </div>
                 <p className="font-opensans font-bold text-xl pt-10 text-center text-white">
-                  1. Download our app
+                  1. Download the BOLD App
                 </p>
               </div>
 
@@ -204,7 +246,7 @@ const Businesspage = () => {
                   <Image src={businessthirdparty} alt="downloadapp" />
                 </div>
                 <p className="font-opensans font-bold text-xl pt-10 text-center text-white">
-                  2. Sign up as intercity or 3rd party partner
+                  2. Sign Up As An Intercity Driver or a 3rd Party Partner
                 </p>
               </div>
 
@@ -213,7 +255,7 @@ const Businesspage = () => {
                   <Image src={businessmoney} alt="downloadapp" />
                 </div>
                 <p className="font-opensans font-bold text-xl pt-10 text-center text-white">
-                  3. Utilise your free time and make money working independently
+                  3. Now, Make Money on Your Terms!
                 </p>
               </div>
             </div>
@@ -234,29 +276,28 @@ const Businesspage = () => {
                     disableOnInteraction: false,
                   }}
                 >
-                  {[...Array(5).keys()].map((_, index) => (
-                    <SwiperSlide key={index}>
+                  {collection.map((collect) => (
+                    <SwiperSlide key={collect.index}>
                       <div className="flex">
                         <div className="w-[50%]">
                           <Image src={businessslider} alt="business" />
                         </div>
                         <div className="px-[5%] w-[50%] flex flex-col justify-center ">
                           <p className="font-bold font-opensans text-3xl">
-                            Lorem ipsum dolor sit amet, sed consectetur elit,
-                            sed do
+                            {collect.heading}
                           </p>
                           <div className="mt-12 flex justify-between">
                             <button className="bg-black text-white font-semibold text-xl py-3 px-7 rounded-[40px]">
-                              Sign up now
+                              {collect.cta}
                             </button>
                             <div className="flex gap-4 items-center">
                               <Image src={van} alt="van" />
                               <div className="f">
                                 <p className="font-opensans text-sm text-[#777777]">
-                                  Even for your startups
+                                  {collect.title1}
                                 </p>
                                 <p className="font-opensans font-semibold text-base pt-1">
-                                  Ship your products faster
+                                  {collect.title2}
                                 </p>
                               </div>
                             </div>
@@ -273,7 +314,7 @@ const Businesspage = () => {
           <div className="pt-72 flex items-center justify-center gap-6 px-[5%]">
             <div className="w-[25%] border-b border-[#CCCCCC]"></div>
             <p className="font-bold font-opensans text-5xl text-center">
-              Our corporate solution
+            Tailored Solutions for Your Company
             </p>
             <div className="w-[25%] border-b border-[#CCCCCC]"></div>
           </div>
@@ -281,17 +322,12 @@ const Businesspage = () => {
           <div className=" flex justify-between w-full gap-[5%] pt-28 pb-20 px-[5%]">
             <div className="w-[55%] pt-8">
               <p className="font-opensans font-bold text-4xl">
-                Bring your employees to office on time with our 9-5 pickup and
-                drop off model
+              Reliable 9-5 Employee Transport: Timely Pickup and Drop-Off
               </p>
               <p className="font-opensans text-xl text-[#777777] pt-6">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+              Bold offers employee transportation solutions with our 9-5 pickup and drop-off model, ensuring your team gets to work on time, every time. 
+
+Our flexible, cost-effective transport options help streamline your operations while improving employee punctuality and satisfaction. Whether for small teams or large companies, <span className="font-bold">BOLD</span>’s transport service keeps your workforce moving efficiently.
                 <span className="text-black font-bold underline">
                   {" "}
                   Read more
@@ -311,21 +347,20 @@ const Businesspage = () => {
 
             <div className="w-[55%] pt-8">
               <p className="font-opensans font-bold text-4xl">
-                Easy register your employee and we will pickup and drop them
-                home safely
+              Simplify Employee Transportation with Bold
               </p>
               <p className="font-opensans text-xl text-[#777777] pt-6">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+              Easily register your employees, and we’ll take care of their daily commute. With <span className="font-bold">BOLD</span>’s reliable pickup and drop-off service, your team travels safely and arrives on time. 
+
+Simplify workplace transportation and ensure a smooth, efficient experience for everyone.
+
                 <span className="text-black font-bold underline">
                   {" "}
-                  Read more
+                  Discover more
                 </span>
               </p>
               <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 underline">
-                Get started now
+              Get Started Today and Keep Your Team Moving on Time!
                 <span className="inline-flex items-center">
                   <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
                 </span>
@@ -335,14 +370,14 @@ const Businesspage = () => {
 
           <div className="flex flex-col justify-center items-center bg-blue-300 py-20">
             <p className="font-opensans font-bold text-[50px] leading-[68px] text-white w-[70%] text-center ">
-              More than 10k customers preferred to use BOLD Business
+            Trusted by Over 10k Businesses and Counting!
             </p>
             <div className="flex  gap-6">
               <button className="py-3 px-6 bg-white border-2  border-white text-black font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
-                Get started now
+                Join BOLD Today
               </button>
               <button className="py-3 px-6  text-white border-2 border-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
-                Contact sales
+              Get in Touch with Sale
               </button>
             </div>
           </div>
@@ -351,23 +386,19 @@ const Businesspage = () => {
             <div className="w-[55%] flex flex-col justify-center">
               <Image src={boldfuel} alt="promotion" width={"18%"} />
               <p className="font-opensans font-bold text-4xl pt-4">
-                More than{" "}
-                <span className="text-[#18C4B8]">100+ fuel stations</span> have
-                partnered BOLD for easy refuelling
+              BOLD Partners with{" "}
+                <span className="text-[#18C4B8]">100+ Fuel Stations</span> for Hassle-Free Refueling
               </p>
               <p className="font-opensans text-xl text-[#777777] pt-6">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed.
+              Join Bold Fuel and become part of our growing network of over 100 stations. Gain access to a larger customer base and offer drivers a seamless refueling experience. Let’s grow together and make fueling more convenient for everyone.
                 <span className="text-black font-bold underline">
                   {" "}
-                  Read more
+                  Know more
                 </span>
               </p>
               <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-10 rounded-lg">
-                Become a partner
+              Partner with BOLD
+
               </button>
             </div>
 
@@ -379,30 +410,24 @@ const Businesspage = () => {
           <div className=" flex justify-between w-full gap-[5%] pt-28 pb-20 px-[5%]">
             <div className="w-[55%] flex flex-col justify-center">
               <p className="font-opensans font-bold text-4xl pt-4">
-                Join your fleet with us and get{" "}
-                <span className="text-[#18C4B8]">Bigger Customer Base</span>
+               
+                <span className="text-[#18C4B8]">Boost Your Fleet’s</span>{" "} Reach with Bold
               </p>
               <p className="font-opensans text-xl text-[#777777] pt-6">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed. totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto.
+              When you team up with Bold, your fleet gets access to a bigger audience, helping you grow your customer base faster. We make it easy for you to stay busy and boost your business. Let’s work together to take your fleet to the next level. 
                 <span className="text-black font-bold underline">
                   {" "}
-                  Read more
+                  Learn more
                 </span>
               </p>
               <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 underline">
-                Register your fleet
+              Register your Fleet with BOLD
                 <span className="inline-flex items-center">
                   <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
                 </span>
               </button>
               <p className="text-base pt-2">
-                100k + fleet partners have joined BOLD
+              Be a part of 100k+ Fleet Owners on Bold
               </p>
             </div>
 
@@ -410,7 +435,7 @@ const Businesspage = () => {
               <Image src={businesscustomerbase} alt="promotion" />
             </div>
           </div>
-          <FAQ />
+          <FAQ questions={questions} />
         </div>
       )}
     </div>

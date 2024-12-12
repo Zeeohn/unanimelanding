@@ -163,7 +163,7 @@ const Ridepage = () => {
   }, []);
 
   return (
-    <div className="relative container mx-0 w-full">
+    <div className="relative">
       <div
         className="md:flex justify-between px-[5%] py-6 backdrop-blur  absolute top-0 left-0 w-full z-50 hidden
     "
@@ -671,10 +671,11 @@ const Ridepage = () => {
           <div className="flex justify-between px-[5%] items-center py-12 md:py-4">
             <div className=" md:max-w-[40%]">
               <p className=" font-opensans md:text-3xl lg:text-4xl font-bold ">
-              Don’t let another car ruin your day
+                Don’t let another car ruin your day
               </p>
               <p className="text-sm md:text-xl text-[#BBBBBB] font-semibold pt-2 md:pt-6 lg:pt-10">
-              Use the SOS feature to alert other drivers blocking your way. With just a few taps they’ll get out of your way. 
+                Use the SOS feature to alert other drivers blocking your way.
+                With just a few taps they’ll get out of your way.
               </p>
               <button className="text-sm md:text-xl font-semibold bg-black text-white px-4 py-2 md:py-3 md:px-6 rounded-lg mt-8 lg:mt-7">
                 Download Now
