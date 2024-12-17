@@ -1,19 +1,18 @@
 "use client";
 import Image from "next/image";
-import logisticmain from "../../../public/Assets/logisticmain.png";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
-import pakageone from "../../../public/Assets/pakageone.png";
-import pakagetwo from "../../../public/Assets/pakagetwo.png";
-import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
-import businesspackage from "../../../public/Assets/businesspackage.png";
-import domesticpackage from "../../../public/Assets/domesticpackage.png";
-import belowbusinessneeds from "../../../public/Assets/belowbusinessneeds.png";
-import deliverylogistics from "../../../public/Assets/deliverylogistics.jpeg";
-import blogsback from "../../../public/Assets/blogsback.png";
 import boldadvertise from "../../../public/Assets/boldadvertise.png";
 import nature from "../../../public/Assets/nature.jpeg";
 import bicycle from "../../../public/Assets/bicycle.jpeg";
+import cyclesky from "../../../public/Assets/cycle-sky.png";
+import cyclemobile from "../../../public/Assets/cycle-mobile.png";
 import lanes from "../../../public/Assets/lanes.png";
+import patternbg from "../../../public/Assets/pattern-bg.png";
+import greenhouse from "../../../public/Assets/green-house.png";
+import greenmarket from "../../../public/Assets/green-market.png";
+import greenshake from "../../../public/Assets/green-shake.png";
+import cycler from "../../../public/Assets/cycler.png";
+import fast from "../../../public/Assets/fast-car.png";
 import Footer from "../home/Footer";
 import { useState } from "react";
 
@@ -30,11 +29,11 @@ const Sustainability = () => {
             className="h-[70vh] md:h-[90vh] object-cover"
           />
           <div className="absolute top-0 w-full left-0 md:max-w-[50%] h-full flex flex-col justify-center pl-[5%] z-20">
-            <p className="hidden md:block font-opensans font-bold text-[45px] leading-[70px] text-white">
+            <p className="hidden md:block font-opensans font-bold text-[56px] leading-[70px] text-white">
               Sustainability at Bold
             </p>
-            <p className="md:hidden font-opensans font-bold text-[25px] text-white">
-              Sustainability at Bold
+            <p className="md:hidden font-opensans font-bold text-[35px] text-white">
+              Sustainability <br /> at Bold
             </p>
             <p className="font-opensans w-full text-base md:text-xl md:font-semibold text-white pt-6">
               Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit,
@@ -44,10 +43,10 @@ const Sustainability = () => {
         </div>
 
         <div className="px-[5%] pt-8 pb-10 md:pt-20 md:pb-28">
-          <p className="hidden md:block font-opensans font-bold md:text-4xl">
+          <p className="hidden md:block font-opensans font-bold md:text-[35px]">
             Sustainability at Bold{" "}
           </p>
-          <p className="md:hidden font-opensans font-bold text-lg">
+          <p className="md:hidden font-opensans font-bold text-[20px]">
             Sustainability at Bold
           </p>
           <p className="hidden md:block pt-10 text-black text-xl">
@@ -60,22 +59,22 @@ const Sustainability = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row px-[5%] justify-between gap-4 md:gap-0">
-          <div>
+        <div className="flex flex-col md:flex-row px-[5%] justify-between gap-8 md:gap-4">
+          <div className="p-4 rounded-lg shadow-xl md:shadow-md flex flex-col gap-4">
             <p className="font-semibold text-xl">Environmental</p>
             <p className="text-gray-400 text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna
             </p>
           </div>
-          <div>
+          <div className="p-4 rounded-lg shadow-xl md:shadow-md flex flex-col gap-4">
             <p className="font-semibold text-xl">Social impact</p>
             <p className="text-gray-400 text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna
             </p>
           </div>
-          <div>
+          <div className="p-4 rounded-lg shadow-xl md:shadow-md flex flex-col gap-4">
             <p className="font-semibold text-xl">Risk management</p>
             <p className="text-gray-400 text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -84,16 +83,26 @@ const Sustainability = () => {
           </div>
         </div>
 
-        <div className="my-20 px-[5%] flex flex-col justify-center items-center">
-          <h2 className="font-semibold text-2xl text-center">
+        <div className="hidden my-20 px-[5%] md:flex flex-col gap-4">
+          <h2 className="font-semibold text-2xl md:text-center">
             Lorem ipsum dolor sit amet
           </h2>
-          <p className="text-center">
+          <p className="md:text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          </p>
+        </div>
+
+        <div className="md:hidden mt-20 mb-10 px-[5%] flex flex-col gap-4">
+          <h2 className="font-semibold text-2xl md:text-center">
+            Lorem ipsum dolor sit amet
+          </h2>
+          <p className="md:text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -104,7 +113,7 @@ const Sustainability = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod
             </p>
-            <p className="text-base md:text-xl text-black md:text-[#777777] pt-6 font-opensans">
+            <p className="hidden md:block text-base md:text-xl text-black md:text-[#777777] pt-6 font-opensans">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -114,181 +123,229 @@ const Sustainability = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut  
-              </p>          
+              nisi ut
+            </p>
+            <p className="md:hidden text-base text-black pt-6 font-opensans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation
+            </p>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row justify-between px-[5%] items-center pt-20 md:pb-28 pb-10 md:gap-[5%] gap-8">
+        <div className="flex flex-col-reverse md:flex-row-reverse justify-between px-[5%] items-center pt-10 md:pt-20 md:pb-28 pb-10 md:gap-[5%] gap-8">
           <div className=" flex flex-col justify-center md:max-w-[50%]">
-            <p className="font-bold text-xl md:text-4xl font-opensans">
-              BOLD Logistics For Individuals
+            <p className="hidden md:block font-bold md:text-4xl font-opensans">
+              Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
+            </p>
+            <p className="font-bold md:hidden text-xl font-opensans">
+              Lorem ipsum dolor sit amet, consectetur.
             </p>
             <p className="hidden md:block text-xl text-[#777777] pt-6 font-opensans">
-              Need to send something special? BOLD makes it easy! Use the BOLD
-              app to deliver gifts, documents, and other items to your friends
-              and loved ones. Our reliable same-day delivery ensures your
-              packages reach their destination quickly and safely.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut
             </p>
-            <p className="md:hidden text-base text-black pt-4 font-opensans">
-              Need to send something special? BOLD makes it easy! Use the BOLD
-              app to deliver gifts, documents, and other items to your friends
-              and loved ones. Our reliable same-day delivery ensures your
-              packages reach their destination quickly and safely.
-            </p>
-            <button className=" bg-black text-white font-redhat font-semibold text-xl  rounded-lg py-3 px-6 mt-5 w-max">
-              Download the App Now
-            </button>
-          </div>
-          <Image src={pakagetwo} alt="driverapp" className="rounded-md" />
-        </div>
-
-        <div className="px-[5%]">
-          <p className="font-bold text-xl md:text-4xl font-opensans">
-            Send Packages With BOLD! Where Fast, Reliable Deliveries Drive Your
-            Business.
-          </p>
-          <div className="flex flex-col md:flex-row justify-between gap-14 md:gap-0 pt-10 pb-28">
-            <div className="md:max-w-[45%]">
-              <Image src={businesspackage} alt="businesspackage" />
-              <div className="bg-[#F3F3F3]  px-6 pb-9">
-                <p className="font-opensans font-semibold text-xl md:text-4xl pt-6">
-                  For Business and E-commerce
-                </p>
-                <p className="font-opensans text-sm md:text-xl pt-6">
-                  Seamlessly integrate BOLD into your platform and give your
-                  customers a smooth experience. Our skilled delivery
-                  professionals are ready to deliver when your customers place
-                  an order.
-                </p>
-                <button className="  font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
-                  Connect your business
-                  <span className="inline-flex items-center">
-                    <Image
-                      src={btnrightarrow}
-                      alt="btnarrow "
-                      width={16}
-                    ></Image>
-                  </span>
-                </button>
+            <div className="flex mt-6 flex-col md:gap-1 gap-10 md:mt-12">
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-row gap-3">
+                  <p className="text-white bg-black rounded-full text-[16px] md:text-[20px] font-extrabold px-3 py-1 h-fit">
+                    1
+                  </p>
+                  <p className="font-bold text-[16px] md:text-[20px] ">
+                    Net-zero carbon emission by 2040.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[#777777] ml-12">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.{" "}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="md:max-w-[45%]">
-              <Image src={domesticpackage} alt="businesspackage" />
-              <div className="bg-[#F3F3F3]  px-6 pb-9">
-                <p className="font-opensans font-semibold text-xl md:text-4xl pt-6">
-                  For domestic packages
-                </p>
-                <p className="font-opensans text-sm md:text-xl pt-6">
-                  Sending a package to a friend or family? With{" "}
-                  <span className="font-bold">BOLD’s</span> reliable same-day
-                  delivery, we can deliver on time.
-                </p>
-                <button className="font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
-                  Send your package now{" "}
-                  <span className="inline-flex items-center">
-                    <Image
-                      src={btnrightarrow}
-                      alt="btnarrow "
-                      width={16}
-                    ></Image>
-                  </span>
-                </button>
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-row gap-3">
+                  <p className="text-white bg-black rounded-full text-[16px] md:text-[20px] flex h-fit font-extrabold px-3 py-1">
+                    2
+                  </p>
+                  <p className="font-bold text-[16px] md:text-[20px] ">
+                    100% renewable electricity in Bolt-controlled offices,
+                    warehouses, charging docks and Bolt Market premises by 2025.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[#777777] ml-12">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-row gap-3">
+                  <p className="text-white bg-black rounded-full text-[16px] md:text-[20px] h-fit font-extrabold px-3 py-1">
+                    3
+                  </p>
+                  <p className="font-bold text-[16px] md:text-[20px] ">
+                    90% of our waste finds a new use through circular economy
+                    solutions by 2030.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[#777777] ml-12">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.{" "}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <Image src={cyclesky} alt="bicycle sky" className="hidden md:block" />
+          <Image
+            src={cyclemobile}
+            alt="bicycle mobile"
+            className="rounded-md md:hidden"
+          />
         </div>
 
-        <div className="relative ">
-          <div className="absolute h-[90vh] opacity-50 bg-black z-50"></div>
+        <div className="flex flex-row gap-2 px-[5%]">
+          <div className="flex w-1/2 h-[20vh] md:h-[70vh] bg-gray-500  relative rounded-lg">
+            <Image
+              src={patternbg}
+              alt="Patterned background"
+              className="rounded-lg absolute w-full h-[20vh] md:h-[70vh]"
+            />
+            <div className="w-fit flex flex-col gap-3 md:gap-5 justify-center px-5 z-10">
+              <p className="font-bold text-black text-[9px] md:text-[35px]">
+                Lorem ipsum dolor sit amet, consectetur{" "}
+              </p>
+              <p className="text-black text-[5px] md:text-[20px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut
+              </p>
+            </div>
+          </div>
+          <div className="flex w-1/2 flex-col h-[20vh] md:h-[70vh] gap-2 md:overflow-clip">
+            <Image src={greenhouse} alt="green house" className="rounded-lg" />
+            <div className="flex flex-row gap-2 h-1/2">
+              <Image
+                src={greenmarket}
+                alt="green market"
+                className="w-[48%] md:h-fit h-full rounded-lg"
+              />
+              <Image
+                src={greenshake}
+                alt="green handshake"
+                className="w-[48%] md:w-[50%] h-full rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex mt-20 relative h-[40vh] md:h-[90vh]">
+          <div className="absolute w-full h-[40vh] md:h-[90vh] opacity-50 bg-black z-10"></div>
           <Image
             src={bicycle}
             alt="cycling"
             // style={{ maxHeight: 700 }}
-            className="relative h-[90vh] object-cover"
+            className="absolute h-[40vh] md:h-[90vh] object-cover"
           />
-          <div className="absolute top-0 left-0 md:max-w-[50%] pl-[5%] flex flex-col justify-center md:justify-end h-full md:pb-24">
-            <p className="font-bold text-[25px] md:text-[50px] md:leading-[70px] text-white">
-              Get the BOLD App and Accelerate Your Deliveries. Join BOLD for
-              Lightning-Fast, Reliable Logistics!
+          <div className="top-0 left-0 md:max-w-[50%] pl-[5%] flex flex-col justify-center md:justify-end md:pb-24 z-20">
+            <p className="font-bold text-[20px] md:text-[50px] md:leading-[70px] text-white">
+              Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
             </p>
-            <button className="rounded-lg mt-2 md:mt-10 py-3 px-6 font-redhat text-xl font-semibold bg-white w-fit">
+            <p className="text-[14px] text-white md:text-[20px] mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut
+            </p>
+            <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold bg-white w-fit">
               Download App Now
             </button>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between px-[5%] items-center gap-[5%] pt-28">
-          <Image src={belowbusinessneeds} alt="driverapp" />
+        <div className="flex flex-col md:flex-row justify-between px-[5%] items-center gap-[5%] md:pt-28 pt-16">
+          <Image src={cycler} alt="driverapp" />
           <div className=" flex flex-col justify-center md:max-w-[50%]">
             <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
-              Join BOLD package for all your e-commerce & business needs.
+              Sustainability in our value chain
             </p>
-            <p className="hidden md:block text-xl text-[#777777] pt-6 font-opensans">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
+            <p className="md:text-xl text-base pt-6 font-opensans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut
             </p>
-            <p className="md:hidden text-base text-black pt-6 font-opensans">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
-            </p>
-            <button className=" bg-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-8 underline">
-              Join as business partner{" "}
-              <span className="inline-flex items-center">
-                <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <div className="px-[5%]">
-          <p className="font-redhat font-bold text-xl md:text-4xl pt-20 md:pt-28 pb-10">
-            Read our latest Blogs
-          </p>
-          {/* Blog 1 */}
-          {/* <div className="group flex-grow basis-1/2 transition-all duration-300 relative bg-cover bg-center hover:basis-1/2"
-              style={{ backgroundImage: "url('/path-to-image-1.jpg')" }}>
-           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-             <p className="text-white text-2xl font-bold">
-               How to connect your e-commerce <br /> with BOLD logistics
-             </p>
-           </div>
-         </div> */}
-
-          {/* Other Blogs */}
-          <div className="flex w-full gap-4 mb-12 md:mb-28 min-h-[360px] overflow-x-auto">
-            {[1, 2, 3, 4].map((blog, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-[calc(100vw-4rem)] md:w-1/4 relative rounded-2xl overflow-hidden 
-                  hover:w-[calc(100vw-2rem)] md:hover:w-1/2 
-                  transition-all duration-300"
-              >
-                <Image
-                  src={blogsback}
-                  alt="blogsback"
-                  className="w-full h-full object-center object-cover"
-                />
-                <div className="absolute w-full h-full top-0 left-0 px-8 pb-14 flex justify-end flex-col">
-                  <p className="text-white text-xl md:group-hover:text-2xl transition-all duration-300 font-bold">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed.
-                  </p>
-                </div>
+            <div className="flex mt-6 flex-col gap-10 md:mt-12">
+              <div className="flex flex-row gap-3 items-center">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] font-extrabold px-3 py-1 h-fit">
+                  1
+                </p>
+                <p className="font-bold text-[16px] md:text-[20px] ">
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
               </div>
-            ))}
+
+              <div className="flex flex-row gap-3 items-center">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] flex h-fit font-extrabold px-3 py-1">
+                  2
+                </p>
+                <p className="font-bold text-[16px] md:text-[20px] ">
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+
+              <div className="flex flex-row gap-3">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] h-fit font-extrabold px-3 py-1 items-center">
+                  3
+                </p>
+                <p className="font-bold text-[16px] md:text-[20px] ">
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+
+              <div className="hidden md:flex flex-row gap-3">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] h-fit font-extrabold px-3 py-1 items-center">
+                  4
+                </p>
+                <p className="font-bold text-[16px] md:text-[20px] ">
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="md:px-[5%] pb-28 ">
+        <div className="flex flex-col md:flex-row-reverse justify-between px-[5%] items-center gap-[5%] pt-28">
+            <Image src={fast} alt="driverapp" />
+            <div className=" flex flex-col justify-center md:max-w-[50%]">
+              <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              <p className="font-bold text-[14px] my-2 md:my-4 md:text-[20px[">Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do</p>
+              <p className="hidden md:block text-xl text-[#777777] font-opensans">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              </p>
+              <p className="md:hidden text-base text-black pt-6 font-opensans">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              </p>
+              <button className="bg-black font-redhat font-semibold w-fit px-4 py-2  text-base md:text-xl flex items-center gap-2 text-white rounded-lg mt-8">
+                Download App{" "}
+                <span className="inline-flex items-center">
+                  <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                </span>
+              </button>
+            </div>
+          </div>
+
+        <div className="md:px-[5%] py-28 ">
           <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
             <div className="md:max-w-[55%] flex flex-col justify-center">
               <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">

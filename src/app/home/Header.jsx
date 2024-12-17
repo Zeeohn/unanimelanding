@@ -21,24 +21,39 @@ const Header = () => {
     { label: "Intercity", path: "/intercity" },
     { label: "Logistics", path: "/logistics" },
     { label: "Business", path: "/business" },
-    {label: "About", path: "/about"},
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState("");
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const dropdownRef = useRef(null);
+  
+  const aboutDropdownRef = useRef(null);
+  const signUpDropdownRef = useRef(null);
+
+  const activePaths = [
+    "/about",
+    "/blogs",
+    "/company",
+    "/franchise",
+    "/newsletter",
+    "/sustainability",
+    "/culture",
+  ];
 
   // Function to check if the current path matches the nav item's path
   const isActive = (path) => pathname === path;
 
+  const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
+  const closeAbout = () => setIsAboutOpen(false);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   const toggleDropdown = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
-
     setIsDropdownOpen(!isDropdownOpen);
   }
   const closeDropdown = () => setIsDropdownOpen(false);
@@ -46,6 +61,7 @@ const Header = () => {
   const toggleSubMenu = (menu) => {
     setSubMenuOpen(subMenuOpen === menu ? "" : menu);
   };
+
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768)
     const handleResize = () => {
@@ -59,10 +75,21 @@ const Header = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        aboutDropdownRef.current &&
+        !aboutDropdownRef.current.contains(event.target)
+      ) {
+        closeAbout();
+      }
+
+      if (
+        signUpDropdownRef.current &&
+        !signUpDropdownRef.current.contains(event.target)
+      ) {
         closeDropdown();
       }
     };
+
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, []);
@@ -111,16 +138,91 @@ const Header = () => {
                     : "text-[#888888]"
                 } hover:text-white md:text-base lg:text-lg font-redhat transition-colors`}
               >
-                {item.label === "About" ? (
-                  <>
-                    {item.label} <IoIosArrowDown />
-                  </>
-                ) : (
-                  item.label
-                )}
+                {item.label === "About" ? <>{item.label}</> : item.label}
               </button>
             </Link>
           ))}
+          <div className="relative" ref={aboutDropdownRef}>
+            <div className="flex flex-row gap-2 items-center">
+            <Link
+              href="/about"
+              className={`${
+                activePaths.some((path) => isActive(path))
+                  ? "text-white font-bold"
+                  : "text-[#888888]"
+              } hover:text-white md:text-base lg:text-lg font-redhat transition-colors`}
+            >              
+                About            
+            </Link>
+            <IoIosArrowDown onClick={toggleAbout} className="cursor-pointer" />
+            </div>
+            {isAboutOpen && (
+              <div className="absolute top-full mt-7 right-0  bg-white shadow-lg z-50 w-[191px] ">
+                <ul>
+                  <li className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${isActive("/blogs") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/blogs" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        Blogs
+                      </button>
+                    </Link>
+                  </li>
+                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/company") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/company" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        About us
+                      </button>
+                    </Link>
+                  </li>
+                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/franchise") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/franchise" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        Franchise
+                      </button>
+                    </Link>
+                  </li>
+                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/newsletter") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/newsletter" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        Newsletter
+                      </button>
+                    </Link>
+                  </li>
+                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/sustainability") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/sustainability" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        Sustainability
+                      </button>
+                    </Link>
+                  </li>
+                  <li className={`px-4 py-3 hover:bg-gray-100 mt-2 hover:text-black ${isActive("/culture") ? "bg-gray-100 text-black " : ""}`}>
+                    <Link href="/culture" passHref >
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        Company culture
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Language Selector and Actions */}
@@ -156,7 +258,7 @@ const Header = () => {
             </a>
 
             {/* Sign Up Dropdown Button */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative" ref={signUpDropdownRef}>
               <button
                 className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden"
                 onClick={toggleDropdown}

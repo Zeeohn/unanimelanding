@@ -134,11 +134,43 @@ const Sidebar = ({
               </span>
             </button>
             {subMenuOpen === "about" && (
-              <Link href="/about" passHref>
-                <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                  <li className="cursor-pointer text-sm">About us</li>
-                </ul>
-              </Link>
+              <>
+                <Link href="/about" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">About us</li>
+                  </ul>
+                </Link>
+                <Link href="/blogs" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Blog</li>
+                  </ul>
+                </Link>
+                <Link href="/company" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Company</li>
+                  </ul>
+                </Link>
+                <Link href="/franchise" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Franchise</li>
+                  </ul>
+                </Link>
+                <Link href="/newsletter" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Newsletter</li>
+                  </ul>
+                </Link>
+                <Link href="/sustainability" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Sustainability</li>
+                  </ul>
+                </Link>
+                <Link href="/culture" passHref>
+                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                    <li className="cursor-pointer text-sm">Company culture</li>
+                  </ul>
+                </Link>
+              </>
             )}
           </li>
           <li
