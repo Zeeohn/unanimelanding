@@ -97,7 +97,8 @@ const Businesspage = () => {
         <Promotion />
       ) : (
         <div className="">
-          <div className="bg-black">
+          <div className="" style={{background: "linear-gradient(112.03deg, #01040D 35.12%, #56080B 165.69%)"
+}}>
             <div className="flex justify-between px-[5%] py-20">
               <div className="md:w-[50%]">
                 <div className="  h-full flex flex-col justify-center">
