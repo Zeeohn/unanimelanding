@@ -1,39 +1,45 @@
 "use client";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import videogif from "../../../public/Assets/video.png";
-import { useState, useEffect, useRef } from "react";
 import newsletter from "../../../public/Assets/newsletter.jpeg";
 import beach from "../../../public/Assets/beach.png";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { LuRefreshCcw } from "react-icons/lu";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import NewsDetails from "./NewsDetails";
-// import FAQ from "./home/FAQ";
-// import Footer from "./home/Footer";
-// import Header from "./home/Header";
+
+// Custom utility to get query parameters
+const getQueryParams = (search) => {
+  const params = new URLSearchParams(search);
+  return Object.fromEntries(params.entries());
+};
 
 const Newsletter = () => {
   const imageRef = useRef(null);
   const [paddingTop, setPaddingTop] = useState(0);
-  // const [page, setPage] = useState("home");
+  const [page, setPage] = useState("home");
 
-  const searchParams = useSearchParams();
-   const pathname = usePathname();
-   const { replace } = useRouter();
+  const pathname = usePathname();
+  const { replace } = useRouter();
 
-  const page = searchParams.get("page") || "home";
+  useEffect(() => {
+    // Get the query parameters from the URL when the component mounts
+    const params = getQueryParams(window.location.search);
+    setPage(params.page || "home");
+  }, []);
 
-   const handleStatus = (status) => {
-     const params = new URLSearchParams(searchParams);
-     if (status) {
-      params.set('page', status);
+  const handleStatus = (status) => {
+    const params = new URLSearchParams(window.location.search);
+    if (status) {
+      params.set("page", status);
     } else {
-      params.set('page', "home");
+      params.delete("page");
     }
     replace(`${pathname}?${params.toString()}`);
-   };
-
+    setPage(status || "home"); // Update state to reflect the change
+  };
   const sliderData = [
     {
       id: 1,
