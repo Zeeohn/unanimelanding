@@ -187,7 +187,7 @@ const Ridepage = () => {
           <p
             className={`text-lg text-[#888888] ${
               currentpage === "trendinglocation" ? "text-white font-bold" : ""
-            }  hover:text-white hover:font-bold`}
+            }  hover:text-white hover:font-bold cursor-pointer`}
             onClick={() =>setCurrentPage("trendinglocation")}
           >
             Trending locations
@@ -195,15 +195,15 @@ const Ridepage = () => {
           <p
             className={`text-lg text-[#888888] ${
               currentpage === "ridesafety" ? "text-white font-bold" : ""
-            }  hover:text-white hover:font-bold`}
+            }  hover:text-white hover:font-bold cursor-pointer`}
             onClick={() =>setCurrentPage("ridesafety")}
           >
             Ride safety
           </p>
-          <p className="text-lg text-[#888888] hover:text-white hover:font-bold">
+          <p className="text-lg text-[#888888] hover:text-white hover:font-bold cursor-pointer">
             Blogs
           </p>
-          <p className="text-lg text-[#888888] hover:text-white hover:font-bold">
+          <p className="text-lg text-[#888888] hover:text-white hover:font-bold cursor-pointer">
             FAQ
           </p>
         </div>

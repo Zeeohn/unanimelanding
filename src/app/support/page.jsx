@@ -3,6 +3,9 @@ import React from "react";
 import Image from "next/image";
 import supportbanner from "../../../public/Assets/supportbanner.jpeg";
 import riderscar from "../../../public/Assets/riderscar.svg";
+import car from "../../../public/Assets/car-icon.png";
+import business from "../../../public/Assets/business-icon.png";
+import delivery from "../../../public/Assets/delivery-icon.png";
 import Footer from "../home/Footer";
 import Sepratesupport from "./Sepratesupport";
 import Detailsupport from "./Detailsupport";
@@ -26,26 +29,24 @@ const Supportpage = () => {
             <div className=" mt-6 md:mt-12 lg:mt-20 xl:mt-[92px] flex flex-wrap gap-[5%]  md:gap-4 w-full">
                 <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%]  md:min-w-[15%]" onClick={()=>setcurrentsupport("sepratesupport")}>
                     <Image src={riderscar} alt='riderscar' style={{width:"20%"}}/>
-                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans"> RIDERS</p>
+                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans">Riders</p>
                 </div>
                 <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%] md:min-w-[15%]" onClick={()=>setcurrentsupport("sepratesupport")}>
-                    <Image src={riderscar} alt='riderscar' style={{width:"20%"}}/>
-                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans"> DRIVERS</p>
+                    <Image src={delivery} alt='riderscar' style={{width:"20%"}}/>
+                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans">Logistics</p>
                 </div>
                 <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%]  md:min-w-[15%]" onClick={()=>setcurrentsupport("sepratesupport")}>
-                    <Image src={riderscar} alt='riderscar' style={{width:"20%"}}/>
-                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans"> TICKET ISSUES</p>
+                    <Image src={business} alt='riderscar' style={{width:"20%"}}/>
+                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans">Business</p>
                 </div>
-                {/* <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%] md:min-w-[15%] mt-6 md:mt-0" onClick={()=>setcurrentsupport("sepratesupport")}>
-                    <Image src={riderscar} alt='riderscar' style={{width:"20%"}}/>
-                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans"> Riders</p>
+                <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%] md:min-w-[15%] mt-6 md:mt-0" onClick={()=>setcurrentsupport("sepratesupport")}>
+                    <Image src={business} alt='riderscar' style={{width:"20%"}}/>
+                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans">Ticket issues</p>
                 </div>
                 <div className="md:flex-1 py-2 md:py-6 lg:py-10 flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden min-w-[30%] md:min-w-[15%]  mt-6 md:mt-0" onClick={()=>setcurrentsupport("sepratesupport")}>
-                    <Image src={riderscar} alt='riderscar' style={{width:"20%"}}/>
-                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans"> Riders</p>
-                </div> */}
-               
-                
+                    <Image src={car} alt='riderscar' style={{width:"20%"}}/>
+                    <p className="pt-4 font-semibold text-xs md:text-base lg:text-xl font-opensans">3rd party courier</p>
+                </div>                
             </div>
           </div>
         </div>

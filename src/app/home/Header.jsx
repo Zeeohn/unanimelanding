@@ -31,6 +31,7 @@ const Header = () => {
   
   const aboutDropdownRef = useRef(null);
   const signUpDropdownRef = useRef(null);
+  const sidebarRef = useRef(null);
 
   const activePaths = [
     "/about",
@@ -42,13 +43,14 @@ const Header = () => {
     "/culture",
   ];
 
-  // Function to check if the current path matches the nav item's path
   const isActive = (path) => pathname === path;
 
   const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
   const closeAbout = () => setIsAboutOpen(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   const toggleDropdown = () => {
     if (isMenuOpen) {
@@ -87,6 +89,10 @@ const Header = () => {
         !signUpDropdownRef.current.contains(event.target)
       ) {
         closeDropdown();
+      }
+
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        closeMenu();
       }
     };
 
@@ -143,24 +149,46 @@ const Header = () => {
             </Link>
           ))}
           <div className="relative" ref={aboutDropdownRef}>
-            <div className="flex flex-row gap-2 items-center">
-            <Link
-              href="/about"
-              className={`${
-                activePaths.some((path) => isActive(path))
-                  ? "text-white font-bold"
-                  : "text-[#888888]"
-              } hover:text-white md:text-base lg:text-lg font-redhat transition-colors`}
-            >              
-                About            
-            </Link>
-            <IoIosArrowDown onClick={toggleAbout} className="cursor-pointer" />
+            <div className="">
+              <button
+                className={`${
+                  activePaths.some((path) => isActive(path))
+                    ? "text-white font-bold"
+                    : "text-[#888888]"
+                } hover:text-white md:text-base lg:text-lg font-redhat transition-colors flex flex-row gap-2 items-center`}
+                onClick={toggleAbout}
+              >
+                About
+                {!isAboutOpen ? (
+                  <IoIosArrowDown className="cursor-pointer" />
+                ) : (
+                  <IoIosArrowDown className="cursor-pointer transform rotate-180" />
+                )}
+              </button>
             </div>
             {isAboutOpen && (
               <div className="absolute top-full mt-7 right-0  bg-white shadow-lg z-50 w-[191px] ">
                 <ul>
-                  <li className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${isActive("/blogs") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/blogs" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${
+                      isActive("/about") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/about" passHref>
+                      <button
+                        className="text-gray-500 hover:text-black font-redhat text-xl"
+                        onClick={toggleAbout}
+                      >
+                        About
+                      </button>
+                    </Link>
+                  </li>
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${
+                      isActive("/blogs") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/blogs" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -169,8 +197,12 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
-                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/company") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/company" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${
+                      isActive("/company") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/company" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -179,8 +211,12 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
-                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/franchise") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/franchise" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${
+                      isActive("/franchise") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/franchise" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -189,8 +225,12 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
-                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/newsletter") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/newsletter" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${
+                      isActive("/newsletter") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/newsletter" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -199,8 +239,14 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
-                  <li className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${isActive("/sustainability") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/sustainability" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 my-2 hover:text-black ${
+                      isActive("/sustainability")
+                        ? "bg-gray-100 text-black "
+                        : ""
+                    }`}
+                  >
+                    <Link href="/sustainability" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -209,8 +255,12 @@ const Header = () => {
                       </button>
                     </Link>
                   </li>
-                  <li className={`px-4 py-3 hover:bg-gray-100 mt-2 hover:text-black ${isActive("/culture") ? "bg-gray-100 text-black " : ""}`}>
-                    <Link href="/culture" passHref >
+                  <li
+                    className={`px-4 py-3 hover:bg-gray-100 mt-2 hover:text-black ${
+                      isActive("/culture") ? "bg-gray-100 text-black " : ""
+                    }`}
+                  >
+                    <Link href="/culture" passHref>
                       <button
                         className="text-gray-500 hover:text-black font-redhat text-xl"
                         onClick={toggleAbout}
@@ -328,11 +378,13 @@ const Header = () => {
             />
             {isMenuOpen && (
               <Sidebar
+                sidebarRef={sidebarRef}
                 toggleSubMenu={toggleSubMenu}
                 isMenuOpen={isMenuOpen}
                 subMenuOpen={subMenuOpen}
                 toggleDropdown={toggleDropdown}
                 closeDropdown={closeDropdown}
+                closeMenu={closeMenu}
               />
             )}
           </div>
