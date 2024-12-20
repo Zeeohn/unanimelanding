@@ -11,6 +11,7 @@ import boldassist from "../../../public/Assets/boldassist.png";
 import youtubecover from "../../../public/Assets/youtubecover.png";
 import prevbtn from "../../../public/Assets/prevbtn.png";
 import nextbtn from "../../../public/Assets/blacknextbtn.png";
+import ridepartner from "../../../public/Assets/ride-partner.jpeg";
 import {
   Navigation,
   Pagination,
@@ -35,6 +36,8 @@ import Link from "next/link";
 import Ridesafety from "./ridesafety/page";
 import Trendinglocation from "./Trendinglocation";
 import rideoverview from "../../../public/Assets/rideoverview.png";
+import overlay from "../../../public/Assets/overlay-ride.png";
+import sos from "../../../public/Assets/sos-img.png";
 import { useStateContext } from "../Stateproviderwraper";
 import "../swiperslider.css";
 
@@ -49,7 +52,7 @@ const RideDetails = ({ heading, paragraphs, listItems, imageSrc, altText }) => (
           {text}
         </p>
       ))}
-      <ul className="mr-8">
+      <ul className="ml-10">
         {listItems.map((item, index) => (
           <li
             key={index}
@@ -164,6 +167,29 @@ const Ridepage = () => {
     setIsClient(true);
   }, []);
 
+  const questions = [
+    {
+      question: "What makes BOLD different from other ride-hailing services?",
+      answer:
+        "BOLD offers more than just a ride. With options like eco-friendly rides, ride-sharing to reduce costs, and spacious vehicles for group trips, we cater to your unique needs. Our innovative features, such as Parking SOS, ensure a seamless and stress-free travel experience.",
+    },
+    {
+      question: "How does BOLD Share work?",
+      answer:
+        "BOLD Share lets you split fares with riders heading in the same direction, making it an affordable and eco-friendly way to travel. Our smart routing technology ensures the most efficient pick-up and drop-off for everyone on board, saving you time and money.",
+    },
+    {
+      question: "What is Parking SOS, and how does it help me?",
+      answer:
+        "Parking SOS allows you to send an alert to the registered owner of a vehicle blocking your way. With just a few taps, you can notify the driver through their Bold app or phone number, ensuring quick action and hassle-free resolution.",
+    },
+    {
+      question: "Does BOLD offer services for individuals with special needs?",
+      answer:
+        "Yes, we do! BOLD Assist is designed for individuals with reduced mobility. Our trained drivers ensure a comfortable and reliable experience, helping make travel stress-free and accessible for everyone.",
+    },
+  ];
+
   return (
     <div className="relative">
       <div
@@ -179,7 +205,7 @@ const Ridepage = () => {
               className={`text-lg text-[#888888] ${
                 currentpage === "overview" ? "text-white font-bold" : ""
               }  hover:text-white hover:font-bold`}
-              onClick={() =>setCurrentPage("overview")}
+              onClick={() => setCurrentPage("overview")}
             >
               Overview
             </p>
@@ -188,7 +214,7 @@ const Ridepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "trendinglocation" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold cursor-pointer`}
-            onClick={() =>setCurrentPage("trendinglocation")}
+            onClick={() => setCurrentPage("trendinglocation")}
           >
             Trending locations
           </p>
@@ -196,7 +222,7 @@ const Ridepage = () => {
             className={`text-lg text-[#888888] ${
               currentpage === "ridesafety" ? "text-white font-bold" : ""
             }  hover:text-white hover:font-bold cursor-pointer`}
-            onClick={() =>setCurrentPage("ridesafety")}
+            onClick={() => setCurrentPage("ridesafety")}
           >
             Ride safety
           </p>
@@ -217,14 +243,14 @@ const Ridepage = () => {
           <div className="py-16 md:pt-24 md:pb-20 flex bg-[url('/Assets/rideoverview.png')] bg-cover px-[5%] justify-between relative  ">
             <div className="max-w-full lg:max-w-[33%]">
               <p className="text-4xl lg:text-[40px] font-bold text-white lg:leading-[60px]">
-                <span className="font-extrabold">Ride with BOLD:</span> Comfort,
-                Style, and Luxury
+                Ride in Comfort, Luxury, and Style
               </p>
               <p className="text-2xl md:text-xl  text-[#BBBBBB] pt-8 md:pt-10">
-                Say goodbye to boring rides! Experience travel that’s fast,
-                comfortable, and tailored to your needs. <br /> <br />
-                Need a quick trip? An eco-friendly ride? Or a spacious ride for
-                your group? We have it all. Join the{" "}
+                It’s time to say goodbye to boring rides! Experience travel
+                that’s comfortable, fast, and affordable. Set your bid for ride
+                fares. <br /> <br />
+                Whether you need a quick trip, an eco-friendly ride or a large
+                car for a group, we’ve got you covered. Join the
                 <span className="font-bold">BOLD</span> side. <br />
                 <br /> Download the <span className="font-bold">BOLD</span> app
                 today!
@@ -265,12 +291,12 @@ const Ridepage = () => {
             <Image
               src={ridegroup}
               alt="ridegruop"
-              className="hidden lg:block"
+              className="hidden mt-10 flex justify-center lg:block h-[80vh]"
             />
             <div className=" lg:max-w-[30%] ml-[8%] hidden md:block">
               <p className="text-xl text-[#BBBBBB]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt dolor
+                Bold is amazing. I like their innovative features which gives me
+                more options to choose from.
               </p>
               <div className="flex gap-4 items-center pt-4">
                 {" "}
@@ -307,7 +333,11 @@ const Ridepage = () => {
             </p>
             <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16 flex-wrap">
               <button
-                className="hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] hover:font-semibold hover:bg-[#000000] focus:font-semibold focus:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full"
+                className={`hover:text-white focus:text-white text-[10px] flex items-center justify-center text-center md:text-xl text-[#777777] hover:font-semibold hover:bg-[#000000] py-1 px-3 md:py-[10px] md:px-6 rounded-full ${
+                  boldType === "share"
+                    ? "font-semibold bg-[#000000] text-white"
+                    : "bg-white text-[#777777]"
+                }`}
                 onClick={() => handleSetBold("share")}
               >
                 BOLD Share
@@ -333,137 +363,19 @@ const Ridepage = () => {
             </div>
 
             <RideOptions boldType={boldType} ridetaxiimg={ridetaxiimg} />
-
-            {/* {boldType === "share" ? (
-              <div className=" flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
-              <div className=" py-4 md:py-7 md:max-w-[50%]">
-                <p className="text-sm md:text-xl">
-                  Split costs and reduce your carbon footprint with BOLD Share.
-                  Save more by sharing the fare with riders heading in the same
-                  direction.
-                </p>
-                <p className="text-sm md:text-xl pt-2 md:pt-4">
-                  BOLD Share is a smart and affordable choice for a quick
-                  commute or long trip. Start sharing today!
-                </p>
-                <ul className="mr-8">
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Comfortable eco-friendly ride-sharing
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Enjoy lower fares
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Meet people while enjoying a fast journey
-                  </li>
-                </ul>
-              </div>
-              <Image
-                src={ridetaxiimg}
-                alt="ridetaxi"
-                className="object-cover object-center rounded-2xl"
-              />
-            </div>
-            )
-            : boldType === "regular" ? (
-              <div className=" flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
-              <div className=" py-4 md:py-7 md:max-w-[50%]">
-                <p className="text-sm md:text-xl">
-                Experience cost-effective luxury rides with BOLD Regular. Designed for your everyday travel needs, our private rides offer an unbeatable value.
-                </p>               
-                <ul className="mr-8">
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                  Enjoy a premium experience without breaking the bank.
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                  Ideal for commuting, errands, or outings with friends and family.
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                  Comfortably seats up to four passengers.
-                  </li>
-                </ul>
-              </div>
-              <Image
-                src={ridetaxiimg}
-                alt="ridetaxi"
-                className="object-cover object-center rounded-2xl"
-              />
-            </div>
-            )
-             : boldType === "premium" ? (
-              <div className=" flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
-              <div className=" py-4 md:py-7 md:max-w-[50%]">
-                <p className="text-sm md:text-xl">
-                  Split costs and reduce your carbon footprint with BOLD Share.
-                  Save more by sharing the fare with riders heading in the same
-                  direction.
-                </p>
-                <p className="text-sm md:text-xl pt-2 md:pt-4">
-                  BOLD Share is a smart and affordable choice for a quick
-                  commute or long trip. Start sharing today!
-                </p>
-                <ul className="mr-8">
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Comfortable eco-friendly ride-sharing
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Enjoy lower fares
-                  </li>
-                  <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                    Meet people while enjoying a fast journey
-                  </li>
-                </ul>
-              </div>
-              <Image
-                src={ridetaxiimg}
-                alt="ridetaxi"
-                className="object-cover object-center rounded-2xl"
-              />
-            </div>
-            )
-              : boldType === "xl" ? (
-                <div className=" flex flex-col-reverse md:flex-row justify-between gap-[5%] mt-8 md:mt-12">
-                <div className=" py-4 md:py-7 md:max-w-[50%]">
-                  <p className="text-sm md:text-xl">
-                    Split costs and reduce your carbon footprint with BOLD Share.
-                    Save more by sharing the fare with riders heading in the same
-                    direction.
-                  </p>
-                  <p className="text-sm md:text-xl pt-2 md:pt-4">
-                    BOLD Share is a smart and affordable choice for a quick
-                    commute or long trip. Start sharing today!
-                  </p>
-                  <ul className="mr-8">
-                    <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                      Comfortable eco-friendly ride-sharing
-                    </li>
-                    <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                      Enjoy lower fares
-                    </li>
-                    <li className="pt-2 md:pt-6 lg:pt-10 font-semibold text-sm md:text-xl list-disc">
-                      Meet people while enjoying a fast journey
-                    </li>
-                  </ul>
-                </div>
-                <Image
-                  src={ridetaxiimg}
-                  alt="ridetaxi"
-                  className="object-cover object-center rounded-2xl"
-                />
-              </div>
-              ) :<p>Unknown error has occurred please refresh the page and try again!</p>
-            } */}
           </div>
 
           <div className="bg-[#F3F3F3] px-[5%] py-4 md:py-10 lg:py-16">
             <div className=" md:flex justify-between gap-[10%] lg:gap-[20%]">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl lg:max-w-[40%]">
-                Rides for Every Need. BOLDLY Tailored to You!
+                We Have Rides for Every Need. BOLDLY Tailored to You!
               </p>
               <p className="font-semibold text-sm md:text-xl text-[#777777] pt-2 md:pt-0">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam labore
+                Discover rides designed to match your lifestyle and values.
+                Whether you're travelling with pets, prioritizing
+                sustainability, or seeking accessibility, BOLD offers
+                personalized options to make every journey seamless and
+                enjoyable.
               </p>
             </div>
             <div className="mt-4 md:mt-8 lg:mt-14 flex flex-col md:flex-row gap-4 justify-between md:gap-[4%]">
@@ -520,51 +432,61 @@ const Ridepage = () => {
           <div className="px-[5%] py-12  md:py-16 lg:pt-20 lg:pb-28 ">
             <div className="flex md:flex-row flex-col-reverse justify-between md:gap-[10%] lg:gap-[20%]">
               <div className=" lg:max-w-[40%] pt-4 lg:pt-0">
-                <p className="font-semibold text-xl font-opensans md:text-3xl lg:text-4xl ">
-                  <span className="font-bold">Jump-Start Assistance:</span>{" "}
-                  We’ll Get You Back on the Road Fast!
+                <p className="font-semibold md:pb-6 text-xl font-opensans md:text-3xl lg:text-4xl ">
+                  <span className="font-bold">Parking SOS:</span> Contact
+                  vehicle owners blocking your way
                 </p>
-                <p className="font-semibold text-sm pt-2 md:text-xl text-[#777777] lg:hidden block">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam labore
+                <p className="font-semibold text-sm pt-2  md:text-xl text-[#777777] lg:hidden block">
+                  Imagine you just finished shopping at the mall and a car is
+                  obstructing your way. With parking SOS you have nothing to
+                  worry about. Trigger the SOS alert via the app and alert the
+                  driver to move their car.
                 </p>
-                <div className=" pt-6 md:pt-10 lg:pt-16">
-                  <p className="text-sm md:text-xl font-bold">
-                    Dead battery? No problem
+                <div className="py-3 ">
+                  <p className="text-sm md:text-[20px] font-bold">
+                    Easily Identify and Resolve Vehicle Obstructions
                   </p>
-                  <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    We’re available when you need us. Whether it’s dawn or dusk,
-                    we’ve got you covered.{" "}
+                  <p className="text-sm md:text-[18px] pt-2 text-[#777777]">
+                    With Bold SOS, vehicle details like the plate number, make
+                    and model, colour, and the owner's phone number are securely
+                    registered. This ensures you can quickly identify and
+                    contact the owner of any vehicle causing an obstruction.{" "}
                   </p>
                 </div>
-                <div className=" pt-6 md:pt-10 lg:pt-16">
-                  <p className="text-sm md:text-xl font-bold">
-                    Quick and Reliable Service
+                <div className="py-3 ">
+                  <p className="text-sm md:text-[20px] font-bold">
+                    Send Alerts in Seconds
                   </p>
-                  <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    With just a few taps easily order a driver to help
-                    jump-start your car.{" "}
+                  <p className="text-sm md:text-[18px] pt-2 text-[#777777]">
+                    With just a few taps, you can quickly send an alert to the
+                    driver’s Bold app or registered phone number. The
+                    notification provides essential details, including the
+                    location and a clear description of the situation. Whether
+                    it’s a blocked driveway or an urgent matter, this feature
+                    ensures swift communication and hassle-free resolution.{" "}
                   </p>
                 </div>
-                <div className=" pt-6 md:pt-10 lg:pt-16">
-                  <p className="text-sm md:text-xl font-bold">
-                    Stress-Free Experience
+                <div className="py-3 ">
+                  <p className="text-sm md:text-[20px] font-bold">
+                    No More Waiting Around
                   </p>
-                  <p className="text-sm md:text-xl font-semibold pt-2 md:pt-4 text-[#777777]">
-                    Count on us to handle the hassle so you can get back on the
-                    road and focus on the journey ahead.{" "}
+                  <p className="text-sm md:text-[18px] pt-2 text-[#777777]">
+                    Parking SOS gets you moving in no time! When you send an
+                    alert, the registered owner is instantly notified and
+                    prompted to take quick action to resolve the issue. Say
+                    goodbye to unnecessary waiting.{" "}
                   </p>
                 </div>
               </div>
               <div>
                 <p className="font-semibold text-xl text-[#777777] lg:block hidden">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam labore
+                  Imagine you just finished shopping at the mall and a car is
+                  obstructing your way. With parking SOS you have nothing to
+                  worry about. Trigger the SOS alert via the app and alert the
+                  driver to move their car.
                 </p>
                 <Image
-                  src={youtubecover}
+                  src={sos}
                   alt="youtubecover"
                   className="lg:mt-16"
                 />
@@ -673,11 +595,12 @@ const Ridepage = () => {
           <div className="flex justify-between px-[5%] items-center py-12 md:py-4">
             <div className=" md:max-w-[40%]">
               <p className=" font-opensans md:text-3xl lg:text-4xl font-bold ">
-                Don’t let another car ruin your day
+                Don’t let wrongful parking and obstructions ruin your day
               </p>
               <p className="text-sm md:text-xl text-[#BBBBBB] font-semibold pt-2 md:pt-6 lg:pt-10">
-                Use the SOS feature to alert other drivers blocking your way.
-                With just a few taps they’ll get out of your way.
+                Get the Bold app and use the SOS feature to alert other drivers
+                blocking your way. With a few taps, you can identify the vehicle
+                owner and get them to come over immediately.
               </p>
               <button className="text-sm md:text-xl font-semibold bg-black text-white px-4 py-2 md:py-3 md:px-6 rounded-lg mt-8 lg:mt-7">
                 Download Now
@@ -693,9 +616,11 @@ const Ridepage = () => {
           <Blogsec
             text={`There’s more to <span class="font-extrabold">BOLD.</span> Bold is not just about getting you from point A to point B. We offer a variety of services designed to enhance your daily life and solve real-world problems.`}
             heading={"More Than Just Rides"}
-            cta={"Read more details on BOLD"}
+                cta={"Read more details on BOLD"}
+                bg={ridepartner}
+                overlayImg={overlay}
           />
-          <FAQ />
+          <FAQ questions={questions} />
         </div>
       )}
     </div>

@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import bgimg from "../../public/Assets/landingmainimg.png";
 import Image from "next/image";
-import videogif from "../../public/Assets/video.png";
+import videogif from "../../public/Assets/landing-gif.gif";
+import blogimg from "../../public/Assets/blogbg.png";
 import uppericon from "../../public/Assets/uppericon.png";
 import upperright from "../../public/Assets/upperright.png";
 import upperleft from "../../public/Assets/lowerleft.png";
@@ -19,10 +21,19 @@ const Homepage = () => {
   const imageRef = useRef(null);
   const [paddingTop, setPaddingTop] = useState(0);
 
+  const router = useRouter()
+
+  const handleRedirect = (page) => {
+    if(page){
+      router.push(page);
+    }
+  };
+
   useEffect(() => {
     const updatePadding = () => {
       if (imageRef.current) {
         setPaddingTop(imageRef.current.clientHeight + 200); // Get the image's height
+        console.log(imageRef.current.clientHeight);
       }
     };
 
@@ -36,62 +47,60 @@ const Homepage = () => {
 
   return (
     <div>
-      <div className="min-h-[650px] relative">
+      <div className="h-[70vh] md:h-[100vh] relative">
         {/* <img src={bgimg} alt="backimg" /> */}
         <Image
-          className="object-cover object-center"
+          className="h-[70vh] md:h-[100vh] object-cover object-center"
           src={bgimg}
           alt="backimg"
-          style={{
-            minHeight: "650px",
-          }}
+         
         />
-        <div className=" absolute w-full h-full top-0 left-0 flex flex-col justify-center sm:items-center px-[5%] ">
-          <p className="font-redhat font-bold text-[25px] md:text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
+        <div className=" absolute w-full h-full top-0 left-0 flex flex-col pt-10 sm:items-center px-[5%] ">
+          <p className="font-redhat font-bold text-[25px] md:text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] sm:text-center  ">
             Innovative Technology Connecting You Globally
           </p>
-          <p className="font-normal font-opensans md:text-2xl text-base sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] lg:max-w-[50%] sm:text-center  ">
+          <p className="font-normal font-opensans md:text-[20px] text-base sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] sm:text-center">
             BOLD is more than just a platform. We’re game changers. We enable
             seamless movement across the globe for people and businesses.
             Whether you’re booking a ride in your city, delivering packages
             internationally, or renting a vehicle, BOLD integrates cutting-edge
             solutions to redefine how you move.
           </p>
-          <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] lg:max-w-[50%] pt-14">
+          <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] pt-14">
             <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]">
-              Learn More
+              Get Started
             </button>
-            {/* <button className="py-3 sm:px-8 font-redhat font-semibold border-white border-2 text-sm  sm:text-base md:text-xl text-white rounded-3xl sm:w-fit w-[50%]  ">
+            <button className="py-3 sm:px-8 font-redhat font-semibold border-white border-2 text-sm  sm:text-base md:text-xl text-white rounded-3xl sm:w-fit w-[50%]" onClick={() => handleRedirect("/company")}>
               Know more
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
       <div className="videosec relative">
         <div
           ref={imageRef}
-          className="upperone absolute hidden justify-center w-full -top-[150px]  md:flex "
+          className="upperone absolute hidden justify-center w-full -top-[160px]  md:flex "
         >
-          {/* <Image
+          <Image
             src={videogif}
             alt="backimg"
             style={{
               maxHeight: "600px",
-              width: "85%",
+              width: "80%",             
               objectFit: "fill",
               borderRadius: "16px",
             }}
-          /> */}
+          />
         </div>
         <div
           style={
             {
-              // paddingTop: paddingTop > 200 ? `${paddingTop / 2}px` : "48px",
+              paddingTop: paddingTop > 200 ? `${paddingTop / 2}px` : "48px",
             }
           }
           className=" flex justify-center mt-6 px-[5%] "
         >
-          <div className="sm:w-[75%]  sm:text-center">
+          <div className="sm:w-[75%] lg:mt-28 sm:text-center">
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
               BOLD brings the world closer!
             </p>
@@ -168,13 +177,13 @@ const Homepage = () => {
       {/* // partnersec */}
 
       <div className="px-[5%] pt-12 md:pt-20 lg:pt-28 lg:pb-20 md:pb-16 pb-12 ">
-        <div className="md:max-w-[65%] md:mx-auto">
+        <div className="md:max-w-[85%] md:mx-auto">
           {/* <p className="text-lg text-center ">Our partners</p>
         <p className="font-semibold text-xl text-center pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p> */}
           <p className="sm:text-center text-xl  sm:text-lg sm:font-medium font-bold text-left">
             Our Partners
           </p>
-          <p className="sm:text-center pt-2 sm:pt-6 text-sm sm:text-2xl lg:text-4xl  font-semibold text-left ">
+          <p className="sm:text-center pt-2 sm:pt-6 text-sm sm:text-2xl md:text-[20px] font-semibold text-left ">
             <span className="font-bold">BOLD</span> builds trust through strong
             partnerships with fleet providers, businesses, and e-commerce
             brands, offering reliable services and rewarding loyalty with
@@ -182,7 +191,7 @@ const Homepage = () => {
           </p>
         </div>
 
-        <div className=" pt-6 sm:pt-12 md:pt-20 lg :pt-28 flex justify-between overflow-x-hidden">
+        <div className=" pt-6 sm:pt-12 md:pt-20 lg:pt-28 flex justify-between overflow-x-hidden">
           <Image src={partner1} alt="partner" style={{ width: "15%" }} />
           <Image src={partner2} alt="partner" style={{ width: "15%" }} />
           <Image src={partner3} alt="partner" style={{ width: "15%" }} />
@@ -192,14 +201,17 @@ const Homepage = () => {
       </div>
 
       {/* // blog sec */}
+      <div className="mb-20">
       <Blogsec
         text={`Your safety is our top priority at <span class="font-extrabold">BOLD</span>. With real-time GPS tracking, vetted drivers, and in-app safety tools, 24/7 support, we prioritize your security for a worry-free ride. Travel confidently with <span class="font-extrabold">BOLD</span>’s trusted and secure services.`}
         heading={"Travel The Safe Way"}
-        cta={"Learn More"}
+        cta={"Read our details on safety concerns"}
+        bg={blogimg}
       />
+      </div>
 
       {/* //FAQ */}
-      <FAQ />
+      {/* <FAQ /> */}
 
       {/* //footersec */}
     </div>

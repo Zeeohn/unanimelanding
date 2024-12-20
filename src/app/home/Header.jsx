@@ -169,7 +169,7 @@ const Header = () => {
             {isAboutOpen && (
               <div className="absolute top-full mt-7 right-0  bg-white shadow-lg z-50 w-[191px] ">
                 <ul>
-                  <li
+                  {/* <li
                     className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${
                       isActive("/about") ? "bg-gray-100 text-black " : ""
                     }`}
@@ -182,7 +182,7 @@ const Header = () => {
                         About
                       </button>
                     </Link>
-                  </li>
+                  </li> */}
                   <li
                     className={`px-4 py-3 hover:bg-gray-100 mb-2 hover:text-black ${
                       isActive("/blogs") ? "bg-gray-100 text-black " : ""

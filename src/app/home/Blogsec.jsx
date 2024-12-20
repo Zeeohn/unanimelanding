@@ -4,7 +4,7 @@ import arrowicon from "../../../public/Assets/arrow.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const Blogsec = ({ text, heading, cta }) => {
+const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor }) => {
   const [displayText, setDisplayText] = useState(text);
 
   useEffect(() => {
@@ -30,14 +30,24 @@ const Blogsec = ({ text, heading, cta }) => {
   }, [text]);
   return (
     <div>
-      <div className="md:px-[5%] sm:pt-4 md:pt-10 lg:pt-16 overflow-hidden md:rounded-2xl">
-        <div className="relative  md:rounded-2xl overflow-hidden">
+      <div className="md:px-[5%] sm:pt-4 md:pt-10 overflow-hidden md:rounded-2xl">
+        <div className="relative flex md:rounded-2xl overflow-hidden">
           <Image
-            src={blogimg}
+            src={bg ? bg : blogimg}
             alt="productimg"
             className="max-h-[700px] w-full object-cover object-center"
           />
-          <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-end h-full px-[5%] pb-6 md:px-8 md:pb-10">
+          {overlayImg && (
+            <Image
+              src={overlayImg}
+              alt="blue overlay"
+              className="flex absolute h-full opacity-60 w-full z-10"
+            />
+          )}
+          {overlayColor && (
+            <div className="absolute w-full h-full bg-[#0E0E0E] opacity-70 z-20"></div>
+          )}
+          <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-end h-full px-[5%] pb-6 md:px-8 md:pb-10 z-20">
             <p className="font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-white ">
               {heading}
             </p>
@@ -45,7 +55,7 @@ const Blogsec = ({ text, heading, cta }) => {
               className=" pt-2 md:pt-6 lg:pt-10 sm:font-semibold text-white text-sm sm:text-xl"
               dangerouslySetInnerHTML={{ __html: displayText }}
             ></p>
-            <div className="flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-6">
+            <div className="flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-8">
               <button className="text-white text-sm md:text-xl lg:text-2xl font-bold ">
                 {cta}
               </button>{" "}

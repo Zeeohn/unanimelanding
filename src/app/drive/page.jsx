@@ -41,7 +41,12 @@ import Footer from "../home/Footer";
 import Howitworks from "./Howitworks";
 import Earning from "./Earning";
 import Drivesafety from "./Drivesafety";
+import cyantick from "../../../public/Assets/cyan-tick.png";
+import cyandoc from "../../../public/Assets/cyan-document.png";
+import cyanstar from "../../../public/Assets/cyan-star.png";
 import drivebackground from "../../../public/Assets/drivebackground.png";
+import driveoverlay from "../../../public/Assets/drive-overlay.png";
+import drivebanner from "../../../public/Assets/drive-banner.jpeg";
 import { useStateContext } from "../Stateproviderwraper";
 import "../swiperslider.css";
 
@@ -52,6 +57,19 @@ const Drivepage = () => {
   const { currentpage , setCurrentPage} = useStateContext(); 
   console.log(currentpage);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+    const questions = [
+    { question: "Do I need to own a car to become a BOLD partner?",  
+answer: "No, you don’t need to own a car to start driving and earning with BOLD. You can partner with us using a vehicle that you have access to, whether it’s your own or rented."},
+{question: "How flexible are the working hours with BOLD?", 
+answer:"With BOLD, you have complete control over your schedule. You can choose when and how much you want to drive—whether it’s part-time or full-time, during the day or night. It's all up to you!"},
+{question: "What kind of support does BOLD offer drivers?",
+answer: "BOLD provides 24/7 in-app safety and support to ensure that you’re always covered, no matter where you are or when you’re working. Our team is always available to help with any issues or questions.",
+},
+{question: "How do I make extra money with BOLD?",
+answer: "You can boost your earnings by bidding for higher-demand trip fares, driving longer distances with the BOLD Intercity feature, or delivering packages as part of our Boost package. Plus, you can earn additional income by assisting stranded drivers with our Jumpstart service."},
+
+  ]
 
   useEffect(() => {
     setIsClient(true); // Ensure Swiper runs client-side
@@ -133,16 +151,28 @@ const Drivepage = () => {
               <p className="font-bold text-4xl lg:text-[40px] lg:leading-[60px] font-redhat text-white">
                 Drive on your terms and make money with BOLD!
               </p>
-              <div className="flex flex-wrap justify-between py-8 md:pt-4 md:pb-10">
-                <div className="flex gap-4 items-center pt-6">
-                  <Image
-                    src={whitecheck}
-                    alt="whitecheck"
-                    className="w-4 sm:w-6"
-                  />
-                  <p className=" text-base md:text-lg text-white">
-                    No need to own a car
-                  </p>
+              <div className="flex flex-col py-8 md:pt-4 md:pb-10">
+                <div className="flex flex-col md:gap-24 md:flex-row">
+                  <div className="flex gap-4 items-center pt-6">
+                    <Image
+                      src={whitecheck}
+                      alt="whitecheck"
+                      className="w-4 sm:w-6"
+                    />
+                    <p className=" text-base md:text-[16px] text-white">
+                      No need to own a car
+                    </p>
+                  </div>
+                  <div className="flex gap-4 items-center pt-6">
+                    <Image
+                      src={whitecheck}
+                      alt="whitecheck"
+                      className="w-4 sm:w-6"
+                    />
+                    <p className="text-base md:text-[16px] text-white">
+                      Flexible hours
+                    </p>
+                  </div>
                 </div>
                 <div className="flex gap-4 items-center pt-6">
                   <Image
@@ -150,17 +180,7 @@ const Drivepage = () => {
                     alt="whitecheck"
                     className="w-4 sm:w-6"
                   />
-                  <p className="text-base md:text-lg text-white">
-                    Flexible hours
-                  </p>
-                </div>
-                <div className="flex gap-4 items-center pt-6">
-                  <Image
-                    src={whitecheck}
-                    alt="whitecheck"
-                    className="w-4 sm:w-6"
-                  />
-                  <p className="text-base md:text-lg text-white">
+                  <p className="text-base md:text-[16px] text-white">
                     24/7 in‑app safety and support
                   </p>
                 </div>
@@ -186,8 +206,12 @@ const Drivepage = () => {
               How it works
             </p>
             <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-              You&apos;re in control with the BOLD app. Drive anytime you want, day
-              or night.
+              The BOLD app puts you in charge of your driving schedule. Whether
+              it&apos;s day or night, you decide when to hit the road. Drive
+              across cities, states, or even countries, and take on parcel
+              deliveries along the way. Maximize your time by carrying riders
+              heading in the same direction, so you spend less time waiting for
+              requests and more time earning on the move.
             </p>
             <div className="mt-4 md:mt-8 lg:mt-14 xl:mt-20 flex flex-col md:flex-row gap-4 justify-between md:gap-[4%]">
               <div
@@ -250,88 +274,119 @@ const Drivepage = () => {
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
               What do you need to become a BOLD partner?
             </p>
-            <div className="flex md:flex-row flex-col gap-6 justify-between mt-6 md:mt-8 lg:mt-10 pb-12 md:pb-20 lg:pb-28 md:gap-6 lg:gap-8">
-              <div className="">
-                <Image src={blackstr} alt="blackstr" className="w-7 md:w-12" />
+            <div className="flex w-full md:flex-row flex-col gap-6 justify-between mt-6 md:mt-8 lg:mt-10 pb-12 md:pb-20 lg:pb-28 md:gap-6 lg:gap-8">
+              <div className="md:w-1/3">
+                <Image src={cyanstar} alt="blackstr" className="w-7 md:w-12" />
                 <p className="font-semibold text-base md:text-xl lg:text-2xl pt-[14px] md:pt-6 lg:pt-8">
                   Basic requirements
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">. Driving Skills:</span> You
+                  need to know how to drive a vehicle confidently and
+                  responsibly.
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">. Age Requirement:</span>{" "}
+                  Ensure you meet the minimum age required to drive in your
+                  area.
+                </p>
+                <p className="text-sm md:text-base pt-2">
+                  <span className="font-semibold">. Background Check:</span> You
+                  should have a clean criminal and driving record.
                 </p>
               </div>
-              <div className="">
-                <Image src={documents} alt="blackstr" className="w-7 md:w-12" />
+              <div className="md:w-1/3">
+                <Image src={cyandoc} alt="blackstr" className="w-7 md:w-12" />
                 <p className="font-semibold text-base md:text-xl lg:text-2xl pt-[14px] md:pt-6 lg:pt-8">
                   Documents
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">
+                    . Driver&apos;s License:
+                  </span>{" "}
+                  A valid driver’s license for the type of vehicle you intend to
+                  drive.
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">. Vehicle Registration:</span>{" "}
+                  Proof that your vehicle is legally registered.
+                </p>
+                <p className="text-sm md:text-base pt-2">
+                  <span className="font-semibold">. Insurance:</span> A valid
+                  insurance policy for the vehicle.
                 </p>
               </div>
-              <div className="">
-                <Image src={blacktick} alt="blackstr" className="w-7 md:w-12" />
+              <div className="md:w-1/3">
+                <Image src={cyantick} alt="blackstr" className="w-7 md:w-12" />
                 <p className="font-semibold text-base md:text-xl lg:text-2xl pt-[14px] md:pt-6 lg:pt-8">
                   Sign up process
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">. Online Application:</span>{" "}
+                  Begin by signing up through our user-friendly platform. Fill
+                  in your details and upload the required documents.
                 </p>
                 <p className="text-sm md:text-base pt-2">
-                  . Lorem Ipsum is not simply random text.
+                  <span className="font-semibold">. Verification:</span> Our
+                  team will review your application and conduct the necessary
+                  background checks.
+                </p>
+                <p className="text-sm md:text-base pt-2">
+                  <span className="font-semibold">. Orientation:</span> Once
+                  approved, you’ll be invited for an onboarding session to
+                  familiarize yourself with our platform and policies.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="px-[5%] mb-12 md:mb-20 lg:mb-28 lg:gap-[5%] xl:gap-[8%] flex lg:flex-row flex-col gap-4 lg:items-center">
-            <div className=" w-[80%] lg:w-[70%]">
+            <div className=" w-[80%] lg:w-1/2">
               <Image
                 src={driverappimage}
                 alt="driverapp"
                 style={{ width: "100%" }}
               />
             </div>
-            <div className="">
+            <div className="lg:w-1/2">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-              Earn more money from BOLD
+                Earn more money from BOLD
               </p>
-              <div className="flex gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
+              <div className="flex gap-6 justify-start pt-6 md:pt-5 lg:pt-5">
                 <div className="">
-                  <Image src={one} alt="one" width={32} height={32} />
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">1</p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Packages</p>
-                  <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                  Boost your earnings by delivering packages quickly and securely. From e-commerce orders to personal deliveries, turn every trip into a money-making opportunity.{" "}
+                  <p className=" pt-3 text-[#777777] text-sm md:text-xl">
+                    Boost your earnings by delivering packages quickly and
+                    securely. From e-commerce orders to personal deliveries,
+                    turn every trip into a money-making opportunity. Whether
+                    it’s a gift, business delivery, or customer order, each
+                    package is a chance to earn more while helping keep goods
+                    moving efficiently.{" "}
                   </p>
                 </div>
               </div>
-              <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+              <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <Image src={two} alt="one" width={32} height={32} />
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">2</p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Boldmiles</p>
-                  <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                  Drive between cities and boost your earnings on longer trips with BOLD Intercity feature.{" "}
+                  <p className=" pt-3 text-[#777777] text-sm md:text-xl">
+                    Drive between cities, states, and countries with the BOLD Intercity feature and boost your earnings on longer trips. Whether for business, leisure, or routine commutes, you can turn cross-country travel into a profitable opportunity, enjoying the freedom of choosing your routes while earning extra income.{" "}
                   </p>
                 </div>
               </div>
-              <div className="flex gap-6 justify-start pt-4 md:pt-10 lg:pt-14">
+              <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <Image src={three} alt="one" width={32} height={32} />
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">3</p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Jumpstart</p>
-                  <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                  Assist stranded drivers and make money by providing quick, reliable jumpstart services. Turn car troubles into your next earning opportunity. {" "}
+                  <p className=" pt-3 text-[#777777] text-sm md:text-xl">
+                    Earn money by assisting stranded drivers with quick, reliable jumpstart services. Car troubles can happen anytime, and you can be the one to help. Turn roadside emergencies into a profitable opportunity, all while offering a valuable service to your community.{" "}
                   </p>
                 </div>
               </div>
@@ -339,22 +394,24 @@ const Drivepage = () => {
           </div>
 
           <Blogsec
-            heading={
-              "Your safety drives everything we do"
-            }
+            heading={"Your safety drives everything we do"}
             text={
               "Your well-being and safety matter. That’s why we’ve designed an experience that keeps you comfortable whether driving at night or during the day."
             }
-            cta={"Learn More"}
+                  cta={"Learn More"}
+                  bg={drivebanner}
+                  overlayImg={driveoverlay}
           />
 
           <div className="flex justify-between px-[5%] items-center py-12 md:py-20 lg:py-28 ">
             <div className="md:max-w-[50%] lg:max-w-[50%] flex flex-col justify-center">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-              Earn money and drive with confidence
+                Make Money and Drive With Confidence
               </p>
               <p className="font-semibold text-sm md:text-xl pt-2 sm:pt-4 md:pt-6 lg:pt-8 max-w-[80%]">
-              Drive on your terms and earn more with every trip. Whether it’s passengers or packages, our platform lets you maximize your earnings across all our services. 
+                Drive on your terms and earn more with every trip. Whether it’s
+                passengers or packages, our platform lets you maximize your
+                earnings across all our services.
               </p>
               <div className="flex gap-2">
                 <div>
@@ -386,7 +443,7 @@ const Drivepage = () => {
           <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
             <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-               Reviews
+                Reviews
               </p>
               {isLargeScreen && (
                 <div className="flex gap-6">
@@ -480,7 +537,7 @@ const Drivepage = () => {
               </Swiper>
             )}
           </div>
-          <FAQ />
+          <FAQ questions={questions} />
         </div>
       )}
     </div>

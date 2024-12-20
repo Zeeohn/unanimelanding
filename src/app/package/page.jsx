@@ -6,6 +6,7 @@ import fillindetails from "../../../public/Assets/fillindetails.png";
 import pickuppackage from "../../../public/Assets/pickuppackage.png";
 import rightdelivery from "../../../public/Assets/rightdelivery.png";
 import boldadvertise from "../../../public/Assets/boldadvertise.png";
+import track from "../../../public/Assets/track-van.png";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
@@ -14,13 +15,22 @@ import Trackdetails from "./Trackdetails";
 const Packagepage = ({ setcurrentpage }) => {
   return (
     <div>
-      <div className="bg-black px-[5%] flex items-center min-h-[560px]">
-        <div className="">
-          <p className="font-redhat font-bold text-2xl md:text-5xl text-white">
-          Find out where your package is
+      <div className=" flex items-center min-h-[560px]">
+        <Image
+          src={track}
+          alt="bold van"
+          className="h-[70vh] -mt-2 md:h-[90vh] w-[100vw] object-cover"
+        />
+        <div className="absolute px-[5%]">
+          <p className="hidden md:block font-redhat font-bold text-2xl md:text-5xl text-white">
+            Find out where your <br /> package is
           </p>
-          <p className="font-opensans text-base md:text-xl pt-6 text-white">
-          Watch your package closely with our tracker. Enter your shipping ID to start tracking and stay up to date with your delivery.
+          <p className="md:hidden font-redhat font-bold text-2xl md:text-5xl text-white">
+            Find out where your <br /> package is
+          </p>
+          <p className="font-opensans text-base md:text-xl pt-6 text-white md:w-[50%]">
+            Watch your package closely with our tracker. Enter your shipping ID
+            to start tracking and stay up to date with your delivery.
           </p>
           <div className="mt-12 flex rounded-lg overflow-hidden w-[80vw] md:w-fit">
             <div className="p-4 flex gap-4 items-center bg-white">
@@ -37,13 +47,13 @@ const Packagepage = ({ setcurrentpage }) => {
         </div>
       </div>
 
-      <div className="py-20 px-[8%]">
-        <div className="md:max-w-[50%] mx-auto">
-          <p className="md:flex hidden font-opensans font-bold text-4xl md:text-center">
+      <div className="md:py-20 px-[8%]">
+        <div className="md:flex md:flex-col md:justify-center mx-auto">
+          <p className="hidden md:block font-opensans font-bold text-4xl text-center">
             How to ship with Bold
           </p>
           <p className="md:hidden font-opensans font-bold text-xl md:text-4xl md:text-center">
-          How to ship with Bold
+            How to ship with Bold
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 md:text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -51,9 +61,9 @@ const Packagepage = ({ setcurrentpage }) => {
           </p>
         </div>
 
-        <div className="flex md:flex-row flex-col items-center gap-8 justify-between pt-20">
-          <div className="md:max-w-[14%]">
-            <div className="md:mx-auto w-[65%]">
+        <div className="flex md:flex-row flex-col items-center gap-8 justify-center md:justify-between py-10 md:pt-20">
+          <div className="md:max-w-[14%] flex flex-col items-center">
+            <div className="md:mx-auto w-[50%]">
               <Image src={downloadapp} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
@@ -61,8 +71,8 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%]">
-            <div className="md:mx-auto w-[65%]">
+          <div className="md:max-w-[14%] flex flex-col items-center">
+            <div className="md:mx-auto w-[50%]">
               <Image src={fillindetails} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
@@ -70,8 +80,8 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%]">
-            <div className="md:mx-auto  md:w-[65%] w-[60%]">
+          <div className="md:max-w-[14%] flex flex-col items-center">
+            <div className="md:mx-auto  md:w-[50%] w-[60%]">
               <Image src={pickuppackage} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
@@ -79,12 +89,12 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%]">
-            <div className="md:mx-auto md:w-[65%] w-[60%]">
+          <div className="md:max-w-[14%] flex flex-col items-center">
+            <div className="md:mx-auto md:w-[50%] w-[40%]">
               <Image src={rightdelivery} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
-            Your package is delivered in one piece 
+              Your package is delivered in one piece
             </p>
           </div>
         </div>
@@ -94,11 +104,11 @@ const Packagepage = ({ setcurrentpage }) => {
         <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="md:max-w-[55%] flex flex-col justify-center">
             <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-            Send packages with BOLD
+              Send packages with BOLD
             </p>
             <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-            Get the BOLD app and enjoy seamless delivery when you send packages safely to your friends and family.
-
+              Get the BOLD app and enjoy seamless delivery when you send
+              packages safely to your friends and family.
             </p>
             <div className="flex gap-2 flex-row justify-between mb-3">
               <div>

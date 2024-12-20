@@ -1,4 +1,7 @@
+"use client";
+
 import aboutcompany from "../../../public/Assets/aboutcompany.jpeg";
+import {useRouter} from "next/navigation";
 import Image from "next/image";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
 import aboutone from "../../../public/Assets/aboutone.png";
@@ -8,6 +11,14 @@ import corevalues from "../../../public/Assets/corevalues.svg";
 import blogsback from "../../../public/Assets/blogsback.png";
 
 const Aboutpage = () => {
+  const router = useRouter();
+
+  const handleRedirect = (page) => {
+    if(page){
+      router.push(page);
+    }
+  }
+
   return (
     <div className="">
       <div className="md:max-w-[61%] md:mx-auto py-10 md:py-28 px-[5%]">
@@ -70,7 +81,7 @@ Our goal is to ensure that every interaction is seamless, so your experience wit
           <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
           Bold provides businesses with practical, reliable solutions tailored to your needs. Whether you need to streamline logistics, enhance transportation, or grow your brand, our platform offers the tools to drive success and keep you ahead of the competition.
           </p>
-          <button className="  font-redhat font-bold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+          <button className="  font-redhat font-bold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline" onClick={() => handleRedirect("/business")}>
             Explore BOLD Business
             <span className="inline-flex items-center">
               <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
@@ -91,7 +102,7 @@ Our goal is to ensure that every interaction is seamless, so your experience wit
           <p className=" text-base md:text-xl text-[#777777] pt-6 font-opensans">
           At Bold, we thrive on collaboration. Our success is tied to the success of our partners. By working together, we deliver innovative solutions that drive mutual growth. We’re committed to supporting you every step of the way as your business expands.
           </p>
-          <button className=" text-white bg-black py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10 w-fit">
+          <button className=" text-white bg-black py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10 w-fit" onClick={() => handleRedirect("/about")}>
             Learn more
             <span className="inline-flex items-center text-white">
               <Image src={whitearrow} alt="btnarrow " width={16}></Image>

@@ -186,9 +186,9 @@ const Sidebar = ({
             </button>
             {subMenuOpen === "about" && (
               <>          
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
+                  {/* <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
                     <li className="cursor-pointer text-sm" onClick={() => handleNavigate("about")}>About us</li>
-                  </ul>                
+                  </ul>                 */}
                   <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
                     <li className="cursor-pointer text-sm" onClick={() => handleNavigate("blogs")}>Blog</li>
                   </ul>                

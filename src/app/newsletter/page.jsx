@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, redirect  } from "next/navigation";
 import videogif from "../../../public/Assets/video.png";
 import newsletter from "../../../public/Assets/newsletter.jpeg";
 import beach from "../../../public/Assets/beach.png";
@@ -37,9 +37,10 @@ const Newsletter = () => {
     } else {
       params.delete("page");
     }
-    replace(`${pathname}?${params.toString()}`);
+    redirect(`${pathname}?${params.toString()}`);
     setPage(status || "home"); // Update state to reflect the change
   };
+  
   const sliderData = [
     {
       id: 1,
