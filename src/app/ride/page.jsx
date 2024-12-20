@@ -372,7 +372,7 @@ const Ridepage = () => {
               </p>
               <p className="font-semibold text-sm md:text-xl text-[#777777] pt-2 md:pt-0">
                 Discover rides designed to match your lifestyle and values.
-                Whether you're travelling with pets, prioritizing
+                Whether you&apos;re travelling with pets, prioritizing
                 sustainability, or seeking accessibility, BOLD offers
                 personalized options to make every journey seamless and
                 enjoyable.
@@ -448,7 +448,7 @@ const Ridepage = () => {
                   </p>
                   <p className="text-sm md:text-[18px] pt-2 text-[#777777]">
                     With Bold SOS, vehicle details like the plate number, make
-                    and model, colour, and the owner's phone number are securely
+                    and model, colour, and the owner&apos;s phone number are securely
                     registered. This ensures you can quickly identify and
                     contact the owner of any vehicle causing an obstruction.{" "}
                   </p>
