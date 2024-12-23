@@ -19,6 +19,7 @@ import boldfuel from "../../../public/Assets/boldfuel.png";
 import businessfuel from "../../../public/Assets/businessfuel.png";
 import businesscustomerbase from "../../../public/Assets/businesscustomerbase.png";
 import patternbg from "../../../public/Assets/pattern-business.png";
+import boldadvertise from "../../../public/Assets/boldadvertise.png";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import Promotion from "./Promotion";
