@@ -27,10 +27,12 @@ const Header = () => {
   const [subMenuOpen, setSubMenuOpen] = useState("");
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [loginDropdownOpen, setLoginDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   
   const aboutDropdownRef = useRef(null);
   const signUpDropdownRef = useRef(null);
+  const loginDropdownRef = useRef(null);
   const sidebarRef = useRef(null);
 
   const activePaths = [
@@ -58,6 +60,18 @@ const Header = () => {
     }
     setIsDropdownOpen(!isDropdownOpen);
   }
+
+  const toggleLoginDropdown = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+    setLoginDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeLogin = () => {
+    setLoginDropdownOpen(false);
+  }
+
   const closeDropdown = () => setIsDropdownOpen(false);
 
   const toggleSubMenu = (menu) => {
@@ -91,6 +105,13 @@ const Header = () => {
         closeDropdown();
       }
 
+      if (
+        loginDropdownRef.current &&
+        !loginDropdownRef.current.contains(event.target)
+      ) {
+        closeLogin();
+      }
+
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
         closeMenu();
       }
@@ -101,22 +122,27 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { title: "Become a courier", subtitle: "Make money on your terms" },
+    { title: "Signup as promoter", subtitle: "Make money on your terms" },
     {
       title: "Become an intercity partner",
       subtitle: "Make money on your terms",
     },
-    { title: "Sign up as a promoter", subtitle: "Lorem ipsum dolor sit amet" },
-    { title: "Sign up as e-commerce", subtitle: "Lorem ipsum dolor sit amet" },
+    { title: "Signup as Fleet partner", subtitle: "Make money on your terms" },
+    { title: "Bold Ads for businesses", subtitle: "Make money on your terms" },
+    { title: "Bold Business", subtitle: "Make money on your terms" },
+    { title: "Bold Rental", subtitle: "Make money on your terms" },
+  ];
+
+  const loginItems = [
+    { title: "Login as promoter", subtitle: "Make money on your terms" },
     {
-      title: "Sign up as a fleet partner",
+      title: "Login as intercity partner",
       subtitle: "Make money on your terms",
     },
-    {
-      title: "Add a restaurant or store",
-      subtitle: "Make money on your terms",
-    },
-    { title: "BOLD Business", subtitle: "Make money on your terms" },
+    { title: "Login as Fleet partner", subtitle: "Make money on your terms" },
+    { title: "Bold Ads for businesses", subtitle: "Make money on your terms" },
+    { title: "Bold Business", subtitle: "Make money on your terms" },
+    { title: "Bold Rental", subtitle: "Make money on your terms" },
   ];
 
   return (
@@ -300,12 +326,62 @@ const Header = () => {
                 Support
               </button>
             </Link>
-            <a
-              href="#"
-              className="hover:text-white text-[#888888] text-lg font-redhat lg:block hidden"
-            >
-              Login
-            </a>
+            <div className="relative lg:block hidden" ref={loginDropdownRef}>
+              <button
+                className="hover:text-white text-[#888888] text-lg font-redhat"
+                onClick={toggleLoginDropdown}
+              >
+                Login
+              </button>
+
+              {loginDropdownOpen && (
+                <div
+                  className={`absolute top-full mt-2 bg-white rounded-lg shadow-lg z-50 ${
+                    isMobile
+                      ? "mt-6 -right-10 p-4 flex h-[100vh] w-[90vw] overflow-y-auto"
+                      : "w-72 right-0 "
+                  }`}
+                >
+                  {/* Mobile Header with Cancel */}
+                  {isMobile && (
+                    <div className="absolute right-2 top-1">
+                      <button
+                        onClick={closeDropdown}
+                        className="text-white bg-black rounded-full px-2.5 py-0.1 hover:text-gray-800 text-3xl font-bold"
+                      >
+                        &times;
+                      </button>
+                    </div>
+                  )}
+
+                  <ul className={`${isMobile && "mt-6"}`}>
+                    {loginItems.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={closeLogin}
+                        className={`cursor-pointer px-4 py-3 hover:bg-gray-100 my-2 md:my-3 ${
+                          isMobile && "w-[80vw]"
+                        }`}
+                      >
+                        <div className="flex flex-row justify-between">
+                          <div>
+                            <p className="text-sm md:text-base text-black font-redhat">
+                              {item.title}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              {item.subtitle}
+                            </p>
+                          </div>
+                          <div className="">
+                            <Image src={right} alt="right" />
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
 
             {/* Sign Up Dropdown Button */}
             <div className="relative" ref={signUpDropdownRef}>
@@ -391,6 +467,13 @@ const Header = () => {
         </div>
       </div>
       {isDropdownOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={closeDropdown}
+        ></div>
+      )}
+
+      {loginDropdownOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-40"
           onClick={closeDropdown}

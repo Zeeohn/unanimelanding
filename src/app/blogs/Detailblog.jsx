@@ -2,13 +2,16 @@ import React from "react";
 import Image from "next/image";
 import detailblog from "../../../public/Assets/detailblog.jpeg";
 import detailbloginnerbanner from "../../../public/Assets/detailbloginnerbanner.png";
+import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
 import Slidercomponent from "../home/Slidercomponent";
+import OurBlogs from "../home/OurBlogs";
 import Footer from "../home/Footer";
 
 const Detailblog = () => {
   return (
     <div>
       <div className="relative flex flex-col-reverse md:flex-col">
+        <div className="absolute w-full bg-black opacity-60 h-[50vh] md:h-[50vh]"></div>
         <Image
           src={detailblog}
           alt="deliverylogistics"
@@ -16,7 +19,9 @@ const Detailblog = () => {
           // style={{ maxHeight: 456 }}
         />
         <div className="md:absolute md:top-0 left-0 md:max-w-[80%] pl-[5%] flex flex-col justify-end h-full pb-6">
-          <p className="text-lg  text-black md:text-white pt-16 md:pt-0">10 November, 2024</p>
+          <p className="text-lg  text-black md:text-white pt-16 md:pt-0">
+            10 November, 2024
+          </p>
           <p className="font-bold md:text-4xl text-lg text-black md:text-white pt-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
@@ -110,10 +115,18 @@ const Detailblog = () => {
           </p>
         </div>
       </div>
-    <div className="mb-16 -mt-20 ">
-      <Slidercomponent />
-    </div>
-      
+      <div className="-mt-20 ">
+        <OurBlogs />
+      </div>
+      {/* <button
+        className="mx-[5%] font-redhat font-bold text-xl md:text-3xl flex items-center gap-2 mt-6 mb-20"
+        // onClick={() => handleRedirect("/business")}
+      >
+        Partner with us now
+        <span className="inline-flex items-center">
+          <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+        </span>
+      </button> */}
     </div>
   );
 };

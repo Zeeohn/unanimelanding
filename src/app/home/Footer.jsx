@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logo from "../../../public/Assets/footerlogo.svg";
 import subscribeemail from "../../../public/Assets/subscribeemail.svg";
@@ -39,10 +40,10 @@ const Footer = () => {
                     <p className="font-bold text-xl text-white">Newsletter</p>
                     <p className="font-redhat sm:text-lg text-white text-sm font-semibold sm:font-normal pt-10">Stay updated with our newsletter and receive the latest news and offers.</p>
                     <div className=" p-2 mt-8 rounded-3xl overflow-hidden bg-white flex justify-between">
-                        <input type="text" placeholder="Email address" className="max-w-[70%]"/>
-                        <div className="bg-[#18C4B8] rounded-full flex justify-center items-center h-10 w-10">
+                        <input type="text" placeholder="Email address" className="max-w-[70%] px-4 outline-none"/>
+                        <button className="bg-[#18C4B8] rounded-full flex justify-center items-center h-10 w-10" onClick={()=> alert("Email added to Mailing list successfully!")}>
                             <Image src={subscribeemail} alt="subscribe" className="w-4 h-4 sm:h-6 sm:w-6"></Image>
-                        </div>
+                        </button>
                     </div>
                     </div>
                 </div>

@@ -35,6 +35,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Blogsec from '../home/Blogsec';
 
 const Businesspage = () => {
   const questions = [
@@ -323,7 +324,11 @@ const Businesspage = () => {
                     <SwiperSlide key={collect.index}>
                       <div className="flex">
                         <div className="w-[45%] h-full">
-                          <Image src={businessslider} alt="business" className="h-full" />
+                          <Image
+                            src={businessslider}
+                            alt="business"
+                            className="h-full"
+                          />
                         </div>
                         <div className="px-[3%] w-[55%] flex flex-col justify-center ">
                           <p className="font-bold font-opensans text-[30px]">
@@ -417,12 +422,7 @@ const Businesspage = () => {
           </div>
 
           <div className="flex py-10">
-            <Image
-              src={patternbg}
-              alt="pattern background"
-              className="w-[100vw] h-[60vh]"
-            />
-            <div className="absolute flex flex-col justify-center items-center bg-[#1197A6] w-[100vw] z-10 opacity-80 h-[60vh]">
+            <div className="absolute flex flex-col justify-center items-center bg-[#1197A6] w-[100vw] h-[60vh]">
               <p className="font-opensans font-bold text-[50px] leading-[68px] text-white w-[70%] text-center ">
                 Trusted by Over 10k Businesses and Counting!
               </p>
@@ -435,6 +435,11 @@ const Businesspage = () => {
                 </button>
               </div>
             </div>
+            <Image
+              src={patternbg}
+              alt="pattern background"
+              className="w-[100vw] h-[60vh]"
+            />
           </div>
 
           <div className=" flex justify-between w-full gap-[5%] pt-28 pb-20 px-[5%] bg-[#F3F3F3]">
@@ -495,8 +500,95 @@ const Businesspage = () => {
             <div className="">
               <Image src={businesscustomerbase} alt="promotion" />
             </div>
+            </div>
+            <div className="md:px-[5%] pb-28">
+            <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
+              <div className="md:max-w-[55%] flex flex-col justify-center">
+                <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
+                  Unlock the Power of Fast Deliveries. Download Our App Today!
+                </p>
+                <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
+                  Experience hassle-free deliveries with just a tap. Our app
+                  gives you access to fast, reliable, and secure shipping
+                  solutions, all in one place. Whether you’re sending a package
+                  across town or the country, we&apos;ve got you covered.
+                  Download the BOLD app and unlock the power of seamless
+                  deliveries at your fingertips.
+                </p>
+                <div className="flex gap-2 flex-row justify-between mb-3">
+                  <div>
+                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                      Download App Now
+                      <span className="inline-flex items-center text-white">
+                        <Image
+                          src={whitearrow}
+                          alt="btnarrow "
+                          width={16}
+                        ></Image>
+                      </span>
+                    </button>
+                  </div>
+                  <Image
+                    src={boldadvertise}
+                    alt="driverapp"
+                    // style={{ maxWidth: "50%" }}
+                    className="md:hidden max-w-[40%]"
+                  />
+                </div>
+              </div>
+              <Image
+                src={boldadvertise}
+                alt="driverapp"
+                // style={{ maxWidth: "50%" }}
+                className="md:max-w-[50%] hidden md:flex"
+              />
+            </div>
+            </div>
+            
+            <div className="md:px-[5%] pb-28">
+            <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
+              <div className="md:max-w-[55%] flex flex-col justify-center">
+                <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
+                  Unlock the Power of Fast Deliveries. Download Our App Today!
+                </p>
+                <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
+                  Experience hassle-free deliveries with just a tap. Our app
+                  gives you access to fast, reliable, and secure shipping
+                  solutions, all in one place. Whether you’re sending a package
+                  across town or the country, we&apos;ve got you covered.
+                  Download the BOLD app and unlock the power of seamless
+                  deliveries at your fingertips.
+                </p>
+                <div className="flex gap-2 flex-row justify-between mb-3">
+                  <div>
+                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                      Download App Now
+                      <span className="inline-flex items-center text-white">
+                        <Image
+                          src={whitearrow}
+                          alt="btnarrow "
+                          width={16}
+                        ></Image>
+                      </span>
+                    </button>
+                  </div>
+                  <Image
+                    src={boldadvertise}
+                    alt="driverapp"
+                    // style={{ maxWidth: "50%" }}
+                    className="md:hidden max-w-[40%]"
+                  />
+                </div>
+              </div>
+              <Image
+                src={boldadvertise}
+                alt="driverapp"
+                // style={{ maxWidth: "50%" }}
+                className="md:max-w-[50%] hidden md:flex"
+              />
+            </div>
           </div>
-          <FAQ questions={questions} />
+          {/* <FAQ questions={questions} /> */}
         </div>
       )}
     </div>

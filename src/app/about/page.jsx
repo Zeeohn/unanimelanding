@@ -28,6 +28,7 @@ const Anotherabout = () => {
   return (
     <div className="">
       <div className="relative w-full">
+        <div className="absolute w-full bg-black opacity-60 h-[70vh] md:h-[90vh]"></div>
         <Image
           src={anotheraboutbanner}
           alt="anotherabout"
@@ -36,10 +37,13 @@ const Anotherabout = () => {
         <div className="absolute w-full top-0 left-0 h-full flex items-center">
           <div className="md:max-w-[55%] flex flex-col justify-center mx-4 md:mx-auto md:items-center">
             <p className="font-bold text-4xl font-opensans text-white md:text-center">
-            BOLD…MORE THAN AN APP
+              BOLD…MORE THAN AN APP
             </p>
             <p className="text-xl pt-6 md:font-semibold text-white md:text-center ">
-            Bold is more than just a ride-hailing service—it’s your all-in-one solution for getting around with ease. We connect people and businesses to their destinations with services tailored to fit your needs, letting you move without the hassle.
+              Bold is more than just a ride-hailing service—it’s your all-in-one
+              solution for getting around with ease. We connect people and
+              businesses to their destinations with services tailored to fit
+              your needs, letting you move without the hassle.
             </p>
             <div className="flex gap-2">
               <div className="flex pt-8 items-center">
@@ -62,24 +66,35 @@ const Anotherabout = () => {
 
       <div className=" flex flex-col-reverse md:flex-row justify-between w-full gap-4 md:gap-[5%]  py-20 px-[5%]">
         <div className="md:w-[55%] flex flex-col justify-center">
-          <p className="font-opensans  text-xl md:text-4xl"><span className="font-bold">MOVE SMARTER, LIVE BOLDER:</span> THE FUTURE OF TRANSPORTATION</p>
+          <p className="font-opensans  text-xl md:text-4xl">
+            <span className="font-bold">MOVE SMARTER, LIVE BOLDER:</span> THE
+            FUTURE OF TRANSPORTATION
+          </p>
           <p className="font-opensans text-base md:text-xl pt-6">
-          Bold is designed to revolutionize transportation, logistics, and rentals, offering a seamless experience for individual users, businesses, and drivers. 
-          We integrate ride-hailing, package delivery, car rentals, and more into one platform, delivering convenience, efficiency, and flexibility tailored to the diverse needs of users. Whether it’s vehicles fit for a family road trip or on-demand services available 24/7, Bold provides solutions designed for your convenience. 
-          We prioritize your safety, comfort, and peace of mind through innovative and trusted technology. Our services include:
-          <ul className="mx-8 list-disc">
-          <li>Eco-friendly rides</li>
-          <li>Affordable and spacious rides.</li>
-          <li>Logistics services</li>
-          <li>Vehicle jump-starts</li>
-          <li>Car leasing</li>
-          <li>Parking solutions</li>
-          <li>Real-time GPS tracking</li>
-          <li>A dual-sided marketplace</li>
-          <li>Transparent pricing with bidding options</li>
-          <li>Multiple payment methods</li>
-          </ul>
-          Bold is your all-in-one hub for seamless movement, saving you time while delivering top-tier service.
+            Bold is designed to revolutionize transportation, logistics, and
+            rentals, offering a seamless experience for individual users,
+            businesses, and drivers. We integrate ride-hailing, package
+            delivery, car rentals, and more into one platform, delivering
+            convenience, efficiency, and flexibility tailored to the diverse
+            needs of users. Whether it’s vehicles fit for a family road trip or
+            on-demand services available 24/7, Bold provides solutions designed
+            for your convenience. We prioritize your safety, comfort, and peace
+            of mind through innovative and trusted technology. Our services
+            include:
+            <ul className="mx-8 list-disc">
+              <li>Eco-friendly rides</li>
+              <li>Affordable and spacious rides.</li>
+              <li>Logistics services</li>
+              <li>Vehicle jump-starts</li>
+              <li>Car leasing</li>
+              <li>Parking solutions</li>
+              <li>Real-time GPS tracking</li>
+              <li>A dual-sided marketplace</li>
+              <li>Transparent pricing with bidding options</li>
+              <li>Multiple payment methods</li>
+            </ul>
+            Bold is your all-in-one hub for seamless movement, saving you time
+            while delivering top-tier service.
           </p>
         </div>
         <div className="md:w-[42%] rounded-2xl overflow-hidden">
@@ -96,18 +111,30 @@ const Anotherabout = () => {
         </div>
         <div className="md:w-[55%] flex flex-col justify-center">
           <p className="font-opensans font-bold text-xl md:text-4xl">
-          Ride green and save the planet with BOLD!
+            Ride green and save the planet with BOLD!
           </p>
           <p className="font-opensans text-base md:text-xl pt-6">
-          We’re on a mission to save the planet. <span className="font-bold">BOLD</span>’s eco-friendly vehicles are a movement toward a greener future. You get comfort and reliability while making choices that reduce your carbon footprint. Whether you’re commuting to work, running errands, or heading out for a fun day, every ride helps protect the environment. 
-          By choosing <span className="font-bold">BOLD</span>, you’re showing that small changes can make a big impact. Together, we can create a cleaner, healthier planet for generations to come. Make a <span className="font-bold">BOLD</span> move for the Earth today! 
+            We’re on a mission to save the planet.{" "}
+            <span className="font-bold">BOLD</span>’s eco-friendly vehicles are
+            a movement toward a greener future. You get comfort and reliability
+            while making choices that reduce your carbon footprint. Whether
+            you’re commuting to work, running errands, or heading out for a fun
+            day, every ride helps protect the environment. By choosing{" "}
+            <span className="font-bold">BOLD</span>, you’re showing that small
+            changes can make a big impact. Together, we can create a cleaner,
+            healthier planet for generations to come. Make a{" "}
+            <span className="font-bold">BOLD</span> move for the Earth today!
           </p>
         </div>
       </div>
 
       <div className="px-[5%] bg-[#F3F3F3] pt-10 pb-14">
-        <p className="font-bold text-xl md:text-4xl md:text-center">Our Blogs</p>
-        <p className="text-base md:hidden">Lorem ipsum dolor sit amet, consectetur </p>
+        <p className="font-bold text-xl md:text-4xl md:text-center">
+          Our Blogs
+        </p>
+        <p className="text-base md:hidden">
+          Lorem ipsum dolor sit amet, consectetur{" "}
+        </p>
         <div className="pt-8 md:pt-20">
           <Swiper
             className="h-full w-full px-8"
@@ -165,11 +192,11 @@ const Anotherabout = () => {
             ))}
           </Swiper>
           <button className="md:hidden font-redhat font-bold text-base flex items-center gap-2 rounded-lg mt-4">
-        Partner with us
-        <span className="inline-flex items-center">
-          <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
-        </span>
-      </button>
+            Partner with us
+            <span className="inline-flex items-center">
+              <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+            </span>
+          </button>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useStateContext } from "../Stateproviderwraper";
@@ -12,40 +12,43 @@ const Sidebar = ({
   subMenuOpen,
   toggleDropdown,
   sidebarRef,
-  closeDropdown,
   closeMenu,
 }) => {
   const { currentpage, setCurrentPage } = useStateContext();
-
   const { push } = useRouter();
 
   const handleSetPage = (page) => {
     if (page) {
-      setCurrentPage(page)
-    }
-    closeMenu();  
-  }
-
-  const handleNavigate = (page) => {
-    if (page) {
-      setCurrentPage(page)
-      push(`/${page}`)
+      if(page === "drive") setCurrentPage("overview");
+      if (page === "ride") setCurrentPage("overview");
+      setCurrentPage(page);
+      // push(`/${page}`);
     }
     closeMenu();
-  }
+  };
 
   return (
     <>
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={closeMenu}
+        ></div>
+      )}
+
+      {/* Sidebar */}
       <div
         ref={sidebarRef}
         className={`fixed top-[42px] sm:top-[88px] right-0 sm:h-[calc(100vh-88px)] h-[calc(100vh-42px)] z-50 bg-white w-[50vw] shadow-lg transition-transform transform ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <ul className="flex flex-col gap-10 md:gap-16 py-12 h-full overflow-y-auto">
+          {/* Ride Section */}
           <li className="cursor-pointer relative w-[50%] mx-auto">
             <button
-              className="flex justify-between items-center w-full gap-2  text-xl font-semibold text-black font-redhat"
+              className="flex justify-between items-center w-full gap-2 text-xl font-semibold text-black font-redhat"
               onClick={() => toggleSubMenu("ride")}
             >
               Ride
@@ -58,46 +61,39 @@ const Sidebar = ({
               </span>
             </button>
             {subMenuOpen === "ride" && (
-              <Link href="/ride" passHref>
-                <ul className="pl-[10%] mt-4 space-y-4 text-[#777777] ">
+              <ul className="pl-[10%] mt-4 space-y-4 text-[#777777]">
+                {[
+                  "Overview",
+                  "Trending locations",
+                  "Ride safety",
+                  "Blogs",
+                  "FAQ",
+                ].map((item) => (
                   <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("ride")}
+                    key={item}
+                    className={`cursor-pointer text-sm ${
+                      currentpage === item.toLowerCase().replace(/\s+/g, "") &&
+                      "text-blue-500 font-bold"
+                    }`}
+                    onClick={() =>
+                      handleSetPage(
+                        item.toLowerCase() === "overview"
+                          ? "ride"
+                          : item.toLowerCase().replace(/\s+/g, "")
+                      )
+                    }
                   >
-                    Overview
+                    {item}
                   </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("trendinglocation")}
-                  >
-                    Trending locations
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("ridesafety")}
-                  >
-                    Ride safety
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("blogs")}
-                  >
-                    Blogs
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("faq")}
-                  >
-                    FAQ
-                  </li>
-                </ul>
-              </Link>
+                ))}
+              </ul>
             )}
           </li>
 
+          {/* Drive Section */}
           <li className="cursor-pointer relative w-[50%] mx-auto">
             <button
-              className="flex justify-between items-center w-full gap-2  text-xl font-semibold text-black font-redhat"
+              className="flex justify-between items-center w-full gap-2 text-xl font-semibold text-black font-redhat"
               onClick={() => toggleSubMenu("drive")}
             >
               Drive
@@ -110,119 +106,63 @@ const Sidebar = ({
               </span>
             </button>
             {subMenuOpen === "drive" && (
-              <Link href="/drive" passHref>
-                <ul className="pl-[10%] mt-4  space-y-4 text-[#777777]">
+              <ul className="pl-[10%] mt-4 space-y-4 text-[#777777]">
+                {[
+                  "Overview",
+                  "How it works",
+                  "Earnings",
+                  "Driver safety",
+                  "FAQ",
+                ].map((item) => (
                   <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("drive")}
+                    key={item}
+                    className={`cursor-pointer text-sm ${
+                      currentpage === item.toLowerCase().replace(/\s+/g, "") &&
+                      "text-blue-500 font-bold"
+                    }`}
+                    onClick={() =>
+                      handleSetPage(
+                        item.toLowerCase() === "overview"
+                          ? "drive"
+                          : item.toLowerCase().replace(/\s+/g, "")
+                      )
+                    }
                   >
-                    Overview
+                    {item}
                   </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("howitworks")}
-                  >
-                    How it works
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("earning")}
-                  >
-                    Earnings
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("drivesafety")}
-                  >
-                    Driver safety
-                  </li>
-                  <li
-                    className="cursor-pointer text-sm"
-                    onClick={() => handleSetPage("faq")}
-                  >
-                    FAQ
-                  </li>
-                </ul>
-              </Link>
+                ))}
+              </ul>
             )}
           </li>
-          <Link href="/intercity" passHref>
+
+          {/* Other Links */}
+          {["Intercity", "Logistics", "Business"].map((item) => (
             <li
-              className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto"
-              onClick={() => closeMenu()}
+              key={item}
+              className={`cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto ${
+                currentpage === item.toLowerCase() && "text-blue-500 font-bold"
+              }`}
+              onClick={() => handleSetPage(item.toLowerCase())}
             >
-              Intercity
+              {item}
             </li>
-          </Link>
-          <Link href="/logistics" passHref>
-            <li
-              className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto"
-              onClick={() => closeMenu()}
-            >
-              Logistics
-            </li>
-          </Link>
-          <Link href="/business" passHref>
-            <li
-              className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto"
-              onClick={() => closeMenu()}
-            >
-              Business
-            </li>
-          </Link>
-          <li className="cursor-pointer relative w-[50%] mx-auto">
-            <button
-              className="flex justify-between items-center gap-2 w-full text-left text-xl font-semibold text-black font-redhat"
-              onClick={() => toggleSubMenu("about")}
-            >
-              About
-              <span>
-                {subMenuOpen === "about" ? (
-                  <Image src={sidebarup} alt="sidebar" />
-                ) : (
-                  <Image src={sidebardown} alt="sidebar" />
-                )}
-              </span>
-            </button>
-            {subMenuOpen === "about" && (
-              <>          
-                  {/* <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("about")}>About us</li>
-                  </ul>                 */}
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("blogs")}>Blog</li>
-                  </ul>                
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("company")}>Company</li>
-                  </ul>
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("franchise")}>Franchise</li>
-                  </ul>                               
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("newsletter")}>Newsletter</li>
-                  </ul>                              
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("sustainability")}>Sustainability</li>
-                  </ul>                                
-                  <ul className="pl-6 mt-2 space-y-4 text-[#777777]">
-                    <li className="cursor-pointer text-sm" onClick={() => handleNavigate("culture")}>Company culture</li>
-                  </ul>           
-              </>
-            )}
-          </li>
+          ))}
+
+          {/* Signup and Login */}
           <li
             className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto"
-            onClick={() => toggleDropdown()}
+            onClick={toggleDropdown}
           >
             Signup
           </li>
-          <li className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto">
+          <li
+            className="cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto"
+            onClick={() => handleSetPage("login")}
+          >
             Login
           </li>
         </ul>
       </div>
-
-      {/* Overlay */}
     </>
   );
 };

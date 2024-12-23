@@ -12,6 +12,9 @@ import Slidercomponent from "./home/Slidercomponent";
 import partner1 from "../../public/Assets/partner1.svg";
 import partner2 from "../../public/Assets/partner2.svg";
 import partner3 from "../../public/Assets/partner3.svg";
+import street from "../../public/Assets/taxi-street.png";
+import yellow from "../../public/Assets/yellow-taxis.png";
+import whitearrow from "../../public/Assets/whitearrow.svg";
 import FAQ from "./home/FAQ";
 import Footer from "./home/Footer";
 import Blogsec from "./home/Blogsec";
@@ -53,24 +56,27 @@ const Homepage = () => {
           className="h-[70vh] md:h-[100vh] object-cover object-center"
           src={bgimg}
           alt="backimg"
-         
         />
         <div className=" absolute w-full h-full top-0 left-0 flex flex-col pt-10 sm:items-center px-[5%] ">
           <p className="font-redhat font-bold text-[25px] md:text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] sm:text-center  ">
             Innovative Technology Connecting You Globally
           </p>
           <p className="font-normal font-opensans md:text-[20px] text-base sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] sm:text-center">
-            BOLD is more than just a platform. We’re game changers. We enable
-            seamless movement across the globe for people and businesses.
-            Whether you’re booking a ride in your city, delivering packages
-            internationally, or renting a vehicle, BOLD integrates cutting-edge
-            solutions to redefine how you move.
+            Bold is more than just a platform—it’s a revolutionary technology
+            designed to connect people and businesses, enabling seamless
+            movement across the globe. Whether you’re booking a ride in your
+            city, delivering packages internationally, or renting a vehicle for
+            your journey, Bold integrates cutting-edge solutions to redefine how
+            we move and interact.
           </p>
           <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] pt-14">
             <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]">
               Get Started
             </button>
-            <button className="py-3 sm:px-8 font-redhat font-semibold border-white border-2 text-sm  sm:text-base md:text-xl text-white rounded-3xl sm:w-fit w-[50%]" onClick={() => handleRedirect("/company")}>
+            <button
+              className="py-3 sm:px-8 font-redhat font-semibold border-white border-2 text-sm  sm:text-base md:text-xl text-white rounded-3xl sm:w-fit w-[50%]"
+              onClick={() => handleRedirect("/company")}
+            >
               Know more
             </button>
           </div>
@@ -86,28 +92,26 @@ const Homepage = () => {
             alt="backimg"
             style={{
               maxHeight: "600px",
-              width: "80%",             
+              width: "80%",
               objectFit: "fill",
               borderRadius: "16px",
             }}
           />
         </div>
         <div
-          style={
-            {
-              paddingTop: paddingTop > 200 ? `${paddingTop / 2}px` : "48px",
-            }
-          }
+          style={{
+            paddingTop: paddingTop > 200 ? `${paddingTop / 2}px` : "48px",
+          }}
           className=" flex justify-center mt-6 px-[5%] "
         >
           <div className="sm:w-[75%] lg:mt-28 sm:text-center">
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-              BOLD brings the world closer!
+              The world feels closer with Bold
             </p>
             <p className=" text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-              Wherever life takes you, Bold’s advanced technology ensures you
-              stay connected, efficient, and in control. Experience the future
-              of global mobility with Bold.
+              Experience the future of global mobility with Bold. Stay connected
+              and in control wherever you go with Bold’s advanced technology,
+              everything happens at your fingertips.
             </p>
           </div>
         </div>
@@ -119,10 +123,9 @@ const Homepage = () => {
             Global reach and smart solutions
           </p>
           <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-            We adapt to your lifestyle and offer solutions for every need. From
-            eco-friendly rides to logistics and rentals, BOLD has it all.
-            Whether it’s a local trip or moving across borders, move
-            effortlessly with Bold.
+            Move effortlessly with Bold across cities, states and countries. We
+            have solutions for every need. Whether you want to send packages,
+            book a ride or rent a car, BOLD does it all.
           </p>
         </div>
         <Image
@@ -141,13 +144,14 @@ const Homepage = () => {
           className="max-h-[200px] sm:max-h-full object-cover object-center rounded-lg md:rounded-2xl"
         ></Image>
         <div className=" md:max-w-[50%]">
-          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl pt-4">
+          <p className="font-bold text-xl font-opensans md:text-3xl md:text-right lg:text-4xl pt-4">
             Innovative features
           </p>
-          <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-            Experience seamless interactions with real-time tracking, trending
-            destination insights, and diverse payment options tailored to your
-            needs.
+          <p className="text-sm md:text-right md:text-xl pt-2  sm:pt-4 md:pt-6">
+            Discover exciting locations near you, pay effortlessly with flexible
+            options, contact vehicle owners blocking your way, and connect with
+            trusted insurance companies. Need a jump start? Get it done hassle
+            free all in one app.
           </p>
           <div className=" md:text-right pt-6  md:pt-10">
             <button className="py-2 px-4 md:py-3  md:px-8 text-sm sm:text-base font-redhat border-black border-2 text-black rounded-3xl  ">
@@ -202,14 +206,67 @@ const Homepage = () => {
 
       {/* // blog sec */}
       <div className="mb-20">
-      <Blogsec
-        text={`Your safety is our top priority at <span class="font-extrabold">BOLD</span>. With real-time GPS tracking, vetted drivers, and in-app safety tools, 24/7 support, we prioritize your security for a worry-free ride. Travel confidently with <span class="font-extrabold">BOLD</span>’s trusted and secure services.`}
-        heading={"Travel The Safe Way"}
-        cta={"Read our details on safety concerns"}
-        bg={blogimg}
-      />
+        <Blogsec
+          text={`Your safety is our top priority at <span class="font-extrabold">BOLD</span>. With real-time GPS tracking, vetted drivers, and in-app safety tools, 24/7 support, we prioritize your security for a worry-free ride. Travel confidently with <span class="font-extrabold">BOLD</span>’s trusted and secure services.`}
+          heading={"Travel The Safe Way"}
+          cta={"Read our details on safety concerns"}
+          bg={blogimg}
+        />
       </div>
 
+      <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
+        <div className="md:max-w-[50%] flex flex-col justify-center">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
+            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+          </p>
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </p>
+          <div className="flex gap-2">
+            <div>
+              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-black font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
+                Download App{" "}
+                <span className="inline-flex items-center text-white">
+                  <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <Image
+          src={street}
+          alt="driverapp"
+          className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
+        />
+      </div>
+
+      <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
+        <div className="md:max-w-[50%] flex flex-col justify-center">
+          <p className="font-bold text-xl font-opensans md:text-right md:text-3xl lg:text-4xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8 md:text-right">
+            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+          </p>
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777] md:text-right">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </p>          
+        </div>
+        <Image
+          src={yellow}
+          alt="driverapp"
+          className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
+        />
+      </div>
       {/* //FAQ */}
       {/* <FAQ /> */}
 

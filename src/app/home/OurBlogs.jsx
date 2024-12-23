@@ -3,17 +3,15 @@ import Image from "next/image";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import taximimgbg from "../../../public/Assets/taxiimage.jpeg";
 
-const Slidercomponent = () => {
+const OurBlogs  = () => {
   const services = [
     {
       index: 1,
-      title: "Ride-Hailing Services",
+      title: "Moving with Bold:",
       description: (
         <>
-          <span className="font-bold">BOLD</span> offers eco-friendly rides,
-          spacious Bold XL options, and premium travel experiences, all designed
-          for your convenience and comfort. Choose your ride and start your Bold
-          journey today!
+          How Our Tailored Services Make Relocation Effortless, No Matter the
+          Distance.
         </>
       ),
       image: taximimgbg,
@@ -22,31 +20,24 @@ const Slidercomponent = () => {
     },
     {
       index: 2,
-      title: "Bold Logistics/Packages",
+      title: "Reliable Deliveries with Bold: ",
       description: (
         <>
-          <span className="font-bold">BOLD</span> Logistics provides fast,
-          reliable package delivery for individuals and businesses, offering
-          local, intercity, and international shipping solutions. We ensure your
-          packages are delivered on time, every time.
+          Ensuring Your Packages Arrive Safe and On Time.
         </>
       ),
       image: taximimgbg,
-      cta: "Learn More",
+      cta: "Here's How",
       url: "",
     },
     {
       index: 3,
-      title: "Jumpstart Services",
+      title: "Stuck with a Flat Battery?",
       description: (
-        <>
-          Are you having emergency battery issues?{" "}
-          <span className="font-bold">BOLD</span> makes it easier for you to
-          order a driver to jump-start your car.
-        </>
+        <>How Bold&apos;s Jumpstart Service Gets You Back on Track Fast.</>
       ),
       image: taximimgbg,
-      cta: "Learn More",
+      cta: "More Details",
       url: "",
     },
   ];
@@ -79,17 +70,17 @@ const Slidercomponent = () => {
   return (
     <div className="px-[5%] pt-10 pb-16 bg-[#111111] mg:mt-28 md:mt-20 mt-12">
       <p className="sm:text-center text-xl sm:text-lg text-white sm:font-medium font-bold text-left">
-        OUR SERVICES
+        More Blogs
       </p>
       <p className="sm:text-center sm:font-bold pt-2 sm:pt-6 text-sm sm:text-2xl lg:text-4xl text-white font-normal text-left">
-        Explore Our Various Mobility Solutions for You and Your Business
+        Discover The Bold Way Of Life
       </p>
-      <div className="md:pl-[8%] lg:pt-20 sm:pt-12 pt-6 relative">
+      <div className="lg:pt-20 sm:pt-12 pt-6 relative">
         {/* Custom Navigation Buttons */}
         <button
           onClick={handlePrev}
           disabled={currentSlide === 0}
-          className={`absolute top-1/2 -left-2 md:left-4 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
+          className={`absolute top-[60%] -left-2 md:-left-6 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
             currentSlide === 0
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-white hover:bg-gray-200"
@@ -101,7 +92,7 @@ const Slidercomponent = () => {
         <button
           onClick={handleNext}
           disabled={currentSlide === services.length - 1}
-          className={`absolute top-1/2 right-2 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
+          className={`absolute top-[60%] right-2 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
             currentSlide === services.length - 1
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-white hover:bg-gray-200"
@@ -131,7 +122,11 @@ const Slidercomponent = () => {
               <div
                 key={service.index}
                 className="flex-shrink-0 px-2"
-                style={isMobile ? {flexBasis: `${100 / 2}%`} : { flexBasis: `${100 / 3}%` }}
+                style={
+                  isMobile
+                    ? { flexBasis: `${100 / 2}%` }
+                    : { flexBasis: `${100 / 3}%` }
+                }
               >
                 <div className="relative h-72 rounded-lg overflow-hidden shadow-md">
                   <Image
@@ -159,4 +154,4 @@ const Slidercomponent = () => {
   );
 };
 
-export default Slidercomponent;
+export default OurBlogs;

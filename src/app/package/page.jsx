@@ -52,7 +52,7 @@ const Packagepage = ({ setcurrentpage }) => {
           <p className="hidden md:block font-opensans font-bold text-4xl text-center">
             How to ship with Bold
           </p>
-          <p className="md:hidden font-opensans font-bold text-xl md:text-4xl md:text-center">
+          <p className="md:hidden mt-10 font-opensans font-bold text-xl md:text-4xl md:text-center">
             How to ship with Bold
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 md:text-center">
@@ -62,7 +62,7 @@ const Packagepage = ({ setcurrentpage }) => {
         </div>
 
         <div className="flex md:flex-row flex-col items-center gap-8 justify-center md:justify-between py-10 md:pt-20">
-          <div className="md:max-w-[14%] flex flex-col items-center">
+          <div className="md:max-w-[20%] flex flex-col items-center">
             <div className="md:mx-auto w-[50%]">
               <Image src={downloadapp} alt="downloadapp" />
             </div>
@@ -71,8 +71,8 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%] flex flex-col items-center">
-            <div className="md:mx-auto w-[50%]">
+          <div className="md:max-w-[20%] flex flex-col items-center">
+            <div className="md:mx-auto w-[60%]">
               <Image src={fillindetails} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
@@ -80,8 +80,8 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%] flex flex-col items-center">
-            <div className="md:mx-auto  md:w-[50%] w-[60%]">
+          <div className="md:max-w-[20%] flex flex-col items-center">
+            <div className="md:mx-auto  md:w-[40%] w-[45%]">
               <Image src={pickuppackage} alt="downloadapp" />
             </div>
             <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
@@ -89,11 +89,11 @@ const Packagepage = ({ setcurrentpage }) => {
             </p>
           </div>
 
-          <div className="md:max-w-[14%] flex flex-col items-center">
-            <div className="md:mx-auto md:w-[50%] w-[40%]">
+          <div className="md:pt-4 md:max-w-[20%] flex flex-col items-center">
+            <div className="md:mx-auto md:w-[40%] w-[30%]">
               <Image src={rightdelivery} alt="downloadapp" />
             </div>
-            <p className="font-opensans font-bold text-base md:text-xl pt-4 ">
+            <p className="font-opensans font-bold text-base md:text-xl pt-4 md:text-center">
               Your package is delivered in one piece
             </p>
           </div>
@@ -136,7 +136,7 @@ const Packagepage = ({ setcurrentpage }) => {
         </div>
       </div>
 
-      <FAQ />
+      {/* <FAQ /> */}
     </div>
   );
 };
