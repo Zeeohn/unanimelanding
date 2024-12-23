@@ -22,9 +22,69 @@ import "swiper/css/scrollbar";
 import taximimgbg from "../../../public/Assets/taxiimage.jpeg";
 import arrowicon from "../../../public/Assets/arrow.svg";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
+import dual from "../../../public/Assets/dual-sided.png";
+import realtime from "../../../public/Assets/realtime-gps.png";
+import multi from "../../../public/Assets/multi-payment.png";
+import parking from "../../../public/Assets/parking-solutions.png";
+import jumpstart from "../../../public/Assets/vehicle-jump.png";
+import logistic from "../../../public/Assets/logistic-serv.png";
+import affordable from "../../../public/Assets/affordable-ride.png";
+import eco from "../../../public/Assets/eco-friendly.png";
 import Footer from "../home/Footer";
 
 const Anotherabout = () => {
+  const cards = [
+    {
+      title: "Eco-friendly ride",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: eco,
+    },
+    {
+      title: "Affordable and spacious ride",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: affordable,
+    },
+    {
+      title: "Logistic services",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: logistic,
+    },
+    {
+      title: "Vehicle jump-start",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: jumpstart,
+    },
+    {
+      title: "Parking solutions",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: parking,
+    },
+    {
+      title: "Multiple payment method",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: multi,
+    },
+    {
+      title: "Real time GPS tracking",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: realtime,
+    },
+    {
+      title: "Dual sided marketplace",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      image: dual,
+    },
+  ];
+
+  
   return (
     <div className="">
       <div className="relative w-full">
@@ -79,8 +139,8 @@ const Anotherabout = () => {
             needs of users. Whether it’s vehicles fit for a family road trip or
             on-demand services available 24/7, Bold provides solutions designed
             for your convenience. We prioritize your safety, comfort, and peace
-            of mind through innovative and trusted technology. Our services
-            include:
+            of mind through innovative and trusted technology.
+            {/* Our services include:
             <ul className="mx-8 list-disc">
               <li>Eco-friendly rides</li>
               <li>Affordable and spacious rides.</li>
@@ -94,13 +154,49 @@ const Anotherabout = () => {
               <li>Multiple payment methods</li>
             </ul>
             Bold is your all-in-one hub for seamless movement, saving you time
-            while delivering top-tier service.
+            while delivering top-tier service. */}
           </p>
         </div>
         <div className="md:w-[42%] rounded-2xl overflow-hidden">
           <Image src={taxiimage} alt="promotion" />
         </div>
       </div>
+
+      <div className="mx-[5%] flex flex-col gap-10 items-center mb-10">
+        <h1 className="font-bold text-[20px] md:text-[35px]">Our Services</h1>
+        <p className="text-[14px] md:text-[20px] text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mx-[5%] mb-20">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform"
+          >
+            {/* Image Section */}
+            <Image
+              src={card.image}
+              alt={card.title}
+              className="w-full h-full object-cover"
+            />
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 w-full h-[65%] bg-gradient-to-t from-white via-white/90 to-transparent">
+              <div className="absolute bottom-0 p-4">
+                <h3 className="font-bold text-lg text-black">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-[#777777]">{card.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div className=" px-[5%]">
         <Image src={aboutbigbanner} alt="smallanother" />
       </div>
@@ -113,7 +209,7 @@ const Anotherabout = () => {
           <p className="font-opensans font-bold text-xl md:text-4xl">
             Ride green and save the planet with BOLD!
           </p>
-          <p className="font-opensans text-base md:text-xl pt-6">
+          <p className="font-opensans text-base md:text-xl pt-6 text-right">
             We’re on a mission to save the planet.{" "}
             <span className="font-bold">BOLD</span>’s eco-friendly vehicles are
             a movement toward a greener future. You get comfort and reliability
@@ -192,7 +288,7 @@ const Anotherabout = () => {
             ))}
           </Swiper>
           <button className="md:hidden font-redhat font-bold text-base flex items-center gap-2 rounded-lg mt-4">
-            Partner with us
+            Partner with us now
             <span className="inline-flex items-center">
               <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
             </span>
@@ -200,12 +296,14 @@ const Anotherabout = () => {
         </div>
       </div>
 
-      <button className="hidden  font-redhat font-bold text-4xl md:flex items-center gap-2 rounded-lg pl-[5%] mt-20 mb-36">
-        Partner with us
-        <span className="inline-flex items-center">
+      <div className="hidden md:flex md:items-center md:justify-center mt-20 mb-36">
+      <button className="font-redhat font-bold text-4xl gap-8 rounded-lg  flex flex-row items-center">
+        Partner with us now
+        <span className="inline-flex mt-2">
           <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
         </span>
       </button>
+      </div>
     </div>
   );
 };

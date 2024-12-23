@@ -153,11 +153,11 @@ const Homepage = () => {
             trusted insurance companies. Need a jump start? Get it done hassle
             free all in one app.
           </p>
-          <div className=" md:text-right pt-6  md:pt-10">
+          {/* <div className=" md:text-right pt-6  md:pt-10">
             <button className="py-2 px-4 md:py-3  md:px-8 text-sm sm:text-base font-redhat border-black border-2 text-black rounded-3xl  ">
               Know more
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -48,24 +48,24 @@ const Franchisepage = () => {
         />
         <div className="absolute top-0 w-full left-0 md:max-w-[50%] h-full flex flex-col justify-center pl-[5%] z-20">
           <p className="hidden md:block font-opensans font-bold text-[45px] leading-[70px] text-white">
-            Become a <span className="text-cyan-500 font-bold">BOLD</span>{" "}
+            Join the mission: Become a
             <br />
-            Franchise
+            <span className="text-cyan-500 font-bold">BOLD</span> Franchise
           </p>
           <p className="md:hidden font-opensans font-bold text-[25px] text-white">
-            Become a <span className="text-cyan-500 font-bold">BOLD</span>{" "}
+            Join the mission: Become a
             <br />
-            Franchise
+            <span className="text-cyan-500 font-bold">BOLD</span> Franchise
           </p>
           <p className="font-opensans w-full text-base md:text-xl text-white pt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            BOLD is expanding rapidly, and we invite you to be part of the
+            growth. As a franchise partner, you’ll lead local operations and
+            drive market success. With our innovative technology, strong brand,
+            and expert support, you’ll have the tools to thrive.
           </p>
           <div className="flex flex-col gap-4 md:flex-row md:gap-6 pt-8 w-[70%] md:w-full">
             <button className="font-opensans text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
-              Apply Now
+              Partner with us
             </button>
             {/* <button
               className=" text-white underline md:underline-none font-opensans font-semibold text-xl flex items-center gap-3 rounded-lg "
@@ -87,9 +87,9 @@ const Franchisepage = () => {
             About <span className="text-cyan-500 font-bold">BOLD</span>
           </p>
           <p className="text-base md:text-xl text-black pt-6 font-opensans">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam error sit
-            voluptatem accusantium doloremque laudantium, totam rem aperiam
+            BOLD is more than just a platform. We’re game changers. Our mission
+            is to easily connect people and businesses to their destinations and
+            customers, offering flexible services designed to meet unique needs.
           </p>
           <ul className="space-y-3 mt-6">
             {checklistItems.map((item, index) => (
@@ -267,16 +267,13 @@ const Franchisepage = () => {
             }} */}
 
       <div className="md:px-[5%] pb-28 relative">
-        <div className="flex flex-row md:rounded-3xl justify-between items-center " >
+        <div className="flex flex-row md:rounded-3xl justify-between items-center ">
           <Image
             src={franchise4}
             alt="logistic"
             className="object-cover h-[35vh] md:h-full md:rounded-3xl"
           />
-          <div
-            className="md:max-w-[55%] flex flex-col justify-center pl-[5%] absolute "
-            
-          >
+          <div className="md:max-w-[55%] flex flex-col justify-center pl-[5%] absolute ">
             <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
               Get started
             </p>

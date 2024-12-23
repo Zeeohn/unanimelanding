@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import taximimgbg from "../../../public/Assets/taxiimage.jpeg";
+import logis from "../../../public/Assets/logistic-serv.png";
+import jump from "../../../public/Assets/vehicle-jump.png";
+import affordable from "../../../public/Assets/affordable-ride.png";
 
 const Slidercomponent = () => {
   const services = [
@@ -16,9 +19,9 @@ const Slidercomponent = () => {
           journey today!
         </>
       ),
-      image: taximimgbg,
+      image: affordable,
       cta: "Learn More",
-      url: "",
+      url: "/ride",
     },
     {
       index: 2,
@@ -31,9 +34,9 @@ const Slidercomponent = () => {
           packages are delivered on time, every time.
         </>
       ),
-      image: taximimgbg,
+      image: logis,
       cta: "Learn More",
-      url: "",
+      url: "/logistics",
     },
     {
       index: 3,
@@ -45,9 +48,9 @@ const Slidercomponent = () => {
           order a driver to jump-start your car.
         </>
       ),
-      image: taximimgbg,
+      image: jump,
       cta: "Learn More",
-      url: "",
+      url: "/ride",
     },
   ];
 
@@ -130,7 +133,8 @@ const Slidercomponent = () => {
             {services.map((service) => (
               <div
                 key={service.index}
-                className="flex-shrink-0 px-2"
+                className="flex-shrink-0 px-2 cursor-pointer"
+                onClick={() => window.open(service.url, "_self")}
                 style={isMobile ? {flexBasis: `${100 / 2}%`} : { flexBasis: `${100 / 3}%` }}
               >
                 <div className="relative h-72 rounded-lg overflow-hidden shadow-md">

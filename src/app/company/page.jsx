@@ -7,7 +7,10 @@ import whitearrow from "../../../public/Assets/whitearrow.svg";
 import aboutone from "../../../public/Assets/aboutone.png";
 import abouttwo from "../../../public/Assets/abouttwo.png";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
-import corevalues from "../../../public/Assets/corevalues.svg";
+import values from "../../../public/Assets/cyan-chat.png";
+import transparency from "../../../public/Assets/cyan-merge.png";
+import trust from "../../../public/Assets/cyan-shield.png";
+import integrity from "../../../public/Assets/cyan-box.png";
 import blogsback from "../../../public/Assets/blogsback.png";
 
 const Aboutpage = () => {
@@ -144,7 +147,7 @@ const Aboutpage = () => {
       <div className=" flex md:flex-row flex-col gap-16 px-4 md:gap-[4%] md:px-[5%]">
         <div className="md:py-12 pt-10 pb-4 px-4 md:px-16 bg-[#F3F3F3] rounded-2xl flex-grow relative">
           <div className="absolute -top-[30px] left-0 flex justify-center w-full">
-            <Image src={corevalues} alt="corevalues" height={60} />
+            <Image src={values} alt="corevalues" height={60} />
           </div>
           <p className="font-opensans font-bold text-xl md:text-4xl md:text-center">
             Customer value
@@ -156,7 +159,7 @@ const Aboutpage = () => {
         </div>
         <div className="md:py-12 pt-10 pb-4 px-4 md:px-16 bg-[#F3F3F3] rounded-2xl flex-grow relative">
           <div className="absolute -top-[30px] left-0 flex justify-center w-full">
-            <Image src={corevalues} alt="corevalues" height={60} />
+            <Image src={transparency} alt="Transparency" height={60} />
           </div>
           <p className="font-opensans font-bold text-xl md:text-4xl md:text-center">
             Transparency
@@ -170,7 +173,7 @@ const Aboutpage = () => {
       <div className="mt-16 flex md:flex-row flex-col gap-16 px-4 md:gap-[4%] md:px-[5%] ">
         <div className="md:py-12 pt-10 pb-4 px-4 md:px-16 bg-[#F3F3F3] rounded-2xl flex-grow relative">
           <div className="absolute -top-[30px] left-0 flex justify-center w-full">
-            <Image src={corevalues} alt="corevalues" height={60} />
+            <Image src={trust} alt="trust" height={60} />
           </div>
           <p className="font-opensans font-bold text-xl md:text-4xl md:text-center">
             Trust
@@ -182,7 +185,7 @@ const Aboutpage = () => {
         </div>
         <div className="md:py-12 pt-10 pb-4 px-4 md:px-16 bg-[#F3F3F3] rounded-2xl flex-grow relative">
           <div className="absolute -top-[30px] left-0 flex justify-center w-full">
-            <Image src={corevalues} alt="corevalues" height={60} />
+            <Image src={integrity} alt="integrity" height={60} />
           </div>
           <p className="font-opensans font-bold text-xl md:text-4xl md:text-center">
             Integrity
