@@ -23,6 +23,9 @@ import prevbtn from "../../../public/Assets/prevbtn.png";
 import nextbtn from "../../../public/Assets/blacknextbtn.png";
 import { useRef, useEffect, useState } from "react";
 import trendinglocationslider from "../../../public/Assets/trendinglocationslider.jpeg";
+import popular1 from "../../../public/Assets/popular1.jpeg";
+import popular2 from "../../../public/Assets/popular2.jpeg";
+import popular3 from "../../../public/Assets/popular3.jpeg";
 import belowarrowtrending from "../../../public/Assets/belowarrowtrending.svg";
 import flag from "../../../public/Assets/flag.svg";
 import belowtrendingsec from "../../../public/Assets/belowtrendingsec.png";
@@ -59,24 +62,28 @@ const Trendinglocation = () => {
       location: "Paris, France",
       description:
         "Experience the charm of the City of Lights with iconic spots like the Eiffel Tower, Louvre Museum, and vibrant cafes like Café de Flore.",
+      image: trendinglocationslider,
     },
     {
       index: 2,
       location: "Tokyo, Japan",
       description:
         "A blend of modern innovation and rich culture—visit bustling Shibuya, historic Asakusa, and the serene gardens of Meiji Shrine.",
+      image: popular1,
     },
     {
       index: 3,
       location: "Cape Town, South Africa",
       description:
         "From the breathtaking Table Mountain to the lively V&A Waterfront, Cape Town offers stunning views and unforgettable experiences.",
+      image: popular3,
     },
     {
       index: 4,
       location: "New York City, USA",
       description:
         "Explore the energy of the Big Apple with attractions like Times Square, Central Park, and the Statue of Liberty.",
+      image: popular2,
     },
   ];
 
@@ -185,19 +192,20 @@ const Trendinglocation = () => {
               <SwiperSlide key={must.index}>
                 <div className="relative rounded-2xl overflow-hidden">
                   <Image
-                    src={trendinglocationslider}
+                    src={must.image}
                     alt="productimg"
-                    className="max-h-[300px] max-w-[200px] sm:max-h-full sm:max-w-full relative object-cover"
+                    className="h-[80vh] max-w-[200px] sm:max-h-full sm:max-w-full relative object-cover"
                     // style={{ maxHeight: 350 }}
                   />
-                  <div className="absolute max-w-[200px] sm:w-full top-0 flex flex-col-reverse pt-6 justify-between h-full px-2  pb-10">
+                  <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+                  <div className="absolute sm:w-full top-0 flex flex-col-reverse pt-6 justify-between h-full px-2 pb-10 z-20">
                     <p className="font-bold text-sm md:text-xl text-white ">
                       {must.description}
                     </p>
                     <div className="absolute top-1 -left-1  md:relative w-full flex justify-end">
-                      <div className=" h-5 rounded-3xl bg-white p-3 py-4 flex items-center gap-2">
+                      <div className="w-fit h-5 rounded-3xl bg-white p-3 py-4 flex flex-nowrap items-center gap-2">
                         <div className="w-3 h-3 rounded-full bg-[#EF1D1D]"></div>
-                        <p className="font-opensans text-sm md:text-xl font-bold">
+                        <p className="font-opensans text-xs md:text-sm text-nowrap font-bold">
                           {must.location}
                         </p>
                       </div>
@@ -218,25 +226,25 @@ const Trendinglocation = () => {
           className="hidden md:block"
         />
         <div className="md:max-w-[50%] flex flex-col justify-center ">
-          <p className="font-bold text-xl md:text-4xl font-redhat md:text-right">
+          <p className="font-bold text-xl md:text-4xl font-redhat">
             Find Your Perfect Coffee Spot ☕
           </p>
-          <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans md:text-right">
+          <p className="text-lg md:text-2xl font-semibold pt-4 font-opensans">
             Sometimes, the best way to recharge is with a great cup of coffee
             and some time to yourself. <span className="font-bold">BOLD</span>{" "}
             helps you discover cozy cafés where you can enjoy not just amazing
             coffee, but also delicious pastries that make your me-time extra
             special.
           </p>
-          <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans md:text-right ">
-            Whether you&apos;re looking for a quiet corner to unwind or a peaceful
-            spot to reflect, these cafés offer the perfect environment to savor
-            every moment.
+          <p className="text-base md:text-xl pt-4 md:pt-8 font-opensans ">
+            Whether you&apos;re looking for a quiet corner to unwind or a
+            peaceful spot to reflect, these cafés offer the perfect environment
+            to savor every moment.
             <br />
             Take a deep breath, sip slowly, and enjoy the simple joy of spending
             time with yourself. You’ve earned it.
           </p>
-          <div className=" flex justify-end gap-6 pt-6">
+          <div className=" flex gap-6 pt-6">
             <button className="font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
               Find Your Perfect Café with Bold Today!
               <span className="inline-flex ">

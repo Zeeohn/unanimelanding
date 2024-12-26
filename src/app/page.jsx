@@ -144,10 +144,10 @@ const Homepage = () => {
           className="max-h-[200px] sm:max-h-full object-cover object-center rounded-lg md:rounded-2xl"
         ></Image>
         <div className=" md:max-w-[50%]">
-          <p className="font-bold text-xl font-opensans md:text-3xl md:text-right lg:text-4xl pt-4">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl pt-4">
             Innovative features
           </p>
-          <p className="text-sm md:text-right md:text-xl pt-2  sm:pt-4 md:pt-6">
+          <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
             Discover exciting locations near you, pay effortlessly with flexible
             options, contact vehicle owners blocking your way, and connect with
             trusted insurance companies. Need a jump start? Get it done hassle
@@ -248,14 +248,14 @@ const Homepage = () => {
 
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
-          <p className="font-bold text-xl font-opensans md:text-right md:text-3xl lg:text-4xl">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
-          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8 md:text-right">
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
-          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777] md:text-right">
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco

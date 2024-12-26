@@ -186,7 +186,7 @@ const Promotion = () => {
         </div>
       </div>
 
-      <FAQ />
+      {/* <FAQ /> */}
     </div>
   );
 };

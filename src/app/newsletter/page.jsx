@@ -5,6 +5,7 @@ import { usePathname, useRouter, redirect  } from "next/navigation";
 import videogif from "../../../public/Assets/video.png";
 import newsletter from "../../../public/Assets/newsletter.jpeg";
 import beach from "../../../public/Assets/beach.png";
+import lonely from "../../../public/Assets/lonely-car.jpeg";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { LuRefreshCcw } from "react-icons/lu";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -22,7 +23,7 @@ const Newsletter = () => {
   const [page, setPage] = useState("home");
 
   const pathname = usePathname();
-  const { replace } = useRouter();
+  const { router } = useRouter();
 
   useEffect(() => {
     // Get the query parameters from the URL when the component mounts
@@ -37,8 +38,9 @@ const Newsletter = () => {
     } else {
       params.delete("page");
     }
-    redirect(`${pathname}?${params.toString()}`);
     setPage(status || "home"); // Update state to reflect the change
+
+    redirect(`${pathname}?${params.toString()}`);
   };
   
   const sliderData = [
@@ -75,7 +77,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 2,
@@ -83,7 +85,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 3,
@@ -91,7 +93,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 4,
@@ -99,7 +101,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 5,
@@ -107,7 +109,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 6,
@@ -115,7 +117,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 7,
@@ -123,7 +125,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
     {
       id: 8,
@@ -131,7 +133,7 @@ const Newsletter = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum. Dolore harum error officiis impedit corporis",
       date: "Nov 14, 2024",
-      imageUrl: beach,
+      imageUrl: lonely,
     },
   ];
 
@@ -262,7 +264,7 @@ const Newsletter = () => {
       <div className="videosec relative">
         <div
           ref={imageRef}
-          className="absolute hidden justify-center w-full md:-top-[350px] md:flex "
+          className="absolute hidden justify-center w-full md:-top-[350px] lg:-top-[400px] md:flex "
         >
           <div className="relative w-[90%] shadow-lg rounded-lg overflow-hidden bg-white">
             {/* Card Content */}

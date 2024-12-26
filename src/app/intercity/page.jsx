@@ -248,14 +248,14 @@ const Intercitypage = () => {
           className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
         />
         <div className="md:max-w-[50%] flex flex-col justify-center">
-          <p className="font-bold text-xl font-opensans md:text-3xl md:text-right lg:text-4xl">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
-          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 md:text-right lg:pt-8">
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
-          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 md:text-right text-[#777777]">
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco

@@ -22,6 +22,7 @@ import patternbg from "../../../public/Assets/pattern-business.png";
 import boldadvertise from "../../../public/Assets/boldadvertise.png";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
+import yellow from "../../../public/Assets/yellow-taxis.png";
 import Promotion from "./Promotion";
 import { useState } from "react";
 import {
@@ -501,52 +502,8 @@ const Businesspage = () => {
             <div className="">
               <Image src={businesscustomerbase} alt="promotion" />
             </div>
-            </div>
-            <div className="md:px-[5%] pb-28">
-            <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
-              <div className="md:max-w-[55%] flex flex-col justify-center">
-                <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-                  Unlock the Power of Fast Deliveries. Download Our App Today!
-                </p>
-                <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-                  Experience hassle-free deliveries with just a tap. Our app
-                  gives you access to fast, reliable, and secure shipping
-                  solutions, all in one place. Whether you’re sending a package
-                  across town or the country, we&apos;ve got you covered.
-                  Download the BOLD app and unlock the power of seamless
-                  deliveries at your fingertips.
-                </p>
-                <div className="flex gap-2 flex-row justify-between mb-3">
-                  <div>
-                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
-                      Download App Now
-                      <span className="inline-flex items-center text-white">
-                        <Image
-                          src={whitearrow}
-                          alt="btnarrow "
-                          width={16}
-                        ></Image>
-                      </span>
-                    </button>
-                  </div>
-                  <Image
-                    src={boldadvertise}
-                    alt="driverapp"
-                    // style={{ maxWidth: "50%" }}
-                    className="md:hidden max-w-[40%]"
-                  />
-                </div>
-              </div>
-              <Image
-                src={boldadvertise}
-                alt="driverapp"
-                // style={{ maxWidth: "50%" }}
-                className="md:max-w-[50%] hidden md:flex"
-              />
-            </div>
-            </div>
-            
-            <div className="md:px-[5%] pb-28">
+          </div>
+          <div className="md:px-[5%] pb-28">
             <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
               <div className="md:max-w-[55%] flex flex-col justify-center">
                 <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
@@ -589,9 +546,32 @@ const Businesspage = () => {
               />
             </div>
           </div>
+
           {/* <FAQ questions={questions} /> */}
         </div>
       )}
+
+      <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-4 md:pb-12 lg:pb-20 ">
+        <div className="md:max-w-[50%] flex flex-col justify-center">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
+            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+          </p>
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+          </p>
+        </div>
+        <Image
+          src={yellow}
+          alt="driverapp"
+          className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
+        />
+      </div>
     </div>
   );
 };

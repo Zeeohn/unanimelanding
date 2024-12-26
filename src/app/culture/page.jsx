@@ -16,6 +16,8 @@ import fast from "../../../public/Assets/fast-car.png";
 import people from "../../../public/Assets/people.jpeg";
 import mission from "../../../public/Assets/mission.png";
 import culture from "../../../public/Assets/culture.png";
+import culture1 from "../../../public/Assets/culture1.png";
+import culture2 from "../../../public/Assets/culture2.png";
 import happy from "../../../public/Assets/happy-staffs.png";
 import blogsback from "../../../public/Assets/blogsback.png";
 import FAQ from "../home/FAQ"
@@ -29,7 +31,7 @@ const Culture = () => {
     <div className="">
       <div>
         <div className="relative">
-          <div className="absolute w-full md:h-[90vh] h-[70vh] opacity-50 bg-black z-10"></div>
+          <div className="absolute w-full md:h-[90vh] h-[70vh] opacity-70 bg-black z-10"></div>
           <Image
             src={people}
             alt="logistic"
@@ -106,11 +108,11 @@ const Culture = () => {
         <div className="flex flex-col md:flex-row justify-between px-[5%] my-10 md:my-24 items-center gap-[5%]">
           <Image src={culture} alt="people in a meeting" />
           <div className=" flex flex-col justify-center md:max-w-[50%]">
-            <p className="font-bold text-xl pt-6 md:pt-0 md:text-3xl font-opensans md:text-right">
+            <p className="font-bold text-xl pt-6 md:pt-0 md:text-3xl font-opensans">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod
             </p>
-            <p className="hidden md:block text-base md:text-xl text-black pt-6 font-opensans text-right">
+            <p className="hidden md:block text-base md:text-xl text-black pt-6 font-opensans">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -185,7 +187,48 @@ const Culture = () => {
             ))}
           </div>
         </div>
-        <FAQ />
+
+        <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
+          <div className="md:max-w-[50%] flex flex-col justify-center">
+            <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt.
+            </p>
+          </div>
+          <Image
+            src={culture1}
+            alt="driverapp"
+            className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
+          />
+        </div>
+
+        <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
+          <div className="md:max-w-[50%] flex flex-col justify-center">
+            <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+            </p>
+          </div>
+          <Image
+            src={culture2}
+            alt="driverapp"
+            className=" rounded-2xl w-full md:max-w-[45%] object-cover object-center"
+          />
+        </div>
+        {/* <FAQ /> */}
       </div>
     </div>
   );

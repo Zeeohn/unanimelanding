@@ -2,13 +2,28 @@ import React from "react";
 import Image from "next/image";
 import detailblog from "../../../public/Assets/detailblog.jpeg";
 import detailbloginnerbanner from "../../../public/Assets/detailbloginnerbanner.png";
-import Slidercomponent from "../home/Slidercomponent";
 import Footer from "../home/Footer";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import lonely from "../../../public/Assets/lonely-car.jpeg";
+import arrowicon from "../../../public/Assets/arrow.svg";
+import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
 
 const NewsDetails = () => {
   return (
     <div>
       <div className="relative flex flex-col-reverse md:flex-col">
+        <div className="absolute w-full bg-black opacity-60 h-[50vh] md:h-[50vh]"></div>
         <Image
           src={detailblog}
           alt="deliverylogistics"
@@ -112,8 +127,69 @@ const NewsDetails = () => {
           </p>
         </div>
       </div>
-      <div className="mb-16 -mt-20 ">
-        <Slidercomponent />
+      <div className="mb-16 mt-20 ">
+        <div className="px-[5%] bg-[#F3F3F3] pt-10 pb-14">
+          <p className="font-bold text-xl md:text-4xl ">Popular news on BOLD</p>
+
+          <div className="pt-8 md:pt-20">
+            <Swiper
+              className="h-full w-full px-8"
+              modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+              spaceBetween={50}
+              slidesPerView={4}
+              navigation
+              // pagination={{ clickable: true }}
+              scrollbar={false}
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                480: { slidesPerView: 2, spaceBetween: 30 },
+                640: { slidesPerView: 3, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 20 },
+              }}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {[...Array(10)].map((_, index) => (
+                <SwiperSlide key={index}>
+                  {/* <div className="flex flex-col justify-center items-center py-8 px-6 ">
+                  <Image
+                    src={upperright}
+                    alt="productimg"
+                    className="max-h-[200px] max-w-[200px] sm:max-h-full sm:max-w-full"
+                  />
+                  <p className="text-[#D29A5A] text-lg text-center">
+                    CINNAMON HONEY
+                  </p>
+                  <p className="text-white text-center text-base ">
+                  <span className="line-through">  $12.00 </span> <span className="text-lg pl-2">$9.00</span>
+                  </p>
+                </div> */}
+                  <div className="rounded-2xl overflow-hidden ">
+                    <Image
+                      src={lonely}
+                      alt="productimg"
+                      className="max-h-[200px] max-w-[200px] sm:max-h-full sm:max-w-full relative"
+                    />
+                    <div className="bg-white w-full flex flex-col justify-end h-full px-4 pb-4">
+                      <p className="font-bold text-lg pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        sit amet.</p>
+                      <div className="flex pt-6">
+                        <p className="">Nov 12, 2024</p>{" "}
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className="md:hidden font-redhat font-bold text-base flex items-center gap-2 rounded-lg mt-4">
+              Partner with us now
+              <span className="inline-flex items-center">
+                <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -236,7 +236,7 @@ const Sustainability = () => {
               <Image
                 src={greenmarket}
                 alt="green market"
-                className="w-[48%] md:h-fit h-full rounded-lg"
+                className="w-[48%] h-full rounded-lg"
               />
               <Image
                 src={greenshake}
@@ -255,7 +255,7 @@ const Sustainability = () => {
             // style={{ maxHeight: 700 }}
             className="absolute h-[40vh] md:h-[90vh] object-cover"
           />
-          <div className="top-0 left-0 md:max-w-[50%] pl-[5%] flex flex-col justify-center md:justify-end md:pb-24 z-20">
+          <div className="md:max-w-[50%] pl-[5%] flex flex-col justify-center z-20">
             <p className="font-bold text-[20px] md:text-[50px] md:leading-[70px] text-white">
               Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
             </p>
@@ -285,7 +285,7 @@ const Sustainability = () => {
             </p>
             <div className="flex mt-6 flex-col gap-10 md:mt-12">
               <div className="flex flex-row gap-3 items-center">
-                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] font-extrabold px-3 py-1 h-fit">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] font-extrabold md:px-3 md:py-0.5 h-fit px-2 ">
                   1
                 </p>
                 <p className="font-bold text-[16px] md:text-[20px] ">
@@ -294,7 +294,7 @@ const Sustainability = () => {
               </div>
 
               <div className="flex flex-row gap-3 items-center">
-                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] flex h-fit font-extrabold px-3 py-1">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px]  font-extrabold md:px-3 md:py-0.5 h-fit px-2">
                   2
                 </p>
                 <p className="font-bold text-[16px] md:text-[20px] ">
@@ -303,7 +303,7 @@ const Sustainability = () => {
               </div>
 
               <div className="flex flex-row gap-3">
-                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] h-fit font-extrabold px-3 py-1 items-center">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px]  font-extrabold md:px-3 md:py-0.5 h-fit px-2 items-center">
                   3
                 </p>
                 <p className="font-bold text-[16px] md:text-[20px] ">
@@ -312,7 +312,7 @@ const Sustainability = () => {
               </div>
 
               <div className="hidden md:flex flex-row gap-3">
-                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px] h-fit font-extrabold px-3 py-1 items-center">
+                <p className="text-white bg-[#18C4B8] rounded-full text-[16px] md:text-[20px]  font-extrabold px-3 py-0.5 items-center">
                   4
                 </p>
                 <p className="font-bold text-[16px] md:text-[20px] ">

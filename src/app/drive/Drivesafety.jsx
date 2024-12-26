@@ -424,11 +424,11 @@ const Drivesafety = () => {
 
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-12 md:pt-20 lg:pt-28 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[60%] flex flex-col justify-center">
-          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl text-right">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor
           </p>
-          <p className="text-sm md:text-lg pt-2 md:pt-4 lg:pt-6 text-black text-right">
+          <p className="text-sm md:text-lg pt-2 md:pt-4 lg:pt-6 text-black">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis.

@@ -378,7 +378,7 @@ const Ridepage = () => {
                 enjoyable.
               </p>
             </div>
-            <div className="mt-4 md:mt-8 lg:mt-14 flex flex-col md:flex-row gap-4 justify-between md:gap-[4%]">
+            <div className="mt-4 md:mt-8 lg:mt-14 flex flex-col md:flex-row gap-4 justify-evenly md:gap-[4%]">
               <div className="px-2 py-8 md:p-8 bg-[#FFFFFF] rounded-2xl space-y-3 md:space-y-5 lg:space-y-0">
                 <Image
                   src={petfriendly}

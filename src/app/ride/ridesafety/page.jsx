@@ -236,14 +236,14 @@ const Ridesafety = () => {
 
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
-          <p className="font-bold text-xl font-opensans md:text-right md:text-3xl lg:text-4xl">
+          <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
-          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8 md:text-right">
+          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
-          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777] md:text-right">
+          <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco

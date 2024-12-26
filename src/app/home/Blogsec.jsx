@@ -47,7 +47,7 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor }) => {
           {overlayColor && (
             <div className="absolute w-full h-full bg-[#0E0E0E] opacity-70 z-20"></div>
           )}
-          <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-end h-full px-[5%] pb-6 md:px-8 md:pb-10 z-20">
+          <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-center h-full px-[5%] md:px-8 z-20">
             <p className="font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-white ">
               {heading}
             </p>

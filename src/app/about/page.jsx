@@ -209,7 +209,7 @@ const Anotherabout = () => {
           <p className="font-opensans font-bold text-xl md:text-4xl">
             Ride green and save the planet with BOLD!
           </p>
-          <p className="font-opensans text-base md:text-xl pt-6 text-right">
+          <p className="font-opensans text-base md:text-xl pt-6 ">
             We’re on a mission to save the planet.{" "}
             <span className="font-bold">BOLD</span>’s eco-friendly vehicles are
             a movement toward a greener future. You get comfort and reliability
