@@ -64,10 +64,10 @@ const Homepage = () => {
           alt="backimg"
         />
         <div className=" absolute w-full h-full top-0 left-0 flex flex-col pt-10 sm:items-center px-[5%] ">
-          <p className="font-redhat font-bold text-[25px] md:text-4xl  lg:text-5xl text-white max-w-[100%] md:max-w-[70%] sm:text-center  ">
+          <p className="font-redhat font-bold text-[25px] md:text-4xl lg:text-5xl text-white max-w-[100%] md:max-w-[70%] sm:text-center  ">
             Innovative Technology Connecting You Globally
           </p>
-          <p className="font-normal font-opensans md:text-[20px] text-base sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] sm:text-center">
+          <p className="font-normal font-opensans md:text-[20px] text-[14px] sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] sm:text-center">
             Bold is more than just a platform—it’s a revolutionary technology
             designed to connect people and businesses, enabling seamless
             movement across the globe. Whether you’re booking a ride in your
@@ -76,7 +76,10 @@ const Homepage = () => {
             we move and interact.
           </p>
           <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] pt-14">
-            <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]" onClick={() => handleDrop()}>
+            <button
+              className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]"
+              onClick={() => handleDrop()}
+            >
               Get Started
             </button>
             <button
@@ -111,7 +114,7 @@ const Homepage = () => {
           className=" flex justify-center mt-6 px-[5%] "
         >
           <div className="sm:w-[75%] lg:mt-28 sm:text-center">
-            <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
+            <p className="font-bold font-opensans text-[20px] md:text-[35px]">
               The world feels closer with Bold
             </p>
             <p className=" text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
@@ -200,7 +203,7 @@ const Homepage = () => {
         <div className="md:max-w-[85%] md:mx-auto">
           {/* <p className="text-lg text-center ">Our partners</p>
         <p className="font-semibold text-xl text-center pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p> */}
-          <p className="sm:text-center text-xl  sm:text-lg sm:font-medium font-bold text-left">
+          <p className="sm:text-center text-[20px] md:text-[35px] sm:font-medium font-bold text-left">
             Our Partners
           </p>
           <p className="sm:text-center pt-2 sm:pt-6 text-sm sm:text-2xl md:text-[20px] font-semibold text-left ">

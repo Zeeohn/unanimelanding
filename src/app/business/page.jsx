@@ -18,7 +18,7 @@ import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
 import boldfuel from "../../../public/Assets/boldfuel.png";
 import businessfuel from "../../../public/Assets/businessfuel.png";
 import businesscustomerbase from "../../../public/Assets/businesscustomerbase.png";
-import patternbg from "../../../public/Assets/pattern-business.png";
+import patternbg from "../../../public/Assets/transparent-pattern.png";
 import boldadvertise from "../../../public/Assets/boldadvertise.png";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
@@ -194,8 +194,8 @@ const Businesspage = () => {
                     Read more
                   </span> */}
                 </p>
-                <button className="flex items-center underline gap-2 hover:text-[#18C4B8] text-black font-redhat font-semibold text-sm mt-8 rounded-lg">
-                  Promote Your Event on BOLD Today and Reach Millions of Users
+                <button className="flex items-center underline gap-2 hover:text-[#18C4B8] text-black font-redhat font-semibold text-[14px] lg:text-[16px] text-left mt-8 rounded-lg">
+                  Promote on BOLD Today and Reach Millions of Users
                   <span className="inline-flex items-center ">
                     <FaArrowRight size={20} />
                   </span>
@@ -419,7 +419,7 @@ const Businesspage = () => {
                   Discover more
                 </span> */}
               </p>
-              <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 hover:text-[#18C4B8] underline">
+              <button className="  font-redhat font-bold lg:text-[16px] md:text-[14px] flex items-center gap-2 rounded-lg mt-6 hover:text-[#18C4B8] underline">
                 Get Started Today and Keep Your Team Moving on Time!
                 <span className="inline-flex items-center">
                   <FaArrowRight size={20} />{" "}
@@ -428,25 +428,25 @@ const Businesspage = () => {
             </div>
           </div>
 
-          <div className="flex py-10">
-            <div className="absolute flex flex-col justify-center items-center bg-[#18C4B8] w-[100vw] h-[60vh]">
-              <p className="font-opensans font-bold text-[50px] leading-[68px] text-white w-[70%] text-center ">
+          <div className="flex py-10 flex-col relative">
+            <Image
+              src={patternbg}
+              alt="pattern background"
+              className="w-full h-[100vh] overflow-hidden absolute flex z-10"
+            />
+            <div className="relative flex flex-col justify-center items-center bg-[#18C4B8] w-[100vw] h-[60vh]">
+              <p className="font-opensans font-bold text-[50px] z-20 leading-[68px] text-white w-[70%] text-center ">
                 Trusted by Over 10k Businesses and Counting!
               </p>
               <div className="flex  gap-6">
-                <button className="py-3 px-6 bg-white border-2  border-white text-[#18C4B8] font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
+                <button className="py-3 px-6 bg-white border-2 z-20  border-white text-[#18C4B8] font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
                   Join BOLD Today
                 </button>
-                <button className="py-3 px-6  text-white border-2 border-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
+                <button className="py-3 px-6  text-white border-2 z-20 border-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
                   Get in Touch with Sale
                 </button>
               </div>
             </div>
-            <Image
-              src={patternbg}
-              alt="pattern background"
-              className="w-[100vw] h-[60vh]"
-            />
           </div>
 
           <div className=" flex justify-between w-full gap-[5%] pt-28 pb-20 px-[5%] bg-[#F3F3F3]">
