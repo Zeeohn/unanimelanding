@@ -16,10 +16,9 @@ import street from "../../public/Assets/taxi-street.png";
 import yellow from "../../public/Assets/yellow-taxis.png";
 import whitearrow from "../../public/Assets/whitearrow.svg";
 import FAQ from "./home/FAQ";
-import Footer from "./home/Footer";
 import Blogsec from "./home/Blogsec";
-import Header from "./home/Header";
 import eventEmitter from "./home/eventEmitter";
+import { useStateContext } from './Stateproviderwraper';
 
 const Homepage = () => {
   const imageRef = useRef(null);
@@ -228,7 +227,7 @@ const Homepage = () => {
           heading={"Travel The Safe Way"}
           cta={"Read our details on safety concerns"}
           bg={blogimg}
-          url={"/ride"}
+          setPage={"ridesafety"}
         />
       </div>
 

@@ -5,9 +5,11 @@ import arrowicon from "../../../public/Assets/arrow.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useStateContext } from "../Stateproviderwraper";
 
-const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url }) => {
+const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url, setPage }) => {
   const [displayText, setDisplayText] = useState(text);
+  const { currentpage, setCurrentPage } = useStateContext(); 
 
   const router = useRouter();
 
@@ -36,6 +38,8 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url }) => {
   const handleRedirect = (url) => {
     if(url){
       router.push(url);
+    } else if (setPage) {
+      setCurrentPage(setPage);
     }
     
     return;
