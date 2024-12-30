@@ -20,6 +20,7 @@ import franchise4 from "../../../public/Assets/franchise4.png";
 import supportbanner from "../../../public/Assets/supportbanner.jpeg";
 import Footer from "../home/Footer";
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Franchisepage = () => {
     const [currentpage, setcurrentpage] = useState("default");
@@ -50,12 +51,12 @@ const Franchisepage = () => {
           <p className="hidden md:block font-opensans font-bold text-[45px] leading-[70px] text-white">
             Join the mission: Become a
             <br />
-            <span className="text-cyan-500 font-bold">BOLD</span> Franchise
+            <span className="text-[#18C4B8] font-bold">BOLD</span> Franchise
           </p>
           <p className="md:hidden font-opensans font-bold text-[25px] text-white">
             Join the mission: Become a
             <br />
-            <span className="text-cyan-500 font-bold">BOLD</span> Franchise
+            <span className="text-[#18C4B8] font-bold">BOLD</span> Franchise
           </p>
           <p className="font-opensans w-full text-base md:text-xl text-white pt-6">
             BOLD is expanding rapidly, and we invite you to be part of the
@@ -64,7 +65,7 @@ const Franchisepage = () => {
             and expert support, you’ll have the tools to thrive.
           </p>
           <div className="flex flex-col gap-4 md:flex-row md:gap-6 pt-8 w-[70%] md:w-full">
-            <button className="font-opensans text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
+            <button className="font-opensans text-xl font-semibold py-[10px] px-6 text-white bg-[#18C4B8] hover:bg-[#12a096] rounded-lg">
               Partner with us
             </button>
             {/* <button
@@ -218,10 +219,10 @@ const Franchisepage = () => {
             voluptatem accusantium doloremque laudantium, totam rem aperiam{" "}
             <br /> <br />
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam error sit...{" "}
-            <span className="font-bold underline cursor-pointer">
+            accusantium doloremque laudantium, totam rem aperiam error sit.
+            {/* <span className="font-bold underline cursor-pointer">
               Read more
-            </span>
+            </span> */}
           </p>
         </div>
         <Image src={franchise3} alt="driverapp" className="rounded-md" />
@@ -286,14 +287,10 @@ const Franchisepage = () => {
             </p>
             <div className="flex gap-2 flex-row justify-between mb-3">
               <div>
-                <button className="md:p-4 px-2 py-3 text-black font-redhat font-semibold bg-white text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold  bg-[#18C4B8] hover:bg-[#12a096]  text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 ">
                   Apply Now
                   <span className="inline-flex md:hidden items-center text-white">
-                    <Image
-                      src={btnrightarrow}
-                      alt="btnarrow "
-                      width={16}
-                    ></Image>
+                    <FaArrowRight size={20} />
                   </span>
                 </button>
               </div>

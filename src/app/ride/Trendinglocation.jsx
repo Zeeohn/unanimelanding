@@ -31,6 +31,7 @@ import flag from "../../../public/Assets/flag.svg";
 import belowtrendingsec from "../../../public/Assets/belowtrendingsec.png";
 import blogsback from "../../../public/Assets/blogsback.png";
 import Footer from "../home/Footer";
+import { FaArrowRight } from "react-icons/fa";
 
 const Trendinglocation = () => {
   const [isClient, setIsClient] = useState(true);
@@ -112,11 +113,9 @@ const Trendinglocation = () => {
             as the destination.
           </p>
           <div className=" flex gap-6 pt-6">
-            <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
+            <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline hover:text-[#18C4B8] ">
               Explore Trending Locations On Bold Now
-              <span className="inline-flex items-center text-white">
-                <Image src={whitearrow} alt="btnarrow " width={16}></Image>
-              </span>
+              <FaArrowRight size={20} />
             </button>
           </div>
         </div>
@@ -245,10 +244,10 @@ const Trendinglocation = () => {
             time with yourself. You’ve earned it.
           </p>
           <div className=" flex gap-6 pt-6">
-            <button className="font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
+            <button className="font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline hover:text-[#18C4B8]">
               Find Your Perfect Café with Bold Today!
               <span className="inline-flex ">
-                <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                <FaArrowRight size={20} />
               </span>
             </button>
           </div>

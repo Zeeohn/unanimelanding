@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useQuill } from "react-quilljs";
 import "quill/dist/quill.snow.css";
 
-const BlogCreation = () => {
+const NewsletterCreation = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
@@ -21,7 +21,6 @@ const BlogCreation = () => {
       ],
     },
   });
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (quill) {
@@ -39,12 +38,6 @@ const BlogCreation = () => {
           const file = input.files[0];
           if (file) {
             const reader = new FileReader();
-
-            if (file.size > 1024 * 1024 * 3) {
-              alert("Image size should be less than 3MB");
-              return;
-            }
-
             reader.onload = () => {
               const base64 = reader.result;
               const range = quill.getSelection();
@@ -70,26 +63,8 @@ const BlogCreation = () => {
     );
   };
 
-  const handleBannerImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        alert("File size exceeds the maximum limit of 5MB.");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = () => {
-        setBannerImage(reader.result); // Save the Base64-encoded string
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const url = "http://localhost:8081/api/blog/create";
-
-  const handleSubmit = async () => {
-    const blogData = {
+  const handleSubmit = () => {
+    const newsData = {
       title,
       description,
       bannerImage,
@@ -97,34 +72,13 @@ const BlogCreation = () => {
       content,
       author,
     };
-
-    setLoading(true);
-
-    // Send the blogData to the server
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(blogData),
-    });
-
-    if (!response.ok) {
-      alert("Something went wrong!");
-      setLoading(false);
-      return;
-    }
-
-    const data = await response.json();
-    console.log(data);
-
-    alert("Blog created successfully!");
-    setLoading(false);
+    console.log(newsData);
+    alert("Newsletter created successfully!");
   };
 
   return (
     <div className="max-w-4xl my-10 mx-auto p-6 bg-white shadow-md rounded-md">
-      <h1 className="text-2xl font-bold mb-4">Create a New Blog</h1>
+      <h1 className="text-2xl font-bold mb-4">Create a New Newsletter</h1>
 
       <div className="mb-4">
         <label className="block text-gray-700 font-medium mb-2">Title</label>
@@ -153,8 +107,7 @@ const BlogCreation = () => {
         </label>
         <input
           type="file"
-          accept="image/*"
-          onChange={handleBannerImageChange}
+          onChange={(e) => setBannerImage(e.target.files[0])}
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -173,7 +126,7 @@ const BlogCreation = () => {
         <label className="block text-gray-700 font-medium mb-2">Content</label>
         <div
           ref={quillRef}
-          className="bg-white rounded-md border px-4 py-2 h-[50vh]"
+          className="bg-white rounded-md border px-4 py-2 h-[60vh]"
         ></div>
       </div>
 
@@ -184,19 +137,19 @@ const BlogCreation = () => {
         <input
           type="text"
           value={author}
-          onChange={(e) => setAuthor(e.target.value)}
+          onChange={setAuthor(e.target.value)}
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
       <button
         onClick={handleSubmit}
-        className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        className="px-6 py-2 bg-gray-800 text-white rounded-md hover:bg-black"
       >
-        Create Blog
+        Create Newsletter
       </button>
     </div>
   );
 };
 
-export default BlogCreation;
+export default NewsletterCreation;

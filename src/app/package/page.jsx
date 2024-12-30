@@ -11,6 +11,7 @@ import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
 import Trackdetails from "./Trackdetails";
+import { FaArrowRight } from "react-icons/fa";
 
 const Packagepage = ({ setcurrentpage }) => {
   return (
@@ -23,14 +24,15 @@ const Packagepage = ({ setcurrentpage }) => {
         />
         <div className="absolute px-[5%]">
           <p className="hidden md:block font-redhat font-bold text-2xl md:text-5xl text-white">
-            Find out where your <br /> package is
+            Track Your Package’s <br /> Journey
           </p>
           <p className="md:hidden font-redhat font-bold text-2xl md:text-5xl text-white">
-            Find out where your <br /> package is
+            Track Your Package&apos;s <br /> Journey
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 text-white md:w-[50%]">
-            Watch your package closely with our tracker. Enter your shipping ID
-            to start tracking and stay up to date with your delivery.
+            Follow your package every step of the way with our tracker. Just
+            enter your shipping ID to see where it is and get updates on its
+            location.
           </p>
           <div className="mt-12 flex rounded-lg overflow-hidden w-[80vw] md:w-fit">
             <div className="p-4 flex gap-4 items-center bg-white">
@@ -56,8 +58,8 @@ const Packagepage = ({ setcurrentpage }) => {
             How to ship with Bold
           </p>
           <p className="font-opensans text-base md:text-xl pt-6 md:text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Choose Bold for all your logistics needs. Shipping with Bold is
+            easy, fast, reliable, affordable and secure.
           </p>
         </div>
 
@@ -104,18 +106,18 @@ const Packagepage = ({ setcurrentpage }) => {
         <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="md:max-w-[55%] flex flex-col justify-center">
             <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-              Send packages with BOLD
+              Send Packages Safely with BOLD
             </p>
             <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-              Get the BOLD app and enjoy seamless delivery when you send
-              packages safely to your friends and family.
+              Get the BOLD app to enjoy safe and seamless delivery when you send
+              packages to your customers, friends and family.
             </p>
             <div className="flex gap-2 flex-row justify-between mb-3">
               <div>
-                <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6  bg-[#18C4B8] hover:bg-[#12a096] ">
                   Download Now
                   <span className="inline-flex items-center text-white">
-                    <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                    <FaArrowRight size={18} />
                   </span>
                 </button>
               </div>

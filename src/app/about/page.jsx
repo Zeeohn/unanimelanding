@@ -31,6 +31,7 @@ import logistic from "../../../public/Assets/logistic-serv.png";
 import affordable from "../../../public/Assets/affordable-ride.png";
 import eco from "../../../public/Assets/eco-friendly.png";
 import Footer from "../home/Footer";
+import { FaArrowRight } from "react-icons/fa";
 
 const Anotherabout = () => {
   const cards = [
@@ -187,9 +188,7 @@ const Anotherabout = () => {
             {/* Text Overlay */}
             <div className="absolute bottom-0 w-full h-[65%] bg-gradient-to-t from-white via-white/90 to-transparent">
               <div className="absolute bottom-0 p-4">
-                <h3 className="font-bold text-lg text-black">
-                  {card.title}
-                </h3>
+                <h3 className="font-bold text-lg text-black">{card.title}</h3>
                 <p className="text-sm text-[#777777]">{card.description}</p>
               </div>
             </div>
@@ -297,12 +296,12 @@ const Anotherabout = () => {
       </div>
 
       <div className="hidden md:flex md:items-center md:justify-center mt-20 mb-36">
-      <button className="font-redhat font-bold text-4xl gap-8 rounded-lg  flex flex-row items-center">
-        Partner with us now
-        <span className="inline-flex mt-2">
-          <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
-        </span>
-      </button>
+        <button className="font-redhat font-bold text-4xl gap-2 hover:gap-8 transition rounded-lg hover:text-[#18C4B8] flex flex-row items-center">
+          Partner with us now
+          <span className="inline-flex mt-2">
+            <FaArrowRight size={20} />
+          </span>
+        </button>
       </div>
     </div>
   );

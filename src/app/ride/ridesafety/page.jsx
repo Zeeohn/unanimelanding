@@ -14,6 +14,7 @@ import btnrightarrow from "../../../../public/Assets/buttunrightarrow.svg";
 import safety1 from "../../../../public/Assets/safety1.jpeg";
 import safety2 from "../../../../public/Assets/safety2.jpeg";
 import FAQ from "@/app/home/FAQ";
+import { FaArrowRight } from "react-icons/fa";
 
 const Ridesafety = () => {
   return (
@@ -35,11 +36,11 @@ const Ridesafety = () => {
             human support available 24/7, we&apos;re by your side on every ride.
           </p>
           <div className=" flex gap-6 pt-6">
-            <button className=" text-white font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
+            <button className=" text-white hover:text-[#18C4B8] font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
               Browse more trending locations
-              <span className="inline-flex items-center text-white">
-                <Image src={whitearrow} alt="btnarrow " width={16}></Image>
-              </span>
+              <FaArrowRight size={20} />
+              {/* <span className="inline-flex items-center text-white">
+              </span> */}
             </button>
           </div>
         </div>
@@ -171,15 +172,9 @@ const Ridesafety = () => {
             </p>
             <div className="flex gap-2 flex-row justify-between ">
               <div>
-                <button className="md:px-6 px-2 py-3 bg-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-5 md:mt-12 border border-white">
+                <button className="md:px-6 px-2 py-3 bg-[#18C4B8] hover:bg-[#12a096] font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-5 md:mt-12 text-white">
                   Download Now
-                  <span className="inline-flex items-center text-white">
-                    <Image
-                      src={btnrightarrow}
-                      alt="btnarrow "
-                      width={16}
-                    ></Image>
-                  </span>
+                  <FaArrowRight size={20} />
                 </button>
               </div>
               <Image

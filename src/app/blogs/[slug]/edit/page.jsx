@@ -7,6 +7,7 @@ const BlogCreation = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
+  const [authorImage, setAuthorImage] = useState(null);
   const [bannerImage, setBannerImage] = useState(null);
   const [slug, setSlug] = useState("");
   const [content, setContent] = useState("");
@@ -21,7 +22,6 @@ const BlogCreation = () => {
       ],
     },
   });
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (quill) {
@@ -39,12 +39,6 @@ const BlogCreation = () => {
           const file = input.files[0];
           if (file) {
             const reader = new FileReader();
-
-            if (file.size > 1024 * 1024 * 3) {
-              alert("Image size should be less than 3MB");
-              return;
-            }
-
             reader.onload = () => {
               const base64 = reader.result;
               const range = quill.getSelection();
@@ -70,25 +64,7 @@ const BlogCreation = () => {
     );
   };
 
-  const handleBannerImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      if (file.size > 5 * 1024 * 1024) {
-        alert("File size exceeds the maximum limit of 5MB.");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = () => {
-        setBannerImage(reader.result); // Save the Base64-encoded string
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const url = "http://localhost:8081/api/blog/create";
-
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     const blogData = {
       title,
       description,
@@ -96,30 +72,10 @@ const BlogCreation = () => {
       slug,
       content,
       author,
+      authorImage,
     };
-
-    setLoading(true);
-
-    // Send the blogData to the server
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(blogData),
-    });
-
-    if (!response.ok) {
-      alert("Something went wrong!");
-      setLoading(false);
-      return;
-    }
-
-    const data = await response.json();
-    console.log(data);
-
+    console.log(blogData);
     alert("Blog created successfully!");
-    setLoading(false);
   };
 
   return (
@@ -153,8 +109,7 @@ const BlogCreation = () => {
         </label>
         <input
           type="file"
-          accept="image/*"
-          onChange={handleBannerImageChange}
+          onChange={(e) => setBannerImage(e.target.files[0])}
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -184,7 +139,7 @@ const BlogCreation = () => {
         <input
           type="text"
           value={author}
-          onChange={(e) => setAuthor(e.target.value)}
+          onChange={() => setAuthor(e.target.value)}
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>

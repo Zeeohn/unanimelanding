@@ -34,6 +34,7 @@ import { useRef, useEffect, useState } from "react";
 import FAQ from "../home/FAQ";
 import Footer from "../home/Footer";
 import "../swiperslider.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const Intercitypage = () => {
   const [isClient, setIsClient] = useState(false);
@@ -168,7 +169,7 @@ const Intercitypage = () => {
             </p>
             <div className="flex gap-2">
               <div>
-                <button className="p-2 md:p-4 text-white font-redhat font-semibold text-sm md:text-lg lg:text-xl flex items-center gap-2 rounded-lg mt-4  md:mt-8 lg:mt-12 border border-white">
+                <button className="p-2 md:p-4 text-white bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold text-sm md:text-lg lg:text-xl flex items-center gap-2 rounded-lg mt-4  md:mt-8 lg:mt-12 ">
                   Download App
                   <span className="inline-flex items-center text-white">
                     <Image src={whitearrow} alt="btnarrow " width={16}></Image>
@@ -199,10 +200,10 @@ const Intercitypage = () => {
           </p>
           <div className="flex gap-2">
             <div>
-              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-black font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
+              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-[#18C4B8] hover:bg-[#12a096] font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
                 Download App{" "}
                 <span className="inline-flex items-center text-white">
-                  <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
             </div>
@@ -378,10 +379,10 @@ const Intercitypage = () => {
           </p>
           <div className="flex gap-2">
             <div>
-              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-black font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
+              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white  bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
                 Become a partner{" "}
                 <span className="inline-flex items-center text-white">
-                  <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
             </div>

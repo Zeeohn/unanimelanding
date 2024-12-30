@@ -49,6 +49,7 @@ import driveoverlay from "../../../public/Assets/drive-overlay.png";
 import drivebanner from "../../../public/Assets/drive-banner.jpeg";
 import { useStateContext } from "../Stateproviderwraper";
 import "../swiperslider.css";
+import { FaArrowRight } from "react-icons/fa";
 
 const Drivepage = () => {
   const [isClient, setIsClient] = useState(false);
@@ -186,10 +187,10 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
                 </div>
               </div>
 
-              <button className=" text-sm md:text-xl font-semibold bg-white py-4 px-6 rounded-lg lg:mt-10 gap-2 md:mt-7 flex items-center">
+              <button className=" text-sm md:text-xl font-semibold bg-[#18C4B8] hover:bg-[#12a096] text-white py-4 px-6 rounded-lg lg:mt-10 gap-2 md:mt-7 flex items-center">
                 Become a partner today
                 <span className="inline-flex items-center">
-                  <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
             </div>
@@ -354,7 +355,9 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
               </p>
               <div className="flex gap-6 justify-start pt-6 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">1</p>
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                    1
+                  </p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Packages</p>
@@ -370,23 +373,36 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
               </div>
               <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">2</p>
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                    2
+                  </p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Boldmiles</p>
                   <p className=" pt-3 text-[#777777] text-sm md:text-xl">
-                    Drive between cities, states, and countries with the BOLD Intercity feature and boost your earnings on longer trips. Whether for business, leisure, or routine commutes, you can turn cross-country travel into a profitable opportunity, enjoying the freedom of choosing your routes while earning extra income.{" "}
+                    Drive between cities, states, and countries with the BOLD
+                    Intercity feature and boost your earnings on longer trips.
+                    Whether for business, leisure, or routine commutes, you can
+                    turn cross-country travel into a profitable opportunity,
+                    enjoying the freedom of choosing your routes while earning
+                    extra income.{" "}
                   </p>
                 </div>
               </div>
               <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">3</p>
+                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                    3
+                  </p>
                 </div>
-                <div className="">
+                <div className="" id="jumpstart">
                   <p className="font-bold text-base md:text-xl">Jumpstart</p>
                   <p className=" pt-3 text-[#777777] text-sm md:text-xl">
-                    Earn money by assisting stranded drivers with quick, reliable jumpstart services. Car troubles can happen anytime, and you can be the one to help. Turn roadside emergencies into a profitable opportunity, all while offering a valuable service to your community.{" "}
+                    Earn money by assisting stranded drivers with quick,
+                    reliable jumpstart services. Car troubles can happen
+                    anytime, and you can be the one to help. Turn roadside
+                    emergencies into a profitable opportunity, all while
+                    offering a valuable service to your community.{" "}
                   </p>
                 </div>
               </div>
@@ -398,9 +414,9 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
             text={
               "Your well-being and safety matter. That’s why we’ve designed an experience that keeps you comfortable whether driving at night or during the day."
             }
-                  cta={"Learn More"}
-                  bg={drivebanner}
-                  overlayImg={driveoverlay}
+            cta={"Learn More"}
+            bg={drivebanner}
+            overlayImg={driveoverlay}
           />
 
           <div className="flex justify-between px-[5%] items-center py-12 md:py-20 lg:py-28 ">
@@ -415,14 +431,10 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
               </p>
               <div className="flex gap-2">
                 <div>
-                  <button className="p-4 text-white bg-black font-redhat font-semibold text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
+                  <button className="p-4 text-white bg-[#18C4B8] hover:bg-[#12a096] font-redhat font-semibold text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
                     Become a partner today{" "}
                     <span className="inline-flex items-center text-white">
-                      <Image
-                        src={whitearrow}
-                        alt="btnarrow "
-                        width={16}
-                      ></Image>
+                      <FaArrowRight size={20} />
                     </span>
                   </button>
                 </div>

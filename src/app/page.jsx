@@ -19,6 +19,7 @@ import FAQ from "./home/FAQ";
 import Footer from "./home/Footer";
 import Blogsec from "./home/Blogsec";
 import Header from "./home/Header";
+import eventEmitter from "./home/eventEmitter";
 
 const Homepage = () => {
   const imageRef = useRef(null);
@@ -31,6 +32,12 @@ const Homepage = () => {
       router.push(page);
     }
   };
+
+  const handleDrop = () => {
+    eventEmitter.emit("toggleDropdown", { message: "Button clicked!" });
+    
+    console.log("emit clicked")
+  }
 
   useEffect(() => {
     const updatePadding = () => {
@@ -70,7 +77,7 @@ const Homepage = () => {
             we move and interact.
           </p>
           <div className="flex sm:flex-row flex-col gap-6 justify-start max-w-[100%] sm:max-w-[70%] pt-14">
-            <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]">
+            <button className="py-3 sm:px-8 font-redhat bg-[#18C4B8] text-white text-sm  sm:text-base md:text-xl rounded-3xl font-bold sm:w-fit w-[50%]" onClick={() => handleDrop()}>
               Get Started
             </button>
             <button
@@ -118,14 +125,21 @@ const Homepage = () => {
       </div>
       <div className="flex flex-col gap-4  md:flex-row justify-between px-[5%] md:gap-[6%] pt-12 md:pt-16  lg:pt-20">
         <div className=" md:max-w-[50%]">
-          <Image src={uppericon} alt="uppericon"></Image>
+          <Image
+            src={uppericon}
+            alt="uppericon"
+            width={180}
+            height={40}
+          ></Image>
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl pt-4">
-            Global reach and smart solutions
+            Global impact and smart solutions
           </p>
           <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-            Move effortlessly with Bold across cities, states and countries. We
-            have solutions for every need. Whether you want to send packages,
-            book a ride or rent a car, BOLD does it all.
+            BOLD connects you to the world, offering seamless travel and
+            services for every need. Whether it’s a quick local ride, intercity
+            or international travel, eco-friendly transport, logistics, or
+            vehicle rentals, BOLD integrates smart solutions to fit your
+            lifestyle and redefine how you move globally.
           </p>
         </div>
         <Image
@@ -148,10 +162,13 @@ const Homepage = () => {
             Innovative features
           </p>
           <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-            Discover exciting locations near you, pay effortlessly with flexible
-            options, contact vehicle owners blocking your way, and connect with
-            trusted insurance companies. Need a jump start? Get it done hassle
-            free all in one app.
+            BOLD revolutionizes the way you move with cutting-edge tools
+            designed for convenience and ease. Enjoy real-time tracking to stay
+            updated, discover trending destinations tailored to your interests,
+            and choose from multiple payment options for flexibility. From
+            ride-hailing to package delivery and rentals, every feature is
+            crafted to streamline your journey and deliver a user experience
+            that’s seamless, personalized, and ahead of the curve.
           </p>
           {/* <div className=" md:text-right pt-6  md:pt-10">
             <button className="py-2 px-4 md:py-3  md:px-8 text-sm sm:text-base font-redhat border-black border-2 text-black rounded-3xl  ">
@@ -211,6 +228,7 @@ const Homepage = () => {
           heading={"Travel The Safe Way"}
           cta={"Read our details on safety concerns"}
           bg={blogimg}
+          url={"/ride"}
         />
       </div>
 
@@ -230,7 +248,7 @@ const Homepage = () => {
           </p>
           <div className="flex gap-2">
             <div>
-              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-black font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
+              <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-[#18C4B8] font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
                 Download App{" "}
                 <span className="inline-flex items-center text-white">
                   <Image src={whitearrow} alt="btnarrow " width={16}></Image>
@@ -259,7 +277,7 @@ const Homepage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
-          </p>          
+          </p>
         </div>
         <Image
           src={yellow}

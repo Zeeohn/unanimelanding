@@ -6,6 +6,7 @@ import blackcircletick from "../../../public/Assets/blackcircletick.svg";
 import btnrightarrow from "../../../public/Assets/buttunrightarrow.svg";
 import Qrdriver from "../../../public/Assets/Qrdriver.png";
 import Footer from "../home/Footer";
+import { FaArrowRight } from "react-icons/fa";
 const Earning = () => {
   return (
     <div>
@@ -20,10 +21,10 @@ const Earning = () => {
             depends on when, where, and how often you drive.
           </p>
           <div className="flex gap-4 md:gap-8 items-center pt-14">
-            <button className="font-semibold bg-[#FFFFFF] py-3 px-5 md:py-4 md:px-6 rounded-lg flex items-center gap-2 text-sm md:text-xl ">
+            <button className="font-semibold  bg-[#18C4B8] hover:bg-[#12a096]  py-3 px-5 md:py-4 md:px-6 rounded-lg flex items-center gap-2 text-sm md:text-xl text-white">
               Start earning now
-              <span className="inline-flex items-center text-white">
-                <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+              <span className="inline-flex items-center ">
+                <FaArrowRight size={16} />
               </span>
             </button>
             {/* <button className=" bg-white text-white font-opensans font-semibold text-base md:text-xl lg:text-2xl flex items-center gap-3 rounded-lg underline ">
@@ -142,7 +143,11 @@ const Earning = () => {
             One App, Many Ways to Earn Money
           </p>
           <p className="font-opensans text-sm md:text-xl pt-2 md:pt-6 lg:pt-8">
-            With Bold, you’re in control. Choose from a variety of services that fit your schedule and lifestyle. Whether it’s weekdays, evenings, weekends, or just a few hours whenever you can, you decide when and how often you want to work. The more you deliver, the more you earn. Sign up today and start making money on your own terms!
+            With Bold, you’re in control. Choose from a variety of services that
+            fit your schedule and lifestyle. Whether it’s weekdays, evenings,
+            weekends, or just a few hours whenever you can, you decide when and
+            how often you want to work. The more you deliver, the more you earn.
+            Sign up today and start making money on your own terms!
           </p>
           <Image
             src={earningdriver}
@@ -175,7 +180,9 @@ const Earning = () => {
                 alt="whitecheck"
                 className="w-4 md:w-6"
               />
-              <p className="text-base md:text-lg ">Drive Intercity, Interstate and cross-country</p>
+              <p className="text-base md:text-lg ">
+                Drive Intercity, Interstate and cross-country
+              </p>
             </div>
             <div className="flex gap-4 items-center pt-2 md:pt-6">
               <Image
@@ -215,7 +222,10 @@ const Earning = () => {
                   driving and earning on your own terms today.
                 </p>
                 <button>
-                  <Image src={btnrightarrow} alt="rightarrow" className="w-5" />
+                  <FaArrowRight
+                    size={20}
+                    className="text-black hover:text-[#18C4B8]"
+                  />
                 </button>
               </div>
             </div>

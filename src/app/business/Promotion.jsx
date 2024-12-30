@@ -23,7 +23,7 @@ const Promotion = () => {
               iste natus error sit voluptatem accusantium doloremque voluptatem
             </p>
             <div className="flex gap-8 items-center pt-14">
-              <button className="text-xl font-semibold bg-black text-white py-4 px-6 rounded-lg ">
+              <button className="text-xl font-semibold  bg-[#18C4B8] hover:bg-[#12a096]  text-white py-4 px-6 rounded-lg ">
                 Start promoting
               </button>
             </div>
@@ -153,12 +153,12 @@ const Promotion = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center bg-blue-300 py-20 my-20">
+      <div className="flex flex-col justify-center items-center  bg-[#18C4B8] hover:bg-[#12a096] py-20 my-20">
         <p className="font-opensans font-bold text-[50px] leading-[68px] text-white w-[70%] text-center ">
           More than 10k customers preferred to use BOLD Business
         </p>
         <div className="flex  gap-6">
-          <button className="py-3 px-6 bg-white border-2  border-white text-black font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
+          <button className="py-3 px-6 bg-white border-2  border-white text-[#18C4B8] font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
             Get promoting now
           </button>
         </div>
@@ -177,7 +177,7 @@ const Promotion = () => {
             dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt.
-            <span className="text-black font-bold underline"> Read more</span>
+            {/* <span className="text-black font-bold underline"> Read more</span> */}
           </p>
         </div>
 

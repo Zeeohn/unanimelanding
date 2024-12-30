@@ -12,6 +12,7 @@ import transparency from "../../../public/Assets/cyan-merge.png";
 import trust from "../../../public/Assets/cyan-shield.png";
 import integrity from "../../../public/Assets/cyan-box.png";
 import blogsback from "../../../public/Assets/blogsback.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const Aboutpage = () => {
   const router = useRouter();
@@ -66,10 +67,10 @@ const Aboutpage = () => {
               stress-free.
             </p>
           </div>
-          <button className=" text-white bg-black py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10">
+          <button className=" text-white bg-[#18C4B8] hover:bg-[#12a096] py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10">
             Contact BOLD
             <span className="inline-flex items-center text-white">
-              <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+              <FaArrowRight size={20} />
             </span>
           </button>
         </div>
@@ -96,12 +97,12 @@ const Aboutpage = () => {
             drive success and keep you ahead of the competition.
           </p>
           <button
-            className="  font-redhat font-bold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline"
+            className="hover:text-[#18C4B8] font-redhat font-bold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline"
             onClick={() => handleRedirect("/business")}
           >
             Explore BOLD Business
             <span className="inline-flex items-center">
-              <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+              <FaArrowRight size={20} />
             </span>
           </button>
         </div>
@@ -123,12 +124,12 @@ const Aboutpage = () => {
             you every step of the way as your business expands.
           </p>
           <button
-            className=" text-white bg-black py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10 w-fit"
+            className=" text-white  bg-[#18C4B8] hover:bg-[#12a096] py-3 px-6 font-redhat font-semibold text-base md:text-xl flex items-center gap-3 rounded-lg mt-10 w-fit"
             onClick={() => handleRedirect("/about")}
           >
             Learn more
             <span className="inline-flex items-center text-white">
-              <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+              <FaArrowRight size={20} />
             </span>
           </button>
         </div>

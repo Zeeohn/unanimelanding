@@ -284,7 +284,7 @@ const Ridepage = () => {
                   </p>
                 </div>
               </div>
-              <button className=" text-sm md:text-xl font-semibold bg-[#FFFFFF] py-4 px-6 rounded-lg mt-10 md:mt-7">
+              <button className=" text-sm md:text-xl font-semibold bg-[#18C4B8] py-4 px-6 rounded-lg mt-10 text-white md:mt-7">
                 Download App
               </button>
             </div>
@@ -448,9 +448,9 @@ const Ridepage = () => {
                   </p>
                   <p className="text-sm md:text-[18px] pt-2 text-[#777777]">
                     With Bold SOS, vehicle details like the plate number, make
-                    and model, colour, and the owner&apos;s phone number are securely
-                    registered. This ensures you can quickly identify and
-                    contact the owner of any vehicle causing an obstruction.{" "}
+                    and model, colour, and the owner&apos;s phone number are
+                    securely registered. This ensures you can quickly identify
+                    and contact the owner of any vehicle causing an obstruction.{" "}
                   </p>
                 </div>
                 <div className="py-3 ">
@@ -485,11 +485,7 @@ const Ridepage = () => {
                   worry about. Trigger the SOS alert via the app and alert the
                   driver to move their car.
                 </p>
-                <Image
-                  src={sos}
-                  alt="youtubecover"
-                  className="lg:mt-16"
-                />
+                <Image src={sos} alt="youtubecover" className="lg:mt-16" />
               </div>
             </div>
           </div>
@@ -602,7 +598,7 @@ const Ridepage = () => {
                 blocking your way. With a few taps, you can identify the vehicle
                 owner and get them to come over immediately.
               </p>
-              <button className="text-sm md:text-xl font-semibold bg-black text-white px-4 py-2 md:py-3 md:px-6 rounded-lg mt-8 lg:mt-7">
+              <button className="text-sm md:text-xl font-semibold bg-[#18C4B8] text-white px-4 py-2 md:py-3 md:px-6 rounded-lg mt-8 lg:mt-7">
                 Download Now
               </button>
             </div>
@@ -616,9 +612,9 @@ const Ridepage = () => {
           <Blogsec
             text={`There’s more to <span class="font-extrabold">BOLD.</span> Bold is not just about getting you from point A to point B. We offer a variety of services designed to enhance your daily life and solve real-world problems.`}
             heading={"More Than Just Rides"}
-                cta={"Read more details on BOLD"}
-                bg={ridepartner}
-                overlayImg={overlay}
+            cta={"Read more details on BOLD"}
+            bg={ridepartner}
+            overlayImg={overlay}
           />
           <FAQ questions={questions} />
         </div>

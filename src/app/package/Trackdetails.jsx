@@ -4,6 +4,7 @@ import ordertrack from "../../../public/Assets/ordertrack.png";
 import boldadvertise from "../../../public/Assets/boldadvertise.png";
 import whitearrow from "../../../public/Assets/whitearrow.svg";
 import Footer from "../home/Footer";
+import { FaArrowRight } from "react-icons/fa";
 
 const Trackdetails = () => {
   return (
@@ -60,10 +61,10 @@ const Trackdetails = () => {
             </p>
             <div className="flex gap-2">
               <div>
-                <button className="p-4 text-white font-redhat font-semibold text-xl flex items-center gap-2 rounded-lg mt-12 border border-white">
+                <button className="p-4 text-white font-redhat font-semibold text-xl flex items-center gap-2 rounded-lg mt-12 bg-[#18C4B8] hover:bg-[#12a096] ">
                   Download App
                   <span className="inline-flex items-center text-white">
-                    <Image src={whitearrow} alt="btnarrow " width={16}></Image>
+                    <FaArrowRight size={20} />
                   </span>
                 </button>
               </div>

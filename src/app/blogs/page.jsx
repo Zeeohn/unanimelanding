@@ -5,9 +5,6 @@ import { useState, useEffect } from "react";
 import { usePathname, redirect } from "next/navigation";
 import dropdownmenu from "../../../public/Assets/dropdownmenu.svg";
 import blogone from "../../../public/Assets/blogone.png";
-import blogtwo from "../../../public/Assets/blogtwo.png";
-import blogthree from "../../../public/Assets/blogthree.png";
-import blogauthor from "../../../public/Assets/blogauthor.png";
 import Footer from "../home/Footer";
 import Detailblog from "./Detailblog";
 
@@ -16,11 +13,31 @@ const getQueryParams = (search) => {
   return Object.fromEntries(params.entries());
 };
 
+// Utility function to generate an avatar with initials
+const generateAvatar = (name) => {
+  const initials = name
+    .split(" ")
+    .map((n) => n[0].toUpperCase())
+    .join("");
+  return (
+    <div
+      className="flex items-center justify-center bg-gray-300 rounded-full text-white font-bold text-sm"
+      style={{
+        width: "32px",
+        height: "32px",
+        backgroundColor: "#18C4B8", // Dynamic color can be used based on the name
+      }}
+    >
+      {initials}
+    </div>
+  );
+};
+
 const Blogspage = () => {
   const [page, setPage] = useState("home");
 
   const pathname = usePathname();
- 
+
   useEffect(() => {
     // Get the query parameters from the URL when the component mounts
     const params = getQueryParams(window.location.search);
@@ -43,6 +60,7 @@ const Blogspage = () => {
 
   const toggleDropdown1 = () => setDropdown1Open(!dropdown1Open);
   const toggleDropdown2 = () => setDropdown2Open(!dropdown2Open);
+
   return (
     <div>
       {page === "read" ? (
@@ -60,7 +78,7 @@ const Blogspage = () => {
               <div className="relative">
                 <button
                   onClick={toggleDropdown1}
-                  className=" font-semibold text-base font-opensans  px-4 py-2 rounded-lg shadow-md border border-[#EEEEEE] flex items-center gap-1 "
+                  className="font-semibold text-base font-opensans px-4 py-2 rounded-lg shadow-md border border-[#EEEEEE] flex items-center gap-1"
                 >
                   Blogs
                   <span className="inline-flex items-center text-white">
@@ -92,7 +110,7 @@ const Blogspage = () => {
               <div className="relative">
                 <button
                   onClick={toggleDropdown2}
-                  className=" text-base font-opensans  px-4 py-2 rounded-lg shadow-md border border-[#EEEEEE] flex items-center gap-1 "
+                  className="text-base font-opensans px-4 py-2 rounded-lg shadow-md border border-[#EEEEEE] flex items-center gap-1"
                 >
                   Category
                   <span className="inline-flex items-center text-white">
@@ -130,7 +148,6 @@ const Blogspage = () => {
                   style={{ boxShadow: "4px 4px 33px 0px #0000000D" }}
                   onClick={() => {
                     handleStatus("read");
-                    // window.location.href = "/blogs?page=read";
                   }}
                 >
                   <Image
@@ -147,12 +164,12 @@ const Blogspage = () => {
                       <p className="font-semibold text-base font-opensans text-[#777777]">
                         12 November, 2024
                       </p>
-                      <p className=" text-base font-opensans text-[#777777] ">
+                      <p className="text-base font-opensans text-[#777777]">
                         Added to <span className="text-[#18C4B8]">Ride</span>
                       </p>
                     </div>
-                    <div className="flex gap-4 items-center pt-6 ">
-                      <Image src={blogauthor} alt="blogauthor" width={32} />
+                    <div className="flex gap-4 items-center pt-6">
+                      {generateAvatar("Davis Press")}
                       <p className="font-opensans text-base text-[#777777]">
                         by <span className="text-black">Davis Press</span>
                       </p>
@@ -165,7 +182,6 @@ const Blogspage = () => {
         </>
       )}
     </div>
-    // <Detailblog />
   );
 };
 

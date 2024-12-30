@@ -15,6 +15,7 @@ import cycler from "../../../public/Assets/cycler.png";
 import fast from "../../../public/Assets/fast-car.png";
 import Footer from "../home/Footer";
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Sustainability = () => {
   const [currentpage, setcurrentpage] = useState("default");
@@ -265,7 +266,7 @@ const Sustainability = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut
             </p>
-            <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold bg-white w-fit">
+            <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold  bg-[#18C4B8] hover:bg-[#12a096] text-white w-fit">
               Download App Now
             </button>
           </div>
@@ -324,26 +325,32 @@ const Sustainability = () => {
         </div>
 
         <div className="flex flex-col md:flex-row-reverse justify-between px-[5%] items-center gap-[5%] pt-28">
-            <Image src={fast} alt="driverapp" />
-            <div className=" flex flex-col justify-center md:max-w-[50%]">
-              <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
-              <p className="font-bold text-[14px] my-2 md:my-4 md:text-[20px[">Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do</p>
-              <p className="hidden md:block text-xl text-[#777777] font-opensans">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              </p>
-              <p className="md:hidden text-base text-black pt-6 font-opensans">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-              </p>
-              <button className="bg-black font-redhat font-semibold w-fit px-4 py-2  text-base md:text-xl flex items-center gap-2 text-white rounded-lg mt-8">
-                Download App{" "}
-                <span className="inline-flex items-center">
-                  <Image src={whitearrow} alt="btnarrow " width={16}></Image>
-                </span>
-              </button>
-            </div>
+          <Image src={fast} alt="driverapp" />
+          <div className=" flex flex-col justify-center md:max-w-[50%]">
+            <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <p className="font-bold text-[14px] my-2 md:my-4 md:text-[20px[">
+              Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            </p>
+            <p className="hidden md:block text-xl text-[#777777] font-opensans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+            </p>
+            <p className="md:hidden text-base text-black pt-6 font-opensans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore
+            </p>
+            <button className=" bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold w-fit px-4 py-2  text-base md:text-xl flex items-center gap-2 text-white rounded-lg mt-8">
+              Download App{" "}
+              <span className="inline-flex items-center">
+                <FaArrowRight size={20} />
+              </span>
+            </button>
           </div>
+        </div>
 
         <div className="md:px-[5%] py-28 ">
           <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
@@ -360,14 +367,10 @@ const Sustainability = () => {
               </p>
               <div className="flex gap-2 flex-row justify-between mb-3">
                 <div>
-                  <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                  <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 bg-[#18C4B8] hover:bg-[#12a096]">
                     Download App Now
                     <span className="inline-flex items-center text-white">
-                      <Image
-                        src={whitearrow}
-                        alt="btnarrow "
-                        width={16}
-                      ></Image>
+                      <FaArrowRight size={20} />
                     </span>
                   </button>
                 </div>

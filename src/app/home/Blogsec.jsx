@@ -1,11 +1,15 @@
 "use client";
 import blogimg from "../../../public/Assets/blogbg.png";
+import {useRouter} from "next/navigation";
 import arrowicon from "../../../public/Assets/arrow.svg";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
-const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor }) => {
+const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url }) => {
   const [displayText, setDisplayText] = useState(text);
+
+  const router = useRouter();
 
   useEffect(() => {
     const truncateText = () => {
@@ -28,6 +32,15 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor }) => {
 
     return () => window.removeEventListener("resize", truncateText); // Cleanup on unmount
   }, [text]);
+
+  const handleRedirect = (url) => {
+    if(url){
+      router.push(url);
+    }
+    
+    return;
+  }
+
   return (
     <div>
       <div className="md:px-[5%] sm:pt-4 md:pt-10 overflow-hidden md:rounded-2xl">
@@ -55,11 +68,11 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor }) => {
               className=" pt-2 md:pt-6 lg:pt-10 sm:font-semibold text-white text-sm sm:text-xl"
               dangerouslySetInnerHTML={{ __html: displayText }}
             ></p>
-            <div className="flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-8">
-              <button className="text-white text-sm md:text-xl lg:text-2xl font-bold ">
+            <div className="">
+              <button className="text-white flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-8  hover:underline text-sm md:text-xl lg:text-2xl hover:text-[#18C4B8] font-bold" onClick={() => handleRedirect(url)}>
                 {cta}
+              <FaArrowRight size={24} />
               </button>{" "}
-              <Image src={arrowicon} alt="arrow" />
             </div>
           </div>
         </div>

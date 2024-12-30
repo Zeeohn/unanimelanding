@@ -38,6 +38,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Blogsec from '../home/Blogsec';
+import { FaArrowRight } from "react-icons/fa";
 
 const Businesspage = () => {
   const questions = [
@@ -135,18 +136,14 @@ const Businesspage = () => {
                     and international operations.
                   </p>
                   <div className=" flex gap-6 pt-8">
-                    <button className="font-opensans text-base md:text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
+                    <button className="font-opensans text-base md:text-xl font-semibold py-[10px] px-6  bg-[#18C4B8] hover:bg-[#12a096] text-white rounded-lg">
                       Sign up for business
                     </button>
-                    <button className=" text-white font-opensans font-semibold md:text-xl flex items-center gap-3 rounded-lg ">
+                    <button className="text-white font-opensans font-semibold md:text-xl flex items-center gap-3 rounded-lg hover:text-[#18C4B8]">
                       Sign up as fleet owner
-                      <span className="inline-flex items-center text-white">
-                        <Image
-                          src={whitearrow}
-                          alt="btnarrow "
-                          width={16}
-                        ></Image>
-                      </span>
+                      <FaArrowRight size={20} />
+                      {/* <span className="inline-flex items-center text-white">
+                      </span> */}
                     </button>
                   </div>
                 </div>
@@ -187,19 +184,19 @@ const Businesspage = () => {
                   Sell your concert or event tickets directly on the Bold app
                   and connect with a larger audience to make your event
                   unforgettable.{" "}
-                  <span className="text-black font-bold underline">
+                  {/* <span className="text-black font-bold underline">
                     {" "}
                     Read more
-                  </span>
+                  </span> */}
                 </p>
-                <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-16 rounded-lg">
+                <button className="py-3 px-6 bg-[#18C4B8] hover:bg-[#12a096]  text-white font-redhat font-semibold text-xl w-fit mt-16 rounded-lg">
                   Get Started
                 </button>
               </div>
             </div>
             <div className="w-[25%] mx-auto flex flex-col items-center">
               <button
-                className="font-bold text-xl py-4 px-10 rounded-[40px] bg-black text-white w-fit"
+                className="font-bold text-xl py-4 px-10 rounded-[40px]  bg-[#18C4B8] hover:bg-[#12a096] text-white w-fit"
                 onClick={() => setcurrentpage("promotion")}
               >
                 Discover More
@@ -233,12 +230,12 @@ const Businesspage = () => {
                   visibility, connect with a wider audience, and drive more
                   sales. Let Bold’s advertising solutions help you take your
                   business to the next level.
-                  <span className="text-black font-bold underline">
+                  {/* <span className="text-black font-bold underline">
                     {" "}
                     Read more
-                  </span>
+                  </span> */}
                 </p>
-                <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
+                <button className="py-3 px-6  bg-[#18C4B8] hover:bg-[#12a096]  text-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
                   Start advertising with bold
                 </button>
               </div>
@@ -337,7 +334,7 @@ const Businesspage = () => {
                             {collect.heading}
                           </p>
                           <div className="mt-8 flex flex-row items-center gap-8 justify-between">
-                            <button className="bg-black text-white text-[16px] py-3 h-fit px-4 w-full rounded-full">
+                            <button className=" bg-[#18C4B8] hover:bg-[#12a096]  text-white text-[16px] py-3 h-fit px-4 w-full rounded-full">
                               {collect.cta}
                             </button>
                             <div className="flex gap-4 items-center">
@@ -382,10 +379,10 @@ const Businesspage = () => {
                 punctuality and satisfaction. Whether for small teams or large
                 companies, <span className="font-bold">BOLD</span>’s transport
                 service keeps your workforce moving efficiently.
-                <span className="text-black font-bold underline">
+                {/* <span className="text-black font-bold underline">
                   {" "}
                   Read more
-                </span>
+                </span> */}
               </p>
             </div>
 
@@ -409,27 +406,27 @@ const Businesspage = () => {
                 reliable pickup and drop-off service, your team travels safely
                 and arrives on time. Simplify workplace transportation and
                 ensure a smooth, efficient experience for everyone.
-                <span className="text-black font-bold underline">
+                {/* <span className="text-black font-bold underline">
                   {" "}
                   Discover more
-                </span>
+                </span> */}
               </p>
-              <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+              <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 hover:text-[#18C4B8] underline">
                 Get Started Today and Keep Your Team Moving on Time!
                 <span className="inline-flex items-center">
-                  <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />{" "}
                 </span>
               </button>
             </div>
           </div>
 
           <div className="flex py-10">
-            <div className="absolute flex flex-col justify-center items-center bg-[#1197A6] w-[100vw] h-[60vh]">
+            <div className="absolute flex flex-col justify-center items-center bg-[#18C4B8] w-[100vw] h-[60vh]">
               <p className="font-opensans font-bold text-[50px] leading-[68px] text-white w-[70%] text-center ">
                 Trusted by Over 10k Businesses and Counting!
               </p>
               <div className="flex  gap-6">
-                <button className="py-3 px-6 bg-white border-2  border-white text-black font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
+                <button className="py-3 px-6 bg-white border-2  border-white text-[#18C4B8] font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
                   Join BOLD Today
                 </button>
                 <button className="py-3 px-6  text-white border-2 border-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
@@ -457,12 +454,12 @@ const Businesspage = () => {
                 100 stations. Gain access to a larger customer base and offer
                 drivers a seamless refueling experience. Let’s grow together and
                 make fueling more convenient for everyone.
-                <span className="text-black font-bold underline">
+                {/* <span className="text-black font-bold underline">
                   {" "}
                   Know more
-                </span>
+                </span> */}
               </p>
-              <button className="py-3 px-6 bg-black text-white font-redhat font-semibold text-xl w-fit mt-10 rounded-lg">
+              <button className="py-3 px-6 bg-[#18C4B8] hover:bg-[#12a096] text-white font-redhat font-semibold text-xl w-fit mt-10 rounded-lg">
                 Partner with BOLD
               </button>
             </div>
@@ -483,15 +480,15 @@ const Businesspage = () => {
                 audience, helping you grow your customer base faster. We make it
                 easy for you to stay busy and boost your business. Let’s work
                 together to take your fleet to the next level.
-                <span className="text-black font-bold underline">
+                {/* <span className="text-black font-bold underline">
                   {" "}
                   Learn more
-                </span>
+                </span> */}
               </p>
-              <button className="  font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+              <button className="hover:text-[#18C4B8] font-redhat font-bold text-xl flex items-center gap-2 rounded-lg mt-6 underline">
                 Register your Fleet with BOLD
                 <span className="inline-flex items-center">
-                  <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
               <p className="text-base pt-2">
@@ -519,14 +516,10 @@ const Businesspage = () => {
                 </p>
                 <div className="flex gap-2 flex-row justify-between mb-3">
                   <div>
-                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6  bg-[#18C4B8] hover:bg-[#12a096] ">
                       Download App Now
                       <span className="inline-flex items-center text-white">
-                        <Image
-                          src={whitearrow}
-                          alt="btnarrow "
-                          width={16}
-                        ></Image>
+                        <FaArrowRight size={20} />
                       </span>
                     </button>
                   </div>

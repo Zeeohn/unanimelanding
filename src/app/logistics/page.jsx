@@ -16,6 +16,7 @@ import Footer from "../home/Footer";
 import { useState } from "react";
 import Packagepage from "../package/page";
 import Trackdetails from "../package/Trackdetails";
+import { FaArrowRight } from "react-icons/fa";
 
 const Logisticspage = () => {
   const [currentpage, setcurrentpage] = useState("default");
@@ -34,7 +35,7 @@ const Logisticspage = () => {
               loop
               muted
               className="h-[70vh] md:h-[90vh] w-[100vw] object-cover"
-            > 
+            >
               <source src="/Assets/logistics-hero.mp4" type="video/mp4" />
             </video>
             <div className="absolute top-0 w-full left-0 md:max-w-[60%] h-full flex flex-col justify-center pl-[5%] z-20">
@@ -50,17 +51,17 @@ const Logisticspage = () => {
                 country, BOLD helps you deliver seamlessly.
               </p>
               <div className="flex flex-col gap-4 md:flex-row md:gap-6 pt-8 w-[70%] md:w-full">
-                <button className="font-opensans text-xl font-semibold py-[10px] px-6 bg-white rounded-lg">
+                <button className="font-opensans text-xl font-semibold py-[10px] px-6  bg-[#18C4B8] hover:bg-[#12a096] text-white rounded-lg">
                   Ship with us today
                 </button>
                 <button
-                  className=" text-white underline md:underline-none font-opensans font-semibold text-xl flex items-center gap-3 rounded-lg "
+                  className=" text-white underline md:underline-none font-opensans font-semibold text-xl flex items-center gap-3 rounded-lg hover:text-[#18C4B8] "
                   onClick={() => setcurrentpage("trackpackage")}
                 >
                   Track your package
-                  <span className="inline-flex items-center text-white">
-                    <Image src={whitearrow} alt="btnarrow " width={16}></Image>
-                  </span>
+                  <FaArrowRight size={20} />
+                  {/* <span className="inline-flex items-center text-white">
+                  </span> */}
                 </button>
               </div>
             </div>
@@ -99,10 +100,10 @@ const Logisticspage = () => {
                 all your delivery needs so you can keep your online store
                 running smoothly.
               </p>
-              <button className=" bg-white font-redhat font-semibold text-lg underline md:text-xl flex items-center gap-2 rounded-lg mt-8">
+              <button className=" bg-white hover:text-[#18C4B8] font-redhat font-semibold text-lg underline md:text-xl flex items-center gap-2 rounded-lg mt-8">
                 Partner with us today{" "}
                 <span className="inline-flex items-center">
-                  <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
             </div>
@@ -125,7 +126,7 @@ const Logisticspage = () => {
                 and loved ones. Our reliable same-day delivery ensures your
                 packages reach their destination quickly and safely.
               </p>
-              <button className=" bg-black text-white font-redhat font-semibold text-xl  rounded-lg py-3 px-6 mt-5 w-max">
+              <button className="  bg-[#18C4B8] hover:bg-[#12a096]  text-white font-redhat font-semibold text-xl  rounded-lg py-3 px-6 mt-5 w-max">
                 Download the App Now
               </button>
             </div>
@@ -150,14 +151,10 @@ const Logisticspage = () => {
                     professionals are ready to deliver when your customers place
                     an order.
                   </p>
-                  <button className="  font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+                  <button className=" hover:text-[#18C4B8] font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
                     Connect your business
                     <span className="inline-flex items-center">
-                      <Image
-                        src={btnrightarrow}
-                        alt="btnarrow "
-                        width={16}
-                      ></Image>
+                      <FaArrowRight size={20} />
                     </span>
                   </button>
                 </div>
@@ -173,14 +170,10 @@ const Logisticspage = () => {
                     <span className="font-bold">BOLD’s</span> reliable same-day
                     delivery, we can deliver on time.
                   </p>
-                  <button className="font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
+                  <button className="font-redhat hover:text-[#18C4B8] font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 underline">
                     Send your package now{" "}
                     <span className="inline-flex items-center">
-                      <Image
-                        src={btnrightarrow}
-                        alt="btnarrow "
-                        width={16}
-                      ></Image>
+                      <FaArrowRight size={20} />
                     </span>
                   </button>
                 </div>
@@ -206,7 +199,7 @@ const Logisticspage = () => {
                 Get the BOLD App and Accelerate Your Deliveries. Join BOLD for
                 Lightning-Fast, Reliable Logistics!
               </p>
-              <button className="rounded-lg mt-2 md:mt-10 py-3 px-6 font-redhat text-xl font-semibold bg-white w-fit">
+              <button className="rounded-lg mt-2 md:mt-10 py-3 px-6 font-redhat text-xl font-semibold  bg-[#18C4B8] hover:bg-[#12a096] text-white w-fit">
                 Download App Now
               </button>
             </div>
@@ -236,10 +229,10 @@ const Logisticspage = () => {
                 consequuntur magni dolores eos qui ratione voluptatem sequi
                 nesciunt.
               </p>
-              <button className=" bg-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-8 underline">
+              <button className=" bg-white hover:text-[#18C4B8] font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-8 underline">
                 Join as business partner{" "}
                 <span className="inline-flex items-center">
-                  <Image src={btnrightarrow} alt="btnarrow " width={16}></Image>
+                  <FaArrowRight size={20} />
                 </span>
               </button>
             </div>
@@ -300,7 +293,7 @@ const Logisticspage = () => {
                 </p>
                 <div className="flex gap-2 flex-row justify-between mb-3">
                   <div>
-                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6 border border-white">
+                    <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6  bg-[#18C4B8] hover:bg-[#12a096] ">
                       Download App Now
                       <span className="inline-flex items-center text-white">
                         <Image

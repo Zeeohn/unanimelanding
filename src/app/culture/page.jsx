@@ -144,7 +144,7 @@ const Culture = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut
             </p>
-            <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold bg-white w-fit">
+            <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold text-white bg-[#18C4B8] hover:bg-[#12a096] w-fit">
               Download App
             </button>
           </div>

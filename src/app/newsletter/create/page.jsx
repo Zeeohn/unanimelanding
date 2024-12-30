@@ -6,6 +6,7 @@ import "quill/dist/quill.snow.css";
 const NewsletterCreation = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+    const [author, setAuthor] = useState("");
   const [bannerImage, setBannerImage] = useState(null);
   const [slug, setSlug] = useState("");
   const [content, setContent] = useState("");
@@ -63,15 +64,16 @@ const NewsletterCreation = () => {
   };
 
   const handleSubmit = () => {
-    const blogData = {
+    const newsData = {
       title,
       description,
       bannerImage,
       slug,
       content,
+      author,
     };
-    console.log(blogData);
-    alert("Blog created successfully!");
+    console.log(newsData);
+    alert("Newsletter created successfully!");
   };
 
   return (
@@ -126,6 +128,18 @@ const NewsletterCreation = () => {
           ref={quillRef}
           className="bg-white rounded-md border px-4 py-2 h-[60vh]"
         ></div>
+      </div>
+
+      <div className="mb-4">
+        <label className="block text-gray-700 font-medium mb-2">
+          Author Name
+        </label>
+        <input
+          type="text"
+          value={author}
+          onChange={setAuthor(e.target.value)}
+          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
 
       <button

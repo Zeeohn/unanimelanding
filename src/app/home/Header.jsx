@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import hamburger from "../../../public/Assets/hamburger.svg";
 import right from "../../../public/Assets/right-sign.png";
 import Sidebar from "./Mobilesidebar";
+import eventEmitter from "./eventEmitter";
 
 const Header = () => {
   const pathname = usePathname();
@@ -77,6 +78,20 @@ const Header = () => {
   const toggleSubMenu = (menu) => {
     setSubMenuOpen(subMenuOpen === menu ? "" : menu);
   };
+
+  useEffect(() => {
+    const handleEvent = (data) => {
+       console.log("event received")
+       console.log(data.message); 
+       toggleDropdown();
+     };
+
+     eventEmitter.on("toggleDropdown", handleEvent);
+
+     return () => {
+       eventEmitter.off("toggleDropdown", handleEvent);
+     };
+  }, []);
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768)
@@ -386,7 +401,7 @@ const Header = () => {
             {/* Sign Up Dropdown Button */}
             <div className="relative" ref={signUpDropdownRef}>
               <button
-                className="bg-white text-black font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden"
+                className="bg-gradient-to-r from-cyan-500 via-cyan-600 to-cyan-700 hover:from-cyan-700 hover:via-cyan-800 hover:to-cyan-900 transition-all duration-300 ease-in-out text-white  focus:ring-2 focus:ring-cyan-500 focus:outline-none  font-semibold text-xl font-redhat px-9 py-3 rounded-lg lg:block hidden"
                 onClick={toggleDropdown}
               >
                 Sign Up

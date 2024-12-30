@@ -5,6 +5,9 @@ import taximimgbg from "../../../public/Assets/taxiimage.jpeg";
 import logis from "../../../public/Assets/logistic-serv.png";
 import jump from "../../../public/Assets/vehicle-jump.png";
 import affordable from "../../../public/Assets/affordable-ride.png";
+import eco from "../../../public/Assets/eco-friendly.png";
+import realtime from "../../../public/Assets/realtime-gps.png";
+import multi from "../../../public/Assets/multi-payment.png";
 
 const Slidercomponent = () => {
   const services = [
@@ -52,6 +55,50 @@ const Slidercomponent = () => {
       cta: "Learn More",
       url: "/ride",
     },
+    {
+      index: 4,
+      title: "Bold Miles/Intercity",
+      description: (
+        <>
+          Book comfortable, affordable long-distance trips across cities,
+          states, and countries easily. Whether you&apos;re going on a road
+          trip, travelling out of town for work, heading to the airport, or just
+          craving a change of scenery, we&apos;ve got you covered.{" "}
+        </>
+      ),
+      image: eco,
+      cta: "Learn More",
+      url: "/intercity",
+    },
+    {
+      index: 5,
+      title: "Bold Business",
+      description: (
+        <>
+          <span className="font-bold">BOLD</span> revolutionizes business
+          mobility with reliable transportation and package delivery solutions.
+          Whether you&apos;re a small business or a large corporation, we
+          provide the tools to help you grow.
+        </>
+      ),
+      image: multi,
+      cta: "Learn More",
+      url: "/business",
+    },
+    {
+      index: 6,
+      title: "Bold Ads",
+      description: (
+        <>
+          Are you having emergency battery issues?{" "}
+          <span className="font-bold">BOLD</span> makes it easier for you to
+          order a driver to jump-start your car.
+        </>
+      ),
+      image: realtime,
+      cta: "Learn More",
+      url: "/business#promotions",
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -92,7 +139,7 @@ const Slidercomponent = () => {
         <button
           onClick={handlePrev}
           disabled={currentSlide === 0}
-          className={`absolute top-1/2 -left-2 md:left-4 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
+          className={`absolute top-1/2 -left-2 md:left-4 transform  z-10 rounded-full p-3 shadow-md ${
             currentSlide === 0
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-white hover:bg-gray-200"
@@ -104,7 +151,7 @@ const Slidercomponent = () => {
         <button
           onClick={handleNext}
           disabled={currentSlide === services.length - 1}
-          className={`absolute top-1/2 right-2 transform -translate-y-1/2 z-10 rounded-full p-3 shadow-md ${
+          className={`absolute top-1/2 right-2 transform z-10 rounded-full p-3 shadow-md ${
             currentSlide === services.length - 1
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-white hover:bg-gray-200"
@@ -126,7 +173,7 @@ const Slidercomponent = () => {
                   }
                 : {
                     transform: `translateX(-${currentSlide * (100 / 3)}%)`,
-                    width: `${services.length * (100 / 2.5)}%`,
+                    width: `${services.length * (100 / 4.5)}%`,
                   }
             }
           >

@@ -21,34 +21,34 @@ const QRCodePopup = ({ qrCodeSrc, onClose }) => {
   );
 };
 
-const App = () => {
-  const [showPopup, setShowPopup] = useState(false);
+// const App = () => {
+//   const [showPopup, setShowPopup] = useState(false);
 
-  const handleOpenPopup = () => {
-    setShowPopup(true);
-  };
+//   const handleOpenPopup = () => {
+//     setShowPopup(true);
+//   };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
+//   const handleClosePopup = () => {
+//     setShowPopup(false);
+//   };
 
-  return (
-    <div className="p-6">
-      <button
-        onClick={handleOpenPopup}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-      >
-        Show QR Code
-      </button>
+//   return (
+//     <div className="p-6">
+//       <button
+//         onClick={handleOpenPopup}
+//         className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+//       >
+//         Show QR Code
+//       </button>
 
-      {showPopup && (
-        <QRCodePopup
-          qrCodeSrc="https://via.placeholder.com/150"
-          onClose={handleClosePopup}
-        />
-      )}
-    </div>
-  );
-};
+//       {showPopup && (
+//         <QRCodePopup
+//           qrCodeSrc="https://via.placeholder.com/150"
+//           onClose={handleClosePopup}
+//         />
+//       )}
+//     </div>
+//   );
+// };
 
-export default App;
+export default QRCodePopup;
