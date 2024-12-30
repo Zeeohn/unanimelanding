@@ -181,16 +181,24 @@ const Businesspage = () => {
                   Event&apos;s Reach with Bold
                 </p>
                 <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
-                  Sell your concert or event tickets directly on the Bold app
-                  and connect with a larger audience to make your event
-                  unforgettable.{" "}
+                  Take your event to the next level by showcasing it on the BOLD
+                  platform. With thousands of active users, BOLD offers event
+                  promoters unparalleled exposure to a diverse audience. Sell
+                  your tickets directly on the app and ensure your event gets
+                  the attention it deserves. Whether it’s a concert, festival,
+                  or exclusive gathering, BOLD connects you with people who are
+                  ready to engage, making it easier than ever to fill seats and
+                  create unforgettable experiences.{" "}
                   {/* <span className="text-black font-bold underline">
                     {" "}
                     Read more
                   </span> */}
                 </p>
-                <button className="py-3 px-6 bg-[#18C4B8] hover:bg-[#12a096]  text-white font-redhat font-semibold text-xl w-fit mt-16 rounded-lg">
-                  Get Started
+                <button className="flex items-center underline gap-2 hover:text-[#18C4B8] text-black font-redhat font-semibold text-sm mt-8 rounded-lg">
+                  Promote Your Event on BOLD Today and Reach Millions of Users
+                  <span className="inline-flex items-center ">
+                    <FaArrowRight size={20} />
+                  </span>
                 </button>
               </div>
             </div>

@@ -16,9 +16,12 @@ const Earning = () => {
             Earnings you can rely on!
           </p>
           <p className="text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-10">
-            We know you’re wondering how much you can make driving for BOLD. And
-            all we can say is A LOT! Your earnings grow with every ride. It all
-            depends on when, where, and how often you drive.
+            With BOLD, the opportunities to earn are endless. Maximize your
+            income by driving on your schedule and taking advantage of multiple
+            earning options. Whether it’s passenger rides, package deliveries,
+            intercity trips, or providing jumpstart assistance, BOLD empowers
+            you to earn more with every service you offer. Your earnings grow
+            based on when, where, and how often you drive.
           </p>
           <div className="flex gap-4 md:gap-8 items-center pt-14">
             <button className="font-semibold  bg-[#18C4B8] hover:bg-[#12a096]  py-3 px-5 md:py-4 md:px-6 rounded-lg flex items-center gap-2 text-sm md:text-xl text-white">
@@ -44,7 +47,7 @@ const Earning = () => {
         <Image
           src={ridegroup}
           alt="ridegruop"
-          className="md:block hidden max-w-[45%]"
+          className="md:block hidden max-h-[80vh] mt-20 max-w-[45%]"
         />
         {/* <div className="max-w-[30%] ml-[8%]">
           <p className="text-xl text-[#BBBBBB]">

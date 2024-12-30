@@ -182,7 +182,11 @@ const Slidercomponent = () => {
                 key={service.index}
                 className="flex-shrink-0 px-2 cursor-pointer"
                 onClick={() => window.open(service.url, "_self")}
-                style={isMobile ? {flexBasis: `${100 / 2}%`} : { flexBasis: `${100 / 3}%` }}
+                style={
+                  isMobile
+                    ? { flexBasis: `${100 / 2}%` }
+                    : { flexBasis: `${100 / 3}%` }
+                }
               >
                 <div className="relative h-72 rounded-lg overflow-hidden shadow-md">
                   <Image
@@ -196,8 +200,8 @@ const Slidercomponent = () => {
                   <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
                     <p className="font-bold text-lg">{service.title}</p>
                     <p className="pt-2 text-sm">{service.description}</p>
-                    <button className="flex items-center mt-4 font-bold">
-                      {service.cta} <FaLongArrowAltRight className="ml-2" />
+                    <button className="flex items-center gap-2 mt-4 font-bold hover:underline hover:text-[#18C4B8] hover:gap-4 transition-transform translate-x-2">
+                      {service.cta} <FaLongArrowAltRight />
                     </button>
                   </div>
                 </div>
