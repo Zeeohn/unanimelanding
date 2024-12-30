@@ -52,16 +52,16 @@ const NewsletterCreation = () => {
     }
   }, [quill]);
 
-  const handleTitleChange = (e) => {
-    const newTitle = e.target.value;
-    setTitle(newTitle);
-    setSlug(
-      newTitle
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "")
-    );
-  };
+  // const handleTitleChange = (e) => {
+  //   const newTitle = e.target.value;
+  //   setTitle(newTitle);
+  //   setSlug(
+  //     newTitle
+  //       .toLowerCase()
+  //       .replace(/\s+/g, "-")
+  //       .replace(/[^a-z0-9-]/g, "")
+  //   );
+  // };
 
   const handleSubmit = () => {
     const newsData = {
