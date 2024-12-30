@@ -128,10 +128,10 @@ const Slidercomponent = () => {
 
   return (
     <div className="px-[5%] pt-10 pb-16 bg-[#111111] mg:mt-28 md:mt-20 mt-12">
-      <p className="sm:text-center text-xl sm:text-lg text-white sm:font-medium font-bold text-left">
-        OUR SERVICES
+      <p className="sm:text-center text-[20px] md:text-[35px] font-bold text-white text-left">
+        Our Services
       </p>
-      <p className="sm:text-center sm:font-bold pt-2 sm:pt-6 text-sm sm:text-2xl lg:text-4xl text-white font-normal text-left">
+      <p className="sm:text-center sm:font-bold pt-2 sm:pt-6 text-sm md:text-[20px] text-white font-normal text-left">
         Explore Our Various Mobility Solutions for You and Your Business
       </p>
       <div className="md:pl-[8%] lg:pt-20 sm:pt-12 pt-6 relative">

@@ -206,7 +206,7 @@ const Homepage = () => {
           <p className="sm:text-center text-[20px] md:text-[35px] font-bold text-left">
             Our Partners
           </p>
-          <p className="sm:text-center pt-2 sm:pt-6 text-sm sm:text-2xl md:text-[20px] font-semibold text-left ">
+          <p className="sm:text-center pt-2 sm:pt-6 text-sm md:text-[20px] font-semibold text-left ">
             <span className="font-bold">BOLD</span> builds trust through strong
             partnerships with fleet providers, businesses, and e-commerce
             brands, offering reliable services and rewarding loyalty with
