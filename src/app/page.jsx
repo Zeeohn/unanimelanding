@@ -203,7 +203,7 @@ const Homepage = () => {
         <div className="md:max-w-[85%] md:mx-auto">
           {/* <p className="text-lg text-center ">Our partners</p>
         <p className="font-semibold text-xl text-center pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p> */}
-          <p className="sm:text-center text-[20px] md:text-[35px] sm:font-medium font-bold text-left">
+          <p className="sm:text-center text-[20px] md:text-[35px] font-bold text-left">
             Our Partners
           </p>
           <p className="sm:text-center pt-2 sm:pt-6 text-sm sm:text-2xl md:text-[20px] font-semibold text-left ">

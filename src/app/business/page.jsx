@@ -194,7 +194,7 @@ const Businesspage = () => {
                     Read more
                   </span> */}
                 </p>
-                <button className="flex items-center underline gap-2 hover:text-[#18C4B8] text-black font-redhat font-semibold text-[14px] lg:text-[16px] text-left mt-8 rounded-lg">
+                <button className="flex items-center underline gap-2 hover:text-[#18C4B8] text-black font-redhat font-semibold  text-base md:text-xl text-center mt-8 rounded-lg">
                   Promote on BOLD Today and Reach Millions of Users
                   <span className="inline-flex items-center ">
                     <FaArrowRight size={20} />
@@ -419,7 +419,7 @@ const Businesspage = () => {
                   Discover more
                 </span> */}
               </p>
-              <button className="  font-redhat font-bold lg:text-[16px] md:text-[14px] flex items-center gap-2 rounded-lg mt-6 hover:text-[#18C4B8] underline">
+              <button className="  font-redhat font-bold flex items-center gap-2 rounded-lg mt-6 hover:text-[#18C4B8] text-base md:text-xl underline">
                 Get Started Today and Keep Your Team Moving on Time!
                 <span className="inline-flex items-center">
                   <FaArrowRight size={20} />{" "}
