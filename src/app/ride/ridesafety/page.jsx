@@ -28,32 +28,31 @@ const Ridesafety = () => {
         />
         <div className="absolute top-0 left-0 md:max-w-[55%] h-full flex flex-col justify-center pl-[5%] ">
           <p className="font-redhat font-bold text-[25px] md:text-[40px] md:leading-[60px] text-white">
-            We look out for our riders because your safety drives us
+            Your Safety Drives Everything We Do
           </p>
           <p className="font-opensans md:text-xl text-base text-[#BBBBBB] pt-6">
             Bold is a place where everyone feels at home. We prioritize respect
             and safety by setting high standards from your first ride. With real
             human support available 24/7, we&apos;re by your side on every ride.
           </p>
-          <div className=" flex gap-6 pt-6">
+          {/* <div className=" flex gap-6 pt-6">
             <button className=" text-white hover:text-[#18C4B8] font-opensans font-semibold text-base md:text-2xl flex items-center gap-3 rounded-lg underline ">
               Browse more trending locations
               <FaArrowRight size={20} />
-              {/* <span className="inline-flex items-center text-white">
-              </span> */}
+              <span className="inline-flex items-center text-white">
+              </span> 
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
       <div className="pl-[5%] py-12 md:py-20 md:max-w-[70%]">
         <p className="font-redhat font-bold text-[24px] md:text-[40px] md:leading-[60px] ">
-          Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
-          incididunt
+          Embark on a Journey of Safety and Connection
         </p>
         <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-          eiusmod tempor incididunt
+          Every ride is an adventure, and we’re here to guide you with tools and
+          values that ensure your trip is safe, inclusive, and supported.
         </p>
       </div>
 
@@ -132,22 +131,29 @@ const Ridesafety = () => {
         />
         <div className="md:max-w-[50%] flex flex-col justify-center ">
           <p className="font-bold text-xl md:text-4xl font-redhat">
-            Ride in comfort, style, and luxury
+            Ride in Comfort, Luxury, and Style to Your Next Destination
           </p>
           <p className="text-base md:text-xl font-semibold pt-8 font-opensans">
-            Whether you’re commuting to work, traveling to another city or just
-            going to hang out, Bold gives you luxury.
+            Travel the BOLD way and elevate your journey. Whether you’re
+            commuting to work, visiting another city, or heading out with
+            friends, Bold ensures every ride is an experience of luxury and
+            convenience. Choose from a variety of ride options to suit your
+            needs, from premium sedans to eco-friendly vehicles. Travel
+            effortlessly across cities, states, or countries.
           </p>
         </div>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row justify-between px-[5%] gap-8 items-center pb-28 ">
         <div className="md:max-w-[50%] flex flex-col justify-center ">
-          <p className="font-bold text-xl md:text-4xl font-redhat">BOLD XL</p>
+          <p className="font-bold text-xl md:text-4xl font-redhat">
+            Use BOLD XL When Traveling as a Group
+          </p>
           <p className="text-base md:text-xl font-semibold pt-8 font-opensans">
-            Big trips need big solutions. There’s room for everyone and
-            everything with BoldXL. These spacious rides make family trips a
-            breeze.
+            Big trips need big solutions, and BoldXL delivers. With room for
+            everyone and everything, it’s perfect for family vacations, team
+            outings, or getaways with friends. Enjoy spacious seating, ample
+            luggage space, and a smooth ride that makes group travel effortless.
           </p>
         </div>
         <Image
@@ -195,31 +201,34 @@ const Ridesafety = () => {
       </div>
 
       <div className="px-[5%] pb-28 ">
-        <h1 className="text-xl md:text-4xl font-redhat text-center mb-8">
-          Lorem ipsum dolor sit amet
+        <h1 className="text-[20px] md:text-[35px] font-bold font-redhat text-center mb-8">
+          Comprehensive Safety Measures for Every Ride
         </h1>
         <p className="text-center text-base md:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          We’ve put in place comprehensive measures to ensure that each ride is
+          secure, comfortable, and reliable. From detailed driver background
+          checks to 24/7 emergency assistance, we’ve crafted a range of features
+          that give you peace of mind from start to finish. Whether you’re
+          riding solo or with a group, our commitment to your safety means you
+          can focus on enjoying the journey, knowing we’ve got your back every
+          mile of the way.
         </p>
       </div>
 
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Driver Background Checks
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            We’re committed to connecting you with drivers you can trust. Every
+            Bold driver undergoes a rigorous background check, including
+            verification of identity, driving history, and criminal records. Our
+            screening process ensures only the best are behind the wheel, giving
+            you peace of mind on every ride.
           </p>
         </div>
         <Image
@@ -232,16 +241,17 @@ const Ridesafety = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Enhanced Vehicle Inspections
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Every Bold Ride is more than a vehicle; it’s a promise of safety.
+            All cars in our network undergo regular, thorough inspections to
+            meet our high safety and quality standards. From functioning
+            seatbelts to well-maintained brakes, we ensure every ride is as
+            secure as it is comfortable.
           </p>
         </div>
         <Image

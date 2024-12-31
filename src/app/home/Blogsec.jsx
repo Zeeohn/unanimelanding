@@ -39,9 +39,9 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url, setPag
     if(url){
       router.push(url);
     } else if (setPage) {
-      setCurrentPage(setPage);
+      setCurrentPage(setPage)
     }
-    
+
     return;
   }
 

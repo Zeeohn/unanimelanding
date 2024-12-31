@@ -55,22 +55,63 @@ const Drivepage = () => {
   const [isClient, setIsClient] = useState(false);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const { currentpage , setCurrentPage} = useStateContext(); 
+  const { currentpage, setCurrentPage } = useStateContext();
   console.log(currentpage);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    const questions = [
-    { question: "Do I need to own a car to become a BOLD partner?",  
-answer: "No, you don’t need to own a car to start driving and earning with BOLD. You can partner with us using a vehicle that you have access to, whether it’s your own or rented."},
-{question: "How flexible are the working hours with BOLD?", 
-answer:"With BOLD, you have complete control over your schedule. You can choose when and how much you want to drive—whether it’s part-time or full-time, during the day or night. It's all up to you!"},
-{question: "What kind of support does BOLD offer drivers?",
-answer: "BOLD provides 24/7 in-app safety and support to ensure that you’re always covered, no matter where you are or when you’re working. Our team is always available to help with any issues or questions.",
-},
-{question: "How do I make extra money with BOLD?",
-answer: "You can boost your earnings by bidding for higher-demand trip fares, driving longer distances with the BOLD Intercity feature, or delivering packages as part of our Boost package. Plus, you can earn additional income by assisting stranded drivers with our Jumpstart service."},
+  const questions = [
+    {
+      question: "Do I need to own a car to become a BOLD partner?",
+      answer:
+        "No, you don’t need to own a car to start driving and earning with BOLD. You can partner with us using a vehicle that you have access to, whether it’s your own or rented.",
+    },
+    {
+      question: "How flexible are the working hours with BOLD?",
+      answer:
+        "With BOLD, you have complete control over your schedule. You can choose when and how much you want to drive—whether it’s part-time or full-time, during the day or night. It's all up to you!",
+    },
+    {
+      question: "What kind of support does BOLD offer drivers?",
+      answer:
+        "BOLD provides 24/7 in-app safety and support to ensure that you’re always covered, no matter where you are or when you’re working. Our team is always available to help with any issues or questions.",
+    },
+    {
+      question: "How do I make extra money with BOLD?",
+      answer:
+        "You can boost your earnings by bidding for higher-demand trip fares, driving longer distances with the BOLD Intercity feature, or delivering packages as part of our Boost package. Plus, you can earn additional income by assisting stranded drivers with our Jumpstart service.",
+    },
+  ];
 
-  ]
+  const ratings = [
+    {
+      index: 1,
+      name: "Mark Rupert",
+      rating: 4.8,
+      review:
+        "Driving for BOLD was a game-changer. The sign-up process was quick, and I was on the road earning money in no time. The app is easy to use, and I love having full control over my schedule.",
+    },
+    {
+      index: 2,
+      name: "Fernando Lopez",
+      rating: 4.9,
+      review:
+        "With BOLD, I noticed a big difference right away. The platform offers better rates, and I love the bonus incentives for completing rides during busy times.",
+    },
+    {
+      index: 3,
+      name: "Pedro Rodriguez",
+      rating: 4.7,
+      review:
+        "BOLD let me set my own hours, so I can drive between classes and on weekends. The app even helps me find the best routes to maximize my time.",
+    },
+    {
+      index: 4,
+      name: "Natalie Smith",
+      rating: 4.6,
+      review:
+        "BOLD proved me wrong. The demand is high, and the app helps me optimize my routes to minimize downtime. Plus, I earn extra with referral bonuses!",
+    },
+  ];
 
   useEffect(() => {
     setIsClient(true); // Ensure Swiper runs client-side
@@ -351,11 +392,11 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
             </div>
             <div className="lg:w-1/2">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-                Earn more money from BOLD
+                Earn more money with BOLD
               </p>
               <div className="flex gap-6 justify-start pt-6 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                  <p className="rounded-full px-2.5 py-0.5 text-lg font-bold text-white bg-black h-fit w-fit">
                     1
                   </p>
                 </div>
@@ -373,13 +414,13 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
               </div>
               <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                  <p className="rounded-full px-2.5 py-0.5 text-lg font-bold text-white bg-black h-fit w-fit">
                     2
                   </p>
                 </div>
                 <div className="">
                   <p className="font-bold text-base md:text-xl">Boldmiles</p>
-                  <p className=" pt-3 text-[#777777] text-sm md:text-xl">
+                  <p className="pt-3 text-[#777777] text-sm md:text-xl">
                     Drive between cities, states, and countries with the BOLD
                     Intercity feature and boost your earnings on longer trips.
                     Whether for business, leisure, or routine commutes, you can
@@ -391,7 +432,7 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
               </div>
               <div className="flex gap-6 justify-start pt-4 md:pt-5 lg:pt-5">
                 <div className="">
-                  <p className="rounded-full px-3 py-1 text-lg font-bold text-white bg-black h-fit w-fit">
+                  <p className="rounded-full px-2.5 py-0.5 text-lg font-bold text-white bg-black h-fit w-fit">
                     3
                   </p>
                 </div>
@@ -455,7 +496,7 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
           <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
             <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
               <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-                Reviews
+                See What Other Drivers Are Saying
               </p>
               {isLargeScreen && (
                 <div className="flex gap-6">
@@ -500,13 +541,12 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
                   1024: { slidesPerView: 2.5, spaceBetween: 20 },
                 }}
               >
-                {[...Array(10)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl">
+                {ratings.map((rate) => (
+                  <SwiperSlide key={rate.index}>
+                    <div className="px-3 py-6 md:px-6 md:py-8 h-[50vh] bg-white rounded-2xl flex flex-col justify-between">
                       <div className="flex justify-between">
                         <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed incididunt ut labore et dolore magna aliqua.
+                          {rate.review}
                         </p>
                         <div className="w-10">
                           <Image
@@ -525,7 +565,7 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
                         />
                         <div>
                           <p className="font-bold text-sm md:text-xl">
-                            Carter Carder
+                            {rate.name}
                           </p>
                           <div className="mt-2 flex gap-2 items-center">
                             <Image
@@ -534,7 +574,7 @@ answer: "You can boost your earnings by bidding for higher-demand trip fares, dr
                               className="w-3 md:w-6"
                             />
                             <p className="font-semibold text-sm md:text-xl">
-                              4.8
+                              {rate.rating}
                               <span className="font-normal text-sm md:text-xl text-[#777777]">
                                 {" "}
                                 (Customer ratings)

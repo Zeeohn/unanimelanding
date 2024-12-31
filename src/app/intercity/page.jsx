@@ -57,21 +57,60 @@ const Intercitypage = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  const ratings = [
+    {
+      index: 1,
+      name: "Emma L.",
+      rating: 4.8,
+      review:
+        "Bold Miles made my long-distance trips so much easier and affordable. I love how I can share rides and save money while traveling comfortably across cities and states.",
+    },
+    {
+      index: 2,
+      name: "Mark R.",
+      rating: 4.9,
+      review:
+        "I’ve used Bold Miles for several road trips, and it’s been a game-changer. Booking is seamless, and the rides are always safe and reliable. Highly recommend!",
+    },
+    {
+      index: 3,
+      name: "Sarah T.",
+      rating: 4.7,
+      review:
+        "As a student, the discounts are a huge bonus! Bold Miles makes travel affordable and sustainable without sacrificing comfort.",
+    },
+    {
+      index: 4,
+      name: "James W.",
+      rating: 4.6,
+      review:
+        "I frequently travel for work and Bold Miles has been my go-to option for intercity travel. The rides are always on time, and the service is top-notch.",
+    },
+    {
+      index: 5,
+      name: "Olivia K.",
+      rating: 4.6,
+      review:
+        "I appreciate how Bold Miles focuses on reducing carbon footprints. It’s great knowing that my travel is not only affordable but also eco-friendly.",
+    },
+  ];
+
   return (
     <div>
       <div className="bg-[#F3F3F3] px-[5%] py-12 md:pt-12 pb-16 gap-4  lg:pt-14 lg:pb-20 flex flex-col md:flex-row justify-between md:gap-[5%] md:items-center">
         <div className="md:max-w-[53%]">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            See the world, one city at a time. Explore Bold Miles.
           </p>
           <p className="text-sm md:text-xl pt-3 md:pt-6 lg:pt-8 text-[#777777] md:max-w-[70%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et.
+            From dreams to destinations, go the distance with Bold Miles. Travel
+            intercity and across borders with secure, sustainable, and
+            affordable shared rides.
           </p>
-          <p className="text-sm md:text-xl pt-4 text-[#777777]  md:max-w-[70%]">
+          {/* <p className="text-sm md:text-xl pt-4 text-[#777777]  md:max-w-[70%]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          </p> */}
           <div className="flex gap-2">
             <div className="flex pt-6 lg:pt-10 items-center">
               <p className="font-opensans text-base md:text-xl lg:text-2xl">
@@ -270,8 +309,7 @@ const Intercitypage = () => {
       <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
         <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
+            What Our Customers Are Saying
           </p>
           {isLargeScreen && (
             <div className="flex gap-6">
@@ -316,13 +354,12 @@ const Intercitypage = () => {
               1024: { slidesPerView: 2.5, spaceBetween: 20 },
             }}
           >
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide key={index}>
-                <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl">
+            {ratings.map((rate) => (
+              <SwiperSlide key={rate.index}>
+                <div className="px-3 py-6 md:px-6 md:py-8 h-[60vh] md:h-[50vh] flex flex-col justify-between bg-white rounded-2xl">
                   <div className="flex justify-between">
                     <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed incididunt ut labore et dolore magna aliqua.
+                      {rate.review}
                     </p>
                     <div className="w-10">
                       <Image
@@ -341,7 +378,7 @@ const Intercitypage = () => {
                     />
                     <div>
                       <p className="font-bold text-sm md:text-xl">
-                        Carter Carder
+                        {rate.name}
                       </p>
                       <div className="mt-2 flex gap-2 items-center">
                         <Image
@@ -350,7 +387,7 @@ const Intercitypage = () => {
                           className="w-3 md:w-6"
                         />
                         <p className="font-semibold text-sm md:text-xl">
-                          4.8
+                          {rate.rating}
                           <span className="font-normal text-sm md:text-xl text-[#777777]">
                             {" "}
                             (Customer ratings)
@@ -369,18 +406,19 @@ const Intercitypage = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-12 md:pt-20 lg:pt-28 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[60%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
+            Become a Bold Partner
           </p>
           <p className="text-sm md:text-lg pt-2 md:pt-4 lg:pt-6 text-black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis.
+            Looking to expand your reach and grow with us? Become a Bold partner
+            and join a community dedicated to providing convenient, affordable,
+            and eco-friendly travel options. Whether you&apos;re a driver,
+            business, or service provider, Bold is the perfect platform to help
+            you connect with customers and elevate their travel experiences.
           </p>
           <div className="flex gap-2">
             <div>
               <button className="py-[10px] px-4 md:py-3 md:px-6 text-white  bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
-                Become a partner{" "}
+                Become a Bold partner{" "}
                 <span className="inline-flex items-center text-white">
                   <FaArrowRight size={20} />
                 </span>

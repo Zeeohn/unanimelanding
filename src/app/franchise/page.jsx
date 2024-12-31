@@ -26,16 +26,32 @@ const Franchisepage = () => {
     const [currentpage, setcurrentpage] = useState("default");
     
      const checklistItems = [
-       "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-       "Lorem ipsum dolor sit, adipiscing elit",
-       "Lorem ipsum dolor sit, adipiscing elit",
+       "Innovative Technology",
+       "Customer-Centric Approach",
+       "Scalable Solutions",
      ];
     
     const checklist2 = [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit",
-      "Lorem ipsum dolor sit",
-      "Lorem ipsum dolor sit",
+      {
+      index: 1,
+      title: "Commitment to Service Excellence",
+      content: "Deliver high- quality, on - time transportation with a customer - first attitude."
+    },
+      {
+        index: 2,
+        title: "Leadership and Drive",
+        content: "Manage your team, build a local network, and be an ambassador for BOLD in your community."
+      },
+      {
+        index: 3,
+        title: "Understanding of the Market",
+        content: "Know the local market dynamics and adapt to customer needs, creating growth opportunities."
+      },
+      {
+        index: 4,
+        title: "Adaptability and Growth Mindset",
+        content: "Work with our innovative technology and systems to scale your franchise quickly and effectively."
+      },
     ];
     
   return (
@@ -88,9 +104,13 @@ const Franchisepage = () => {
             About <span className="text-cyan-500 font-bold">BOLD</span>
           </p>
           <p className="text-base md:text-xl text-black pt-6 font-opensans">
-            BOLD is more than just a platform. We’re game changers. Our mission
-            is to easily connect people and businesses to their destinations and
-            customers, offering flexible services designed to meet unique needs.
+            <span className="font-bold">BOLD</span> is more than just a
+            platform; we’re a movement in the transportation industry. Our
+            mission is to effortlessly connect people and businesses to their
+            destinations and customers, offering flexible and reliable services
+            designed to meet diverse needs. Through cutting-edge technology, a
+            commitment to safety, and an expansive vehicle network, we’re
+            revolutionizing how people and goods get where they need to go.
           </p>
           <ul className="space-y-3 mt-6">
             {checklistItems.map((item, index) => (
@@ -129,18 +149,16 @@ const Franchisepage = () => {
           franchise?{" "}
         </p>
         <p className="hidden md:block pt-10 text-xl">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam error sit
-          voluptatem accusantium doloremque laudantium, totam rem aperiam
+          Partnering with BOLD offers a unique opportunity to become part of one
+          of the fastest-growing companies in the transportation industry.
         </p>
         <p className="md:hidden pt-5 text-black text-base">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam error sit
-          voluptatem accusantium doloremque laudantium, totam rem aperiam
+          Partnering with BOLD offers a unique opportunity to become part of one
+          of the fastest-growing companies in the transportation industry.
         </p>
       </div>
 
-      <div className="flex md:flex-row flex-col md:justify-between items-center justify-center gap-10 px-[5%]">
+      <div className="flex md:flex-row flex-col md:justify-evenly items-center justify-center gap-10 px-[5%]">
         <div className="flex flex-col items-center md:items-start gap-4">
           <Image src={growing} alt="" />
           <div>
@@ -148,7 +166,8 @@ const Franchisepage = () => {
               Fastest growing company
             </p>
             <p className="text-gray-400 hidden md:block">
-              Lorem ipsum dolor sit amet
+              Join a leader in the industry, expanding across multiple regions
+              with high demand.
             </p>
           </div>
         </div>
@@ -159,7 +178,10 @@ const Franchisepage = () => {
               Fast business setup
             </p>
             <p className="text-gray-400 hidden md:block">
-              Lorem ipsum dolor sit amet
+              Start your franchise quickly with a proven system and full
+              support. Whether you&apos;re new to the industry or an experienced
+              entrepreneur, we provide all the tools and guidance needed to
+              ensure your success.
             </p>
           </div>
         </div>
@@ -170,7 +192,8 @@ const Franchisepage = () => {
               Large vehicle network
             </p>
             <p className="text-gray-400 hidden md:block">
-              Lorem ipsum dolor sit amet
+              Benefit from access to our extensive fleet and scalable business
+              model that fits local needs.
             </p>
           </div>
         </div>
@@ -182,13 +205,12 @@ const Franchisepage = () => {
             What do we expect from you?
           </p>
           <p className="text-base text-black pt-4 md:text-xl  md:pt-6 font-opensans">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam error sit
-            voluptatem accusantium doloremque laudantium, totam rem aperiam
+            At BOLD, we expect franchise partners to be driven,
+            customer-focused, and ready to embrace technology.
           </p>
           <ul className="flex flex-col md:items-center md:flex-row md:flex-wrap md:gap-6 space-y-3 mt-6">
-            {checklist2.map((item, index) => (
-              <li key={index} className="flex items-center">
+            {checklist2.map((check) => (
+              <li key={check.index} className="flex items-center">
                 <svg
                   className="flex-shrink-0 w-8 h-8 mt-1 text-cyan-500"
                   viewBox="0 0 20 20"
@@ -200,7 +222,7 @@ const Franchisepage = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="ml-3 font-semibold">{item}</span>
+                <span className="ml-3 font-semibold">{check.title}</span>
               </li>
             ))}
           </ul>
@@ -279,11 +301,16 @@ const Franchisepage = () => {
               Get started
             </p>
             <p className="hidden md:block md:font-semibold text-base md:text-xl pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
+              Ready to be part of the BOLD movement? Apply now and take the
+              first step toward owning a BOLD franchise. Leverage our
+              industry-leading technology, expertise, and growth potential to
+              build a successful business in your area.
             </p>
             <p className="font-semibold md:hidden pt-2 text-white">
-              Join our logistics for all your fast delivery needs
+              Ready to be part of the BOLD movement? Apply now and take the
+              first step toward owning a BOLD franchise. Leverage our
+              industry-leading technology, expertise, and growth potential to
+              build a successful business in your area.
             </p>
             <div className="flex gap-2 flex-row justify-between mb-3">
               <div>

@@ -75,15 +75,15 @@ const Logisticspage = () => {
               Take a BOLD Step With Deliveries
             </p>
             <p className="hidden md:block pt-10 text-[#777777] text-xl">
-              Say goodbye to delivery struggles. Experience fast and secure
-              deliveries with <span>BOLD Logistics</span>. If you run an
-              E-Commerce business, this one’s for you. And yes, even random
+              No more delivery struggles. Experience fast and secure deliveries
+              with <span className="font-bold">BOLD Logistics</span>. If you run
+              an E-Commerce business, this one’s for you. And yes, even random
               people can send packages too. Sending packages is only a tap away.
             </p>
             <p className="md:hidden pt-5 text-black text-base">
-              Say goodbye to delivery struggles. Experience fast and secure
-              deliveries with <span>BOLD Logistics</span>. If you run an
-              E-Commerce business, this one’s for you. And yes, even random
+              No more delivery struggles. Experience fast and secure deliveries
+              with <span className="font-bold">BOLD Logistics</span>. If you run
+              an E-Commerce business, this one’s for you. And yes, even random
               people can send packages too. Sending packages is only a tap away.
             </p>
           </div>
@@ -95,10 +95,10 @@ const Logisticspage = () => {
                 Level Up Your Online Business With BOLD Logistics
               </p>
               <p className="text-base md:text-xl text-black md:text-[#777777] pt-6 font-opensans">
-                Join <span>BOLD Logistics</span> to keep your customers
-                satisfied with fast delivery services. We partner with you for
-                all your delivery needs so you can keep your online store
-                running smoothly.
+                Join <span className="font-bold">BOLD Logistics</span> to keep
+                your customers satisfied with fast delivery services. We partner
+                with you for all your delivery needs so you can keep your online
+                store running smoothly.
               </p>
               <button className=" bg-white hover:text-[#18C4B8] font-redhat font-semibold text-lg underline md:text-xl flex items-center gap-2 rounded-lg mt-8">
                 Partner with us today{" "}
@@ -209,25 +209,23 @@ const Logisticspage = () => {
             <Image src={belowbusinessneeds} alt="driverapp" />
             <div className=" flex flex-col justify-center md:max-w-[50%]">
               <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
-                Join BOLD package for all your e-commerce & business needs.
+                Use Bold Logistics for Your E-Commerce and Business Needs
               </p>
               <p className="hidden md:block text-xl text-[#777777] pt-6 font-opensans">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+                Send packages locally, across cities, and internationally. We’re
+                your trusted companion, whether you&apos;re a business, an
+                individual, or an e-commerce platform. We prioritize efficiency,
+                security, and transparency every step of the way. Track your
+                package in real-time and stay connected to your delivery with
+                the Bold app or website.
               </p>
               <p className="md:hidden text-base text-black pt-6 font-opensans">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+                Send packages locally, across cities, and internationally. We’re
+                your trusted companion, whether you&apos;re a business, an
+                individual, or an e-commerce platform. We prioritize efficiency,
+                security, and transparency every step of the way. Track your
+                package in real-time and stay connected to your delivery with
+                the Bold app or website.
               </p>
               <button className=" bg-white hover:text-[#18C4B8] font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-8 underline">
                 Join as business partner{" "}
@@ -281,20 +279,19 @@ const Logisticspage = () => {
             <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
               <div className="md:max-w-[55%] flex flex-col justify-center">
                 <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
-                  Unlock the Power of Fast Deliveries. Download Our App Today!
+                  Unlock the Power of Fast Deliveries. Get the BOLD App Today!
                 </p>
                 <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
-                  Experience hassle-free deliveries with just a tap. Our app
+                  Experience hassle-free deliveries at your fingertips. Our app
                   gives you access to fast, reliable, and secure shipping
-                  solutions, all in one place. Whether you’re sending a package
-                  across town or the country, we&apos;ve got you covered.
-                  Download the BOLD app and unlock the power of seamless
-                  deliveries at your fingertips.
+                  solutions. We&apos;ve got you covered whether you’re sending a
+                  package across town or the country. Download the BOLD app and
+                  unlock the power of seamless deliveries.
                 </p>
                 <div className="flex gap-2 flex-row justify-between mb-3">
                   <div>
                     <button className="md:p-4 px-2 py-3 text-white font-redhat font-semibold text-base md:text-xl flex items-center gap-2 rounded-lg mt-6  bg-[#18C4B8] hover:bg-[#12a096] ">
-                      Download App Now
+                      Download Now
                       <span className="inline-flex items-center text-white">
                         <Image
                           src={whitearrow}

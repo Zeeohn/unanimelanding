@@ -76,8 +76,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
     share: {
       heading: "BOLD Share",
       paragraphs: [
-        "Split costs and reduce your carbon footprint with BOLD Share. Save more by sharing the fare with riders heading in the same direction.",
-        "BOLD Share is a smart and affordable choice for a quick commute or long trip. Start sharing today!",
+        "Split costs and reduce your carbon footprint with BOLD Share. Save more by sharing fares with riders heading in your direction. We calculate the most efficient route to pick up and drop you and other riders. BOLD Share is a smart and affordable choice for a quick commute or long trip. Start sharing today!",
       ],
       listItems: [
         "Comfortable eco-friendly ride-sharing",
@@ -93,7 +92,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
       listItems: [
         "Enjoy a premium experience without breaking the bank.",
         "Ideal for commuting, errands, or outings with friends and family.",
-        "Comfortable seats up to four passengers.",
+        "Comfortably seats up to four passengers.",
       ],
     },
     premium: {
@@ -190,6 +189,37 @@ const Ridepage = () => {
     },
   ];
 
+  const ratings = [
+    {
+      index: 1,
+      name: "Carter Carder",
+      rating: 4.8,
+      review:
+        "When I opened the BOLD app, I was amazed at how quickly I found a ride. The booking process was smooth, and I had multiple options to choose from.",
+    },
+    {
+      index: 2,
+      name: "Johnny Junior",
+      rating: 4.9,
+      review:
+        "BOLD  gave me exactly what I needed—eco-friendly vehicles and booking was easy. I didn’t have to worry about anything. The ride was smooth, and my driver was courteous.",
+    },
+    {
+      index: 3,
+      name: "Alice Smith",
+      rating: 4.7,
+      review:
+        "BOLD Rides completely changed my perspective. The app is simple to use, the fares are reasonable, and I’ve always had great experiences with the drivers.",
+    },
+    {
+      index: 4,
+      name: "Bob Johnson",
+      rating: 4.6,
+      review:
+        "BOLD Rides made it easy to travel sustainably without compromise. The eco-friendly options were exactly what I was looking for, and the ride was comfortable and smooth",
+    },
+  ];
+
   return (
     <div className="relative">
       <div
@@ -243,16 +273,15 @@ const Ridepage = () => {
           <div className="py-16 md:pt-24 md:pb-20 flex bg-[url('/Assets/rideoverview.png')] bg-cover px-[5%] justify-between relative  ">
             <div className="max-w-full lg:max-w-[33%]">
               <p className="text-4xl lg:text-[40px] font-bold text-white lg:leading-[60px]">
-                Ride in Comfort, Luxury, and Style
+                Where to? Ride in Comfort, Luxury, and Style
               </p>
               <p className="text-2xl md:text-xl  text-[#BBBBBB] pt-8 md:pt-10">
-                It’s time to say goodbye to boring rides! Experience travel
-                that’s comfortable, fast, and affordable. Set your bid for ride
-                fares. <br /> <br />
+                Say goodbye to boring rides! Experience travel that’s fast,
+                comfortable, and affordable. <br /> <br />
                 Whether you need a quick trip, an eco-friendly ride or a large
                 car for a group, we’ve got you covered. Join the
                 <span className="font-bold">BOLD</span> side. <br />
-                <br /> Download the <span className="font-bold">BOLD</span> app
+                <br /> Get the <span className="font-bold">BOLD</span> app
                 today!
               </p>
               <div className="md:hidden">
@@ -295,8 +324,9 @@ const Ridepage = () => {
             />
             <div className=" lg:max-w-[30%] ml-[8%] hidden md:block">
               <p className="text-xl text-[#BBBBBB]">
-                Bold is amazing. I like their innovative features which gives me
-                more options to choose from.
+                With BOLD, I found an easy-to-use app with flexible payment
+                options. My driver was friendly, the car was clean, and I felt
+                completely at ease.
               </p>
               <div className="flex gap-4 items-center pt-4">
                 {" "}
@@ -329,7 +359,7 @@ const Ridepage = () => {
 
           <div className="px-[5%] py-12 lg:py-20">
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl lg:max-w-[40%]">
-              Your Journey Starts Here! Choose The Service That Suits You
+              Your Adventure Starts Here! Choose The Ride That Fits Your Journey
             </p>
             <div className="mt-6 md:mt-10 lg:mt-16 flex gap-2 md:gap-10 lg:gap-16 flex-wrap">
               <button
@@ -538,13 +568,12 @@ const Ridepage = () => {
                   1024: { slidesPerView: 2.5, spaceBetween: 20 },
                 }}
               >
-                {[...Array(10)].map((_, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl">
+                {ratings.map((rate) => (
+                  <SwiperSlide key={rate.index}>
+                    <div className="px-3 py-6 md:px-6 md:py-8 bg-white h-[50vh] rounded-2xl flex flex-col justify-between">
                       <div className="flex justify-between">
                         <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed incididunt ut labore et dolore magna aliqua.
+                          {rate.review}
                         </p>
                         <div className="w-10">
                           <Image
@@ -563,7 +592,7 @@ const Ridepage = () => {
                         />
                         <div>
                           <p className="font-bold text-sm md:text-xl">
-                            Carter Carder
+                            {rate.name}
                           </p>
                           <div className="mt-2 flex gap-2 items-center">
                             <Image
@@ -572,7 +601,7 @@ const Ridepage = () => {
                               className="w-3 md:w-6"
                             />
                             <p className="font-semibold text-sm md:text-xl">
-                              4.8
+                              {rate.rating}
                               <span className="font-normal text-sm md:text-xl text-[#777777]">
                                 {" "}
                                 (Customer ratings)
@@ -591,7 +620,7 @@ const Ridepage = () => {
           <div className="flex justify-between px-[5%] items-center py-12 md:py-4">
             <div className=" md:max-w-[40%]">
               <p className=" font-opensans md:text-3xl lg:text-4xl font-bold ">
-                Don’t let wrongful parking and obstructions ruin your day
+                Don’t Let Wrongful Parking Block Your Path To Adventure
               </p>
               <p className="text-sm md:text-xl text-[#BBBBBB] font-semibold pt-2 md:pt-6 lg:pt-10">
                 Get the Bold app and use the SOS feature to alert other drivers

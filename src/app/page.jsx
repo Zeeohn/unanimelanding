@@ -65,7 +65,7 @@ const Homepage = () => {
         />
         <div className=" absolute w-full h-full top-0 left-0 flex flex-col pt-10 sm:items-center px-[5%] ">
           <p className="font-redhat font-bold text-[25px] md:text-4xl lg:text-5xl text-white max-w-[100%] md:max-w-[70%] sm:text-center  ">
-            Innovative Technology Connecting You Globally
+            Connecting You Globally Using Innovative Technology
           </p>
           <p className="font-normal font-opensans md:text-[20px] text-[14px] sm:text-xl pt-8  text-white max-w-[100%] sm:max-w-[70%] sm:text-center">
             Bold is more than just a platform—it’s a revolutionary technology
@@ -115,12 +115,13 @@ const Homepage = () => {
         >
           <div className="sm:w-[75%] lg:mt-28 sm:text-center">
             <p className="font-bold font-opensans text-[20px] md:text-[35px]">
-              The world feels closer with Bold
+              We Bring the World Closer to You
             </p>
             <p className=" text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
-              Experience the future of global mobility with Bold. Stay connected
-              and in control wherever you go with Bold’s advanced technology,
-              everything happens at your fingertips.
+              Experience the power of staying connected and in control anywhere
+              you are. With Bold’s cutting-edge technology, every movement
+              happens effortlessly at your fingertips. Navigate the world
+              confidently knowing you can find your way around anywhere.
             </p>
           </div>
         </div>
@@ -134,7 +135,7 @@ const Homepage = () => {
             height={40}
           ></Image>
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl pt-4">
-            Global impact and smart solutions
+            Global Reach and Smart Solutions
           </p>
           <p className="text-sm md:text-xl pt-2  sm:pt-4 md:pt-6">
             BOLD connects you to the world, offering seamless travel and
@@ -207,10 +208,9 @@ const Homepage = () => {
             Our Partners
           </p>
           <p className="sm:text-center pt-2 sm:pt-6 text-sm md:text-[20px] font-semibold text-left ">
-            <span className="font-bold">BOLD</span> builds trust through strong
-            partnerships with fleet providers, businesses, and e-commerce
-            brands, offering reliable services and rewarding loyalty with
-            exclusive programs for frequent users.
+            We build trust through strong partnerships with fleet providers,
+            businesses, and e-commerce brands, offering reliable services and
+            rewarding loyalty with exclusive programs for frequent users.
           </p>
         </div>
 
@@ -237,21 +237,23 @@ const Homepage = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Book Rides and Explore The World Around You
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            Enjoy comfortable, affordable, and eco-friendly rides at your
+            fingertips
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            We see a future where mobility and logistics are boundless,
+            eco-friendly, and accessible. BOLD was created to empower you to
+            explore with purpose and care. When you choose BOLD, you contribute
+            to a more eco-friendly world. Get the BOLD app today and experience
+            seamless, sustainable living.
           </p>
           <div className="flex gap-2">
             <div>
               <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-[#18C4B8] font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
-                Download App{" "}
+                Download Now{" "}
                 <span className="inline-flex items-center text-white">
                   <Image src={whitearrow} alt="btnarrow " width={16}></Image>
                 </span>
@@ -269,16 +271,15 @@ const Homepage = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Move Cleaner And Smarter With BOLD
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            Explore the world around you and contribute to a greener planet
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            We’re dedicated to providing a seamless experience for individuals,
+            businesses, and drivers. Take a BOLD step and join us on our mission
+            to revolutionize transportation, logistics, and rentals.
           </p>
         </div>
         <Image

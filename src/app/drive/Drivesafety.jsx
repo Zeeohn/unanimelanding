@@ -55,6 +55,37 @@ const Drivesafety = () => {
     setIsClient(true);
   }, []);
 
+  const ratings = [
+    {
+      index: 1,
+      name: "Samuel Ambrose",
+      rating: 4.8,
+      review:
+        "I’ve never felt so empowered as a driver. Bold’s focus on safety and support is unmatched. From clear guidelines to robust tech features, I know I’m in good hands. It’s a pleasure to be part of a company that truly cares about its drivers.",
+    },
+    {
+      index: 2,
+      name: "Razaq Abdul",
+      rating: 4.9,
+      review:
+        "Driving with Bold has been a game-changer. The 24/7 support team is always there when I need assistance, and the community guidelines ensure a respectful and professional environment for everyone. I’m proud to be part of such a thoughtful platform.",
+    },
+    {
+      index: 3,
+      name: "Chen Mikel",
+      rating: 4.7,
+      review:
+        "Bold has transformed the way I work. The app is easy to use, and the in-app safety features give me peace of mind on every trip. I feel supported and valued as a driver, which motivates me to deliver the best experience for my passengers.",
+    },
+    {
+      index: 4,
+      name: "Jorge Luis",
+      rating: 4.6,
+      review:
+        "Bold gives me the freedom to work on my own schedule. The app’s features, like real-time trip tracking and rider verification, make me feel secure while driving. I appreciate how the platform prioritizes driver safety and success.",
+    },
+  ];
+
   return (
     <div>
       <div className="relative">
@@ -72,6 +103,10 @@ const Drivesafety = () => {
             connected to the people and places that matter most. That’s why we
             prioritize safety standards and develop technology designed to
             minimize risks.
+            <br />
+            <br />
+            Bold ensures that drivers have access to the tools, resources, and
+            support they need to drive confidently and responsibly every day.
           </p>
           {/* <div className=" flex gap-6 pt-8 md:pt-6">
             <button className=" text-white font-opensans font-semibold text-base md:text-xl lg:text-2xl flex items-center gap-3 rounded-lg underline ">
@@ -86,12 +121,12 @@ const Drivesafety = () => {
 
       <div className="px-[5%] md:pl-[5%] pt-12 pb-8 md:py-16 lg:py-[88px] md:max-w-[70%]">
         <p className="font-redhat font-bold text-xl md:text-3xl lg:text-[40px] lg:leading-[60px] ">
-          Lorem ipsum amet, consectetur adipiscing elit dolor eiusmod tempor
-          incididunt
+          Round-the-Clock Support
         </p>
         <p className="font-opensans text-sm md:text-xl text-[#777777] pt-2 md:pt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dolor
-          eiusmod tempor incididunt
+          Our dedicated support team is here for you 24/7. Whether you have
+          questions, or concerns, or need immediate assistance, you can always
+          connect with us directly through the app.
         </p>
       </div>
 
@@ -268,8 +303,7 @@ const Drivesafety = () => {
       <div className="bg-[#F3F3F3] px-[5%] py-6 md:pt-14 md:pb-20">
         <div className="flex justify-between gap-[20%] mb-6 md:mb-10">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl md:max-w-[50%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
+            Hear What Other Drivers Have To Say
           </p>
           {isLargeScreen && (
             <div className="flex gap-6">
@@ -314,13 +348,12 @@ const Drivesafety = () => {
               1024: { slidesPerView: 2.5, spaceBetween: 20 },
             }}
           >
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide key={index}>
-                <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl">
+            {ratings.map((rate) => (
+              <SwiperSlide key={rate.index}>
+                <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl flex-col flex justify-between h-[60vh] md:h-[50vh]">
                   <div className="flex justify-between">
                     <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed incididunt ut labore et dolore magna aliqua.
+                      {rate.review}
                     </p>
                     <div className="w-10">
                       <Image
@@ -339,7 +372,7 @@ const Drivesafety = () => {
                     />
                     <div>
                       <p className="font-bold text-sm md:text-xl">
-                        Carter Carder
+                        {rate.name}
                       </p>
                       <div className="mt-2 flex gap-2 items-center">
                         <Image
@@ -348,7 +381,7 @@ const Drivesafety = () => {
                           className="w-3 md:w-6"
                         />
                         <p className="font-semibold text-sm md:text-xl">
-                          4.8
+                          {rate.rating}
                           <span className="font-normal text-sm md:text-xl text-[#777777]">
                             {" "}
                             (Customer ratings)
@@ -403,7 +436,9 @@ const Drivesafety = () => {
               Become your own boss today!
             </p>
             <p className="font-semibold text-xs md:text-base lg:text-xl pt-2 md:pt-4 lg:pt-8 max-w-[80%] text-white">
-              Get the Bold app to start driving and earning on your own terms.
+              Take control of your schedule and start earning on your own terms.
+              Download the Bold app now and begin your journey as a trusted,
+              confident driver.
             </p>
             <div className="flex gap-2">
               <div>
