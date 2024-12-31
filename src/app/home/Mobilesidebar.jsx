@@ -136,13 +136,13 @@ const Sidebar = ({
           </li>
 
           {/* Other Links */}
-          {["Intercity", "Logistics", "Business"].map((item) => (
+          {["Bold Miles", "Logistics", "Business"].map((item) => (
             <li
               key={item}
               className={`cursor-pointer text-xl font-semibold text-black font-redhat w-[50%] mx-auto ${
                 currentpage === item.toLowerCase() && "text-blue-500 font-bold"
               }`}
-              onClick={() => handleSetPage(item.toLowerCase())}
+              onClick={() => handleSetPage(item === "Bold Miles" ? "intercity" : item.toLowerCase())}
             >
               {item}
             </li>

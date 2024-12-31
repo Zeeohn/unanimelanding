@@ -19,7 +19,7 @@ const Header = () => {
   const navItems = [
     { label: "Ride", path: "/ride" },
     { label: "Drive", path: "/drive" },
-    { label: "Intercity", path: "/intercity" },
+    { label: "Bold Miles", path: "/intercity" },
     { label: "Logistics", path: "/logistics" },
     { label: "Business", path: "/business" },
   ];
@@ -139,7 +139,7 @@ const Header = () => {
   const menuItems = [
     { title: "Signup as promoter", subtitle: "Make money on your terms" },
     {
-      title: "Become an intercity partner",
+      title: "Become a Bold Miles partner",
       subtitle: "Make money on your terms",
     },
     { title: "Signup as Fleet partner", subtitle: "Make money on your terms" },
@@ -151,7 +151,7 @@ const Header = () => {
   const loginItems = [
     { title: "Login as promoter", subtitle: "Make money on your terms" },
     {
-      title: "Login as intercity partner",
+      title: "Login as Bold Miles partner",
       subtitle: "Make money on your terms",
     },
     { title: "Login as Fleet partner", subtitle: "Make money on your terms" },
