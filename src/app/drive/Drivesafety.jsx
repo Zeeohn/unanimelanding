@@ -350,7 +350,7 @@ const Drivesafety = () => {
           >
             {ratings.map((rate) => (
               <SwiperSlide key={rate.index}>
-                <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl flex-col flex justify-between h-[60vh] md:h-[50vh]">
+                <div className="px-3 py-6 md:px-6 md:py-8 bg-white rounded-2xl flex-col flex justify-between h-[60vh] md:h-[70vh]">
                   <div className="flex justify-between">
                     <p className="text-[#777777] font-semibold text-sm md:text-xl w-[90%]">
                       {rate.review}

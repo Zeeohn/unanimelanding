@@ -133,7 +133,7 @@ const Ridesafety = () => {
           <p className="font-bold text-xl md:text-4xl font-redhat">
             Ride in Comfort, Luxury, and Style to Your Next Destination
           </p>
-          <p className="text-base md:text-xl font-semibold pt-8 font-opensans">
+          <p className="text-base md:text-xl pt-8 font-opensans">
             Travel the BOLD way and elevate your journey. Whether you’re
             commuting to work, visiting another city, or heading out with
             friends, Bold ensures every ride is an experience of luxury and
@@ -149,7 +149,7 @@ const Ridesafety = () => {
           <p className="font-bold text-xl md:text-4xl font-redhat">
             Use BOLD XL When Traveling as a Group
           </p>
-          <p className="text-base md:text-xl font-semibold pt-8 font-opensans">
+          <p className="text-base md:text-xl pt-8 font-opensans">
             Big trips need big solutions, and BoldXL delivers. With room for
             everyone and everything, it’s perfect for family vacations, team
             outings, or getaways with friends. Enjoy spacious seating, ample
