@@ -21,7 +21,7 @@ const Header = () => {
     { label: "Drive", path: "/drive" },
     { label: "Bold Miles", path: "/intercity" },
     { label: "Logistics", path: "/logistics" },
-    { label: "Business", path: "/business" },
+    { label: "Business", path: "/business" }, 
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -150,10 +150,6 @@ const Header = () => {
 
   const loginItems = [
     { title: "Login as promoter", subtitle: "Make money on your terms" },
-    {
-      title: "Login as Bold Miles partner",
-      subtitle: "Make money on your terms",
-    },
     { title: "Login as Fleet partner", subtitle: "Make money on your terms" },
     { title: "Bold Ads for businesses", subtitle: "Make money on your terms" },
     { title: "Bold Business", subtitle: "Make money on your terms" },
