@@ -146,8 +146,7 @@ const Intercitypage = () => {
         </div>
         <div className=" pt-12 md:pt-16 lg:pt-20">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Miles Without Limits! Discover And Explore The World With BoldMiles
           </p>
           <div className="flex gap-2 md:gap-6 justify-start pt-6 md:pt-10 lg:pt-14">
             <div className="w-[6%] md:w-[5%]">
@@ -156,11 +155,13 @@ const Intercitypage = () => {
             <div className="">
               <p className="font-bold text-base md:text-xl">
                 {" "}
-                Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+                Reimagine boundaries with long-distance trips across cities,
+                states, and countries.
               </p>
               <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+                Whether you&apos;re headed to the airport or planning an
+                adventurous road trip, Bold Miles ensures your journey is
+                seamless.{" "}
               </p>
             </div>
           </div>
@@ -171,11 +172,11 @@ const Intercitypage = () => {
             <div className="">
               <p className="font-bold text-base md:text-xl">
                 {" "}
-                Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+                Share your ride and save money while exploring new places.
               </p>
               <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+                Our affordable solutions make travel more accessible, so you can
+                focus on the experiences that matter most.{" "}
               </p>
             </div>
           </div>
@@ -186,11 +187,11 @@ const Intercitypage = () => {
             <div className="">
               <p className="font-bold text-base md:text-xl">
                 {" "}
-                Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+                Help reduce your carbon footprint by choosing shared rides.
               </p>
               <p className=" pt-3 md:pt-4 text-[#777777] text-sm md:text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+                With every shared journey, you contribute to a greener planet
+                while enjoying a more sustainable way to travel.{" "}
               </p>
             </div>
           </div>
@@ -201,15 +202,16 @@ const Intercitypage = () => {
         <div className="flex md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
           <div className="md:max-w-[55%] flex flex-col justify-center py-6">
             <p className="font-bold text-lg font-opensans md:text-3xl lg:text-4xl text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Make Bold Moves! Take That Trip You’ve Dreamed of
             </p>
             <p className="font-semibold text-xs md:text-base lg:text-xl pt-2 md:pt-4 lg:pt-8 max-w-[80%] text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+              Get the Bold app and travel intercity, interstate, or
+              intercountry.
             </p>
             <div className="flex gap-2">
               <div>
                 <button className="p-2 md:p-4 text-white bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold text-sm md:text-lg lg:text-xl flex items-center gap-2 rounded-lg mt-4  md:mt-8 lg:mt-12 ">
-                  Download App
+                  Download Now
                   <span className="inline-flex items-center text-white">
                     <Image src={whitearrow} alt="btnarrow " width={16}></Image>
                   </span>
@@ -226,21 +228,20 @@ const Intercitypage = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row md:justify-between px-[5%] md:items-center pt-12 md:pt-20 lg:pt-28 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Turn Your Trips into Money-Making Opportunities With BoldMiles
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            Why go solo when you can earn extra income along the way?
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Own a car and traveling soon? Sign up on the Bold app, list your
+            trip, and earn by carrying passengers heading your way. Download the
+            app and make your travels rewarding!
           </p>
           <div className="flex gap-2">
             <div>
               <button className="py-[10px] px-4 md:py-3 md:px-6 text-white bg-[#18C4B8] hover:bg-[#12a096] font-redhat font-semibold  text-sm md:text-xl flex items-center gap-2 rounded-lg mt-6 md:mt-8 lg:mt-12">
-                Download App{" "}
+                Download Now{" "}
                 <span className="inline-flex items-center text-white">
                   <FaArrowRight size={20} />
                 </span>
@@ -289,16 +290,16 @@ const Intercitypage = () => {
         />
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Is Bold a secure and safe way to travel?
           </p>
-          <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
+          {/* <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
-          </p>
+          </p> */}
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Bold prioritizes your safety. Our drivers are thoroughly vetted, and
+            all rides are tracked to ensure a secure and smooth experience.
+            Whether you&apos;re traveling for work or leisure, you can trust us to
+            get you to your destination safely.
           </p>
           <div className="flex gap-2">
             <div></div>
