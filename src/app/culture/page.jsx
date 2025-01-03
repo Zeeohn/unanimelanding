@@ -37,12 +37,12 @@ const Culture = () => {
             alt="logistic"
             className="h-[70vh] md:h-[90vh] object-cover"
           />
-          <div className="absolute top-0 w-full left-0 md:max-w-[50%] h-full flex flex-col justify-center pl-[5%] z-20">
+          <div className="absolute top-0 w-full left-0 md:max-w-[55%] h-full flex flex-col justify-center pl-[5%] z-20">
             <p className="hidden md:block font-opensans font-bold text-[56px] leading-[70px] text-white">
               Discover the Bold Spirit: People & Culture at BOLD
             </p>
             <p className="md:hidden font-opensans font-bold text-[35px] text-white">
-              Discover the Bold Spirit: <br /> People & Culture at BOLD
+              Discover the Bold Spirit: People & Culture at BOLD
             </p>
             <p className="font-opensans w-full text-base md:text-xl md:font-semibold text-white pt-6">
               At Bold, our success is driven by our people. We create an
@@ -62,7 +62,7 @@ const Culture = () => {
             Empowering Bold Connections
           </p>
           <p className="hidden md:block pt-10 text-black text-xl text-center">
-            At Bold, we are dedicated to creating connections that truly matter,
+            We are dedicated to creating connections that truly matter,
             transforming the way people move and interact. Our customer-centric
             approach ensures every journey is designed with safety, comfort, and
             efficiency in mind. We are deeply committed to sustainability,
@@ -74,7 +74,7 @@ const Culture = () => {
             collaborative, innovative work environment.
           </p>
           <p className="md:hidden pt-5 text-black text-base">
-            At Bold, we are dedicated to creating connections that truly matter,
+            We are dedicated to creating connections that truly matter,
             transforming the way people move and interact. Our customer-centric
             approach ensures every journey is designed with safety, comfort, and
             efficiency in mind. We are deeply committed to sustainability,
@@ -97,14 +97,14 @@ const Culture = () => {
               Driving Change One Ride At A Time
             </p>
             <p className="hidden md:block text-base md:text-xl text-black pt-6 font-opensans">
-              At Bold, our mission is to connect people and businesses
+              Our mission is to connect people and businesses
               seamlessly while shaping a more sustainable, inclusive future.
               From providing reliable transportation solutions to empowering
               communities through technology, we’re committed to delivering
               excellence every step of the way.{" "}
             </p>
             <p className="md:hidden text-base text-black pt-6 font-opensans">
-              At Bold, our mission is to connect people and businesses
+              Our mission is to connect people and businesses
               seamlessly while shaping a more sustainable, inclusive future.
               From providing reliable transportation solutions to empowering
               communities through technology, we’re committed to delivering
@@ -120,7 +120,7 @@ const Culture = () => {
               Collaboration in Action
             </p>
             <p className="hidden md:block text-base md:text-xl text-black pt-6 font-opensans">
-              At Bold, teamwork drives everything we do, from brainstorming
+              Teamwork drives everything we do, from brainstorming
               sessions to rides across the city. We believe in the power of
               collaboration to overcome challenges and unlock new opportunities.
               Our open culture fosters innovation by welcoming fresh ideas,
@@ -129,7 +129,7 @@ const Culture = () => {
               environment where bold thinking leads to impactful results.{" "}
             </p>
             <p className="md:hidden text-base text-black pt-6 font-opensans">
-              At Bold, teamwork drives everything we do, from brainstorming
+              Teamwork drives everything we do, from brainstorming
               sessions to rides across the city. We believe in the power of
               collaboration to overcome challenges and unlock new opportunities.
               Our open culture fosters innovation by welcoming fresh ideas,
@@ -222,7 +222,7 @@ const Culture = () => {
           />
         </div>
 
-        <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-12 md:pb-12 lg:pb-20 ">
+        <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-12 pb-12 lg:pb-20 ">
           <div className="md:max-w-[50%] flex flex-col justify-center">
             <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
               We’re committed to Innovation, Inclusivity, And Sustainability
