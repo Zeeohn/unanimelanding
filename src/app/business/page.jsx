@@ -118,7 +118,6 @@ const Businesspage = () => {
               <div className="md:w-[50%]">
                 <div className="  h-full flex flex-col justify-center">
                   <p className="font-opensans font-bold text-[25px] md:text-[50px] md:leading-[68px] text-white">
-                    <span className="font-bold">Bold Business:</span>{" "}
                     Transforming mobility and logistics for business success
                   </p>
                   <p className="font-opensans text-base md:text-xl  text-[#777777] pt-6">
@@ -177,8 +176,8 @@ const Businesspage = () => {
               <div className="md:w-[50%] flex flex-col justify-center">
                 <Image src={promotion} alt="promotion" />
                 <p className="font-opensans font-bold text-xl md:text-4xl pt-4">
-                  <span className="text-[#18C4B8]">Maximize </span> Your
-                  Event&apos;s Reach with Bold
+                  <span className="text-[#18C4B8]">Get </span> Your Event seen
+                  with Bold
                 </p>
                 <p className="font-opensans text-base md:text-xl text-[#777777] pt-6">
                   Take your event to the next level by showcasing it on the BOLD
@@ -244,7 +243,7 @@ const Businesspage = () => {
                   </span> */}
                 </p>
                 <button className="py-3 px-6  bg-[#18C4B8] hover:bg-[#12a096]  text-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
-                  Start advertising with bold
+                  Advertise with bold
                 </button>
               </div>
             </div>
@@ -443,7 +442,7 @@ const Businesspage = () => {
                   Join BOLD Today
                 </button>
                 <button className="py-3 px-6  text-white border-2 z-20 border-white font-redhat font-semibold text-xl w-fit mt-12 rounded-lg">
-                  Get in Touch with Sale
+                  Get in Touch with Sales
                 </button>
               </div>
             </div>
@@ -555,16 +554,16 @@ const Businesspage = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-8 md:pt-4 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[50%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
+            Get Thousands of Eyeballs on Your Brand With BOLD
           </p>
           <p className="font-bold text-sm md:text-xl pt-2 md:pt-4 lg:pt-8">
-            Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+            Turn your everyday people into your biggest advocates
           </p>
           <p className="text-sm md:text-xl pt-2 md:pt-4 lg:pt-6 text-[#777777]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco
+            Do you run a restaurant or cafe? BOLD helps you connect with the
+            right audience. Get noticed and stay memorable with ads that impact.
+            Boost your visibility, attract loyal customers, and grow your
+            business effortlessly.
           </p>
         </div>
         <Image

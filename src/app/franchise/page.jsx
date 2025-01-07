@@ -233,15 +233,14 @@ const Franchisepage = () => {
       <div className="flex flex-col-reverse md:flex-row justify-between px-[5%] items-center md:pb-28 pb-10 md:gap-[5%] gap-8">
         <div className=" flex flex-col justify-center md:max-w-[50%]">
           <p className="font-bold text-xl md:text-4xl font-opensans">
-            What do we expect from you?
+            Own a Piece of the Future
           </p>
           <p className="text-base text-black pt-4 md:text-xl  md:pt-6 font-opensans">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam error sit
-            voluptatem accusantium doloremque laudantium, totam rem aperiam{" "}
-            <br /> <br />
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam error sit.
+            Bring sustainable and innovative transportation to your city and
+            grow with us. Join the BOLD movement and redefine urban mobility.
+            When you own a BOLD franchise, you invest in a greener, smarter, and
+            more connected future. Together, we’ll help people move better,
+            businesses deliver faster, and cities thrive sustainably.
             {/* <span className="font-bold underline cursor-pointer">
               Read more
             </span> */}
@@ -253,27 +252,31 @@ const Franchisepage = () => {
       <div className="flex flex-col-reverse md:flex-row-reverse justify-between items-center md:mb-28 py-8 bg-gray-100 mb-10 md:gap-[5%] gap-8">
         <div className=" flex flex-col justify-center px-[5%] md:pr-[5%] md:max-w-[50%]">
           <p className="font-bold text-lg md:text-4xl font-opensans mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            How to Start Your Journey To Own BOLD Franchise
           </p>
           <div className="my-3">
-            <p className="font-semibold my-1">Lorem ipsum dolor sit amet</p>
+            <p className="font-semibold my-1">Fill Out The Application Form</p>
             <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Start your journey by filling out our application form. We’ll
+              review your details and get back to you with the next steps.
             </p>
           </div>
           <div className="my-3">
-            <p className="font-semibold my-1">Lorem ipsum dolor sit amet</p>
+            <p className="font-semibold my-1">
+              Connect With Our Franchise Team
+            </p>
             <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Once your application is submitted, you’ll connect with our
+              dedicated franchise team. We’ll discuss your goals and set you up
+              for success.
             </p>
           </div>
           <div className="my-3">
-            <p className="font-semibold my-1">Lorem ipsum dolor sit amet</p>
+            <p className="font-semibold my-1">Launch Your Bold Franchise</p>
             <p className="text-gray-400 text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Get ready to open your franchise and make a lasting impact in your
+              community. Our team will provide support to ensure a smooth and
+              successful launch.
             </p>
           </div>
         </div>

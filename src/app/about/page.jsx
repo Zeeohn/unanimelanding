@@ -36,51 +36,45 @@ import { FaArrowRight } from "react-icons/fa";
 const Anotherabout = () => {
   const cards = [
     {
-      title: "Eco-friendly ride",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      title: "Eco-friendly rides",
+      description: "Reduce your carbon footprint.",
       image: eco,
     },
     {
-      title: "Affordable and spacious ride",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      title: "Affordable and spacious rides",
+      description: "Travel comfortably without breaking the bank.",
       image: affordable,
     },
     {
-      title: "Logistic services",
+      title: "Logistics services",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+        "Simplify deliveries with fast, reliable, and efficient logistics.",
       image: logistic,
     },
     {
-      title: "Vehicle jump-start",
+      title: "Vehicle jump-starts",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+        "Get back on the road quickly with our dependable jump-start service.",
       image: jumpstart,
     },
     {
       title: "Parking solutions",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      description: "Find stress-free parking with our innovative solutions.",
       image: parking,
     },
     {
-      title: "Multiple payment method",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      title: "Multiple payment methods",
+      description: "Pay your way with flexible options.",
       image: multi,
     },
     {
-      title: "Real time GPS tracking",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      title: "Real-time GPS tracking",
+      description: "Stay in control with accurate live tracking.",
       image: realtime,
     },
     {
-      title: "Dual sided marketplace",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed",
+      title: "A Dual sided marketplace",
+      description: "Connect with riders or drivers seamlessly.",
       image: dual,
     },
   ];
@@ -166,10 +160,8 @@ const Anotherabout = () => {
       <div className="mx-[5%] flex flex-col gap-10 items-center mb-10">
         <h1 className="font-bold text-[20px] md:text-[35px]">Our Services</h1>
         <p className="text-[14px] md:text-[20px] text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor
+          Bold is your all-in-one hub for seamless movement, saving you time
+          while delivering top-tier service.
         </p>
       </div>
 

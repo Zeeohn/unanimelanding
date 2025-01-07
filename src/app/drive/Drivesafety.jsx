@@ -96,7 +96,7 @@ const Drivesafety = () => {
         />
         <div className="absolute top-0 right-0 md:max-w-[75%] lg:max-w-[55%] h-full flex flex-col justify-center px-[5%] md:px-0 md:pr-[5%] ">
           <p className="font-redhat font-bold text-4xl lg:text-[40px] lg:leading-[60px] text-white md:pt-6">
-            Your safety drives us
+            Your Safety Drives Everything We Do
           </p>
           <p className="font-opensans text-2xl md:text-xl text-[#BBBBBB] pt-8 md:pt-6">
             Our goal is to help you move freely, maximize your time, and stay
@@ -460,23 +460,22 @@ const Drivesafety = () => {
       <div className="flex flex-col-reverse gap-2 md:gap-6 md:flex-row-reverse md:justify-between px-[5%] md:items-center pt-12 md:pt-20 lg:pt-28 md:pb-12 lg:pb-20 ">
         <div className="md:max-w-[60%] flex flex-col justify-center">
           <p className="font-bold text-xl font-opensans md:text-3xl lg:text-4xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
+            We Ensure Your Journeys Are Secure and Reliable
           </p>
           <p className="text-sm md:text-lg pt-2 md:pt-4 lg:pt-6 text-black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis.
+            Our drivers are the backbone of our service. That’s why we go the
+            extra mile to ensure you’re equipped with the tools and knowledge to
+            drive safely.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis.
+            We provide you with comprehensive training, regular vehicle
+            inspections, and ongoing support to ensure that every ride you
+            provide is secure for you and your passengers.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis.
+            With features like real-time GPS tracking and 24/7 emergency
+            support, you can focus on delivering great rides while we handle the
+            rest.
           </p>
         </div>
         <Image

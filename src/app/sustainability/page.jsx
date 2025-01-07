@@ -88,24 +88,25 @@ const Sustainability = () => {
 
         <div className="hidden my-20 px-[5%] md:flex flex-col gap-4">
           <h2 className="font-semibold text-2xl md:text-center">
-            Lorem ipsum dolor sit amet
+            Why Sustainability Matters to Us
           </h2>
           <p className="md:text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            Sustainability is at the heart of everything we do. And with every
+            ride, we’re committed to reducing carbon emissions. This will drive
+            us closer to cleaner cities and a healthier planet. We’re on a
+            mission to make the world a better place.
           </p>
         </div>
 
         <div className="md:hidden mt-20 mb-10 px-[5%] flex flex-col gap-4">
           <h2 className="font-semibold text-2xl md:text-center">
-            Lorem ipsum dolor sit amet
+            Why Sustainability Matters to Us
           </h2>
           <p className="md:text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Sustainability is at the heart of everything we do. And with every
+            ride, we’re committed to reducing carbon emissions. This will drive
+            us closer to cleaner cities and a healthier planet. We’re on a
+            mission to make the world a better place.
           </p>
         </div>
 
@@ -113,25 +114,25 @@ const Sustainability = () => {
           <Image src={lanes} alt="driverapp" />
           <div className=" flex flex-col justify-center md:max-w-[50%]">
             <p className="font-bold text-xl pt-6 md:pt-0 md:text-4xl font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
+              A BOLD Journey Toward a Sustainable Future
             </p>
             <p className="hidden md:block text-base md:text-xl text-black md:text-[#777777] pt-6 font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+              We’re taking the road less travelled and we’re going to make it
+              through. The journey ahead will be cleaner and greener than ever
+              before. As we pave the way toward a more sustainable future, we’re
+              not just changing the way people travel we’re changing the way the
+              world moves. <br />
               <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut
+              We’ve embraced green technology to create a transportation system
+              that benefits everyone. The journey may be long, but with BOLD,
+              it’s worth taking.
             </p>
             <p className="md:hidden text-base text-black pt-6 font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
+              We’re taking the road less travelled and we’re going to make it
+              through. The journey ahead will be cleaner and greener than ever
+              before. As we pave the way toward a more sustainable future, we’re
+              not just changing the way people travel we’re changing the way the
+              world moves.
             </p>
           </div>
         </div>
@@ -236,7 +237,11 @@ const Sustainability = () => {
             </div>
           </div>
           <div className="flex w-1/2 flex-col h-[30vh] md:h-[70vh] gap-2 md:overflow-hidden">
-            <Image src={greenhouse} alt="green house" className="rounded-lg h-1/2" />
+            <Image
+              src={greenhouse}
+              alt="green house"
+              className="rounded-lg h-1/2"
+            />
             <div className="flex flex-row gap-2 h-1/2">
               <Image
                 src={greenmarket}
@@ -262,13 +267,13 @@ const Sustainability = () => {
           />
           <div className="md:max-w-[50%] pl-[5%] flex flex-col justify-center z-20">
             <p className="font-bold text-[20px] md:text-[50px] md:leading-[70px] text-white">
-              Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit
+              Contribute To A Cleaner Planet
             </p>
             <p className="text-[14px] text-white md:text-[20px] mt-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut
+              Go green and make the planet cleaner. When you choose BOLD’s
+              eco-friendly rides, you’re helping reduce carbon emissions. Join
+              us in driving toward a cleaner future. Download the BOLD app
+              today.
             </p>
             <button className="rounded-lg mt-3 md:mt-10 md:py-3 md:px-6 py-2 px-4 font-redhat text-base md:text-xl font-semibold  bg-[#18C4B8] hover:bg-[#12a096] text-white w-fit">
               Download App Now
@@ -321,7 +326,7 @@ const Sustainability = () => {
                   4
                 </p>
                 <p className="font-bold text-[16px] md:text-[20px] ">
-                  Lorem ipsum dolor sit amet, consectetur.
+                  Responsible Waste Management
                 </p>
               </div>
             </div>
@@ -332,20 +337,20 @@ const Sustainability = () => {
           <Image src={fast} alt="driverapp" />
           <div className=" flex flex-col justify-center md:max-w-[50%]">
             <p className="font-bold text-xl md:text-4xl mt-4 md:mt-0 font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
+              Join The Movement for a Greener Future
             </p>
             <p className="font-bold text-[14px] my-2 md:my-4 md:text-[20px[">
-              Lorem ipsum dolor sit amet, onsectetur adipiscing elit, sed do
+              Sustainability is woven into everything we stand for
             </p>
             <p className="hidden md:block text-xl text-[#777777] font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
+              We’ve embedded sustainability into our value chain by offering
+              eco-friendly transport solutions. Get the BOLD app today and ride
+              toward a greener tomorrow.
             </p>
             <p className="md:hidden text-base text-black pt-6 font-opensans">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
+              We’ve embedded sustainability into our value chain by offering
+              eco-friendly transport solutions. Get the BOLD app today and ride
+              toward a greener tomorrow.
             </p>
             <button className=" bg-[#18C4B8] hover:bg-[#12a096]  font-redhat font-semibold w-fit px-4 py-2  text-base md:text-xl flex items-center gap-2 text-white rounded-lg mt-8">
               Download App{" "}
@@ -364,7 +369,8 @@ const Sustainability = () => {
               </p>
               <p className="md:font-semibold text-sm pt-2 md:pt-8 max-w-[70%] md:max-w-[80%] text-white">
                 Drive change towards a greener tomorrow. Join us in creating a
-                sustainable future! With the BOLD app, every ride reduces
+                sustainable future! With the{" "}
+                <span className="font-bold">BOLD</span> app, every ride reduces
                 emissions and supports eco-friendly transportation.
               </p>
               <div className="flex gap-2 flex-row justify-between mb-3">
