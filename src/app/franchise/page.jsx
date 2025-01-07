@@ -178,10 +178,8 @@ const Franchisepage = () => {
               Fast business setup
             </p>
             <p className="text-gray-400 hidden md:block">
-              Start your franchise quickly with a proven system and full
-              support. Whether you&apos;re new to the industry or an experienced
-              entrepreneur, we provide all the tools and guidance needed to
-              ensure your success.
+              Start your franchise quickly with a proven system. We'll provide
+              you full support.
             </p>
           </div>
         </div>
