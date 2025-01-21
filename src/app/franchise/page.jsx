@@ -178,7 +178,7 @@ const Franchisepage = () => {
               Fast business setup
             </p>
             <p className="text-gray-400 hidden md:block">
-              Start your franchise quickly with a proven system. We'll provide
+              Start your franchise quickly with a proven system. We&apos;ll provide
               you full support.
             </p>
           </div>
