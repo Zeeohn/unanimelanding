@@ -17,6 +17,7 @@ import reviewer from "../../../public/Assets/reviewer.png";
 import doublequotes from "../../../public/Assets/doublequotes.svg";
 import prevbtn from "../../../public/Assets/prevbtn.png";
 import nextbtn from "../../../public/Assets/blacknextbtn.png";
+import miles from "../../../public/Assets/milescta.png";
 import appsplash from "../../../public/Assets/app-preview.png";
 import {
   Navigation,
@@ -199,7 +200,7 @@ const Intercitypage = () => {
       </div>
 
       <div className="md:px-[5%] ">
-        <div className="flex md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
+        <div className="flex md:rounded-3xl justify-between pl-[5%] items-center " style={{ background: "linear-gradient(94.35deg, #0C5E58 2.83%, #10BDA5 92.34%)"}}>
           <div className="md:max-w-[55%] flex flex-col justify-center py-6">
             <p className="font-bold text-lg font-opensans md:text-3xl lg:text-4xl text-white">
               Make Bold Moves! Take That Trip You’ve Dreamed of
@@ -220,7 +221,7 @@ const Intercitypage = () => {
             </div>
           </div>
           <div className="w-[35%] md:w-[45%] flex items-end flex-col">
-            <Image src={boldadvertise} alt="driverapp" className="" />
+            <Image src={miles} alt="driverapp" className="" />
           </div>
         </div>
       </div>

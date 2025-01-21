@@ -181,6 +181,7 @@ const Logisticspage = () => {
             </div>
           </div>
 
+
           <div className="relative flex">
             {/* <div className="absolute max-h-[700] opacity-50 bg-black z-10"></div> */}
             <Image
@@ -192,7 +193,7 @@ const Logisticspage = () => {
             <Image
               src={logisticoverlay}
               alt="blue overlay"
-              className="flex absolute h-full opacity-60 w-full z-10"
+              className="flex absolute h-full opacity-80 w-[80%] z-10"
             />
             <div className="absolute top-0 left-0 md:max-w-[50%] pl-[5%] flex flex-col justify-center md:justify-end h-full md:pb-24 z-20">
               <p className="font-bold text-[25px] md:text-[50px] md:leading-[70px] text-white">
@@ -276,7 +277,7 @@ const Logisticspage = () => {
           </div>
 
           <div className="md:px-[5%] pb-28">
-            <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#041521] ">
+            <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center" style={{ background: "linear-gradient(94.35deg, #0C5E58 2.83%, #10BDA5 92.34%)"}}>
               <div className="md:max-w-[55%] flex flex-col justify-center">
                 <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
                   Unlock the Power of Fast Deliveries. Get the BOLD App Today!

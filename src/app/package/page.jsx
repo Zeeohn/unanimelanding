@@ -103,7 +103,13 @@ const Packagepage = ({ setcurrentpage }) => {
       </div>
 
       <div className="md:px-[5%] pb-28 ">
-        <div className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center  bg-[#191919] ">
+        <div
+          className="flex flex-row md:rounded-3xl justify-between pl-[5%] items-center"
+          style={{
+            background:
+              "linear-gradient(94.35deg, #0C5E58 2.83%, #10BDA5 92.34%)",
+          }}
+        >
           <div className="md:max-w-[55%] flex flex-col justify-center">
             <p className="font-bold mt-3 md:mt-0 text-xl md:text-4xl text-white">
               Send Packages Safely with BOLD

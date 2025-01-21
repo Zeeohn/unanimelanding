@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useStateContext } from "../Stateproviderwraper";
 
-const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url, setPage }) => {
+const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, overlayImgColor, url, setPage }) => {
   const [displayText, setDisplayText] = useState(text);
   const { currentpage, setCurrentPage } = useStateContext(); 
 
@@ -64,6 +64,9 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url, setPag
           {overlayColor && (
             <div className="absolute w-full h-full bg-[#0E0E0E] opacity-70 z-20"></div>
           )}
+          {overlayImgColor && (
+            <Image src={overlayImgColor} className="absolute w-[60%] h-full opacity-70 z-20" alt="overlay image color" />
+          )}
           <div className="absolute w-full md:max-w-[80%] lg:max-w-[65%] xl:max-w-[45%] top-0 left-0 flex flex-col justify-center h-full px-[5%] md:px-8 z-20">
             <p className="font-bold text-xl md:text-2xl lg:text-4xl xl:text-5xl text-white ">
               {heading}
@@ -73,9 +76,12 @@ const Blogsec = ({ text, heading, cta, bg, overlayImg, overlayColor, url, setPag
               dangerouslySetInnerHTML={{ __html: displayText }}
             ></p>
             <div className="">
-              <button className="text-white flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-8  hover:underline text-sm md:text-xl lg:text-2xl hover:text-[#18C4B8] font-bold" onClick={() => handleRedirect(url)}>
+              <button
+                className="text-white flex gap-2 md:gap-4 lg:gap-6 items-center pt-4 md:pt-8  hover:underline text-sm md:text-xl lg:text-2xl hover:text-[#18C4B8] font-bold"
+                onClick={() => handleRedirect(url)}
+              >
                 {cta}
-              <FaArrowRight size={24} />
+                <FaArrowRight size={24} />
               </button>{" "}
             </div>
           </div>

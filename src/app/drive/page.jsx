@@ -263,7 +263,7 @@ const Drivepage = () => {
                 <Image
                   src={highearning}
                   alt="assist"
-                  className="md:h-20 md:w-20 h-12 w-12"
+                  className="md:h-20 md:w-20 h-10 w-10 p-2 bg-[#18C4B81F] rounded-lg"
                 />
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Higher earnings
@@ -281,7 +281,7 @@ const Drivepage = () => {
                 <Image
                   src={flexiblework}
                   alt="assist"
-                  className="md:h-20 md:w-20 h-12 w-12 "
+                  className="md:h-20 md:w-20 h-10 w-10 p-2 bg-[#18C4B81F] rounded-lg"
                 />
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Flexible work
@@ -299,7 +299,7 @@ const Drivepage = () => {
                 <Image
                   src={smoothpayout}
                   alt="assist"
-                  className="md:h-20 md:w-20 h-12 w-12 "
+                  className="md:h-20 md:w-20 h-10 w-10 px-3 pt-3 -pb-6 bg-[#18C4B81F] rounded-lg"
                 />
                 <p className="lg:pt-12 font-bold text-xl md:text-3xl">
                   Smooth payouts

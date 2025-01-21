@@ -7,6 +7,7 @@ import blogimg from "../../public/Assets/blogbg.png";
 import uppericon from "../../public/Assets/uppericon.png";
 import upperright from "../../public/Assets/upperright.png";
 import upperleft from "../../public/Assets/lowerleft.png";
+import homeOverlay from "../../public/Assets/home-overlay.png";
 import { useState, useEffect, useRef } from "react";
 import Slidercomponent from "./home/Slidercomponent";
 import partner1 from "../../public/Assets/partner1.svg";
@@ -230,6 +231,7 @@ const Homepage = () => {
           heading={"Travel The Safe Way"}
           cta={"Read our details on safety concerns"}
           bg={blogimg}
+          overlayImgColor={homeOverlay}
           setPage={"ridesafety"}
         />
       </div>

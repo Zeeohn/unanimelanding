@@ -8,7 +8,7 @@ import ridetaxiimg from "../../../public/Assets/ridetaxi.png";
 import petfriendly from "../../../public/Assets/perfriendly.png";
 import boldgreen from "../../../public/Assets/boldgreen.png";
 import boldassist from "../../../public/Assets/boldassist.png";
-import youtubecover from "../../../public/Assets/youtubecover.png";
+import homeOverlay from "../../../public/Assets/home-overlay.png";
 import prevbtn from "../../../public/Assets/prevbtn.png";
 import nextbtn from "../../../public/Assets/blacknextbtn.png";
 import ridepartner from "../../../public/Assets/ride-partner.jpeg";
@@ -38,6 +38,9 @@ import Trendinglocation from "./Trendinglocation";
 import rideoverview from "../../../public/Assets/rideoverview.png";
 import overlay from "../../../public/Assets/overlay-ride.png";
 import sos from "../../../public/Assets/sos-img.png";
+import regular from "../../../public/Assets/bold-regular.png";
+import premium from "../../../public/Assets/bold-premium.png";
+import xl from "../../../public/Assets/bold-xl.png";
 import { useStateContext } from "../Stateproviderwraper";
 import "../swiperslider.css";
 
@@ -75,6 +78,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
   const data = {
     share: {
       heading: "BOLD Share",
+      image: ridetaxiimg,
       paragraphs: [
         "Split costs and reduce your carbon footprint with BOLD Share. Save more by sharing fares with riders heading in your direction. We calculate the most efficient route to pick up and drop you and other riders. BOLD Share is a smart and affordable choice for a quick commute or long trip. Start sharing today!",
       ],
@@ -86,6 +90,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
     },
     regular: {
       heading: "BOLD Regular",
+      image: regular,
       paragraphs: [
         "Experience cost-effective luxury rides with BOLD Regular. Designed for your everyday travel needs, our private rides offer an unbeatable value.",
       ],
@@ -97,6 +102,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
     },
     premium: {
       heading: "BOLD Premium",
+      image: premium,
       paragraphs: [
         "Treat yourself to a first-class experience with BOLD Premium. Ride in vehicles designed for comfort, elegance, and style. Whether it's a special occasion or just a regular outing, Bold Premium elevates the way you travel",
       ],
@@ -108,6 +114,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
     },
     xl: {
       heading: "BOLD XL",
+      image: xl,
       paragraphs: [
         "Big trips need big solutions. There’s room for everyone and everything with BoldXL. These spacious rides make group trips a breeze.",
       ],
@@ -132,7 +139,7 @@ const RideOptions = ({ boldType, ridetaxiimg }) => {
       heading={rideData.heading}
       paragraphs={rideData.paragraphs}
       listItems={rideData.listItems}
-      imageSrc={ridetaxiimg}
+      imageSrc={rideData.image}
       altText={rideData.heading}
     />
   );
@@ -643,7 +650,7 @@ const Ridepage = () => {
             heading={"More Than Just Rides"}
             cta={"Read more details on BOLD"}
             bg={ridepartner}
-            overlayImg={overlay}
+            overlayImg={homeOverlay}
           />
           <FAQ questions={questions} />
         </div>

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import taximimgbg from "../../../public/Assets/taxiimage.jpeg";
-import logis from "../../../public/Assets/logistic-serv.png";
-import jump from "../../../public/Assets/vehicle-jump.png";
+import logis from "../../../public/Assets/package.png";
+import jump from "../../../public/Assets/jump.png";
 import affordable from "../../../public/Assets/affordable-ride.png";
 import eco from "../../../public/Assets/eco-friendly.png";
 import realtime from "../../../public/Assets/realtime-gps.png";
@@ -22,7 +22,7 @@ const Slidercomponent = () => {
           journey today!
         </>
       ),
-      image: affordable,
+      image: taximimgbg,
       cta: "Learn More",
       url: "/ride",
     },
